@@ -1,0 +1,81 @@
+# K2J AI Quantitative Lab — Full System Knowledge Base & Whitepaper
+
+URL: https://k2j.net/
+Author: Justin (k2jysy@gmail.com | https://www.linkedin.com/in/justin-k2j)
+Published by: K2J AI Quantitative Lab
+License: Informational & Educational Research
+
+---
+
+## 1. Executive Summary
+
+K2J AI Quantitative Lab is a production-grade, daily quantitative research and market intelligence system covering the entire US equities universe. The system generates daily research reports every trading morning, integrating macro regime detection, market breadth, 5-dimensional statistical factor attribution, unsupervised theme clustering, and Bayesian tail-risk portfolio management.
+
+The entire platform is designed, engineered, and operated independently by Justin, an AI systems architect with over 20 years of experience across enterprise technology giants (Dell, Microsoft, IBM) and private investment funds, who actively trades US equities and options using this exact analytical framework.
+
+---
+
+## 2. Quantitative & Machine Learning Methodologies
+
+### 2.1 Layer 1: Market Regime Classification (GBDT Ensemble)
+- **Objective**: Determine the overarching macro market regime (Risk-On, Risk-Off, or Transitional / Compression) before analyzing individual stocks.
+- **Model**: Gradient Boosted Decision Tree (GBDT) ensemble combined with hidden macro state indicators.
+- **Inputs**: Cross-asset volatility surface (VIX, VVIX, term structure), interest rate differentials, credit spreads (HYG/LQD), foreign exchange dynamics, and liquidity momentum.
+- **Output**: Calibrated regime probability distributions guiding directional exposure and hedging mandates.
+
+### 2.2 Layer 2: Full-Market Breadth Analysis
+- **Objective**: Dissect true market participation beneath headline capitalization-weighted index movements (e.g., S&P 500, Nasdaq 100).
+- **Metrics**: Advance-decline volume ratios, percentage of stocks trading above key moving averages (20D, 50D, 200D), net new 52-week highs/lows, and sector-level participation dispersion.
+
+### 2.3 Layer 3: 5-D Orthogonal Factor Attribution (Robust WLS + PCA)
+- **Objective**: Explain the underlying structural forces driving cross-sectional daily returns while filtering noise.
+- **Methodology**: Weighted Least Squares (WLS) regression with Huber loss robustness and Principal Component Analysis (PCA) orthogonalization.
+- **Dimensions**:
+  1. Market Beta (Systematic co-movement)
+  2. Size & Capitalization (Large vs. Small Cap divergence)
+  3. Value vs. Growth / Quality (Valuation multiples and profitability)
+  4. Momentum & Reversal (Short-term cross-sectional trend persistence)
+  5. Volatility & Liquidity / Residual Alpha (Idiosyncratic factor dynamics)
+
+### 2.4 Layer 4: Unsupervised Theme Clustering (HDBSCAN + Semantic Vectors)
+- **Objective**: Group moving assets into coherent, emerging narrative clusters rather than disjointed ticker lists.
+- **Pipeline**: Dense text embeddings of corporate disclosures, real-time catalysts, and sector definitions, combined with high-dimensional price/volume co-movement matrices, clustered via HDBSCAN (Hierarchical Density-Based Spatial Clustering of Applications with Noise).
+
+### 2.5 Layer 5: Portfolio Stance & Bayesian Tail-Risk Optimization (CVaR + Risk Parity)
+- **Objective**: Convert quantitative insights into concrete, actionable portfolio positioning and risk management parameters.
+- **Optimization**: Conditional Value-at-Risk (CVaR) minimization subject to Bayesian risk-parity constraints, dynamic volatility targeting, and asymmetric downside protection protocols.
+
+---
+
+## 3. Autonomous AI Systems Architecture
+
+- **Multi-Agent Orchestration**: Powered by LangGraph, coordinating specialized autonomous agents for data ingestion, statistical computation, signal validation, natural language synthesis, and report publishing.
+- **Agentic RAG**: Multi-stage retrieval-augmented generation utilizing Pinecone vector databases and hybrid sparse-dense indices to ground research narratives in historical regime precedents and market archives.
+- **Deterministic Guardrails**: Strict constraint checks ensuring numerical consistency, mathematical verification of factor returns, and strict avoidance of LLM hallucination in financial statistics.
+- **Autonomous Operations**: Completely automated pipeline executing pre-market calculations, data synthesis, multilingual HTML/Markdown generation, and CDN deployment daily.
+
+---
+
+## 4. Frequently Asked Questions (FAQ)
+
+### Q1: What makes K2J AI Quantitative Lab unique?
+A1: Unlike purely discretionary commentary or black-box academic models, K2J combines rigorous multi-factor statistical mechanics with production-grade autonomous agentic AI. It is built to institutional rigor by a veteran practitioner who actively trades the signals daily.
+
+### Q2: What technology stack does K2J use?
+A2: The AI architecture leverages LangGraph for multi-agent workflows, Pinecone for vector retrieval, and Python (uv, NumPy, SciPy, LightGBM, scikit-learn) for quantitative modeling, backed by deterministic guardrail engines.
+
+### Q3: How can I access the daily reports?
+A3: Daily reports are published every trading morning in both English and Simplified Chinese at `https://report.k2j.net/`. A full chronological archive with year filtering is accessible on the homepage at `https://k2j.net/#archive`.
+
+### Q4: What collaboration opportunities are available with Justin?
+A4: Justin is open to strategic advisory, technical consulting, and collaborative partnerships with hedge funds, proprietary trading firms, asset managers, and AI startups seeking proven expertise in building production agentic AI systems and quantitative finance models. Contact via email at `k2jysy@gmail.com` or LinkedIn at `https://www.linkedin.com/in/justin-k2j`.
+
+---
+
+## 5. Contact & Social Channels
+
+- **Website**: https://k2j.net/
+- **Author**: Justin
+- **Email**: k2jysy@gmail.com
+- **LinkedIn**: https://www.linkedin.com/in/justin-k2j
+- **Reports CDN**: https://report.k2j.net/

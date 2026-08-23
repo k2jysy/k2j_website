@@ -1,0 +1,36 @@
+# robots.txt for K2J AI Quantitative Lab (https://k2j.net)
+
+User-agent: *
+Allow: /
+
+# AI Crawlers & LLM Search Agents (Full Access for GEO / Generative Engine Optimization)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Cohere-ai
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+# Sitemap & LLMs Knowledge Discovery
+Sitemap: https://k2j.net/sitemap.xml
+LLMs-Txt: https://k2j.net/llms.txt

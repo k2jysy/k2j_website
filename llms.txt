@@ -1,0 +1,32 @@
+# K2J AI Quantitative Lab
+
+> K2J AI Quantitative Lab is an independent, institutional-standard daily quantitative research system for US equities. Designed, built, and operated end-to-end by Justin — an enterprise AI systems architect with 20+ years of experience and an active options/equities trader — using LangGraph multi-agent orchestration, Agentic RAG, and deterministic guardrails.
+
+## Core Quantitative Research Methodology
+
+- [Market Regime Classification](https://k2j.net/#research): Multi-state macro risk classification using GBDT ensembles to detect risk-on, risk-off, and transitional phases before factor calculation.
+- [Market Breadth Analysis](https://k2j.net/#research): Full-market cross-sectional participation metric measuring internal equity breadth beyond headline indices.
+- [5-D Orthogonal Factor Attribution](https://k2j.net/#research): Five-dimensional cross-sectional statistical attribution using robust WLS and PCA to isolate true alpha drivers from noise.
+- [Latent Theme Clustering](https://k2j.net/#research): High-dimensional mover clustering using HDBSCAN and dense semantic embeddings to identify emergent market narrative clusters.
+- [Portfolio & Tail-Risk Optimization](https://k2j.net/#research): Dynamic portfolio stance modeling constrained by CVaR (Conditional Value-at-Risk) and Bayesian Risk Parity.
+
+## AI Systems Architecture
+
+- **Agentic Orchestration**: Autonomous multi-agent pipelines orchestrated via LangGraph.
+- **Retrieval-Augmented Generation**: Agentic RAG with Pinecone vector database and hybrid dense/sparse indexing.
+- **Reliability & Guardrails**: Deterministic guardrails preventing hallucination and enforcing financial data consistency.
+- **Production Cadence**: Rebuilt and published autonomously every trading morning before market open.
+
+## Author & Background
+
+- **Author**: Justin (AI Systems Architect & Quant Trader)
+- **Experience**: 20+ years in enterprise technology architecture (Dell, Microsoft, IBM, private funds)
+- **Profile & Contact**: Open to advisory, consulting, and full-time/part-time collaboration for teams seeking dual expertise in AI engineering and quantitative markets.
+- **Email**: k2jysy@gmail.com
+- **LinkedIn**: https://www.linkedin.com/in/justin-k2j
+
+## Key Links & Resources
+
+- [Official Website](https://k2j.net/): Homepage with methodology, interactive FAQ, and report archive.
+- [Full LLM Knowledge Base](https://k2j.net/llms-full.txt): Complete detailed text representation for LLM context windows and deep retrieval.
+- [Daily Reports Archive](https://report.k2j.net/): Full repository of daily market quantitative analysis reports (Bilingual: English & Simplified Chinese).
