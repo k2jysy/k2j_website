@@ -696,8 +696,8 @@
 
     <div class="cta-row">
       <a class="cta-primary" id="report-link" href="https://report.k2j.net/20260821.en" target="_blank" rel="noopener">
-        <span data-lang="en">Read the Aug 21 report →</span>
-        <span data-lang="zh">阅读8月21日报告 →</span>
+        <span data-lang="en">Read the Aug 21 US Equities report →</span>
+        <span data-lang="zh">阅读美股市场8月21日报告 →</span>
       </a>
     </div>
   </div>
@@ -982,10 +982,10 @@
     var spanEn = reportLink.querySelector('[data-lang="en"]');
     var spanZh = reportLink.querySelector('[data-lang="zh"]');
     if (spanEn) {
-      spanEn.textContent = 'Read the ' + formatDate(latestDate, 'en', 'hero') + ' report →';
+      spanEn.textContent = 'Read the ' + formatDate(latestDate, 'en', 'hero') + ' US Equities report →';
     }
     if (spanZh) {
-      spanZh.textContent = '阅读' + formatDate(latestDate, 'zh', 'hero') + '报告 →';
+      spanZh.textContent = '阅读美股市场' + formatDate(latestDate, 'zh', 'hero') + '报告 →';
     }
   }
 
