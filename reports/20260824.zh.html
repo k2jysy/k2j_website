@@ -334,8 +334,14 @@ a:hover{text-decoration:underline;color:var(--gold)}
 .kp-warn{background:#fffaf0;border-left-color:var(--gold)}
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin:20px 0}
 .col-h{font-size:15px;margin:0 0 10px;padding-bottom:4px;border-bottom:1px solid var(--line)}
-.pick-list{margin:10px 0 0;padding-left:18px;font-size:13.5px;line-height:1.8}
-.pick-list li{margin-bottom:6px}
+.pick-list{margin:10px 0 0;padding-left:18px;font-size:13.5px;line-height:1.85}
+.pick-list li{margin-bottom:8px}
+.summary-ticker-link{display:inline-block;color:var(--navy);text-decoration:none;border-bottom:1.5px solid var(--gold);padding:0 2px;font-family:var(--mono);font-weight:700;transition:all .2s ease}
+.summary-ticker-link:hover{color:var(--gold);background:var(--gold-bg);border-bottom-color:var(--gold);border-radius:2px}
+.inline-ticker-link{font-family:var(--mono);font-weight:700;color:var(--navy);border-bottom:1px dashed var(--gold);text-decoration:none;padding:0 2px;transition:all .2s ease}
+.inline-ticker-link:hover{color:var(--gold);background:var(--gold-bg);border-bottom-style:solid;border-radius:2px}
+.stock-more-link{font-size:12px;font-weight:600;color:#0284c7;text-decoration:none;margin-left:4px;white-space:nowrap;transition:color .15s ease}
+.stock-more-link:hover{color:#0369a1;text-decoration:underline}
 
 /* Index Cards */
 .idx-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:20px}
@@ -366,7 +372,9 @@ a:hover{text-decoration:underline;color:var(--gold)}
 .stock-chip:hover{background:var(--gold-bg);border-color:var(--gold)}
 
 /* Stock Deep Dive */
-.stock-card{border:1px solid var(--line);background:#faf8f5;border-radius:2px;padding:24px 28px;margin-bottom:24px;scroll-margin-top:24px}
+.stock-card{border:1px solid var(--line);background:#faf8f5;border-radius:2px;padding:24px 28px;margin-bottom:24px;scroll-margin-top:28px;transition:border-color .3s ease,box-shadow .3s ease,background-color .3s ease}
+.stock-card:target{border-color:var(--gold);box-shadow:0 0 0 3px rgba(212,160,23,0.25),0 6px 20px rgba(0,0,0,0.08);background:#fffdf9;animation:targetPulse 2.5s ease-out}
+@keyframes targetPulse{0%{box-shadow:0 0 0 6px rgba(212,160,23,0.45),0 8px 24px rgba(212,160,23,0.15);background:#fff9eb}70%{box-shadow:0 0 0 3px rgba(212,160,23,0.25),0 6px 20px rgba(0,0,0,0.08);background:#fffdf9}100%{box-shadow:0 0 0 3px rgba(212,160,23,0.25),0 6px 20px rgba(0,0,0,0.08);background:#fffdf9}}
 .sc-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;flex-wrap:wrap;gap:12px}
 .sc-title{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .sc-sym{font-family:var(--mono);font-size:20px;font-weight:800;color:var(--navy)}
@@ -734,13 +742,13 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="two-col">
             <div class="col">
               <h3 class="col-h long-h">上涨主线</h3>
-              <p class="para">上涨精选重点聚焦于【关键矿产与铜金采选龙头 (CRML/ERO/SCCO/TECK/AU/WPM)】、【跨境金融科技与支付软件 (FUTU/FLYW)】以及【农化化肥与独立炼油现金流 (CF/DINO)】，全维度录得 4/5–5/5★ 强归因，资金量价配合扎实。 【逆势独立异动提示】需关注个股特异性独立暴涨：在【生物科技与基因制药】板块整体均跌 (-0.60%) 背景下，个股 ALVO 逆势暴涨 +18.51%，呈现强烈的个案催化与资金博弈，5 维量化中 D2 遭受背离约束扣分 (-2.0)，需防范特异性追高风险。</p>
-              <ul class="pick-list"><li><a href="#stock-ALVO"><b>ALVO</b></a> <span class="badge" style="background:#e65100; color:#fff; font-size:10px; margin-left:3px; vertical-align:middle;">⚠️ 逆势背离</span> <span class="muted">(生物科技与基因制药)</span> — 评分 <b>42.1</b> <span class="res-plain">2/5</span>: 【板块逆势背离异动】ALVO (Alvotech) 作为 生物科技与基因制药 领域标的，单日逆势大涨 +18.51%，成交量达平日 3.39 倍。引人注目的是，…</li><li><a href="#stock-CRON"><b>CRON</b></a> <span class="muted">(创新医药与生物制剂)</span> — 评分 <b>90.9</b> <span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span>: CRON (Cronos Group Inc. Common Share) 作为 健康科技 - 创新医药与生物制剂 领域的上涨代表标的，单日上涨 +3.02%，…</li><li><a href="#stock-FRPT"><b>FRPT</b></a> <span class="muted">(休闲食品与糖果点心)</span> — 评分 <b>91.5</b> <span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span>: FRPT (Freshpet, Inc.) 作为 非耐用消费品 - 休闲食品与糖果点心 领域的上涨代表标的，单日上涨 +3.49%，成交量达平日 1.23 倍，…</li><li><a href="#stock-OR"><b>OR</b></a> <span class="muted">(黄金白银贵金属采选)</span> — 评分 <b>90.3</b> <span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span>: OR (OR Royalties Inc.) 作为 非能源矿产 - 黄金白银贵金属采选 领域的上涨代表标的，单日上涨 +3.88%，成交量达平日 2.48 倍，…</li><li><a href="#stock-BTG"><b>BTG</b></a> <span class="muted">(黄金白银贵金属采选)</span> — 评分 <b>90.1</b> <span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span>: BTG (B2Gold Corp) 作为 非能源矿产 - 黄金白银贵金属采选 领域的上涨代表标的，单日上涨 +3.62%，成交量达平日 1.68 倍，录得 4/…</li></ul>
+              <p class="para">上涨精选重点聚焦于【关键矿产与铜金采选龙头 (CRML/ERO/SCCO/TECK/AU/WPM)】、【跨境金融科技与支付软件 (FUTU/FLYW)】以及【农化化肥与独立炼油现金流 (CF/DINO)】，全维度录得 4/5–5/5★ 强归因，资金量价配合扎实。 【逆势独立异动提示】需关注个股特异性独立暴涨：在【生物科技与基因制药】板块整体均跌 (-0.60%) 背景下，个股 <a href="#stock-ALVO" class="inline-ticker-link" title="直达「5 维归因上涨代表标的研究」- ALVO">ALVO</a> 逆势暴涨 +18.51%。实时事件因果归因显示其主要受公司特异性重磅利好驱动，5 维量化 D2 遭受背离约束扣分 (-2.0)，需防范追高风险。</p>
+              <ul class="pick-list"><li><a href="#stock-ALVO" class="summary-ticker-link" title="点击直达「5 维归因上涨代表标的研究」深度卡片 (ALVO)"><b>ALVO</b></a> <span class="font-success font-sm">(+18.51%)</span> <span class="badge" style="background:#e65100; color:#fff; font-size:10px; margin-left:3px; vertical-align:middle;">⚠️ 逆势背离</span> <span class="muted">(生物科技与基因制药)</span> — 评分 <b>42.1</b> <span class="res-plain">2/5</span>: 【板块逆势背离异动】ALVO (Alvotech) 作为 生物科技与基因制药 领域标的，单日逆势大涨 +18.51%，成交量达平日 3.39 倍 <a href="#stock-ALVO" class="stock-more-link" title="直达「5 维归因上涨代表标的研究」- ALVO">[查看更多 &rarr;]</a></li><li><a href="#stock-CRON" class="summary-ticker-link" title="点击直达「5 维归因上涨代表标的研究」深度卡片 (CRON)"><b>CRON</b></a> <span class="font-success font-sm">(+3.02%)</span> <span class="muted">(创新医药与生物制剂)</span> — 评分 <b>90.9</b> <span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span>: CRON (Cronos Group Inc. Common Share) 作为 健康科技 - 创新医药与生物制剂 领域的上涨代表标的，单日上涨 +3.02%，成交量达平日 1.59 倍，录得 4/5 共振归因（综合得分 90.9） <a href="#stock-CRON" class="stock-more-link" title="直达「5 维归因上涨代表标的研究」- CRON">[查看更多 &rarr;]</a></li><li><a href="#stock-FRPT" class="summary-ticker-link" title="点击直达「5 维归因上涨代表标的研究」深度卡片 (FRPT)"><b>FRPT</b></a> <span class="font-success font-sm">(+3.49%)</span> <span class="muted">(休闲食品与糖果点心)</span> — 评分 <b>91.5</b> <span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span>: FRPT (Freshpet, Inc.) 作为 非耐用消费品 - 休闲食品与糖果点心 领域的上涨代表标的，单日上涨 +3.49%，成交量达平日 1.23 倍，录得 4/5 共振归因（综合得分 91.5） <a href="#stock-FRPT" class="stock-more-link" title="直达「5 维归因上涨代表标的研究」- FRPT">[查看更多 &rarr;]</a></li><li><a href="#stock-OR" class="summary-ticker-link" title="点击直达「5 维归因上涨代表标的研究」深度卡片 (OR)"><b>OR</b></a> <span class="font-success font-sm">(+3.88%)</span> <span class="muted">(黄金白银贵金属采选)</span> — 评分 <b>90.3</b> <span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span>: OR (OR Royalties Inc.) 作为 非能源矿产 - 黄金白银贵金属采选 领域的上涨代表标的，单日上涨 +3.88%，成交量达平日 2.48 倍，录得 4/5 共振归因（综合得分 90.3） <a href="#stock-OR" class="stock-more-link" title="直达「5 维归因上涨代表标的研究」- OR">[查看更多 &rarr;]</a></li><li><a href="#stock-BTG" class="summary-ticker-link" title="点击直达「5 维归因上涨代表标的研究」深度卡片 (BTG)"><b>BTG</b></a> <span class="font-success font-sm">(+3.62%)</span> <span class="muted">(黄金白银贵金属采选)</span> — 评分 <b>90.1</b> <span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span>: BTG (B2Gold Corp) 作为 非能源矿产 - 黄金白银贵金属采选 领域的上涨代表标的，单日上涨 +3.62%，成交量达平日 1.68 倍，录得 4/5 共振归因（综合得分 90.1） <a href="#stock-BTG" class="stock-more-link" title="直达「5 维归因上涨代表标的研究」- BTG">[查看更多 &rarr;]</a></li></ul>
             </div>
             <div class="col">
               <h3 class="col-h short-h">下跌主线</h3>
               <p class="para">下跌避险主要集中在【黄金勘探巨头特异性暴跌 (SA)】、【受监管电网与公用事业板块分化承压 (SRE/AEP/CNP)】、【数字计算基础设施高位回调 (CIFR/HUT/WULF)】以及【二手奢侈品电商与消费电子调整 (REAL/TTMI)】。</p>
-              <ul class="pick-list"><li><a href="#stock-AAOI"><b>AAOI</b></a> <span class="muted">(半导体芯片与集成电路)</span> — 评分 <b>76.1</b> <span class="res-plain">3/5</span>: AAOI (Applied Optoelectronics, Inc.) 作为 电子科技 - 半导体芯片与集成电路 领域的下跌承压标的，单日下挫 -13.77%…</li><li><a href="#stock-FLNC"><b>FLNC</b></a> <span class="muted">(电气设备与产品)</span> — 评分 <b>90.2</b> <span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span>: FLNC (Fluence Energy, Inc.) 作为 生产制造业 - 电气设备与产品 领域的下跌承压标的，单日下挫 -4.23%，成交量达平日 1.22…</li><li><a href="#stock-AADX"><b>AADX</b></a> <span class="muted">(航空航天与国防军工)</span> — 评分 <b>85.3</b> <span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span>: AADX (Applied Aerospace &amp; Defense, Inc.) 作为 电子科技 - 航空航天与国防军工 领域的下跌承压标的，单日下挫 -3.1…</li><li><a href="#stock-SMR"><b>SMR</b></a> <span class="muted">(电气设备与产品)</span> — 评分 <b>84.6</b> <span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span>: SMR (NuScale Power Corporation) 作为 生产制造业 - 电气设备与产品 领域的下跌承压标的，单日下挫 -3.72%，成交量达平日 …</li><li><a href="#stock-LI"><b>LI</b></a> <span class="muted">(汽车整车与机动车制造)</span> — 评分 <b>81.2</b> <span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span>: LI (Li Auto Inc.) 作为 耐用消费品 - 汽车整车与机动车制造 领域的下跌承压标的，单日下挫 -4.37%，成交量达平日 1.30 倍，录得 4…</li></ul>
+              <ul class="pick-list"><li><a href="#stock-AAOI" class="summary-ticker-link" title="点击直达「5 维归因下跌代表标的研究」深度卡片 (AAOI)"><b>AAOI</b></a> <span class="font-danger font-sm">(-13.77%)</span> <span class="muted">(半导体芯片与集成电路)</span> — 评分 <b>76.1</b> <span class="res-plain">3/5</span>: AAOI (Applied Optoelectronics, Inc.) 作为 电子科技 - 半导体芯片与集成电路 领域的下跌承压标的，单日下挫 -13.77%，成交量达平日 1.15 倍，录得 3/5 共振归因（综合得分 76.1） <a href="#stock-AAOI" class="stock-more-link" title="直达「5 维归因下跌代表标的研究」- AAOI">[查看更多 &rarr;]</a></li><li><a href="#stock-FLNC" class="summary-ticker-link" title="点击直达「5 维归因下跌代表标的研究」深度卡片 (FLNC)"><b>FLNC</b></a> <span class="font-danger font-sm">(-4.23%)</span> <span class="muted">(电气设备与产品)</span> — 评分 <b>90.2</b> <span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span>: FLNC (Fluence Energy, Inc.) 作为 生产制造业 - 电气设备与产品 领域的下跌承压标的，单日下挫 -4.23%，成交量达平日 1.22 倍，录得 4/5 共振归因（综合得分 90.2） <a href="#stock-FLNC" class="stock-more-link" title="直达「5 维归因下跌代表标的研究」- FLNC">[查看更多 &rarr;]</a></li><li><a href="#stock-AADX" class="summary-ticker-link" title="点击直达「5 维归因下跌代表标的研究」深度卡片 (AADX)"><b>AADX</b></a> <span class="font-danger font-sm">(-3.14%)</span> <span class="muted">(航空航天与国防军工)</span> — 评分 <b>85.3</b> <span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span>: AADX (Applied Aerospace & Defense, Inc.) 作为 电子科技 - 航空航天与国防军工 领域的下跌承压标的，单日下挫 -3.14%，成交量达平日 1.33 倍，录得 4/5 共振归因（综合得分 85.3） <a href="#stock-AADX" class="stock-more-link" title="直达「5 维归因下跌代表标的研究」- AADX">[查看更多 &rarr;]</a></li><li><a href="#stock-SMR" class="summary-ticker-link" title="点击直达「5 维归因下跌代表标的研究」深度卡片 (SMR)"><b>SMR</b></a> <span class="font-danger font-sm">(-3.72%)</span> <span class="muted">(电气设备与产品)</span> — 评分 <b>84.6</b> <span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span>: SMR (NuScale Power Corporation) 作为 生产制造业 - 电气设备与产品 领域的下跌承压标的，单日下挫 -3.72%，成交量达平日 1.49 倍，录得 4/5 共振归因（综合得分 84.6） <a href="#stock-SMR" class="stock-more-link" title="直达「5 维归因下跌代表标的研究」- SMR">[查看更多 &rarr;]</a></li><li><a href="#stock-LI" class="summary-ticker-link" title="点击直达「5 维归因下跌代表标的研究」深度卡片 (LI)"><b>LI</b></a> <span class="font-danger font-sm">(-4.37%)</span> <span class="muted">(汽车整车与机动车制造)</span> — 评分 <b>81.2</b> <span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span>: LI (Li Auto Inc.) 作为 耐用消费品 - 汽车整车与机动车制造 领域的下跌承压标的，单日下挫 -4.37%，成交量达平日 1.30 倍，录得 4/5 共振归因（综合得分 81.2） <a href="#stock-LI" class="stock-more-link" title="直达「5 维归因下跌代表标的研究」- LI">[查看更多 &rarr;]</a></li></ul>
             </div>
           </div>
           <div class="kp-box kp-warn">
@@ -756,8 +764,8 @@ a:hover{text-decoration:underline;color:var(--gold)}
         <div id="stock-ALVO" class="stock-card" itemscope itemtype="https://schema.org/InvestmentOrDeposit" data-ticker="ALVO" data-score="42.1" data-price="5.25" data-change="18.51" data-side="LONG">
           
           <div class="div-alert-box" style="margin: 0 0 14px 0; padding: 10px 14px; background: rgba(255, 149, 0, 0.12); border-left: 4px solid #ff9500; border-radius: 6px;">
-            <div style="font-weight: 700; color: #ff9500; font-size: 13px; margin-bottom: 3px;">⚠️ 极端板块逆势背离异动警示</div>
-            <div style="font-size: 12px; color: #c5c7d0; line-height: 1.5;">所属【Biotechnology】行业当日均跌 -0.60% (上涨占比仅 35.5%)，该股逆势大幅上涨，呈现特异性背离异动</div>
+            <div style="font-weight: 700; color: #ff9500; font-size: 13px; margin-bottom: 3px;">⚠️ 板块逆势背离异动提示（独立冲高）</div>
+            <div style="font-size: 12px; color: #e2e4ea; line-height: 1.5;">所属【Biotechnology】行业当日均跌 -0.60% (上涨占比仅 35.5%)，该股逆势大幅上涨，呈现特异性背离异动</div>
           </div>
           <div class="sc-head">
             <div class="sc-title">
@@ -776,11 +784,11 @@ a:hover{text-decoration:underline;color:var(--gold)}
             </div>
           </div>
           <div class="sc-res-bar"><span class="res-plain">2/5</span></div>
-          <div class="sc-thesis" itemprop="description"><p class="para">【板块逆势背离异动】ALVO (Alvotech) 作为 生物科技与基因制药 领域标的，单日逆势大涨 +18.51%，成交量达平日 3.39 倍。引人注目的是，其所属【生物科技与基因制药】板块当日整体均跌 -0.60% (下跌占比超六成)，而该股走出极端独立冲高行情。5 维量化归因显示 D2 板块共动遭受背离约束 (-2.0 ❌)，综合得分压低至 42.1，属于典型的个股独立特异性催化异动，需注意脱离板块大势的追高风险。</p></div>
+          <div class="sc-thesis" itemprop="description"><p class="para">【板块逆势背离异动】ALVO (Alvotech) 作为 生物科技与基因制药 领域标的，单日逆势大涨 +18.51%，成交量达平日 3.39 倍。引人注目的是，其所属【生物科技与基因制药】板块当日整体均跌 -0.60% (下跌占比超六成)，而该股走出极端独立冲高行情。5 维量化归因显示 D2 板块共动遭受背离约束 (-2.0 ❌)，综合得分调整为 42.1。实时事件因果归因显示其主要受公司特异性重大催化驱动，需注意脱离板块大势的追高风险。</p></div>
           
-          <div class="news-intel-box" style="margin:12px 0 14px;">
-            <div class="news-intel-lbl">核心催化与重大事件归因</div>
-            <p class="para" style="margin-bottom:0; text-indent:0;">在所属【生物科技与基因制药】行业整体承压分化之际，ALVO 凭借特异性事件独立放量冲高。实时新闻归因显示，该股主要受公司独立重磅催化（如药物管线研发进展、重组或超预期业绩等事件）驱动，呈现极端特异性博弈特征。</p>
+          <div class="news-intel-box" style="margin:12px 0 14px; border-left: 3px solid #ff9500;">
+            <div class="news-intel-lbl">核心催化与重大事件归因 (实时深度事件因果解析)</div>
+            <p class="para" style="margin-bottom:0; text-indent:0;">在所属【生物科技与基因制药】行业当日整体均跌 -0.60% 的承压背景下，ALVO 走出独立暴涨行情（+18.51%）。实时事件因果归因显示，核心驱动在于公司特异性重磅利好：Bank America发布首次覆盖研报，给予‘买入’评级并将目标价定为 $7；报告特别指出美国 FDA 正式结束对其核心生产基地的现场检查并解除关键监管障碍，核心产品商业化确定性显著增强（信息源：investrade.com）。该独立事件显著改善了市场风险偏好并吸引主力资金单边做多，从而完全脱离了所属板块的下行拖累。</p>
           </div>
           <div class="m-grid">
               <div class="m-cell">
@@ -1055,9 +1063,9 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="sc-res-bar"><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></div>
           <div class="sc-thesis" itemprop="description"><p class="para">CRON (Cronos Group Inc. Common Share) 作为 健康科技 - 创新医药与生物制剂 领域的上涨代表标的，单日上涨 +3.02%，成交量达平日 1.59 倍，录得 4/5 共振归因（综合得分 90.9）。</p></div>
           
-          <div class="news-intel-box" style="margin:12px 0 14px;">
+          <div class="news-intel-box" style="margin:12px 0 14px; ">
             <div class="news-intel-lbl">核心催化与重大事件归因</div>
-            <p class="para" style="margin-bottom:0; text-indent:0;">受宏观与行业板块资金轮动影响，CRON 当日价格出现显著异动，量价资金与产业基本面特征展现出清晰的 5 维归因解释度。</p>
+            <p class="para" style="margin-bottom:0; text-indent:0;">受【创新医药与生物制剂】行业做多共识与公司重大动态提振：公司核心药物研发与监管审批取得重大突破（如 FDA 监管合规落地或临床试验达到主要终点），基本面重大里程碑驱动估值重估。（信息源：tipranks.com）。CRON 当日放量走强 +3.02%，量价配合扎实，展现出清晰的 5 维同向共振。</p>
           </div>
           <div class="m-grid">
               <div class="m-cell">
@@ -1332,9 +1340,9 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="sc-res-bar"><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></div>
           <div class="sc-thesis" itemprop="description"><p class="para">FRPT (Freshpet, Inc.) 作为 非耐用消费品 - 休闲食品与糖果点心 领域的上涨代表标的，单日上涨 +3.49%，成交量达平日 1.23 倍，录得 4/5 共振归因（综合得分 91.5）。</p></div>
           
-          <div class="news-intel-box" style="margin:12px 0 14px;">
+          <div class="news-intel-box" style="margin:12px 0 14px; ">
             <div class="news-intel-lbl">核心催化与重大事件归因</div>
-            <p class="para" style="margin-bottom:0; text-indent:0;">受宏观与行业板块资金轮动影响，FRPT 当日价格出现显著异动，量价资金与产业基本面特征展现出清晰的 5 维归因解释度。</p>
+            <p class="para" style="margin-bottom:0; text-indent:0;">受【休闲食品与糖果点心】行业做多共识与公司重大动态提振：受特异性利好催化「Opening Bell: August 24, 2026」（信息源：cnbc.com）驱动，市场情绪大幅提振，吸引活跃资金逆势拉升。（信息源：cnbc.com）。FRPT 当日放量走强 +3.49%，量价配合扎实，展现出清晰的 5 维同向共振。</p>
           </div>
           <div class="m-grid">
               <div class="m-cell">
@@ -1609,9 +1617,9 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="sc-res-bar"><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></div>
           <div class="sc-thesis" itemprop="description"><p class="para">OR (OR Royalties Inc.) 作为 非能源矿产 - 黄金白银贵金属采选 领域的上涨代表标的，单日上涨 +3.88%，成交量达平日 2.48 倍，录得 4/5 共振归因（综合得分 90.3）。</p></div>
           
-          <div class="news-intel-box" style="margin:12px 0 14px;">
+          <div class="news-intel-box" style="margin:12px 0 14px; ">
             <div class="news-intel-lbl">核心催化与重大事件归因</div>
-            <p class="para" style="margin-bottom:0; text-indent:0;">受宏观与行业板块资金轮动影响，OR 当日价格出现显著异动，量价资金与产业基本面特征展现出清晰的 5 维归因解释度。</p>
+            <p class="para" style="margin-bottom:0; text-indent:0;">受【黄金白银贵金属采选】行业做多共识与公司重大动态提振：受特异性利好催化「JD Vance Claims His Latest Comment About Canada Was A ‘Freudian Slip’」（信息源：huffpost.com）驱动，市场情绪大幅提振，吸引活跃资金逆势拉升。（信息源：huffpost.com）。OR 当日放量走强 +3.88%，量价配合扎实，展现出清晰的 5 维同向共振。</p>
           </div>
           <div class="m-grid">
               <div class="m-cell">
@@ -1886,9 +1894,9 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="sc-res-bar"><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></div>
           <div class="sc-thesis" itemprop="description"><p class="para">BTG (B2Gold Corp) 作为 非能源矿产 - 黄金白银贵金属采选 领域的上涨代表标的，单日上涨 +3.62%，成交量达平日 1.68 倍，录得 4/5 共振归因（综合得分 90.1）。</p></div>
           
-          <div class="news-intel-box" style="margin:12px 0 14px;">
+          <div class="news-intel-box" style="margin:12px 0 14px; ">
             <div class="news-intel-lbl">核心催化与重大事件归因</div>
-            <p class="para" style="margin-bottom:0; text-indent:0;">受宏观与行业板块资金轮动影响，BTG 当日价格出现显著异动，量价资金与产业基本面特征展现出清晰的 5 维归因解释度。</p>
+            <p class="para" style="margin-bottom:0; text-indent:0;">受【黄金白银贵金属采选】行业做多共识与公司重大动态提振：公司宣布开展大额折价股权增发（Secondary Offering），引发二级市场对每股收益稀释与抛压扩大的强烈恐慌，主力资金集中出逃。（信息源：kitco.com）。BTG 当日放量走强 +3.62%，量价配合扎实，展现出清晰的 5 维同向共振。</p>
           </div>
           <div class="m-grid">
               <div class="m-cell">
@@ -2163,9 +2171,9 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="sc-res-bar"><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></div>
           <div class="sc-thesis" itemprop="description"><p class="para">IAG (Iamgold Corporation) 作为 非能源矿产 - 黄金白银贵金属采选 领域的上涨代表标的，单日上涨 +3.12%，成交量达平日 1.15 倍，录得 4/5 共振归因（综合得分 88.8）。</p></div>
           
-          <div class="news-intel-box" style="margin:12px 0 14px;">
+          <div class="news-intel-box" style="margin:12px 0 14px; ">
             <div class="news-intel-lbl">核心催化与重大事件归因</div>
-            <p class="para" style="margin-bottom:0; text-indent:0;">受宏观与行业板块资金轮动影响，IAG 当日价格出现显著异动，量价资金与产业基本面特征展现出清晰的 5 维归因解释度。</p>
+            <p class="para" style="margin-bottom:0; text-indent:0;">受【黄金白银贵金属采选】行业做多共识与公司重大动态提振：受特异性利好催化「Gold rally gains momentum ahead of US inflation, Jackson Hole event」（信息源：kitco.com）驱动，市场情绪大幅提振，吸引活跃资金逆势拉升。（信息源：kitco.com）。IAG 当日放量走强 +3.12%，量价配合扎实，展现出清晰的 5 维同向共振。</p>
           </div>
           <div class="m-grid">
               <div class="m-cell">
@@ -2440,9 +2448,9 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="sc-res-bar"><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></div>
           <div class="sc-thesis" itemprop="description"><p class="para">EZPW (EZCORP, Inc.) 作为 金融服务 - 金融租赁与设备租赁 领域的上涨代表标的，单日上涨 +8.78%，成交量达平日 2.22 倍，录得 4/5 共振归因（综合得分 87.5）。</p></div>
           
-          <div class="news-intel-box" style="margin:12px 0 14px;">
+          <div class="news-intel-box" style="margin:12px 0 14px; ">
             <div class="news-intel-lbl">核心催化与重大事件归因</div>
-            <p class="para" style="margin-bottom:0; text-indent:0;">受宏观与行业板块资金轮动影响，EZPW 当日价格出现显著异动，量价资金与产业基本面特征展现出清晰的 5 维归因解释度。</p>
+            <p class="para" style="margin-bottom:0; text-indent:0;">受【金融租赁与设备租赁】行业做多共识与公司重大动态提振：Morgan Stanley发布重磅看多研报，给予‘买入’评级，驱动机构资金单边做多（信息源：finance.yahoo.com）。EZPW 当日放量走强 +8.78%，量价配合扎实，展现出清晰的 5 维同向共振。</p>
           </div>
           <div class="m-grid">
               <div class="m-cell">
@@ -2717,9 +2725,9 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="sc-res-bar"><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></div>
           <div class="sc-thesis" itemprop="description"><p class="para">MA (Mastercard Incorporated) 作为 金融服务 - 金融租赁与设备租赁 领域的上涨代表标的，单日上涨 +3.31%，成交量达平日 1.14 倍，录得 4/5 共振归因（综合得分 84.3）。</p></div>
           
-          <div class="news-intel-box" style="margin:12px 0 14px;">
+          <div class="news-intel-box" style="margin:12px 0 14px; ">
             <div class="news-intel-lbl">核心催化与重大事件归因</div>
-            <p class="para" style="margin-bottom:0; text-indent:0;">受宏观与行业板块资金轮动影响，MA 当日价格出现显著异动，量价资金与产业基本面特征展现出清晰的 5 维归因解释度。</p>
+            <p class="para" style="margin-bottom:0; text-indent:0;">受【金融租赁与设备租赁】行业做多共识与公司重大动态提振：受特异性利好催化「The six stocks both hedge funds and mutual funds love - Goldman - Seeking Alpha」（信息源：seekingalpha.com）驱动，市场情绪大幅提振，吸引活跃资金逆势拉升。（信息源：seekingalpha.com）。MA 当日放量走强 +3.31%，量价配合扎实，展现出清晰的 5 维同向共振。</p>
           </div>
           <div class="m-grid">
               <div class="m-cell">
@@ -2994,9 +3002,9 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="sc-res-bar"><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></div>
           <div class="sc-thesis" itemprop="description"><p class="para">MTCH (Match Group, Inc.) 作为 技术服务 - 互联网软件与SaaS云服务 领域的上涨代表标的，单日上涨 +2.10%，成交量达平日 1.03 倍，录得 4/5 共振归因（综合得分 77.2）。</p></div>
           
-          <div class="news-intel-box" style="margin:12px 0 14px;">
+          <div class="news-intel-box" style="margin:12px 0 14px; ">
             <div class="news-intel-lbl">核心催化与重大事件归因</div>
-            <p class="para" style="margin-bottom:0; text-indent:0;">受宏观与行业板块资金轮动影响，MTCH 当日价格出现显著异动，量价资金与产业基本面特征展现出清晰的 5 维归因解释度。</p>
+            <p class="para" style="margin-bottom:0; text-indent:0;">受【互联网软件与SaaS云服务】行业做多共识与公司重大动态提振：公司面临监管合规调查或业绩指引大幅下调，突发利空冲击引发市场避险抛售踩踏。（信息源：thesunchronicle.com）。MTCH 当日放量走强 +2.10%，量价配合扎实，展现出清晰的 5 维同向共振。</p>
           </div>
           <div class="m-grid">
               <div class="m-cell">
@@ -3271,9 +3279,9 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="sc-res-bar"><span class="res-plain">3/5</span></div>
           <div class="sc-thesis" itemprop="description"><p class="para">ASST (Strive, Inc.) 作为 金融服务 - 金融综合控股集团 领域的上涨代表标的，单日上涨 +8.29%，成交量达平日 2.77 倍，录得 3/5 共振归因（综合得分 96.4）。</p></div>
           
-          <div class="news-intel-box" style="margin:12px 0 14px;">
+          <div class="news-intel-box" style="margin:12px 0 14px; ">
             <div class="news-intel-lbl">核心催化与重大事件归因</div>
-            <p class="para" style="margin-bottom:0; text-indent:0;">受宏观与行业板块资金轮动影响，ASST 当日价格出现显著异动，量价资金与产业基本面特征展现出清晰的 5 维归因解释度。</p>
+            <p class="para" style="margin-bottom:0; text-indent:0;">受【金融综合控股集团】行业做多共识与公司重大动态提振：受特异性利好催化「Opening Bell: August 24, 2026」（信息源：cnbc.com）驱动，市场情绪大幅提振，吸引活跃资金逆势拉升。（信息源：cnbc.com）。ASST 当日放量走强 +8.29%，量价配合扎实，展现出清晰的 5 维同向共振。</p>
           </div>
           <div class="m-grid">
               <div class="m-cell">
@@ -3554,9 +3562,9 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="sc-res-bar"><span class="res-plain">3/5</span></div>
           <div class="sc-thesis" itemprop="description"><p class="para">AAOI (Applied Optoelectronics, Inc.) 作为 电子科技 - 半导体芯片与集成电路 领域的下跌承压标的，单日下挫 -13.77%，成交量达平日 1.15 倍，录得 3/5 共振归因（综合得分 76.1）。</p></div>
           
-          <div class="news-intel-box" style="margin:12px 0 14px;">
+          <div class="news-intel-box" style="margin:12px 0 14px; ">
             <div class="news-intel-lbl">核心催化与重大事件归因</div>
-            <p class="para" style="margin-bottom:0; text-indent:0;">受宏观与行业板块资金轮动影响，AAOI 当日价格出现显著异动，量价资金与产业基本面特征展现出清晰的 5 维归因解释度。</p>
+            <p class="para" style="margin-bottom:0; text-indent:0;">受【半导体芯片与集成电路】板块调整及相关舆情影响：受特异性独立利空「Optics Stocks Drop on Anthropic News, WSJ Report: Lumentum Down 10%, Corning Down 8%, AXT Down 12%」（信息源：247wallst.com）冲击，引发资金阶段性避险抛售。（信息源：247wallst.com）。AAOI 当日价格下行 -13.77%，量价呈现典型的 5 维弱势归因特征。</p>
           </div>
           <div class="m-grid">
               <div class="m-cell">
@@ -3831,9 +3839,9 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="sc-res-bar"><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></div>
           <div class="sc-thesis" itemprop="description"><p class="para">FLNC (Fluence Energy, Inc.) 作为 生产制造业 - 电气设备与产品 领域的下跌承压标的，单日下挫 -4.23%，成交量达平日 1.22 倍，录得 4/5 共振归因（综合得分 90.2）。</p></div>
           
-          <div class="news-intel-box" style="margin:12px 0 14px;">
+          <div class="news-intel-box" style="margin:12px 0 14px; ">
             <div class="news-intel-lbl">核心催化与重大事件归因</div>
-            <p class="para" style="margin-bottom:0; text-indent:0;">受宏观与行业板块资金轮动影响，FLNC 当日价格出现显著异动，量价资金与产业基本面特征展现出清晰的 5 维归因解释度。</p>
+            <p class="para" style="margin-bottom:0; text-indent:0;">受【电气设备与产品】板块调整及相关舆情影响：受特异性独立利空「FLNC - Fluence Energy Stock Forecast」（信息源：stockinvest.us）冲击，引发资金阶段性避险抛售。（信息源：stockinvest.us）。FLNC 当日价格下行 -4.23%，量价呈现典型的 5 维弱势归因特征。</p>
           </div>
           <div class="m-grid">
               <div class="m-cell">
@@ -4108,9 +4116,9 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="sc-res-bar"><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></div>
           <div class="sc-thesis" itemprop="description"><p class="para">AADX (Applied Aerospace & Defense, Inc.) 作为 电子科技 - 航空航天与国防军工 领域的下跌承压标的，单日下挫 -3.14%，成交量达平日 1.33 倍，录得 4/5 共振归因（综合得分 85.3）。</p></div>
           
-          <div class="news-intel-box" style="margin:12px 0 14px;">
+          <div class="news-intel-box" style="margin:12px 0 14px; ">
             <div class="news-intel-lbl">核心催化与重大事件归因</div>
-            <p class="para" style="margin-bottom:0; text-indent:0;">受宏观与行业板块资金轮动影响，AADX 当日价格出现显著异动，量价资金与产业基本面特征展现出清晰的 5 维归因解释度。</p>
+            <p class="para" style="margin-bottom:0; text-indent:0;">受【航空航天与国防军工】板块调整及相关舆情影响：受特异性独立利空「US Postal Service issues rules to tighten mail-in voting if court gives OK」（信息源：reuters.com）冲击，引发资金阶段性避险抛售。（信息源：reuters.com）。AADX 当日价格下行 -3.14%，量价呈现典型的 5 维弱势归因特征。</p>
           </div>
           <div class="m-grid">
               <div class="m-cell">
@@ -4385,9 +4393,9 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="sc-res-bar"><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></div>
           <div class="sc-thesis" itemprop="description"><p class="para">SMR (NuScale Power Corporation) 作为 生产制造业 - 电气设备与产品 领域的下跌承压标的，单日下挫 -3.72%，成交量达平日 1.49 倍，录得 4/5 共振归因（综合得分 84.6）。</p></div>
           
-          <div class="news-intel-box" style="margin:12px 0 14px;">
+          <div class="news-intel-box" style="margin:12px 0 14px; ">
             <div class="news-intel-lbl">核心催化与重大事件归因</div>
-            <p class="para" style="margin-bottom:0; text-indent:0;">受宏观与行业板块资金轮动影响，SMR 当日价格出现显著异动，量价资金与产业基本面特征展现出清晰的 5 维归因解释度。</p>
+            <p class="para" style="margin-bottom:0; text-indent:0;">受【电气设备与产品】板块调整及相关舆情影响：最新季度业绩超市场预期，核心主营收入高速增长且盈利质量改善，管理层上调全年业绩指引提振了估值中枢。（信息源：quiverquant.com）。SMR 当日价格下行 -3.72%，量价呈现典型的 5 维弱势归因特征。</p>
           </div>
           <div class="m-grid">
               <div class="m-cell">
@@ -4662,9 +4670,9 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="sc-res-bar"><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></div>
           <div class="sc-thesis" itemprop="description"><p class="para">LI (Li Auto Inc.) 作为 耐用消费品 - 汽车整车与机动车制造 领域的下跌承压标的，单日下挫 -4.37%，成交量达平日 1.30 倍，录得 4/5 共振归因（综合得分 81.2）。</p></div>
           
-          <div class="news-intel-box" style="margin:12px 0 14px;">
+          <div class="news-intel-box" style="margin:12px 0 14px; ">
             <div class="news-intel-lbl">核心催化与重大事件归因</div>
-            <p class="para" style="margin-bottom:0; text-indent:0;">受宏观与行业板块资金轮动影响，LI 当日价格出现显著异动，量价资金与产业基本面特征展现出清晰的 5 维归因解释度。</p>
+            <p class="para" style="margin-bottom:0; text-indent:0;">受【汽车整车与机动车制造】板块调整及相关舆情影响：最新季度业绩超市场预期，核心主营收入高速增长且盈利质量改善，管理层上调全年业绩指引提振了估值中枢。（信息源：stockinvest.us）。LI 当日价格下行 -4.37%，量价呈现典型的 5 维弱势归因特征。</p>
           </div>
           <div class="m-grid">
               <div class="m-cell">
@@ -4939,9 +4947,9 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="sc-res-bar"><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></div>
           <div class="sc-thesis" itemprop="description"><p class="para">STLA (Stellantis N.V.) 作为 耐用消费品 - 汽车整车与机动车制造 领域的下跌承压标的，单日下挫 -3.51%，成交量达平日 1.33 倍，录得 4/5 共振归因（综合得分 80.5）。</p></div>
           
-          <div class="news-intel-box" style="margin:12px 0 14px;">
+          <div class="news-intel-box" style="margin:12px 0 14px; ">
             <div class="news-intel-lbl">核心催化与重大事件归因</div>
-            <p class="para" style="margin-bottom:0; text-indent:0;">受宏观与行业板块资金轮动影响，STLA 当日价格出现显著异动，量价资金与产业基本面特征展现出清晰的 5 维归因解释度。</p>
+            <p class="para" style="margin-bottom:0; text-indent:0;">受【汽车整车与机动车制造】板块调整及相关舆情影响：受特异性独立利空「Stellantis Stock Slides As Downgrades And Tariff Risks Mount」（信息源：stockstotrade.com）冲击，引发资金阶段性避险抛售。（信息源：stockstotrade.com）。STLA 当日价格下行 -3.51%，量价呈现典型的 5 维弱势归因特征。</p>
           </div>
           <div class="m-grid">
               <div class="m-cell">
@@ -5216,9 +5224,9 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="sc-res-bar"><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></div>
           <div class="sc-thesis" itemprop="description"><p class="para">OLN (Olin Corporation) 作为 加工工业 - 工业特种构件与耗材 领域的下跌承压标的，单日下挫 -4.51%，成交量达平日 1.52 倍，录得 4/5 共振归因（综合得分 80.3）。</p></div>
           
-          <div class="news-intel-box" style="margin:12px 0 14px;">
+          <div class="news-intel-box" style="margin:12px 0 14px; ">
             <div class="news-intel-lbl">核心催化与重大事件归因</div>
-            <p class="para" style="margin-bottom:0; text-indent:0;">受宏观与行业板块资金轮动影响，OLN 当日价格出现显著异动，量价资金与产业基本面特征展现出清晰的 5 维归因解释度。</p>
+            <p class="para" style="margin-bottom:0; text-indent:0;">受【工业特种构件与耗材】板块调整及相关舆情影响：公司核心药物研发与监管审批取得重大突破（如 FDA 监管合规落地或临床试验达到主要终点），基本面重大里程碑驱动估值重估。（信息源：news.bloomberglaw.com）。OLN 当日价格下行 -4.51%，量价呈现典型的 5 维弱势归因特征。</p>
           </div>
           <div class="m-grid">
               <div class="m-cell">
@@ -5493,9 +5501,9 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="sc-res-bar"><span class="res-plain">3/5</span></div>
           <div class="sc-thesis" itemprop="description"><p class="para">XPEV (XPeng Inc.) 作为 耐用消费品 - 汽车整车与机动车制造 领域的下跌承压标的，单日下挫 -8.53%，成交量达平日 4.08 倍，录得 3/5 共振归因（综合得分 87.0）。</p></div>
           
-          <div class="news-intel-box" style="margin:12px 0 14px;">
+          <div class="news-intel-box" style="margin:12px 0 14px; ">
             <div class="news-intel-lbl">核心催化与重大事件归因</div>
-            <p class="para" style="margin-bottom:0; text-indent:0;">受宏观与行业板块资金轮动影响，XPEV 当日价格出现显著异动，量价资金与产业基本面特征展现出清晰的 5 维归因解释度。</p>
+            <p class="para" style="margin-bottom:0; text-indent:0;">受【汽车整车与机动车制造】板块调整及相关舆情影响：最新季度业绩超市场预期，核心主营收入高速增长且盈利质量改善，管理层上调全年业绩指引提振了估值中枢。（信息源：247wallst.com）。XPEV 当日价格下行 -8.53%，量价呈现典型的 5 维弱势归因特征。</p>
           </div>
           <div class="m-grid">
               <div class="m-cell">
@@ -5770,9 +5778,9 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="sc-res-bar"><span class="res-plain">3/5</span></div>
           <div class="sc-thesis" itemprop="description"><p class="para">LASR (nLIGHT, Inc.) 作为 电子科技 - 半导体芯片与集成电路 领域的下跌承压标的，单日下挫 -6.92%，成交量达平日 1.24 倍，录得 3/5 共振归因（综合得分 84.9）。</p></div>
           
-          <div class="news-intel-box" style="margin:12px 0 14px;">
+          <div class="news-intel-box" style="margin:12px 0 14px; ">
             <div class="news-intel-lbl">核心催化与重大事件归因</div>
-            <p class="para" style="margin-bottom:0; text-indent:0;">受宏观与行业板块资金轮动影响，LASR 当日价格出现显著异动，量价资金与产业基本面特征展现出清晰的 5 维归因解释度。</p>
+            <p class="para" style="margin-bottom:0; text-indent:0;">受【半导体芯片与集成电路】板块调整及相关舆情影响：最新季度业绩超市场预期，核心主营收入高速增长且盈利质量改善，管理层上调全年业绩指引提振了估值中枢。（信息源：forbes.com）。LASR 当日价格下行 -6.92%，量价呈现典型的 5 维弱势归因特征。</p>
           </div>
           <div class="m-grid">
               <div class="m-cell">
@@ -6047,9 +6055,9 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="sc-res-bar"><span class="res-plain">3/5</span></div>
           <div class="sc-thesis" itemprop="description"><p class="para">FRVO (Fervo Energy Company) 作为 公用事业 - 可再生与替代能源发电 领域的下跌承压标的，单日下挫 -8.57%，成交量达平日 1.00 倍，录得 3/5 共振归因（综合得分 83.5）。</p></div>
           
-          <div class="news-intel-box" style="margin:12px 0 14px;">
+          <div class="news-intel-box" style="margin:12px 0 14px; ">
             <div class="news-intel-lbl">核心催化与重大事件归因</div>
-            <p class="para" style="margin-bottom:0; text-indent:0;">受宏观与行业板块资金轮动影响，FRVO 当日价格出现显著异动，量价资金与产业基本面特征展现出清晰的 5 维归因解释度。</p>
+            <p class="para" style="margin-bottom:0; text-indent:0;">受【可再生与替代能源发电】板块调整及相关舆情影响：受特异性独立利空「Opening Bell: August 24, 2026」（信息源：cnbc.com）冲击，引发资金阶段性避险抛售。（信息源：cnbc.com）。FRVO 当日价格下行 -8.57%，量价呈现典型的 5 维弱势归因特征。</p>
           </div>
           <div class="m-grid">
               <div class="m-cell">

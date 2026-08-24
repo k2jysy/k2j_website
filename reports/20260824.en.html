@@ -334,8 +334,14 @@ a:hover{text-decoration:underline;color:var(--gold)}
 .kp-warn{background:#fffaf0;border-left-color:var(--gold)}
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin:20px 0}
 .col-h{font-size:15px;margin:0 0 10px;padding-bottom:4px;border-bottom:1px solid var(--line)}
-.pick-list{margin:10px 0 0;padding-left:18px;font-size:13.5px;line-height:1.8}
-.pick-list li{margin-bottom:6px}
+.pick-list{margin:10px 0 0;padding-left:18px;font-size:13.5px;line-height:1.85}
+.pick-list li{margin-bottom:8px}
+.summary-ticker-link{display:inline-block;color:var(--navy);text-decoration:none;border-bottom:1.5px solid var(--gold);padding:0 2px;font-family:var(--mono);font-weight:700;transition:all .2s ease}
+.summary-ticker-link:hover{color:var(--gold);background:var(--gold-bg);border-bottom-color:var(--gold);border-radius:2px}
+.inline-ticker-link{font-family:var(--mono);font-weight:700;color:var(--navy);border-bottom:1px dashed var(--gold);text-decoration:none;padding:0 2px;transition:all .2s ease}
+.inline-ticker-link:hover{color:var(--gold);background:var(--gold-bg);border-bottom-style:solid;border-radius:2px}
+.stock-more-link{font-size:12px;font-weight:600;color:#0284c7;text-decoration:none;margin-left:4px;white-space:nowrap;transition:color .15s ease}
+.stock-more-link:hover{color:#0369a1;text-decoration:underline}
 
 /* Index Cards */
 .idx-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:20px}
@@ -366,7 +372,9 @@ a:hover{text-decoration:underline;color:var(--gold)}
 .stock-chip:hover{background:var(--gold-bg);border-color:var(--gold)}
 
 /* Stock Deep Dive */
-.stock-card{border:1px solid var(--line);background:#faf8f5;border-radius:2px;padding:24px 28px;margin-bottom:24px;scroll-margin-top:24px}
+.stock-card{border:1px solid var(--line);background:#faf8f5;border-radius:2px;padding:24px 28px;margin-bottom:24px;scroll-margin-top:28px;transition:border-color .3s ease,box-shadow .3s ease,background-color .3s ease}
+.stock-card:target{border-color:var(--gold);box-shadow:0 0 0 3px rgba(212,160,23,0.25),0 6px 20px rgba(0,0,0,0.08);background:#fffdf9;animation:targetPulse 2.5s ease-out}
+@keyframes targetPulse{0%{box-shadow:0 0 0 6px rgba(212,160,23,0.45),0 8px 24px rgba(212,160,23,0.15);background:#fff9eb}70%{box-shadow:0 0 0 3px rgba(212,160,23,0.25),0 6px 20px rgba(0,0,0,0.08);background:#fffdf9}100%{box-shadow:0 0 0 3px rgba(212,160,23,0.25),0 6px 20px rgba(0,0,0,0.08);background:#fffdf9}}
 .sc-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;flex-wrap:wrap;gap:12px}
 .sc-title{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .sc-sym{font-family:var(--mono);font-size:20px;font-weight:800;color:var(--navy)}
@@ -734,13 +742,13 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="two-col">
             <div class="col">
               <h3 class="col-h long-h">Bullish Leaders</h3>
-              <p class="para">Bullish selections focus on critical minerals & copper/gold miners (CRML, ERO, SCCO, TECK, AU, WPM), fintech & payment enablement (FUTU, FLYW), and agricultural chemicals / downstream refining (CF, DINO), locking in robust 4/5 to 5/5★ resonance. 【Bullish Divergence Note】Monitor standalone surging outliers: while Biotechnology dropped (-0.60%), ALVO surged +18.51% on idiosyncratic catalysts; D2 reflects sector divergence deductions (-2.0).</p>
-              <ul class="pick-list"><li><a href="#stock-ALVO"><b>ALVO</b></a> <span class="badge" style="background:#e65100; color:#fff; font-size:10px; margin-left:3px; vertical-align:middle;">⚠️ Divergent</span> <span class="muted">(Biotechnology)</span> — Score <b>42.1</b> <span class="res-plain">2/5</span>: 【Bullish Sector Divergence】ALVO (Alvotech) in Biotechnology surged +18.51% on 3.…</li><li><a href="#stock-CRON"><b>CRON</b></a> <span class="muted">(Pharmaceuticals: other)</span> — Score <b>90.9</b> <span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span>: CRON (Cronos Group Inc. Common Share) operates as a Bullish Leader in Health tec…</li><li><a href="#stock-FRPT"><b>FRPT</b></a> <span class="muted">(Food: specialty/candy)</span> — Score <b>91.5</b> <span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span>: FRPT (Freshpet, Inc.) operates as a Bullish Leader in Consumer non-durables - Fo…</li><li><a href="#stock-OR"><b>OR</b></a> <span class="muted">(Precious metals)</span> — Score <b>90.3</b> <span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span>: OR (OR Royalties Inc.) operates as a Bullish Leader in Non-energy minerals - Pre…</li><li><a href="#stock-BTG"><b>BTG</b></a> <span class="muted">(Precious metals)</span> — Score <b>90.1</b> <span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span>: BTG (B2Gold Corp) operates as a Bullish Leader in Non-energy minerals - Precious…</li></ul>
+              <p class="para">Bullish selections focus on critical minerals & copper/gold miners (CRML, ERO, SCCO, TECK, AU, WPM), fintech & payment enablement (FUTU, FLYW), and agricultural chemicals / downstream refining (CF, DINO), locking in robust 4/5 to 5/5★ resonance. 【Bullish Divergence Note】Monitor standalone surging outliers: while Biotechnology dropped (-0.60%), <a href="#stock-ALVO" class="inline-ticker-link" title="Jump to 5D Attribution Bullish Stock Research - ALVO">ALVO</a> surged +18.51%. Real-time event attribution confirms idiosyncratic positive catalysts with D2 divergence deductions (-2.0).</p>
+              <ul class="pick-list"><li><a href="#stock-ALVO" class="summary-ticker-link" title="Click to jump to 5D Bullish Deep Dive card (ALVO)"><b>ALVO</b></a> <span class="font-success font-sm">(+18.51%)</span> <span class="badge" style="background:#e65100; color:#fff; font-size:10px; margin-left:3px; vertical-align:middle;">⚠️ Divergent</span> <span class="muted">(Biotechnology)</span> — Score <b>42.1</b> <span class="res-plain">2/5</span>: 【Bullish Sector Divergence】ALVO (Alvotech) in Biotechnology surged +18.51% on 3.39x volume despite the broader... <a href="#stock-ALVO" class="stock-more-link" title="Jump to 5D Attribution Bullish Stock Research - ALVO">[View More &rarr;]</a></li><li><a href="#stock-CRON" class="summary-ticker-link" title="Click to jump to 5D Bullish Deep Dive card (CRON)"><b>CRON</b></a> <span class="font-success font-sm">(+3.02%)</span> <span class="muted">(Pharmaceuticals: other)</span> — Score <b>90.9</b> <span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span>: CRON (Cronos Group Inc. Common Share) operates as a Bullish Leader in Health technology - Pharmaceuticals: other... <a href="#stock-CRON" class="stock-more-link" title="Jump to 5D Attribution Bullish Stock Research - CRON">[View More &rarr;]</a></li><li><a href="#stock-FRPT" class="summary-ticker-link" title="Click to jump to 5D Bullish Deep Dive card (FRPT)"><b>FRPT</b></a> <span class="font-success font-sm">(+3.49%)</span> <span class="muted">(Food: specialty/candy)</span> — Score <b>91.5</b> <span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span>: FRPT (Freshpet, Inc.) operates as a Bullish Leader in Consumer non-durables - Food: specialty/candy... <a href="#stock-FRPT" class="stock-more-link" title="Jump to 5D Attribution Bullish Stock Research - FRPT">[View More &rarr;]</a></li><li><a href="#stock-OR" class="summary-ticker-link" title="Click to jump to 5D Bullish Deep Dive card (OR)"><b>OR</b></a> <span class="font-success font-sm">(+3.88%)</span> <span class="muted">(Precious metals)</span> — Score <b>90.3</b> <span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span>: OR (OR Royalties Inc.) operates as a Bullish Leader in Non-energy minerals - Precious metals... <a href="#stock-OR" class="stock-more-link" title="Jump to 5D Attribution Bullish Stock Research - OR">[View More &rarr;]</a></li><li><a href="#stock-BTG" class="summary-ticker-link" title="Click to jump to 5D Bullish Deep Dive card (BTG)"><b>BTG</b></a> <span class="font-success font-sm">(+3.62%)</span> <span class="muted">(Precious metals)</span> — Score <b>90.1</b> <span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span>: BTG (B2Gold Corp) operates as a Bullish Leader in Non-energy minerals - Precious metals... <a href="#stock-BTG" class="stock-more-link" title="Jump to 5D Attribution Bullish Stock Research - BTG">[View More &rarr;]</a></li></ul>
             </div>
             <div class="col">
               <h3 class="col-h short-h">Bearish Trends</h3>
               <p class="para">Bearish watchlist centers on gold exploration developer standalone plunge (SA), regulated electric/gas utility multiple decompression (SRE, AEP, CNP), digital compute capacity pullbacks (CIFR, HUT, WULF), and luxury e-commerce softness (REAL, TTMI).</p>
-              <ul class="pick-list"><li><a href="#stock-AAOI"><b>AAOI</b></a> <span class="muted">(Semiconductors)</span> — Score <b>76.1</b> <span class="res-plain">3/5</span>: AAOI (Applied Optoelectronics, Inc.) operates as a Bearish Underperformer in Ele…</li><li><a href="#stock-FLNC"><b>FLNC</b></a> <span class="muted">(Electrical products)</span> — Score <b>90.2</b> <span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span>: FLNC (Fluence Energy, Inc.) operates as a Bearish Underperformer in Producer man…</li><li><a href="#stock-AADX"><b>AADX</b></a> <span class="muted">(Aerospace &amp; defense)</span> — Score <b>85.3</b> <span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span>: AADX (Applied Aerospace &amp; Defense, Inc.) operates as a Bearish Underperformer in…</li><li><a href="#stock-SMR"><b>SMR</b></a> <span class="muted">(Electrical products)</span> — Score <b>84.6</b> <span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span>: SMR (NuScale Power Corporation) operates as a Bearish Underperformer in Producer…</li><li><a href="#stock-LI"><b>LI</b></a> <span class="muted">(Motor vehicles)</span> — Score <b>81.2</b> <span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span>: LI (Li Auto Inc.) operates as a Bearish Underperformer in Consumer durables - Mo…</li></ul>
+              <ul class="pick-list"><li><a href="#stock-AAOI" class="summary-ticker-link" title="Click to jump to 5D Bearish Deep Dive card (AAOI)"><b>AAOI</b></a> <span class="font-danger font-sm">(-13.77%)</span> <span class="muted">(Semiconductors)</span> — Score <b>76.1</b> <span class="res-plain">3/5</span>: AAOI (Applied Optoelectronics, Inc.) operates as a Bearish Underperformer in Electronic technology - Semiconductors... <a href="#stock-AAOI" class="stock-more-link" title="Jump to 5D Attribution Bearish Stock Research - AAOI">[View More &rarr;]</a></li><li><a href="#stock-FLNC" class="summary-ticker-link" title="Click to jump to 5D Bearish Deep Dive card (FLNC)"><b>FLNC</b></a> <span class="font-danger font-sm">(-4.23%)</span> <span class="muted">(Electrical products)</span> — Score <b>90.2</b> <span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span>: FLNC (Fluence Energy, Inc.) operates as a Bearish Underperformer in Producer manufacturing - Electrical products... <a href="#stock-FLNC" class="stock-more-link" title="Jump to 5D Attribution Bearish Stock Research - FLNC">[View More &rarr;]</a></li><li><a href="#stock-AADX" class="summary-ticker-link" title="Click to jump to 5D Bearish Deep Dive card (AADX)"><b>AADX</b></a> <span class="font-danger font-sm">(-3.14%)</span> <span class="muted">(Aerospace &amp; defense)</span> — Score <b>85.3</b> <span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span>: AADX (Applied Aerospace & Defense... <a href="#stock-AADX" class="stock-more-link" title="Jump to 5D Attribution Bearish Stock Research - AADX">[View More &rarr;]</a></li><li><a href="#stock-SMR" class="summary-ticker-link" title="Click to jump to 5D Bearish Deep Dive card (SMR)"><b>SMR</b></a> <span class="font-danger font-sm">(-3.72%)</span> <span class="muted">(Electrical products)</span> — Score <b>84.6</b> <span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span>: SMR (NuScale Power Corporation) operates as a Bearish Underperformer in Producer manufacturing - Electrical products... <a href="#stock-SMR" class="stock-more-link" title="Jump to 5D Attribution Bearish Stock Research - SMR">[View More &rarr;]</a></li><li><a href="#stock-LI" class="summary-ticker-link" title="Click to jump to 5D Bearish Deep Dive card (LI)"><b>LI</b></a> <span class="font-danger font-sm">(-4.37%)</span> <span class="muted">(Motor vehicles)</span> — Score <b>81.2</b> <span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span>: LI (Li Auto Inc.) operates as a Bearish Underperformer in Consumer durables - Motor vehicles... <a href="#stock-LI" class="stock-more-link" title="Jump to 5D Attribution Bearish Stock Research - LI">[View More &rarr;]</a></li></ul>
             </div>
           </div>
           <div class="kp-box kp-warn">
@@ -756,8 +764,8 @@ a:hover{text-decoration:underline;color:var(--gold)}
         <div id="stock-ALVO" class="stock-card" itemscope itemtype="https://schema.org/InvestmentOrDeposit" data-ticker="ALVO" data-score="42.1" data-price="5.25" data-change="18.51" data-side="LONG">
           
           <div class="div-alert-box" style="margin: 0 0 14px 0; padding: 10px 14px; background: rgba(255, 149, 0, 0.12); border-left: 4px solid #ff9500; border-radius: 6px;">
-            <div style="font-weight: 700; color: #ff9500; font-size: 13px; margin-bottom: 3px;">⚠️ Extreme Sector Divergence Warning</div>
-            <div style="font-size: 12px; color: #c5c7d0; line-height: 1.5;">Industry [Biotechnology] averaged -0.60% (decline ratio only 35.5%), but this equity plunged sharply against the sector trend.</div>
+            <div style="font-weight: 700; color: #ff9500; font-size: 13px; margin-bottom: 3px;">⚠️ Bullish Sector Divergence Alert (Standalone Surge)</div>
+            <div style="font-size: 12px; color: #e2e4ea; line-height: 1.5;">Industry [Biotechnology] averaged -0.60% (ratio 35.5%), but this equity rallied sharply against the sector trend with D2 deductions (-2.0).</div>
           </div>
           <div class="sc-head">
             <div class="sc-title">
@@ -776,11 +784,11 @@ a:hover{text-decoration:underline;color:var(--gold)}
             </div>
           </div>
           <div class="sc-res-bar"><span class="res-plain">2/5</span></div>
-          <div class="sc-thesis" itemprop="description"><p class="para">【Bullish Sector Divergence】ALVO (Alvotech) in Biotechnology surged +18.51% on 3.39x volume despite the broader Biotechnology sector dropping -0.60%. 5-D attribution flags an acute D2 Sector Clustering penalty (-2.0 ❌, score 42.1), confirming an isolated idiosyncratic catalyst rather than broad sector momentum.</p></div>
+          <div class="sc-thesis" itemprop="description"><p class="para">【Bullish Sector Divergence】ALVO (Alvotech) in Biotechnology surged +18.51% on 3.39x volume despite the broader Biotechnology sector dropping -0.60%. 5-D attribution flags an acute D2 Sector Clustering penalty (-2.0 ❌, score 42.1). Real-time event attribution confirms an idiosyncratic catalyst driving the standalone breakout.</p></div>
           
-          <div class="news-intel-box" style="margin:12px 0 14px;">
-            <div class="news-intel-lbl">Primary Catalysts &amp; Event Attribution</div>
-            <p class="para" style="margin-bottom:0; text-indent:0;">While the broader Biotechnology sector faced selling pressure, ALVO rallied aggressively on company-specific catalysts (such as pipeline drug milestones, restructuring, or earnings beats) disconnected from peer weakness.</p>
+          <div class="news-intel-box" style="margin:12px 0 14px; border-left: 3px solid #ff9500;">
+            <div class="news-intel-lbl">Primary Catalysts &amp; Event Attribution (Real-Time Intelligence)</div>
+            <p class="para" style="margin-bottom:0; text-indent:0;">While the broader Biotechnology sector declined by -0.60%, ALVO staged a powerful standalone surge (+18.51%). Real-time event attribution indicates the primary catalyst: Bank America initiated coverage with a Buy rating with a $7 price target, citing the formal closure of the FDA facility inspection which clears a key regulatory overhang and accelerates commercial rollout (Source: investrade.com). This standalone positive trigger drove aggressive institutional buying, completely decoupling the equity from broader sector headwinds.</p>
           </div>
           <div class="m-grid">
               <div class="m-cell">
@@ -1055,9 +1063,9 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="sc-res-bar"><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></div>
           <div class="sc-thesis" itemprop="description"><p class="para">CRON (Cronos Group Inc. Common Share) operates as a Bullish Leader in Health technology - Pharmaceuticals: other, moving +3.02% on 1.59x volume with 4/5 resonance (score 90.9).</p></div>
           
-          <div class="news-intel-box" style="margin:12px 0 14px;">
+          <div class="news-intel-box" style="margin:12px 0 14px; ">
             <div class="news-intel-lbl">Primary Catalysts &amp; Event Attribution</div>
-            <p class="para" style="margin-bottom:0; text-indent:0;">Driven by macro and industry capital rotation, CRON experienced notable price action with clear 5-D attribution characteristics.</p>
+            <p class="para" style="margin-bottom:0; text-indent:0;">Supported by Pharmaceuticals: other sector momentum and company development: Achieved a major regulatory milestone with FDA clearance / clinical trial progress, significantly de-risking the commercial pipeline and driving valuation multiple expansion. (Source: tipranks.com). CRON advanced +3.02% with robust 5D resonance confirmation.</p>
           </div>
           <div class="m-grid">
               <div class="m-cell">
@@ -1332,9 +1340,9 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="sc-res-bar"><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></div>
           <div class="sc-thesis" itemprop="description"><p class="para">FRPT (Freshpet, Inc.) operates as a Bullish Leader in Consumer non-durables - Food: specialty/candy, moving +3.49% on 1.23x volume with 4/5 resonance (score 91.5).</p></div>
           
-          <div class="news-intel-box" style="margin:12px 0 14px;">
+          <div class="news-intel-box" style="margin:12px 0 14px; ">
             <div class="news-intel-lbl">Primary Catalysts &amp; Event Attribution</div>
-            <p class="para" style="margin-bottom:0; text-indent:0;">Driven by macro and industry capital rotation, FRPT experienced notable price action with clear 5-D attribution characteristics.</p>
+            <p class="para" style="margin-bottom:0; text-indent:0;">Supported by Food: specialty/candy sector momentum and company development: Driven by headline catalyst &quot;Opening Bell: August 24, 2026&quot; (Source: cnbc.com), attracting active risk-on bidding. (Source: cnbc.com). FRPT advanced +3.49% with robust 5D resonance confirmation.</p>
           </div>
           <div class="m-grid">
               <div class="m-cell">
@@ -1609,9 +1617,9 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="sc-res-bar"><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></div>
           <div class="sc-thesis" itemprop="description"><p class="para">OR (OR Royalties Inc.) operates as a Bullish Leader in Non-energy minerals - Precious metals, moving +3.88% on 2.48x volume with 4/5 resonance (score 90.3).</p></div>
           
-          <div class="news-intel-box" style="margin:12px 0 14px;">
+          <div class="news-intel-box" style="margin:12px 0 14px; ">
             <div class="news-intel-lbl">Primary Catalysts &amp; Event Attribution</div>
-            <p class="para" style="margin-bottom:0; text-indent:0;">Driven by macro and industry capital rotation, OR experienced notable price action with clear 5-D attribution characteristics.</p>
+            <p class="para" style="margin-bottom:0; text-indent:0;">Supported by Precious metals sector momentum and company development: Driven by headline catalyst &quot;JD Vance Claims His Latest Comment About Canada Was A ‘Freudian Slip’&quot; (Source: huffpost.com), attracting active risk-on bidding. (Source: huffpost.com). OR advanced +3.88% with robust 5D resonance confirmation.</p>
           </div>
           <div class="m-grid">
               <div class="m-cell">
@@ -1886,9 +1894,9 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="sc-res-bar"><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></div>
           <div class="sc-thesis" itemprop="description"><p class="para">BTG (B2Gold Corp) operates as a Bullish Leader in Non-energy minerals - Precious metals, moving +3.62% on 1.68x volume with 4/5 resonance (score 90.1).</p></div>
           
-          <div class="news-intel-box" style="margin:12px 0 14px;">
+          <div class="news-intel-box" style="margin:12px 0 14px; ">
             <div class="news-intel-lbl">Primary Catalysts &amp; Event Attribution</div>
-            <p class="para" style="margin-bottom:0; text-indent:0;">Driven by macro and industry capital rotation, BTG experienced notable price action with clear 5-D attribution characteristics.</p>
+            <p class="para" style="margin-bottom:0; text-indent:0;">Supported by Precious metals sector momentum and company development: Announced a discount equity distribution / secondary offering, triggering severe share dilution concerns and concentrated institutional selling. (Source: kitco.com). BTG advanced +3.62% with robust 5D resonance confirmation.</p>
           </div>
           <div class="m-grid">
               <div class="m-cell">
@@ -2163,9 +2171,9 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="sc-res-bar"><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></div>
           <div class="sc-thesis" itemprop="description"><p class="para">IAG (Iamgold Corporation) operates as a Bullish Leader in Non-energy minerals - Precious metals, moving +3.12% on 1.15x volume with 4/5 resonance (score 88.8).</p></div>
           
-          <div class="news-intel-box" style="margin:12px 0 14px;">
+          <div class="news-intel-box" style="margin:12px 0 14px; ">
             <div class="news-intel-lbl">Primary Catalysts &amp; Event Attribution</div>
-            <p class="para" style="margin-bottom:0; text-indent:0;">Driven by macro and industry capital rotation, IAG experienced notable price action with clear 5-D attribution characteristics.</p>
+            <p class="para" style="margin-bottom:0; text-indent:0;">Supported by Precious metals sector momentum and company development: Driven by headline catalyst &quot;Gold rally gains momentum ahead of US inflation, Jackson Hole event&quot; (Source: kitco.com), attracting active risk-on bidding. (Source: kitco.com). IAG advanced +3.12% with robust 5D resonance confirmation.</p>
           </div>
           <div class="m-grid">
               <div class="m-cell">
@@ -2440,9 +2448,9 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="sc-res-bar"><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></div>
           <div class="sc-thesis" itemprop="description"><p class="para">EZPW (EZCORP, Inc.) operates as a Bullish Leader in Finance - Finance/Rental/Leasing, moving +8.78% on 2.22x volume with 4/5 resonance (score 87.5).</p></div>
           
-          <div class="news-intel-box" style="margin:12px 0 14px;">
+          <div class="news-intel-box" style="margin:12px 0 14px; ">
             <div class="news-intel-lbl">Primary Catalysts &amp; Event Attribution</div>
-            <p class="para" style="margin-bottom:0; text-indent:0;">Driven by macro and industry capital rotation, EZPW experienced notable price action with clear 5-D attribution characteristics.</p>
+            <p class="para" style="margin-bottom:0; text-indent:0;">Supported by Finance/Rental/Leasing sector momentum and company development: Morgan Stanley initiated/upgraded the stock with a Buy rating , igniting strong institutional accumulation (Source: finance.yahoo.com). EZPW advanced +8.78% with robust 5D resonance confirmation.</p>
           </div>
           <div class="m-grid">
               <div class="m-cell">
@@ -2717,9 +2725,9 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="sc-res-bar"><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></div>
           <div class="sc-thesis" itemprop="description"><p class="para">MA (Mastercard Incorporated) operates as a Bullish Leader in Finance - Finance/Rental/Leasing, moving +3.31% on 1.14x volume with 4/5 resonance (score 84.3).</p></div>
           
-          <div class="news-intel-box" style="margin:12px 0 14px;">
+          <div class="news-intel-box" style="margin:12px 0 14px; ">
             <div class="news-intel-lbl">Primary Catalysts &amp; Event Attribution</div>
-            <p class="para" style="margin-bottom:0; text-indent:0;">Driven by macro and industry capital rotation, MA experienced notable price action with clear 5-D attribution characteristics.</p>
+            <p class="para" style="margin-bottom:0; text-indent:0;">Supported by Finance/Rental/Leasing sector momentum and company development: Driven by headline catalyst &quot;The six stocks both hedge funds and mutual funds love - Goldman - Seeking Alpha&quot; (Source: seekingalpha.com), attracting active risk-on bidding. (Source: seekingalpha.com). MA advanced +3.31% with robust 5D resonance confirmation.</p>
           </div>
           <div class="m-grid">
               <div class="m-cell">
@@ -2994,9 +3002,9 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="sc-res-bar"><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></div>
           <div class="sc-thesis" itemprop="description"><p class="para">MTCH (Match Group, Inc.) operates as a Bullish Leader in Technology services - Internet software/Services, moving +2.10% on 1.03x volume with 4/5 resonance (score 77.2).</p></div>
           
-          <div class="news-intel-box" style="margin:12px 0 14px;">
+          <div class="news-intel-box" style="margin:12px 0 14px; ">
             <div class="news-intel-lbl">Primary Catalysts &amp; Event Attribution</div>
-            <p class="para" style="margin-bottom:0; text-indent:0;">Driven by macro and industry capital rotation, MTCH experienced notable price action with clear 5-D attribution characteristics.</p>
+            <p class="para" style="margin-bottom:0; text-indent:0;">Supported by Internet software/Services sector momentum and company development: Impacted by regulatory investigations or full-year guidance downgrades, prompting aggressive risk-off liquidation. (Source: thesunchronicle.com). MTCH advanced +2.10% with robust 5D resonance confirmation.</p>
           </div>
           <div class="m-grid">
               <div class="m-cell">
@@ -3271,9 +3279,9 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="sc-res-bar"><span class="res-plain">3/5</span></div>
           <div class="sc-thesis" itemprop="description"><p class="para">ASST (Strive, Inc.) operates as a Bullish Leader in Finance - Financial conglomerates, moving +8.29% on 2.77x volume with 3/5 resonance (score 96.4).</p></div>
           
-          <div class="news-intel-box" style="margin:12px 0 14px;">
+          <div class="news-intel-box" style="margin:12px 0 14px; ">
             <div class="news-intel-lbl">Primary Catalysts &amp; Event Attribution</div>
-            <p class="para" style="margin-bottom:0; text-indent:0;">Driven by macro and industry capital rotation, ASST experienced notable price action with clear 5-D attribution characteristics.</p>
+            <p class="para" style="margin-bottom:0; text-indent:0;">Supported by Financial conglomerates sector momentum and company development: Driven by headline catalyst &quot;Opening Bell: August 24, 2026&quot; (Source: cnbc.com), attracting active risk-on bidding. (Source: cnbc.com). ASST advanced +8.29% with robust 5D resonance confirmation.</p>
           </div>
           <div class="m-grid">
               <div class="m-cell">
@@ -3554,9 +3562,9 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="sc-res-bar"><span class="res-plain">3/5</span></div>
           <div class="sc-thesis" itemprop="description"><p class="para">AAOI (Applied Optoelectronics, Inc.) operates as a Bearish Underperformer in Electronic technology - Semiconductors, moving -13.77% on 1.15x volume with 3/5 resonance (score 76.1).</p></div>
           
-          <div class="news-intel-box" style="margin:12px 0 14px;">
+          <div class="news-intel-box" style="margin:12px 0 14px; ">
             <div class="news-intel-lbl">Primary Catalysts &amp; Event Attribution</div>
-            <p class="para" style="margin-bottom:0; text-indent:0;">Driven by macro and industry capital rotation, AAOI experienced notable price action with clear 5-D attribution characteristics.</p>
+            <p class="para" style="margin-bottom:0; text-indent:0;">Pressured by Semiconductors sector consolidation and development: Hit by company-specific negative headline &quot;Optics Stocks Drop on Anthropic News, WSJ Report: Lumentum Down 10%, Corning Down 8%, AXT Down 12%&quot; (Source: 247wallst.com), sparking tactical distribution. (Source: 247wallst.com). AAOI declined -13.77% with bearish 5D quantitative telemetry.</p>
           </div>
           <div class="m-grid">
               <div class="m-cell">
@@ -3831,9 +3839,9 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="sc-res-bar"><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></div>
           <div class="sc-thesis" itemprop="description"><p class="para">FLNC (Fluence Energy, Inc.) operates as a Bearish Underperformer in Producer manufacturing - Electrical products, moving -4.23% on 1.22x volume with 4/5 resonance (score 90.2).</p></div>
           
-          <div class="news-intel-box" style="margin:12px 0 14px;">
+          <div class="news-intel-box" style="margin:12px 0 14px; ">
             <div class="news-intel-lbl">Primary Catalysts &amp; Event Attribution</div>
-            <p class="para" style="margin-bottom:0; text-indent:0;">Driven by macro and industry capital rotation, FLNC experienced notable price action with clear 5-D attribution characteristics.</p>
+            <p class="para" style="margin-bottom:0; text-indent:0;">Pressured by Electrical products sector consolidation and development: Hit by company-specific negative headline &quot;FLNC - Fluence Energy Stock Forecast&quot; (Source: stockinvest.us), sparking tactical distribution. (Source: stockinvest.us). FLNC declined -4.23% with bearish 5D quantitative telemetry.</p>
           </div>
           <div class="m-grid">
               <div class="m-cell">
@@ -4108,9 +4116,9 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="sc-res-bar"><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></div>
           <div class="sc-thesis" itemprop="description"><p class="para">AADX (Applied Aerospace & Defense, Inc.) operates as a Bearish Underperformer in Electronic technology - Aerospace & defense, moving -3.14% on 1.33x volume with 4/5 resonance (score 85.3).</p></div>
           
-          <div class="news-intel-box" style="margin:12px 0 14px;">
+          <div class="news-intel-box" style="margin:12px 0 14px; ">
             <div class="news-intel-lbl">Primary Catalysts &amp; Event Attribution</div>
-            <p class="para" style="margin-bottom:0; text-indent:0;">Driven by macro and industry capital rotation, AADX experienced notable price action with clear 5-D attribution characteristics.</p>
+            <p class="para" style="margin-bottom:0; text-indent:0;">Pressured by Aerospace &amp; defense sector consolidation and development: Hit by company-specific negative headline &quot;US Postal Service issues rules to tighten mail-in voting if court gives OK&quot; (Source: reuters.com), sparking tactical distribution. (Source: reuters.com). AADX declined -3.14% with bearish 5D quantitative telemetry.</p>
           </div>
           <div class="m-grid">
               <div class="m-cell">
@@ -4385,9 +4393,9 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="sc-res-bar"><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></div>
           <div class="sc-thesis" itemprop="description"><p class="para">SMR (NuScale Power Corporation) operates as a Bearish Underperformer in Producer manufacturing - Electrical products, moving -3.72% on 1.49x volume with 4/5 resonance (score 84.6).</p></div>
           
-          <div class="news-intel-box" style="margin:12px 0 14px;">
+          <div class="news-intel-box" style="margin:12px 0 14px; ">
             <div class="news-intel-lbl">Primary Catalysts &amp; Event Attribution</div>
-            <p class="para" style="margin-bottom:0; text-indent:0;">Driven by macro and industry capital rotation, SMR experienced notable price action with clear 5-D attribution characteristics.</p>
+            <p class="para" style="margin-bottom:0; text-indent:0;">Pressured by Electrical products sector consolidation and development: Delivered an earnings/revenue beat with accelerating top-line momentum and upgraded full-year guidance, reinforcing fundamental strength. (Source: quiverquant.com). SMR declined -3.72% with bearish 5D quantitative telemetry.</p>
           </div>
           <div class="m-grid">
               <div class="m-cell">
@@ -4662,9 +4670,9 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="sc-res-bar"><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></div>
           <div class="sc-thesis" itemprop="description"><p class="para">LI (Li Auto Inc.) operates as a Bearish Underperformer in Consumer durables - Motor vehicles, moving -4.37% on 1.30x volume with 4/5 resonance (score 81.2).</p></div>
           
-          <div class="news-intel-box" style="margin:12px 0 14px;">
+          <div class="news-intel-box" style="margin:12px 0 14px; ">
             <div class="news-intel-lbl">Primary Catalysts &amp; Event Attribution</div>
-            <p class="para" style="margin-bottom:0; text-indent:0;">Driven by macro and industry capital rotation, LI experienced notable price action with clear 5-D attribution characteristics.</p>
+            <p class="para" style="margin-bottom:0; text-indent:0;">Pressured by Motor vehicles sector consolidation and development: Delivered an earnings/revenue beat with accelerating top-line momentum and upgraded full-year guidance, reinforcing fundamental strength. (Source: stockinvest.us). LI declined -4.37% with bearish 5D quantitative telemetry.</p>
           </div>
           <div class="m-grid">
               <div class="m-cell">
@@ -4939,9 +4947,9 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="sc-res-bar"><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></div>
           <div class="sc-thesis" itemprop="description"><p class="para">STLA (Stellantis N.V.) operates as a Bearish Underperformer in Consumer durables - Motor vehicles, moving -3.51% on 1.33x volume with 4/5 resonance (score 80.5).</p></div>
           
-          <div class="news-intel-box" style="margin:12px 0 14px;">
+          <div class="news-intel-box" style="margin:12px 0 14px; ">
             <div class="news-intel-lbl">Primary Catalysts &amp; Event Attribution</div>
-            <p class="para" style="margin-bottom:0; text-indent:0;">Driven by macro and industry capital rotation, STLA experienced notable price action with clear 5-D attribution characteristics.</p>
+            <p class="para" style="margin-bottom:0; text-indent:0;">Pressured by Motor vehicles sector consolidation and development: Hit by company-specific negative headline &quot;Stellantis Stock Slides As Downgrades And Tariff Risks Mount&quot; (Source: stockstotrade.com), sparking tactical distribution. (Source: stockstotrade.com). STLA declined -3.51% with bearish 5D quantitative telemetry.</p>
           </div>
           <div class="m-grid">
               <div class="m-cell">
@@ -5216,9 +5224,9 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="sc-res-bar"><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></div>
           <div class="sc-thesis" itemprop="description"><p class="para">OLN (Olin Corporation) operates as a Bearish Underperformer in Process industries - Industrial specialties, moving -4.51% on 1.52x volume with 4/5 resonance (score 80.3).</p></div>
           
-          <div class="news-intel-box" style="margin:12px 0 14px;">
+          <div class="news-intel-box" style="margin:12px 0 14px; ">
             <div class="news-intel-lbl">Primary Catalysts &amp; Event Attribution</div>
-            <p class="para" style="margin-bottom:0; text-indent:0;">Driven by macro and industry capital rotation, OLN experienced notable price action with clear 5-D attribution characteristics.</p>
+            <p class="para" style="margin-bottom:0; text-indent:0;">Pressured by Industrial specialties sector consolidation and development: Achieved a major regulatory milestone with FDA clearance / clinical trial progress, significantly de-risking the commercial pipeline and driving valuation multiple expansion. (Source: news.bloomberglaw.com). OLN declined -4.51% with bearish 5D quantitative telemetry.</p>
           </div>
           <div class="m-grid">
               <div class="m-cell">
@@ -5493,9 +5501,9 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="sc-res-bar"><span class="res-plain">3/5</span></div>
           <div class="sc-thesis" itemprop="description"><p class="para">XPEV (XPeng Inc.) operates as a Bearish Underperformer in Consumer durables - Motor vehicles, moving -8.53% on 4.08x volume with 3/5 resonance (score 87.0).</p></div>
           
-          <div class="news-intel-box" style="margin:12px 0 14px;">
+          <div class="news-intel-box" style="margin:12px 0 14px; ">
             <div class="news-intel-lbl">Primary Catalysts &amp; Event Attribution</div>
-            <p class="para" style="margin-bottom:0; text-indent:0;">Driven by macro and industry capital rotation, XPEV experienced notable price action with clear 5-D attribution characteristics.</p>
+            <p class="para" style="margin-bottom:0; text-indent:0;">Pressured by Motor vehicles sector consolidation and development: Delivered an earnings/revenue beat with accelerating top-line momentum and upgraded full-year guidance, reinforcing fundamental strength. (Source: 247wallst.com). XPEV declined -8.53% with bearish 5D quantitative telemetry.</p>
           </div>
           <div class="m-grid">
               <div class="m-cell">
@@ -5770,9 +5778,9 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="sc-res-bar"><span class="res-plain">3/5</span></div>
           <div class="sc-thesis" itemprop="description"><p class="para">LASR (nLIGHT, Inc.) operates as a Bearish Underperformer in Electronic technology - Semiconductors, moving -6.92% on 1.24x volume with 3/5 resonance (score 84.9).</p></div>
           
-          <div class="news-intel-box" style="margin:12px 0 14px;">
+          <div class="news-intel-box" style="margin:12px 0 14px; ">
             <div class="news-intel-lbl">Primary Catalysts &amp; Event Attribution</div>
-            <p class="para" style="margin-bottom:0; text-indent:0;">Driven by macro and industry capital rotation, LASR experienced notable price action with clear 5-D attribution characteristics.</p>
+            <p class="para" style="margin-bottom:0; text-indent:0;">Pressured by Semiconductors sector consolidation and development: Delivered an earnings/revenue beat with accelerating top-line momentum and upgraded full-year guidance, reinforcing fundamental strength. (Source: forbes.com). LASR declined -6.92% with bearish 5D quantitative telemetry.</p>
           </div>
           <div class="m-grid">
               <div class="m-cell">
@@ -6047,9 +6055,9 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="sc-res-bar"><span class="res-plain">3/5</span></div>
           <div class="sc-thesis" itemprop="description"><p class="para">FRVO (Fervo Energy Company) operates as a Bearish Underperformer in Utilities - Alternative power generation, moving -8.57% on 1.00x volume with 3/5 resonance (score 83.5).</p></div>
           
-          <div class="news-intel-box" style="margin:12px 0 14px;">
+          <div class="news-intel-box" style="margin:12px 0 14px; ">
             <div class="news-intel-lbl">Primary Catalysts &amp; Event Attribution</div>
-            <p class="para" style="margin-bottom:0; text-indent:0;">Driven by macro and industry capital rotation, FRVO experienced notable price action with clear 5-D attribution characteristics.</p>
+            <p class="para" style="margin-bottom:0; text-indent:0;">Pressured by Alternative power generation sector consolidation and development: Hit by company-specific negative headline &quot;Opening Bell: August 24, 2026&quot; (Source: cnbc.com), sparking tactical distribution. (Source: cnbc.com). FRVO declined -8.57% with bearish 5D quantitative telemetry.</p>
           </div>
           <div class="m-grid">
               <div class="m-cell">
