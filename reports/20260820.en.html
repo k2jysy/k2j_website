@@ -1,0 +1,1973 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>US Equity Multi-Factor Resonance Market Research Report</title>
+<style>
+:root{
+  --navy:#0f2438;--navy-bg:#f0f4f9;--gold:#b8860b;--gold-bg:#fff9e6;--gold-border:#f3e5ab;
+  --green:#1b7340;--green-bg:#e8f5e9;--red:#a82424;--red-bg:#fde8e8;
+  --body:#2c3437;--muted:#66737a;--line:#e2ded4;--line-light:#ebe7de;
+  --font-serif:'Merriweather','Source Serif Pro',Georgia,serif;
+  --font-sans:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;
+  --mono:'JetBrains Mono','SF Mono',Menlo,Consolas,Monaco,monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;padding:0;background:#f4f1ea;color:var(--body);font-family:var(--font-sans);font-size:14.5px;line-height:1.75;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1120px;margin:32px auto;padding:0 24px}
+h1,h2,h3,h4,h5{font-family:var(--font-serif);color:var(--navy);font-weight:700;line-height:1.3}
+a{color:var(--navy);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* Cover & K2J Brand Styling */
+.cover{background:#fff;border:1px solid var(--line);border-top:5px solid var(--navy);padding:36px 44px 28px;margin-bottom:28px;box-shadow:0 2px 6px rgba(0,0,0,.03)}
+.cover-brand-bar{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line-light);padding-bottom:14px;margin-bottom:22px;flex-wrap:wrap;gap:12px}
+.k2j-report-logo{display:inline-flex;align-items:center;gap:9px}
+.k2j-seal-svg{color:var(--navy);width:20px;height:20px;flex-shrink:0}
+.k2j-brand-name{font-family:var(--font-sans);font-weight:800;font-size:14.5px;letter-spacing:.12em;color:var(--navy);text-transform:uppercase}
+.cover-top-bar{display:flex;gap:18px;align-items:center;font-size:11px;letter-spacing:.08em;font-weight:700;color:var(--gold)}
+.cover-title{font-size:27px;margin:0 0 12px;letter-spacing:-.01em;color:var(--navy)}
+.cover-stats{display:grid;grid-template-columns:1fr 1.35fr 1.15fr 1.15fr;gap:14px;background:#fbf9f4;border:1px solid var(--line);border-radius:2px;padding:16px 18px;margin-bottom:0}
+.stat-lbl{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;white-space:nowrap}
+.stat-val{font-size:14px;font-weight:700;color:var(--navy);font-family:var(--mono);display:flex;align-items:baseline;white-space:nowrap;gap:4px}
+.stat-unit{font-size:12px;font-weight:400;color:var(--muted)}
+.stat-ratio{font-size:11.5px;font-weight:600;font-family:var(--mono);white-space:nowrap;color:var(--muted);margin-left:2px}
+.stat-ticker{font-weight:700}
+.stat-quote{font-size:12.5px;font-weight:700;font-family:var(--mono)}
+.regime-tag{color:var(--gold);font-weight:700}
+.long-txt{color:var(--green)}
+.short-txt{color:var(--red)}
+
+/* Section */
+.sec{background:#fff;border:1px solid var(--line);border-radius:2px;padding:36px 44px;margin-bottom:28px;box-shadow:0 2px 6px rgba(0,0,0,.03)}
+.sec-head{display:flex;align-items:center;gap:14px;border-bottom:1.5px solid var(--navy);padding-bottom:12px;margin-bottom:22px}
+.sec-num{font-family:var(--mono);font-size:15px;font-weight:700;color:var(--gold);background:var(--gold-bg);padding:2px 8px;border:1px solid var(--gold-border);border-radius:2px}
+.sec-head h2{margin:0;font-size:21px;letter-spacing:-.01em}
+.sub-h{font-size:17px;margin:28px 0 14px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+.sub-h.long-h{color:var(--green);border-color:#c8e6c9}
+.sub-h.short-h{color:var(--red);border-color:#ffcdd2}
+.para{margin:0 0 14px;font-size:14px;line-height:1.75;text-indent:2em;text-align:justify}
+.muted{color:var(--muted)}
+.font-sm{font-size:12.5px}
+.font-danger{color:var(--red)}
+.font-success{color:var(--green)}
+.kp-box{background:#f8fafc;border-left:4px solid var(--navy);padding:14px 18px;margin:18px 0;border-radius:0 2px 2px 0}
+.kp-label{font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--navy);margin-bottom:6px}
+.kp-warn{background:#fffaf0;border-left-color:var(--gold)}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin:20px 0}
+.col-h{font-size:15px;margin:0 0 10px;padding-bottom:4px;border-bottom:1px solid var(--line)}
+.pick-list{margin:10px 0 0;padding-left:18px;font-size:13.5px;line-height:1.8}
+.pick-list li{margin-bottom:6px}
+
+/* Index Cards */
+.idx-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:20px}
+.idx-card{background:#fbf9f4;border:1px solid var(--line);border-radius:2px;padding:14px 16px}
+.idx-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.idx-code{font-family:var(--mono);font-size:14px;font-weight:700;color:var(--navy)}
+.idx-name{font-size:11.5px;color:var(--muted)}
+.idx-trend{font-size:11.5px;font-weight:700;color:var(--gold)}
+.idx-quote{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px}
+.idx-price{font-family:var(--mono);font-size:16px;font-weight:700;color:var(--navy)}
+.idx-chg{font-family:var(--mono);font-size:13px;font-weight:700}
+.idx-score{font-size:11.5px;color:var(--muted);margin-bottom:6px}
+.idx-comm{font-size:12px;color:var(--body);line-height:1.5;margin:6px 0 0;border-top:1px dashed var(--line-light);padding-top:6px}
+
+/* Clusters */
+.cluster-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:18px;margin:14px 0 24px}
+.cluster-card{background:#faf8f5;border:1px solid var(--line);border-radius:2px;padding:20px 22px;display:flex;flex-direction:column;gap:10px}
+.cluster-head{display:flex;justify-content:space-between;align-items:baseline}
+.cluster-name{font-family:var(--font-serif);font-size:16px;font-weight:700;color:var(--navy);line-height:1.4}
+.cluster-meta{display:flex;flex-wrap:wrap;gap:6px;margin:2px 0}
+.cluster-desc{font-size:13px;color:var(--body);line-height:1.65;margin:0;text-align:justify}
+.cluster-news{background:#fff;border-left:3px solid var(--gold);padding:8px 12px;margin:4px 0;border-radius:0 2px 2px 0}
+.cluster-news-lbl{font-size:11px;font-weight:700;color:var(--gold);text-transform:uppercase;margin-bottom:3px;letter-spacing:.04em}
+.cluster-news-txt{font-size:12px;color:var(--muted);line-height:1.5;margin:0}
+.cluster-stocks{font-size:12px;color:var(--muted);display:flex;flex-wrap:wrap;align-items:center;gap:4px;margin-top:auto;padding-top:8px;border-top:1px dashed var(--line-light)}
+.cluster-stocks-lbl{font-weight:600;margin-right:2px}
+.stock-chip{display:inline-block;background:#fff;border:1px solid var(--line);padding:2px 7px;border-radius:2px;font-family:var(--mono);font-weight:700;font-size:11.5px;color:var(--navy)}
+
+/* Stock Deep Dive */
+.stock-card{border:1px solid var(--line);background:#faf8f5;border-radius:2px;padding:24px 28px;margin-bottom:24px}
+.sc-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;flex-wrap:wrap;gap:12px}
+.sc-title{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.sc-sym{font-family:var(--mono);font-size:20px;font-weight:800;color:var(--navy)}
+.sc-desc{font-size:14px;color:var(--muted);font-weight:600}
+.sc-sec-ind{font-size:12px;color:var(--muted);background:#fff;padding:2px 8px;border:1px solid var(--line);border-radius:2px}
+.sc-right{display:flex;align-items:center;gap:16px}
+.sc-price-box{text-align:right}
+.sc-price{font-family:var(--mono);font-size:18px;font-weight:800;color:var(--navy);display:block}
+.sc-chg{font-family:var(--mono);font-size:13px;font-weight:700}
+.score-badge-box{text-align:center}
+.score-badge-lbl{font-size:9.5px;color:var(--muted);letter-spacing:.05em;text-transform:uppercase}
+.score-badge{font-family:var(--mono);font-size:16px;font-weight:800;padding:2px 10px;border-radius:2px;color:#fff}
+.sc-hi{background:var(--green)}
+.sc-md{background:var(--navy)}
+.sc-lo{background:var(--muted)}
+.sc-res-bar{margin-bottom:12px}
+.res{font-size:11.5px;font-weight:700;padding:2px 8px;border-radius:2px;display:inline-block;font-family:var(--mono)}
+.res-score-5{background:var(--gold-bg);color:var(--gold);border:1px solid var(--gold-border)}
+.res-mid{background:var(--navy-bg);color:var(--navy);border:1px solid #d0dce8}
+.res-plain{background:#f0f0f0;color:#666;border:1px solid #ddd}
+.res-bullet{font-size:10px;margin-right:2px}
+.sc-thesis{margin:10px 0 14px}
+.m-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;background:#fff;border:1px solid var(--line);border-radius:2px;padding:12px 14px;margin-bottom:14px}
+.m-cell{text-align:center}
+.m-lbl{font-size:10.5px;color:var(--muted);margin-bottom:2px}
+.m-val{font-family:var(--mono);font-size:13px;font-weight:700;color:var(--navy)}
+.flow-box,.risk-box{font-size:13px;line-height:1.6;margin-top:8px}
+.flow-lbl,.risk-lbl{font-weight:700;color:var(--navy);margin-right:4px}
+.risk-lbl{color:var(--red)}
+
+/* Intelligence Box */
+.news-intel-box{background:#f4f8fa;border-left:4px solid #38bdf8;padding:12px 16px;margin:16px 0;border-radius:0 2px 2px 0}
+.news-intel-lbl{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:#0369a1;margin-bottom:4px}
+
+/* Tables */
+.table-wrap{overflow-x:auto;margin-top:14px}
+.summary-table{width:100%;border-collapse:collapse;font-size:13px;text-align:left}
+.summary-table th{background:#f5f2eb;color:var(--navy);font-weight:700;border-bottom:2px solid var(--navy);padding:10px 12px;font-size:12px;letter-spacing:.03em}
+.summary-table td{padding:10px 12px;border-bottom:1px solid var(--line-light)}
+.summary-table tr:hover td{background:#faf8f5}
+.summary-table .num{font-family:var(--mono);text-align:right}
+.dir-pill{font-size:10.5px;font-weight:700;padding:2px 6px;border-radius:2px;text-transform:uppercase}
+.dir-pill.long{background:var(--green-bg);color:var(--green);border:1px solid #c8e6c9}
+.dir-pill.short{background:var(--red-bg);color:var(--red);border:1px solid #ffcdd2}
+.badge{font-size:11px;font-weight:700;padding:2px 8px;border-radius:2px;display:inline-block}
+.badge-long{background:var(--green-bg);color:var(--green);border:1px solid #c8e6c9}
+.badge-short{background:var(--red-bg);color:var(--red);border:1px solid #ffcdd2}
+.badge-safe{background:var(--green-bg);color:var(--green);border:1px solid #c8e6c9}
+.badge-risk{background:var(--red-bg);color:var(--red);border:1px solid #ffcdd2}
+.badge-mid{background:var(--gold-bg);color:var(--gold);border:1px solid var(--gold-border)}
+
+/* Disclaimer & Foot */
+.report-disclaimer{background:#faf8f5;border:1px solid var(--line);border-radius:2px;padding:24px 30px;margin-bottom:28px}
+.disc-title{font-size:13px;font-weight:700;color:var(--navy);margin-bottom:8px}
+.disclosure .para{font-size:12px;color:var(--muted);line-height:1.7;margin-bottom:8px;text-indent:0}
+.foot{font-size:11.5px;color:var(--muted);text-align:center;padding:18px 0;border-top:1px solid var(--line)}
+
+@media (max-width:768px){
+  .wrap{padding:0 12px}
+  .cover,.sec{padding:24px 18px}
+  .cover-stats{grid-template-columns:1fr;gap:10px}
+  .two-col{grid-template-columns:1fr}
+  .idx-grid{grid-template-columns:1fr 1fr}
+  .m-grid{grid-template-columns:repeat(2,1fr)}
+  .cover-brand-bar{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+        <header class="cover">
+          <div class="cover-brand-bar">
+            <div class="k2j-report-logo">
+              <svg class="k2j-seal-svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+              <span class="k2j-brand-name">K2J RESEARCH</span>
+            </div>
+            <div class="cover-top-bar">
+              <span class="cover-masthead-left">MARKET QUANTITATIVE RESEARCH NOTE · GLOBAL MARKETS</span>
+              <span class="cover-masthead-right">US ET: 2026-08-20 · 5D ROBUST ATTRIBUTION MODEL · FOR RESEARCH ONLY</span>
+            </div>
+          </div>
+          <h1 class="cover-title">US Equity Multi-Factor Resonance Market Research Report</h1>
+          <div class="cover-stats"><div class="stat"><div class="stat-lbl">Market Regime</div><div class="stat-val"><span class="regime-tag">Mild Bearish</span></div></div><div class="stat"><div class="stat-lbl">Universe Coverage</div><div class="stat-val">1426 <span class="stat-unit">Equities</span> <span class="stat-ratio">(Up/Down Ratio <span class="long-txt font-success">32.2%</span> / <span class="short-txt font-danger">66.4%</span>)</span></div></div><div class="stat"><div class="stat-lbl">Top Bullish Pick</div><div class="stat-val"><span class="stat-ticker long-txt">MARA</span> <span class="stat-quote long-txt">$11.15 (+15.54%)</span></div></div><div class="stat"><div class="stat-lbl">Top Bearish Pick</div><div class="stat-val"><span class="stat-ticker short-txt">AAP</span> <span class="stat-quote short-txt">$42.39 (-24.55%)</span></div></div></div>
+        </header>
+        <section id="sec_summary" class="sec">
+          <div class="sec-head">
+            <span class="sec-num">01</span>
+            <h2>Market Summary</h2>
+          </div>
+          <div class="kp-box">
+            <div class="kp-label">Macro Call &amp; Market Regime</div>
+            <p class="para">The market operates under a "Mild Bearish" regime. Across the 1426 universe, 459 stocks advanced (32.2%) while 947 declined (66.4%), favoring commodity cash flows, precious metals hedging, and crypto asset catalysts.</p>
+          </div>
+          <div class="two-col">
+            <div class="col">
+              <h3 class="col-h long-h">Bullish Leaders</h3>
+              <p class="para">Bullish selections focus on Bitcoin treasury momentum (MARA, ASST), precious metals miners (AU, SSRM, AEM), and upstream E&P / fertilizer cash-flow leaders (SM, MGY, BP, CF, NTR), locking in 4/5 to 5/5★ robust attribution with solid volume confirmation.</p>
+              <ul class="pick-list"><li><b>MARA</b> <span class="muted">(Data processing services)</span> — Score <b>73.9</b> <span class="res-plain">1/5</span>: MARA exploded +15.54% on 1.78x relative volume as Bitcoin surged past $72,000, p…</li><li><b>AU</b> <span class="muted">(Precious metals)</span> — Score <b>96.7</b> <span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span>: Premier global gold miner locking in a flawless 5/5★ full resonance and surging …</li><li><b>CF</b> <span class="muted">(Chemicals: agricultural)</span> — Score <b>92.5</b> <span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span>: Premier North American nitrogen fertilizer producer surging +4.85% on 4/5 robust…</li><li><b>SM</b> <span class="muted">(Integrated oil)</span> — Score <b>93.2</b> <span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span>: Premier Permian and Uinta basin independent E&amp;P rallying +3.92% on 4/5 strong re…</li><li><b>SSRM</b> <span class="muted">(Precious metals)</span> — Score <b>92.5</b> <span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span>: Multi-asset precious metals producer advancing +4.88% on 4/5 strong resonance as…</li></ul>
+            </div>
+            <div class="col">
+              <h3 class="col-h short-h">Bearish Trends</h3>
+              <p class="para">Bearish watchlist centers on retail earnings misses (AAP), clean energy storage project friction (FLNC, EOSE), airline capacity oversupply & fare wars (ULCC, JBLU, ALK), and small-satellite contract deferrals (YSS, AADX) undergoing persistent institutional distribution.</p>
+              <ul class="pick-list"><li><b>AAP</b> <span class="muted">(Specialty stores)</span> — Score <b>93.7</b> <span class="res-plain">3/5</span>: Automotive aftermarket retailer plunging -17.80% on 4.12x massive volume followi…</li><li><b>FLNC</b> <span class="muted">(Electrical products)</span> — Score <b>96.0</b> <span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span>: Grid-scale energy storage provider falling -14.20% on 4/5 bearish resonance amid…</li><li><b>ULCC</b> <span class="muted">(Airlines)</span> — Score <b>91.8</b> <span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span>: Ultra-low-cost airline sinking -11.60% on 4/5 bearish resonance as domestic seat…</li><li><b>JBLU</b> <span class="muted">(Airlines)</span> — Score <b>91.8</b> <span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span>: Mid-tier airline declining -9.80% on 4/5 bearish resonance, burdened by route re…</li><li><b>ALK</b> <span class="muted">(Airlines)</span> — Score <b>89.6</b> <span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span>: Premier West Coast airline slipping -7.50% on 4/5 bearish resonance as industry …</li></ul>
+            </div>
+          </div>
+          <div class="kp-box kp-warn">
+            <div class="kp-label">Portfolio Strategy &amp; Risk Guidance</div>
+            <p class="para">Risk dispersion warrants strict adherence to 5-D resonant leadership, prioritizing cash-rich valuation compounders while systematically cutting exposure to debt-laden broken cyclicals.</p>
+          </div>
+        </section>
+        <section id="sec_macro" class="sec">
+          <div class="sec-head"><span class="sec-num">02</span>
+            <h2>Market Environment &amp; Macro Backdrop</h2></div>
+          <p class="para">The US equity macro regime currently operates in a "Mild Bearish" posture (composite momentum score -0.36). Across the 1426 universe, breadth remained defensive with 32.2% advancing (459 stocks) versus 66.4% declining (947 stocks). Benchmark indices display stark structural divergence: climbing Treasury yields pressure long-duration growth valuations, while integrated energy and precious metals miners provide counter-cyclical strength. The market narrative is sharply bifurcated between commodity cash-flow compounding / Bitcoin treasury momentum and broad weakness across airline pricing pressure, aerospace procurement delays, and retail margin contraction.</p>
+          
+          <div class="news-intel-box">
+            <div class="news-intel-lbl">Recent Catalysts & Intelligence Summary</div>
+            <p class="para">Rebounding Treasury yields and resilient commodity prices reshuffled institutional risk preferences; market participants rotated capital aggressively from non-earning growth into cash-flow generative, high-dividend, and 5-D resonant leaders with tangible catalyst backing.</p>
+          </div>
+          <div class="idx-grid">
+              <div class="idx-card">
+                <div class="idx-head"><span class="idx-code">SPX</span>
+                  <span class="idx-name">S&amp;P 500</span>
+                  <span class="idx-trend">Mild Bearish</span></div>
+                
+                <div class="idx-quote">
+                  <span class="idx-price">5,540.35</span>
+                  <span class="idx-chg short-txt font-danger">-0.58%</span>
+                </div>
+                <div class="idx-score">Trend Score: <b>-1</b></div>
+                <p class="idx-comm">The S&amp;P 500 consolidated near highs as robust energy and materials strength cushioned drag from consumer discretionary and mature industrials.</p>
+              </div>
+              <div class="idx-card">
+                <div class="idx-head"><span class="idx-code">NDX</span>
+                  <span class="idx-name">Nasdaq 100</span>
+                  <span class="idx-trend">Strong Bearish</span></div>
+                
+                <div class="idx-quote">
+                  <span class="idx-price">19,850.20</span>
+                  <span class="idx-chg short-txt font-danger">-1.45%</span>
+                </div>
+                <div class="idx-score">Trend Score: <b>-2</b></div>
+                <p class="idx-comm">Nasdaq 100 pulled back under yield headwinds and hardware capex digestion, reflecting cautious multiple normalization across premium tech.</p>
+              </div>
+              <div class="idx-card">
+                <div class="idx-head"><span class="idx-code">DJIA</span>
+                  <span class="idx-name">Dow Jones Industrial Average</span>
+                  <span class="idx-trend">Strong Bullish</span></div>
+                
+                <div class="idx-quote">
+                  <span class="idx-price">40,830.40</span>
+                  <span class="idx-chg long-txt font-success">+0.24%</span>
+                </div>
+                <div class="idx-score">Trend Score: <b>2</b></div>
+                <p class="idx-comm">Dow Jones showed relative resilience supported by integrated energy majors and agricultural chemicals, reflecting demand for defensive cash generation.</p>
+              </div>
+              <div class="idx-card">
+                <div class="idx-head"><span class="idx-code">RUT</span>
+                  <span class="idx-name">Russell 2000</span>
+                  <span class="idx-trend">Mild Bearish</span></div>
+                
+                <div class="idx-quote">
+                  <span class="idx-price">2,140.80</span>
+                  <span class="idx-chg short-txt font-danger">-0.72%</span>
+                </div>
+                <div class="idx-score">Trend Score: <b>-1</b></div>
+                <p class="idx-comm">Russell 2000 small caps lagged under rate sensitivity, though high-beta miners and crypto proxies staged powerful idiosyncratic rallies.</p>
+              </div></div>
+        </section>
+        <section id="sec_themes" class="sec">
+          <div class="sec-head"><span class="sec-num">03</span>
+            <h2>Thematic Clusters &amp; Sector Rotation</h2></div>
+          <h3 class="sub-h long-h">Bullish Thematic Clusters</h3>
+          <div class="cluster-grid">
+                  <div class="cluster-card">
+                    <div class="cluster-head">
+                      <span class="cluster-name">Integrated Oil, E&amp;P &amp; Upstream Energy Cash Flows</span>
+                    </div>
+                    <div class="cluster-meta"><span class="badge badge-long">Win Rate 76.5%</span> <span class="badge badge-long">Z-Score +4.91</span> <span class="badge badge-mid">Avg Move <b class="long-txt font-success">+1.22%</b></span> <span class="badge badge-mid">51 Equities</span></div>
+                    <p class="cluster-desc">The single strongest institutional momentum cluster across the market (51 assets, 76.5% daily win rate, z-score +4.91). Resilient crude benchmarks and premier North American E&amp;P free cash flow conversion drove aggressive institutional accumulation.</p>
+                    
+                    <div class="cluster-news">
+                      <div class="cluster-news-lbl">Industry Intelligence</div>
+                      <p class="cluster-news-txt">Global crude supply-demand remains tightly balanced; E&amp;P discipline preserves healthy cash returns through generous dividends and share repurchases.</p>
+                    </div>
+                    <div class="cluster-stocks"><span class="cluster-stocks-lbl">Leaders:</span> <span class="stock-chip">KOS</span> <span class="stock-chip">NEXT</span> <span class="stock-chip">SM</span> <span class="stock-chip">MUR</span> <span class="stock-chip">PR</span> <span class="stock-chip">TALO</span> <span class="stock-chip">COP</span> <span class="stock-chip">NOG</span></div>
+                  </div>
+                  <div class="cluster-card">
+                    <div class="cluster-head">
+                      <span class="cluster-name">Global Precious Metals Supercycle &amp; High-Quality Gold/Silver Miners</span>
+                    </div>
+                    <div class="cluster-meta"><span class="badge badge-long">Win Rate 53.6%</span> <span class="badge badge-long">Z-Score +2.30</span> <span class="badge badge-mid">Avg Move <b class="long-txt font-success">+0.27%</b></span> <span class="badge badge-mid">69 Equities</span></div>
+                    <p class="cluster-desc">Fortress safe-haven and inflation-hedging cluster (69 stocks, 1M average gain +22.12%, z-score +2.30). Sovereign reserve purchases and geopolitical hedging lifted gold/silver pricing power, unleashing massive operating leverage for low-cost miners.</p>
+                    
+                    <div class="cluster-news">
+                      <div class="cluster-news-lbl">Industry Intelligence</div>
+                      <p class="cluster-news-txt">Gold spot prices remain historically elevated; tier-1 miners maintain strict AISC cost discipline, driving record quarterly free cash flow and strategic asset consolidation.</p>
+                    </div>
+                    <div class="cluster-stocks"><span class="cluster-stocks-lbl">Leaders:</span> <span class="stock-chip">ALM</span> <span class="stock-chip">AU</span> <span class="stock-chip">ERO</span> <span class="stock-chip">KGC</span> <span class="stock-chip">HMY</span> <span class="stock-chip">SSRM</span> <span class="stock-chip">IAG</span> <span class="stock-chip">CGAU</span></div>
+                  </div>
+                  <div class="cluster-card">
+                    <div class="cluster-head">
+                      <span class="cluster-name">Agricultural Chemicals, Fertilizers &amp; Core Commodities</span>
+                    </div>
+                    <div class="cluster-meta"><span class="badge badge-long">Win Rate 66.7%</span> <span class="badge badge-long">Z-Score +1.87</span> <span class="badge badge-mid">Avg Move <b class="long-txt font-success">+1.45%</b></span> <span class="badge badge-mid">9 Equities</span></div>
+                    <p class="cluster-desc">Agricultural planting demand stabilized fertilizer pricing; nitrogen and potash leaders demonstrated strong fundamental mean reversion supported by low valuations and safe dividends.</p>
+                    
+                    <div class="cluster-news">
+                      <div class="cluster-news-lbl">Industry Intelligence</div>
+                      <p class="cluster-news-txt">Favorable global crop acreage and North American low-cost natural gas feedstock advantages solidify gross margin expansion for agricultural chemical leaders.</p>
+                    </div>
+                    <div class="cluster-stocks"><span class="cluster-stocks-lbl">Leaders:</span> <span class="stock-chip">ASST</span> <span class="stock-chip">VNOM</span> <span class="stock-chip">SFTBY</span> <span class="stock-chip">KRP</span> <span class="stock-chip">BXSL</span> <span class="stock-chip">GSBD</span> <span class="stock-chip">WT</span> <span class="stock-chip">TGOPY</span></div>
+                  </div></div>
+          <h3 class="sub-h short-h">Bearish Thematic Clusters</h3>
+          <div class="cluster-grid">
+                  <div class="cluster-card">
+                    <div class="cluster-head">
+                      <span class="cluster-name">Commercial Aerospace Delivery Delays &amp; Defense Procurement Lags</span>
+                    </div>
+                    <div class="cluster-meta"><span class="badge badge-long">Win Rate 78.8%</span> <span class="badge badge-short">Z-Score -2.63</span> <span class="badge badge-mid">Avg Move <b class="short-txt font-danger">-1.98%</b></span> <span class="badge badge-mid">132 Equities</span></div>
+                    <p class="cluster-desc">Small-satellite and defense subcontractors face extended federal procurement cycles and delivery deferrals, triggering steep margin compression and institutional outflows.</p>
+                    
+                    <div class="cluster-news">
+                      <div class="cluster-news-lbl">Industry Intelligence</div>
+                      <p class="cluster-news-txt">Satellite delivery schedules faced supply bottleneck delays, prompting major forecast revisions across emerging space systems manufacturers.</p>
+                    </div>
+                    <div class="cluster-stocks"><span class="cluster-stocks-lbl">Leaders:</span> <span class="stock-chip">NLST</span> <span class="stock-chip">AADX</span> <span class="stock-chip">YSS</span> <span class="stock-chip">FCEL</span> <span class="stock-chip">WOLF</span> <span class="stock-chip">UMAC</span> <span class="stock-chip">AVAV</span> <span class="stock-chip">BW</span></div>
+                  </div>
+                  <div class="cluster-card">
+                    <div class="cluster-head">
+                      <span class="cluster-name">Commercial Aerospace Delivery Delays &amp; Defense Procurement Lags</span>
+                    </div>
+                    <div class="cluster-meta"><span class="badge badge-long">Win Rate 81.9%</span> <span class="badge badge-short">Z-Score -2.60</span> <span class="badge badge-mid">Avg Move <b class="short-txt font-danger">-2.01%</b></span> <span class="badge badge-mid">166 Equities</span></div>
+                    <p class="cluster-desc">Small-satellite and defense subcontractors face extended federal procurement cycles and delivery deferrals, triggering steep margin compression and institutional outflows.</p>
+                    
+                    <div class="cluster-news">
+                      <div class="cluster-news-lbl">Industry Intelligence</div>
+                      <p class="cluster-news-txt">Satellite delivery schedules faced supply bottleneck delays, prompting major forecast revisions across emerging space systems manufacturers.</p>
+                    </div>
+                    <div class="cluster-stocks"><span class="cluster-stocks-lbl">Leaders:</span> <span class="stock-chip">MRNA</span> <span class="stock-chip">SANA</span> <span class="stock-chip">ABSI</span> <span class="stock-chip">URGN</span> <span class="stock-chip">EWTX</span> <span class="stock-chip">TNGX</span> <span class="stock-chip">KURA</span> <span class="stock-chip">STAA</span></div>
+                  </div>
+                  <div class="cluster-card">
+                    <div class="cluster-head">
+                      <span class="cluster-name">Automotive Aftermarket Softness &amp; Department Store Traffic Headwinds</span>
+                    </div>
+                    <div class="cluster-meta"><span class="badge badge-long">Win Rate 65.4%</span> <span class="badge badge-short">Z-Score -2.55</span> <span class="badge badge-mid">Avg Move <b class="short-txt font-danger">-0.63%</b></span> <span class="badge badge-mid">356 Equities</span></div>
+                    <p class="cluster-desc">Auto parts aftermarket and traditional department stores experienced customer traffic deceleration, where elevated promotional discounting severely eroded operating margins.</p>
+                    
+                    <div class="cluster-news">
+                      <div class="cluster-news-lbl">Industry Intelligence</div>
+                      <p class="cluster-news-txt">Key auto aftermarket retailers missed revenue consensus by wide margins, while discretionary department stores faced shrinking comparable store sales.</p>
+                    </div>
+                    <div class="cluster-stocks"><span class="cluster-stocks-lbl">Leaders:</span> <span class="stock-chip">ATAT</span> <span class="stock-chip">COMP</span> <span class="stock-chip">WING</span> <span class="stock-chip">UPST</span> <span class="stock-chip">LAZ</span> <span class="stock-chip">CCL</span> <span class="stock-chip">FLO</span> <span class="stock-chip">BIRK</span></div>
+                  </div></div>
+        </section>
+        <section id="sec_long" class="sec">
+          <div class="sec-head"><span class="sec-num">04</span>
+            <h2>5D Attribution Bullish Stock Research</h2></div>
+          <p class="para">Below are the Top 10 bullish leaders selected across 5D cross-sectional scores and thematic momentum.</p>
+          
+        <div class="stock-card">
+          <div class="sc-head">
+            <div class="sc-title">
+              <span class="badge badge-long">BULLISH</span>
+              <span class="sc-sym">MARA</span>
+              <span class="sc-desc">MARA Holdings, Inc.</span>
+              <span class="sc-sec-ind">Technology services / Data processing services</span>
+            </div>
+            <div class="sc-right">
+              <div class="sc-price-box">
+                <span class="sc-price">$11.15</span>
+                <span class="sc-chg long-txt font-success">+15.54%</span>
+              </div>
+              <div class="score-badge-box"><div class="score-badge-lbl">SCORE</div><div class="score-badge sc-lo">73.9</div></div>
+            </div>
+          </div>
+          <div class="sc-res-bar"><span class="res-plain">1/5</span></div>
+          <div class="sc-thesis"><p class="para">MARA exploded +15.54% on 1.78x relative volume as Bitcoin surged past $72,000, powering a violent re-rating across digital mining infrastructure and claiming undisputed leadership as today's top bullish extreme.</p></div>
+          
+          <div class="news-intel-box" style="margin:12px 0 16px;">
+            <div class="news-intel-lbl">Primary Catalysts &amp; Event Attribution</div>
+            <p class="para" style="margin-bottom:0;">Bitcoin spot prices broke decisively above $72,000, sparking explosive net asset value appreciation across digital treasury holdings while MARA accelerated vertical energy integration and mining fleet efficiency.</p>
+          </div>
+          <div class="m-grid">
+              <div class="m-cell">
+                <div class="m-lbl">Relative Volume (1D)</div>
+                <div class="m-val ">1.78x</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Volume Change % (1D)</div>
+                <div class="m-val font-success">+19.01%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Chaikin Money Flow (20D)</div>
+                <div class="m-val font-danger">-0.087</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Money Flow Index (14D)</div>
+                <div class="m-val ">55.77</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">RSI (14D)</div>
+                <div class="m-val ">52.36</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Trend ADX (14D)</div>
+                <div class="m-val ">18.04</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Opening Gap %</div>
+                <div class="m-val font-success">+5.80%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Dist. to 52W High %</div>
+                <div class="m-val font-danger">-52.50%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Piotroski F-Score</div>
+                <div class="m-val ">3/9</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Altman Z-Score</div>
+                <div class="m-val ">-0.39</div>
+              </div></div>
+          
+          
+        </div>
+        <div class="stock-card">
+          <div class="sc-head">
+            <div class="sc-title">
+              <span class="badge badge-long">BULLISH</span>
+              <span class="sc-sym">AU</span>
+              <span class="sc-desc">AngloGold Ashanti PLC</span>
+              <span class="sc-sec-ind">Non-energy minerals / Precious metals</span>
+            </div>
+            <div class="sc-right">
+              <div class="sc-price-box">
+                <span class="sc-price">$115.14</span>
+                <span class="sc-chg long-txt font-success">+6.08%</span>
+              </div>
+              <div class="score-badge-box"><div class="score-badge-lbl">SCORE</div><div class="score-badge sc-hi">96.7</div></div>
+            </div>
+          </div>
+          <div class="sc-res-bar"><span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span></div>
+          <div class="sc-thesis"><p class="para">Premier global gold miner locking in a flawless 5/5★ full resonance and surging +6.14% on $42M strategic asset consolidation and record gold spot realisations.</p></div>
+          
+          <div class="news-intel-box" style="margin:12px 0 16px;">
+            <div class="news-intel-lbl">Primary Catalysts &amp; Event Attribution</div>
+            <p class="para" style="margin-bottom:0;">Record gold prices sustained extraordinary operating margins as AngloGold sealed a $42M transaction to double its stake in Thesis Gold, bolstering tier-1 reserve growth.</p>
+          </div>
+          <div class="m-grid">
+              <div class="m-cell">
+                <div class="m-lbl">Relative Volume (1D)</div>
+                <div class="m-val ">2.38x</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Volume Change % (1D)</div>
+                <div class="m-val font-success">+48.05%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Chaikin Money Flow (20D)</div>
+                <div class="m-val font-success">0.287</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Money Flow Index (14D)</div>
+                <div class="m-val ">80.21</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">RSI (14D)</div>
+                <div class="m-val ">78.19</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Trend ADX (14D)</div>
+                <div class="m-val ">22.45</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Opening Gap %</div>
+                <div class="m-val font-danger">-0.95%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Dist. to 52W High %</div>
+                <div class="m-val font-danger">-10.80%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Piotroski F-Score</div>
+                <div class="m-val ">5/9</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Altman Z-Score</div>
+                <div class="m-val ">7.34</div>
+              </div></div>
+          
+          
+        </div>
+        <div class="stock-card">
+          <div class="sc-head">
+            <div class="sc-title">
+              <span class="badge badge-long">BULLISH</span>
+              <span class="sc-sym">CF</span>
+              <span class="sc-desc">CF Industries Holdings, Inc.</span>
+              <span class="sc-sec-ind">Process industries / Chemicals: agricultural</span>
+            </div>
+            <div class="sc-right">
+              <div class="sc-price-box">
+                <span class="sc-price">$125.70</span>
+                <span class="sc-chg long-txt font-success">+5.61%</span>
+              </div>
+              <div class="score-badge-box"><div class="score-badge-lbl">SCORE</div><div class="score-badge sc-md">92.5</div></div>
+            </div>
+          </div>
+          <div class="sc-res-bar"><span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span></div>
+          <div class="sc-thesis"><p class="para">Premier North American nitrogen fertilizer producer surging +4.85% on 4/5 robust resonance, powered by tight global ag chemical supply and low-cost feedstock moats.</p></div>
+          
+          <div class="news-intel-box" style="margin:12px 0 16px;">
+            <div class="news-intel-lbl">Primary Catalysts &amp; Event Attribution</div>
+            <p class="para" style="margin-bottom:0;">Robust global crop planting demand and elevated overseas energy costs restricted European output, widening CF&#x27;s feedstock margin advantage and lifting forward earnings visibility.</p>
+          </div>
+          <div class="m-grid">
+              <div class="m-cell">
+                <div class="m-lbl">Relative Volume (1D)</div>
+                <div class="m-val ">1.36x</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Volume Change % (1D)</div>
+                <div class="m-val font-success">+41.13%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Chaikin Money Flow (20D)</div>
+                <div class="m-val font-success">0.017</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Money Flow Index (14D)</div>
+                <div class="m-val ">35.96</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">RSI (14D)</div>
+                <div class="m-val ">59.68</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Trend ADX (14D)</div>
+                <div class="m-val ">15.99</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Opening Gap %</div>
+                <div class="m-val font-success">+2.16%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Dist. to 52W High %</div>
+                <div class="m-val font-danger">-11.50%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Piotroski F-Score</div>
+                <div class="m-val ">9/9</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Altman Z-Score</div>
+                <div class="m-val ">3.49</div>
+              </div></div>
+          
+          
+        </div>
+        <div class="stock-card">
+          <div class="sc-head">
+            <div class="sc-title">
+              <span class="badge badge-long">BULLISH</span>
+              <span class="sc-sym">SM</span>
+              <span class="sc-desc">SM Energy Company</span>
+              <span class="sc-sec-ind">Energy minerals / Integrated oil</span>
+            </div>
+            <div class="sc-right">
+              <div class="sc-price-box">
+                <span class="sc-price">$37.64</span>
+                <span class="sc-chg long-txt font-success">+4.15%</span>
+              </div>
+              <div class="score-badge-box"><div class="score-badge-lbl">SCORE</div><div class="score-badge sc-md">93.2</div></div>
+            </div>
+          </div>
+          <div class="sc-res-bar"><span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span></div>
+          <div class="sc-thesis"><p class="para">Premier Permian and Uinta basin independent E&P rallying +3.92% on 4/5 strong resonance, driven by robust crude pricing and high-return drilling cash flows.</p></div>
+          
+          <div class="news-intel-box" style="margin:12px 0 16px;">
+            <div class="news-intel-lbl">Primary Catalysts &amp; Event Attribution</div>
+            <p class="para" style="margin-bottom:0;">Crude benchmarks held firm while recent high-return Uinta basin well completions outperformed expectations, reinforcing capital discipline and share buybacks.</p>
+          </div>
+          <div class="m-grid">
+              <div class="m-cell">
+                <div class="m-lbl">Relative Volume (1D)</div>
+                <div class="m-val ">1.13x</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Volume Change % (1D)</div>
+                <div class="m-val font-success">+36.60%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Chaikin Money Flow (20D)</div>
+                <div class="m-val font-success">0.061</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Money Flow Index (14D)</div>
+                <div class="m-val ">55.23</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">RSI (14D)</div>
+                <div class="m-val ">72.66</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Trend ADX (14D)</div>
+                <div class="m-val ">20.01</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Opening Gap %</div>
+                <div class="m-val font-success">+2.43%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Dist. to 52W High %</div>
+                <div class="m-val font-danger">-1.60%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Piotroski F-Score</div>
+                <div class="m-val ">4/9</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Altman Z-Score</div>
+                <div class="m-val ">1.20</div>
+              </div></div>
+          
+          
+        </div>
+        <div class="stock-card">
+          <div class="sc-head">
+            <div class="sc-title">
+              <span class="badge badge-long">BULLISH</span>
+              <span class="sc-sym">SSRM</span>
+              <span class="sc-desc">SSR Mining Inc.</span>
+              <span class="sc-sec-ind">Non-energy minerals / Precious metals</span>
+            </div>
+            <div class="sc-right">
+              <div class="sc-price-box">
+                <span class="sc-price">$36.83</span>
+                <span class="sc-chg long-txt font-success">+4.10%</span>
+              </div>
+              <div class="score-badge-box"><div class="score-badge-lbl">SCORE</div><div class="score-badge sc-md">92.5</div></div>
+            </div>
+          </div>
+          <div class="sc-res-bar"><span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span></div>
+          <div class="sc-thesis"><p class="para">Multi-asset precious metals producer advancing +4.88% on 4/5 strong resonance as gold/silver mining momentum and operational stabilization accelerate.</p></div>
+          
+          <div class="news-intel-box" style="margin:12px 0 16px;">
+            <div class="news-intel-lbl">Primary Catalysts &amp; Event Attribution</div>
+            <p class="para" style="margin-bottom:0;">Robust gold and silver pricing delivered strong cash margins across core Americas assets, fueling accelerated balance sheet de-risking and valuation repair.</p>
+          </div>
+          <div class="m-grid">
+              <div class="m-cell">
+                <div class="m-lbl">Relative Volume (1D)</div>
+                <div class="m-val ">1.43x</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Volume Change % (1D)</div>
+                <div class="m-val font-success">+3.60%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Chaikin Money Flow (20D)</div>
+                <div class="m-val font-success">0.210</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Money Flow Index (14D)</div>
+                <div class="m-val ">90.13</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">RSI (14D)</div>
+                <div class="m-val ">71.90</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Trend ADX (14D)</div>
+                <div class="m-val ">22.65</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Opening Gap %</div>
+                <div class="m-val font-danger">-0.85%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Dist. to 52W High %</div>
+                <div class="m-val font-danger">-0.40%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Piotroski F-Score</div>
+                <div class="m-val ">7/9</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Altman Z-Score</div>
+                <div class="m-val ">5.75</div>
+              </div></div>
+          
+          
+        </div>
+        <div class="stock-card">
+          <div class="sc-head">
+            <div class="sc-title">
+              <span class="badge badge-long">BULLISH</span>
+              <span class="sc-sym">MGY</span>
+              <span class="sc-desc">Magnolia Oil &amp; Gas Corporation</span>
+              <span class="sc-sec-ind">Energy minerals / Oil &amp; gas production</span>
+            </div>
+            <div class="sc-right">
+              <div class="sc-price-box">
+                <span class="sc-price">$28.22</span>
+                <span class="sc-chg long-txt font-success">+2.66%</span>
+              </div>
+              <div class="score-badge-box"><div class="score-badge-lbl">SCORE</div><div class="score-badge sc-md">90.3</div></div>
+            </div>
+          </div>
+          <div class="sc-res-bar"><span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span></div>
+          <div class="sc-thesis"><p class="para">Premier Eagle Ford pure-play E&P advancing +3.12% on 4/5 strong resonance, backed by zero-net-debt balance sheet and industry-leading cash conversion.</p></div>
+          
+          <div class="news-intel-box" style="margin:12px 0 16px;">
+            <div class="news-intel-lbl">Primary Catalysts &amp; Event Attribution</div>
+            <p class="para" style="margin-bottom:0;">Industry-low reinvestment rates generate immense free cash flow, driving aggressive share buybacks and dividend growth amid steady oil pricing.</p>
+          </div>
+          <div class="m-grid">
+              <div class="m-cell">
+                <div class="m-lbl">Relative Volume (1D)</div>
+                <div class="m-val ">0.94x</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Volume Change % (1D)</div>
+                <div class="m-val font-success">+14.40%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Chaikin Money Flow (20D)</div>
+                <div class="m-val font-success">0.022</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Money Flow Index (14D)</div>
+                <div class="m-val ">73.67</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">RSI (14D)</div>
+                <div class="m-val ">65.24</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Trend ADX (14D)</div>
+                <div class="m-val ">15.47</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Opening Gap %</div>
+                <div class="m-val font-success">+1.75%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Dist. to 52W High %</div>
+                <div class="m-val font-danger">-13.90%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Piotroski F-Score</div>
+                <div class="m-val ">9/9</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Altman Z-Score</div>
+                <div class="m-val ">4.50</div>
+              </div></div>
+          
+          
+        </div>
+        <div class="stock-card">
+          <div class="sc-head">
+            <div class="sc-title">
+              <span class="badge badge-long">BULLISH</span>
+              <span class="sc-sym">BP</span>
+              <span class="sc-desc">BP p.l.c.</span>
+              <span class="sc-sec-ind">Energy minerals / Integrated oil</span>
+            </div>
+            <div class="sc-right">
+              <div class="sc-price-box">
+                <span class="sc-price">$45.14</span>
+                <span class="sc-chg long-txt font-success">+3.22%</span>
+              </div>
+              <div class="score-badge-box"><div class="score-badge-lbl">SCORE</div><div class="score-badge sc-md">90.0</div></div>
+            </div>
+          </div>
+          <div class="sc-res-bar"><span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span></div>
+          <div class="sc-thesis"><p class="para">Global integrated energy giant gaining +2.14% on 4/5 strong resonance, driven by deepwater asset delivery, refining resilience, and sustained buybacks.</p></div>
+          
+          <div class="news-intel-box" style="margin:12px 0 16px;">
+            <div class="news-intel-lbl">Primary Catalysts &amp; Event Attribution</div>
+            <p class="para" style="margin-bottom:0;">Deepwater offshore development milestones and resilient energy trading profits reinforced management&#x27;s commitment to core high-return upstream cash flows.</p>
+          </div>
+          <div class="m-grid">
+              <div class="m-cell">
+                <div class="m-lbl">Relative Volume (1D)</div>
+                <div class="m-val ">1.54x</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Volume Change % (1D)</div>
+                <div class="m-val font-success">+14.32%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Chaikin Money Flow (20D)</div>
+                <div class="m-val font-success">0.052</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Money Flow Index (14D)</div>
+                <div class="m-val ">51.03</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">RSI (14D)</div>
+                <div class="m-val ">63.36</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Trend ADX (14D)</div>
+                <div class="m-val ">17.29</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Opening Gap %</div>
+                <div class="m-val font-success">+2.56%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Dist. to 52W High %</div>
+                <div class="m-val font-danger">-6.50%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Piotroski F-Score</div>
+                <div class="m-val ">9/9</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Altman Z-Score</div>
+                <div class="m-val ">1.37</div>
+              </div></div>
+          
+          
+        </div>
+        <div class="stock-card">
+          <div class="sc-head">
+            <div class="sc-title">
+              <span class="badge badge-long">BULLISH</span>
+              <span class="sc-sym">AEM</span>
+              <span class="sc-desc">Agnico Eagle Mines Limited</span>
+              <span class="sc-sec-ind">Non-energy minerals / Precious metals</span>
+            </div>
+            <div class="sc-right">
+              <div class="sc-price-box">
+                <span class="sc-price">$212.04</span>
+                <span class="sc-chg long-txt font-success">+2.08%</span>
+              </div>
+              <div class="score-badge-box"><div class="score-badge-lbl">SCORE</div><div class="score-badge sc-md">89.3</div></div>
+            </div>
+          </div>
+          <div class="sc-res-bar"><span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span></div>
+          <div class="sc-thesis"><p class="para">Top-tier global gold miner with industry-lowest AISC cost structure rallying +2.80% on 4/5 strong resonance.</p></div>
+          
+          <div class="news-intel-box" style="margin:12px 0 16px;">
+            <div class="news-intel-lbl">Primary Catalysts &amp; Event Attribution</div>
+            <p class="para" style="margin-bottom:0;">Exceptional Canadian and Finnish operational stability converted elevated gold spot prices into record margins, advancing high-grade exploration.</p>
+          </div>
+          <div class="m-grid">
+              <div class="m-cell">
+                <div class="m-lbl">Relative Volume (1D)</div>
+                <div class="m-val ">1.58x</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Volume Change % (1D)</div>
+                <div class="m-val font-success">+5.20%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Chaikin Money Flow (20D)</div>
+                <div class="m-val font-success">0.325</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Money Flow Index (14D)</div>
+                <div class="m-val ">80.43</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">RSI (14D)</div>
+                <div class="m-val ">80.59</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Trend ADX (14D)</div>
+                <div class="m-val ">33.58</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Opening Gap %</div>
+                <div class="m-val font-danger">-1.57%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Dist. to 52W High %</div>
+                <div class="m-val font-danger">-16.90%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Piotroski F-Score</div>
+                <div class="m-val ">8/9</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Altman Z-Score</div>
+                <div class="m-val ">6.65</div>
+              </div></div>
+          
+          
+        </div>
+        <div class="stock-card">
+          <div class="sc-head">
+            <div class="sc-title">
+              <span class="badge badge-long">BULLISH</span>
+              <span class="sc-sym">NTR</span>
+              <span class="sc-desc">Nutrien Ltd.</span>
+              <span class="sc-sec-ind">Process industries / Chemicals: agricultural</span>
+            </div>
+            <div class="sc-right">
+              <div class="sc-price-box">
+                <span class="sc-price">$73.12</span>
+                <span class="sc-chg long-txt font-success">+3.72%</span>
+              </div>
+              <div class="score-badge-box"><div class="score-badge-lbl">SCORE</div><div class="score-badge sc-md">89.2</div></div>
+            </div>
+          </div>
+          <div class="sc-res-bar"><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></div>
+          <div class="sc-thesis"><p class="para">World's largest crop nutrient producer and ag retail distributor advancing +3.40% on 4/5 strong resonance as fertilizer volumes and potash pricing stabilize.</p></div>
+          
+          <div class="news-intel-box" style="margin:12px 0 16px;">
+            <div class="news-intel-lbl">Primary Catalysts &amp; Event Attribution</div>
+            <p class="para" style="margin-bottom:0;">Ag retail inventory restocking and stable potash/nitrogen demand lifted gross margin performance across its unmatched proprietary distribution network.</p>
+          </div>
+          <div class="m-grid">
+              <div class="m-cell">
+                <div class="m-lbl">Relative Volume (1D)</div>
+                <div class="m-val ">1.10x</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Volume Change % (1D)</div>
+                <div class="m-val font-danger">-9.68%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Chaikin Money Flow (20D)</div>
+                <div class="m-val font-success">0.341</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Money Flow Index (14D)</div>
+                <div class="m-val ">63.47</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">RSI (14D)</div>
+                <div class="m-val ">68.77</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Trend ADX (14D)</div>
+                <div class="m-val ">15.41</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Opening Gap %</div>
+                <div class="m-val font-success">+0.62%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Dist. to 52W High %</div>
+                <div class="m-val font-danger">-14.30%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Piotroski F-Score</div>
+                <div class="m-val ">9/9</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Altman Z-Score</div>
+                <div class="m-val ">1.83</div>
+              </div></div>
+          
+          
+        </div>
+        <div class="stock-card">
+          <div class="sc-head">
+            <div class="sc-title">
+              <span class="badge badge-long">BULLISH</span>
+              <span class="sc-sym">ASST</span>
+              <span class="sc-desc">Strive, Inc.</span>
+              <span class="sc-sec-ind">Miscellaneous / Investment trusts</span>
+            </div>
+            <div class="sc-right">
+              <div class="sc-price-box">
+                <span class="sc-price">$16.13</span>
+                <span class="sc-chg long-txt font-success">+9.50%</span>
+              </div>
+              <div class="score-badge-box"><div class="score-badge-lbl">SCORE</div><div class="score-badge sc-md">93.4</div></div>
+            </div>
+          </div>
+          <div class="sc-res-bar"><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></div>
+          <div class="sc-thesis"><p class="para">Emerging asset management and digital treasury platform surging +8.19% on 4/5 strong resonance, buoyed by crypto momentum and AUM inflows.</p></div>
+          
+          <div class="news-intel-box" style="margin:12px 0 16px;">
+            <div class="news-intel-lbl">Primary Catalysts &amp; Event Attribution</div>
+            <p class="para" style="margin-bottom:0;">Digital asset strength accelerated inflows into alternative wealth strategies, sparking intense retail and institutional bid for high-beta asset managers.</p>
+          </div>
+          <div class="m-grid">
+              <div class="m-cell">
+                <div class="m-lbl">Relative Volume (1D)</div>
+                <div class="m-val ">3.04x</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Volume Change % (1D)</div>
+                <div class="m-val font-success">+29.29%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Chaikin Money Flow (20D)</div>
+                <div class="m-val font-success">0.253</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Money Flow Index (14D)</div>
+                <div class="m-val ">77.49</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">RSI (14D)</div>
+                <div class="m-val ">70.33</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Trend ADX (14D)</div>
+                <div class="m-val ">11.61</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Opening Gap %</div>
+                <div class="m-val font-success">+8.62%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Dist. to 52W High %</div>
+                <div class="m-val font-danger">-93.60%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Piotroski F-Score</div>
+                <div class="m-val ">5/9</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Altman Z-Score</div>
+                <div class="m-val ">15.89</div>
+              </div></div>
+          
+          
+        </div>
+        </section>
+        <section id="sec_short" class="sec">
+          <div class="sec-head"><span class="sec-num">05</span>
+            <h2>5D Attribution Bearish Stock Research</h2></div>
+          <p class="para">Below are the Top 10 bearish stocks selected across downward theme clusters.</p>
+          
+        <div class="stock-card">
+          <div class="sc-head">
+            <div class="sc-title">
+              <span class="badge badge-short">BEARISH</span>
+              <span class="sc-sym">AAP</span>
+              <span class="sc-desc">Advance Auto Parts Inc.</span>
+              <span class="sc-sec-ind">Retail trade / Specialty stores</span>
+            </div>
+            <div class="sc-right">
+              <div class="sc-price-box">
+                <span class="sc-price">$42.39</span>
+                <span class="sc-chg short-txt font-danger">-24.55%</span>
+              </div>
+              <div class="score-badge-box"><div class="score-badge-lbl">SCORE</div><div class="score-badge sc-md">93.7</div></div>
+            </div>
+          </div>
+          <div class="sc-res-bar"><span class="res-plain">3/5</span></div>
+          <div class="sc-thesis"><p class="para">Automotive aftermarket retailer plunging -17.80% on 4.12x massive volume following steep Q2 revenue misses and severe margin compression, claiming top bearish extreme status.</p></div>
+          
+          <div class="news-intel-box" style="margin:12px 0 16px;">
+            <div class="news-intel-lbl">Primary Catalysts &amp; Event Attribution</div>
+            <p class="para" style="margin-bottom:0;">Q2 comparable store sales and EPS missed consensus by wide margins as supply chain restructuring costs escalated, triggering massive institutional capitulation.</p>
+          </div>
+          <div class="m-grid">
+              <div class="m-cell">
+                <div class="m-lbl">Relative Volume (1D)</div>
+                <div class="m-val ">11.34x</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Volume Change % (1D)</div>
+                <div class="m-val font-success">+696.68%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Chaikin Money Flow (20D)</div>
+                <div class="m-val font-danger">-0.149</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Money Flow Index (14D)</div>
+                <div class="m-val ">28.60</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">RSI (14D)</div>
+                <div class="m-val ">27.52</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Trend ADX (14D)</div>
+                <div class="m-val ">14.11</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Opening Gap %</div>
+                <div class="m-val font-danger">-16.61%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Dist. to 52W High %</div>
+                <div class="m-val font-danger">-35.00%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Piotroski F-Score</div>
+                <div class="m-val ">7/9</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Altman Z-Score</div>
+                <div class="m-val ">1.84</div>
+              </div></div>
+          
+          
+        </div>
+        <div class="stock-card">
+          <div class="sc-head">
+            <div class="sc-title">
+              <span class="badge badge-short">BEARISH</span>
+              <span class="sc-sym">FLNC</span>
+              <span class="sc-desc">Fluence Energy, Inc.</span>
+              <span class="sc-sec-ind">Producer manufacturing / Electrical products</span>
+            </div>
+            <div class="sc-right">
+              <div class="sc-price-box">
+                <span class="sc-price">$11.39</span>
+                <span class="sc-chg short-txt font-danger">-5.63%</span>
+              </div>
+              <div class="score-badge-box"><div class="score-badge-lbl">SCORE</div><div class="score-badge sc-hi">96.0</div></div>
+            </div>
+          </div>
+          <div class="sc-res-bar"><span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span></div>
+          <div class="sc-thesis"><p class="para">Grid-scale energy storage provider falling -14.20% on 4/5 bearish resonance amid project execution delays and intense competitive pricing in battery systems.</p></div>
+          
+          <div class="news-intel-box" style="margin:12px 0 16px;">
+            <div class="news-intel-lbl">Primary Catalysts &amp; Event Attribution</div>
+            <p class="para" style="margin-bottom:0;">Grid interconnection bottlenecks and delivery deferrals slowed quarterly revenue recognition, pressuring second-half gross margin guidance.</p>
+          </div>
+          <div class="m-grid">
+              <div class="m-cell">
+                <div class="m-lbl">Relative Volume (1D)</div>
+                <div class="m-val ">1.07x</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Volume Change % (1D)</div>
+                <div class="m-val font-success">+43.87%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Chaikin Money Flow (20D)</div>
+                <div class="m-val font-danger">-0.277</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Money Flow Index (14D)</div>
+                <div class="m-val ">28.68</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">RSI (14D)</div>
+                <div class="m-val ">34.86</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Trend ADX (14D)</div>
+                <div class="m-val ">23.08</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Opening Gap %</div>
+                <div class="m-val font-danger">-4.14%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Dist. to 52W High %</div>
+                <div class="m-val font-danger">-66.00%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Piotroski F-Score</div>
+                <div class="m-val ">1/9</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Altman Z-Score</div>
+                <div class="m-val ">1.77</div>
+              </div></div>
+          
+          
+        </div>
+        <div class="stock-card">
+          <div class="sc-head">
+            <div class="sc-title">
+              <span class="badge badge-short">BEARISH</span>
+              <span class="sc-sym">ULCC</span>
+              <span class="sc-desc">Frontier Group Holdings, Inc.</span>
+              <span class="sc-sec-ind">Transportation / Airlines</span>
+            </div>
+            <div class="sc-right">
+              <div class="sc-price-box">
+                <span class="sc-price">$5.76</span>
+                <span class="sc-chg short-txt font-danger">-3.84%</span>
+              </div>
+              <div class="score-badge-box"><div class="score-badge-lbl">SCORE</div><div class="score-badge sc-md">91.8</div></div>
+            </div>
+          </div>
+          <div class="sc-res-bar"><span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span></div>
+          <div class="sc-thesis"><p class="para">Ultra-low-cost airline sinking -11.60% on 4/5 bearish resonance as domestic seat oversupply, leisure fare wars, and elevated cost structures crush profitability.</p></div>
+          
+          <div class="news-intel-box" style="margin:12px 0 16px;">
+            <div class="news-intel-lbl">Primary Catalysts &amp; Event Attribution</div>
+            <p class="para" style="margin-bottom:0;">Domestic leisure route overcapacity triggered vicious fare discounting, while elevated labor and fuel costs squeezed unit margins (PRASM).</p>
+          </div>
+          <div class="m-grid">
+              <div class="m-cell">
+                <div class="m-lbl">Relative Volume (1D)</div>
+                <div class="m-val ">1.17x</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Volume Change % (1D)</div>
+                <div class="m-val font-success">+30.25%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Chaikin Money Flow (20D)</div>
+                <div class="m-val font-danger">-0.138</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Money Flow Index (14D)</div>
+                <div class="m-val ">42.26</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">RSI (14D)</div>
+                <div class="m-val ">37.08</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Trend ADX (14D)</div>
+                <div class="m-val ">17.36</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Opening Gap %</div>
+                <div class="m-val font-danger">-2.34%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Dist. to 52W High %</div>
+                <div class="m-val font-danger">-31.50%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Piotroski F-Score</div>
+                <div class="m-val ">2/9</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Altman Z-Score</div>
+                <div class="m-val ">0.19</div>
+              </div></div>
+          
+          
+        </div>
+        <div class="stock-card">
+          <div class="sc-head">
+            <div class="sc-title">
+              <span class="badge badge-short">BEARISH</span>
+              <span class="sc-sym">JBLU</span>
+              <span class="sc-desc">JetBlue Airways Corporation</span>
+              <span class="sc-sec-ind">Transportation / Airlines</span>
+            </div>
+            <div class="sc-right">
+              <div class="sc-price-box">
+                <span class="sc-price">$4.74</span>
+                <span class="sc-chg short-txt font-danger">-3.27%</span>
+              </div>
+              <div class="score-badge-box"><div class="score-badge-lbl">SCORE</div><div class="score-badge sc-md">91.8</div></div>
+            </div>
+          </div>
+          <div class="sc-res-bar"><span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span></div>
+          <div class="sc-thesis"><p class="para">Mid-tier airline declining -9.80% on 4/5 bearish resonance, burdened by route restructuring friction, elevated cost inflation, and fleet grounding headwinds.</p></div>
+          
+          <div class="news-intel-box" style="margin:12px 0 16px;">
+            <div class="news-intel-lbl">Primary Catalysts &amp; Event Attribution</div>
+            <p class="para" style="margin-bottom:0;">Domestic unit revenue weakness and Pratt &amp; Whitney engine inspection groundings inflated aircraft leasing expenses and widened operating losses.</p>
+          </div>
+          <div class="m-grid">
+              <div class="m-cell">
+                <div class="m-lbl">Relative Volume (1D)</div>
+                <div class="m-val ">1.41x</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Volume Change % (1D)</div>
+                <div class="m-val font-success">+20.74%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Chaikin Money Flow (20D)</div>
+                <div class="m-val font-danger">-0.234</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Money Flow Index (14D)</div>
+                <div class="m-val ">35.35</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">RSI (14D)</div>
+                <div class="m-val ">33.18</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Trend ADX (14D)</div>
+                <div class="m-val ">18.62</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Opening Gap %</div>
+                <div class="m-val font-danger">-1.33%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Dist. to 52W High %</div>
+                <div class="m-val font-danger">-28.40%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Piotroski F-Score</div>
+                <div class="m-val ">1/9</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Altman Z-Score</div>
+                <div class="m-val ">0.47</div>
+              </div></div>
+          
+          
+        </div>
+        <div class="stock-card">
+          <div class="sc-head">
+            <div class="sc-title">
+              <span class="badge badge-short">BEARISH</span>
+              <span class="sc-sym">ALK</span>
+              <span class="sc-desc">Alaska Air Group, Inc.</span>
+              <span class="sc-sec-ind">Transportation / Airlines</span>
+            </div>
+            <div class="sc-right">
+              <div class="sc-price-box">
+                <span class="sc-price">$40.18</span>
+                <span class="sc-chg short-txt font-danger">-2.55%</span>
+              </div>
+              <div class="score-badge-box"><div class="score-badge-lbl">SCORE</div><div class="score-badge sc-md">89.6</div></div>
+            </div>
+          </div>
+          <div class="sc-res-bar"><span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span></div>
+          <div class="sc-thesis"><p class="para">Premier West Coast airline slipping -7.50% on 4/5 bearish resonance as industry capacity overhang and passenger yield compression pressure margins.</p></div>
+          
+          <div class="news-intel-box" style="margin:12px 0 16px;">
+            <div class="news-intel-lbl">Primary Catalysts &amp; Event Attribution</div>
+            <p class="para" style="margin-bottom:0;">West Coast fare discounting and transitional integration expenses dampened near-term operating margins and quarterly EPS guidance.</p>
+          </div>
+          <div class="m-grid">
+              <div class="m-cell">
+                <div class="m-lbl">Relative Volume (1D)</div>
+                <div class="m-val ">1.41x</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Volume Change % (1D)</div>
+                <div class="m-val font-success">+37.35%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Chaikin Money Flow (20D)</div>
+                <div class="m-val font-danger">-0.313</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Money Flow Index (14D)</div>
+                <div class="m-val ">37.77</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">RSI (14D)</div>
+                <div class="m-val ">31.55</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Trend ADX (14D)</div>
+                <div class="m-val ">16.92</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Opening Gap %</div>
+                <div class="m-val font-danger">-1.36%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Dist. to 52W High %</div>
+                <div class="m-val font-danger">-39.00%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Piotroski F-Score</div>
+                <div class="m-val ">4/9</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Altman Z-Score</div>
+                <div class="m-val ">1.02</div>
+              </div></div>
+          
+          
+        </div>
+        <div class="stock-card">
+          <div class="sc-head">
+            <div class="sc-title">
+              <span class="badge badge-short">BEARISH</span>
+              <span class="sc-sym">YSS</span>
+              <span class="sc-desc">York Space Systems Inc.</span>
+              <span class="sc-sec-ind">Electronic technology / Aerospace &amp; defense</span>
+            </div>
+            <div class="sc-right">
+              <div class="sc-price-box">
+                <span class="sc-price">$9.20</span>
+                <span class="sc-chg short-txt font-danger">-9.63%</span>
+              </div>
+              <div class="score-badge-box"><div class="score-badge-lbl">SCORE</div><div class="score-badge sc-md">94.5</div></div>
+            </div>
+          </div>
+          <div class="sc-res-bar"><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></div>
+          <div class="sc-thesis"><p class="para">Commercial small-satellite manufacturer plunging -10.40% on 4/5 bearish resonance after slashing full-year revenue outlook by a third due to defense contract deferrals.</p></div>
+          
+          <div class="news-intel-box" style="margin:12px 0 16px;">
+            <div class="news-intel-lbl">Primary Catalysts &amp; Event Attribution</div>
+            <p class="para" style="margin-bottom:0;">Management slashed full-year revenue guidance by approximately one-third due to federal procurement delays and subcontractor component bottlenecks, exacerbating cash burn.</p>
+          </div>
+          <div class="m-grid">
+              <div class="m-cell">
+                <div class="m-lbl">Relative Volume (1D)</div>
+                <div class="m-val ">1.27x</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Volume Change % (1D)</div>
+                <div class="m-val font-success">+44.55%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Chaikin Money Flow (20D)</div>
+                <div class="m-val font-danger">-0.016</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Money Flow Index (14D)</div>
+                <div class="m-val ">33.29</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">RSI (14D)</div>
+                <div class="m-val ">26.65</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Trend ADX (14D)</div>
+                <div class="m-val ">34.33</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Opening Gap %</div>
+                <div class="m-val font-danger">-1.87%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Dist. to 52W High %</div>
+                <div class="m-val font-danger">-79.30%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Piotroski F-Score</div>
+                <div class="m-val ">5/9</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Altman Z-Score</div>
+                <div class="m-val ">3.00</div>
+              </div></div>
+          
+          
+        </div>
+        <div class="stock-card">
+          <div class="sc-head">
+            <div class="sc-title">
+              <span class="badge badge-short">BEARISH</span>
+              <span class="sc-sym">AADX</span>
+              <span class="sc-desc">Applied Aerospace &amp; Defense, Inc.</span>
+              <span class="sc-sec-ind">Electronic technology / Aerospace &amp; defense</span>
+            </div>
+            <div class="sc-right">
+              <div class="sc-price-box">
+                <span class="sc-price">$15.50</span>
+                <span class="sc-chg short-txt font-danger">-10.25%</span>
+              </div>
+              <div class="score-badge-box"><div class="score-badge-lbl">SCORE</div><div class="score-badge sc-md">93.1</div></div>
+            </div>
+          </div>
+          <div class="sc-res-bar"><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></div>
+          <div class="sc-thesis"><p class="para">Aerospace and defense precision structural components subcontractor sliding -8.90% on 4/5 bearish resonance due to supply delays and fixed-price cost overruns.</p></div>
+          
+          <div class="news-intel-box" style="margin:12px 0 16px;">
+            <div class="news-intel-lbl">Primary Catalysts &amp; Event Attribution</div>
+            <p class="para" style="margin-bottom:0;">Subcontract delivery timing friction and cost inflation across legacy fixed-price contracts compressed quarterly operating margins.</p>
+          </div>
+          <div class="m-grid">
+              <div class="m-cell">
+                <div class="m-lbl">Relative Volume (1D)</div>
+                <div class="m-val ">2.73x</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Volume Change % (1D)</div>
+                <div class="m-val font-success">+152.97%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Chaikin Money Flow (20D)</div>
+                <div class="m-val font-danger">-0.275</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Money Flow Index (14D)</div>
+                <div class="m-val ">33.25</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">RSI (14D)</div>
+                <div class="m-val ">33.24</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Trend ADX (14D)</div>
+                <div class="m-val ">15.80</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Opening Gap %</div>
+                <div class="m-val font-danger">-0.17%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Dist. to 52W High %</div>
+                <div class="m-val font-danger">-36.10%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Piotroski F-Score</div>
+                <div class="m-val ">5/9</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Altman Z-Score</div>
+                <div class="m-val ">3.71</div>
+              </div></div>
+          
+          
+        </div>
+        <div class="stock-card">
+          <div class="sc-head">
+            <div class="sc-title">
+              <span class="badge badge-short">BEARISH</span>
+              <span class="sc-sym">EOSE</span>
+              <span class="sc-desc">Eos Energy Enterprises, Inc.</span>
+              <span class="sc-sec-ind">Producer manufacturing / Electrical products</span>
+            </div>
+            <div class="sc-right">
+              <div class="sc-price-box">
+                <span class="sc-price">$3.46</span>
+                <span class="sc-chg short-txt font-danger">-7.49%</span>
+              </div>
+              <div class="score-badge-box"><div class="score-badge-lbl">SCORE</div><div class="score-badge sc-md">94.0</div></div>
+            </div>
+          </div>
+          <div class="sc-res-bar"><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></div>
+          <div class="sc-thesis"><p class="para">Zinc-based long-duration energy storage developer tumbling -12.80% on 4/5 bearish resonance on manufacturing ramp capital intensity and dilution overhang.</p></div>
+          
+          <div class="news-intel-box" style="margin:12px 0 16px;">
+            <div class="news-intel-lbl">Primary Catalysts &amp; Event Attribution</div>
+            <p class="para" style="margin-bottom:0;">Extended manufacturing automation commissioning and elevated quarterly cash burn renewed market concerns over project timing and financing overhang.</p>
+          </div>
+          <div class="m-grid">
+              <div class="m-cell">
+                <div class="m-lbl">Relative Volume (1D)</div>
+                <div class="m-val ">1.74x</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Volume Change % (1D)</div>
+                <div class="m-val font-success">+33.14%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Chaikin Money Flow (20D)</div>
+                <div class="m-val font-success">0.102</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Money Flow Index (14D)</div>
+                <div class="m-val ">52.43</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">RSI (14D)</div>
+                <div class="m-val ">38.07</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Trend ADX (14D)</div>
+                <div class="m-val ">18.64</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Opening Gap %</div>
+                <div class="m-val font-danger">-1.87%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Dist. to 52W High %</div>
+                <div class="m-val font-danger">-82.60%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Piotroski F-Score</div>
+                <div class="m-val ">6/9</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Altman Z-Score</div>
+                <div class="m-val ">-3.10</div>
+              </div></div>
+          
+          
+        </div>
+        <div class="stock-card">
+          <div class="sc-head">
+            <div class="sc-title">
+              <span class="badge badge-short">BEARISH</span>
+              <span class="sc-sym">INIO</span>
+              <span class="sc-desc">INNIO N.V.</span>
+              <span class="sc-sec-ind">Producer manufacturing / Electrical products</span>
+            </div>
+            <div class="sc-right">
+              <div class="sc-price-box">
+                <span class="sc-price">$23.00</span>
+                <span class="sc-chg short-txt font-danger">-8.80%</span>
+              </div>
+              <div class="score-badge-box"><div class="score-badge-lbl">SCORE</div><div class="score-badge sc-md">91.5</div></div>
+            </div>
+          </div>
+          <div class="sc-res-bar"><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></div>
+          <div class="sc-thesis"><p class="para">Industrial gas engine and decentralized energy equipment vendor falling -6.80% on 4/5 bearish resonance as global factory automation capex moderates.</p></div>
+          
+          <div class="news-intel-box" style="margin:12px 0 16px;">
+            <div class="news-intel-lbl">Primary Catalysts &amp; Event Attribution</div>
+            <p class="para" style="margin-bottom:0;">Muted global industrial manufacturing PMIs led industrial clients to defer cogeneration and backup generator capex, slowing equipment order intake.</p>
+          </div>
+          <div class="m-grid">
+              <div class="m-cell">
+                <div class="m-lbl">Relative Volume (1D)</div>
+                <div class="m-val ">1.70x</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Volume Change % (1D)</div>
+                <div class="m-val font-success">+46.32%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Chaikin Money Flow (20D)</div>
+                <div class="m-val font-danger">-0.123</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Money Flow Index (14D)</div>
+                <div class="m-val ">40.94</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">RSI (14D)</div>
+                <div class="m-val ">35.43</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Trend ADX (14D)</div>
+                <div class="m-val ">21.58</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Opening Gap %</div>
+                <div class="m-val font-danger">-0.87%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Dist. to 52W High %</div>
+                <div class="m-val font-danger">-46.40%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Piotroski F-Score</div>
+                <div class="m-val ">5/9</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Altman Z-Score</div>
+                <div class="m-val ">3.00</div>
+              </div></div>
+          
+          
+        </div>
+        <div class="stock-card">
+          <div class="sc-head">
+            <div class="sc-title">
+              <span class="badge badge-short">BEARISH</span>
+              <span class="sc-sym">KSS</span>
+              <span class="sc-desc">Kohl&#x27;s Corporation</span>
+              <span class="sc-sec-ind">Retail trade / Department stores</span>
+            </div>
+            <div class="sc-right">
+              <div class="sc-price-box">
+                <span class="sc-price">$17.33</span>
+                <span class="sc-chg short-txt font-danger">-8.01%</span>
+              </div>
+              <div class="score-badge-box"><div class="score-badge-lbl">SCORE</div><div class="score-badge sc-md">89.3</div></div>
+            </div>
+          </div>
+          <div class="sc-res-bar"><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></div>
+          <div class="sc-thesis"><p class="para">Department store retail chain declining -7.20% on 4/5 bearish resonance as mall traffic deceleration, promotional discounting, and apparel softness compress margins.</p></div>
+          
+          <div class="news-intel-box" style="margin:12px 0 16px;">
+            <div class="news-intel-lbl">Primary Catalysts &amp; Event Attribution</div>
+            <p class="para" style="margin-bottom:0;">Soft middle-income discretionary consumer spending and store traffic declines necessitated deeper promotional markdowns, pressuring merchandise margins.</p>
+          </div>
+          <div class="m-grid">
+              <div class="m-cell">
+                <div class="m-lbl">Relative Volume (1D)</div>
+                <div class="m-val ">1.86x</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Volume Change % (1D)</div>
+                <div class="m-val font-success">+93.53%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Chaikin Money Flow (20D)</div>
+                <div class="m-val font-danger">-0.024</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Money Flow Index (14D)</div>
+                <div class="m-val ">49.30</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">RSI (14D)</div>
+                <div class="m-val ">41.43</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Trend ADX (14D)</div>
+                <div class="m-val ">18.74</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Opening Gap %</div>
+                <div class="m-val font-danger">-2.23%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Dist. to 52W High %</div>
+                <div class="m-val font-danger">-31.30%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Piotroski F-Score</div>
+                <div class="m-val ">7/9</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Altman Z-Score</div>
+                <div class="m-val ">1.64</div>
+              </div></div>
+          
+          
+        </div>
+        </section>
+        <section id="sec_roster" class="sec">
+          <div class="sec-head"><span class="sec-num">06</span>
+            <h2>Multi-Factor Selection Roster</h2></div>
+          <div class="table-wrap">
+            <table class="summary-table">
+              <thead>
+                <tr>
+                  <th>Trend</th>
+                  <th>Symbol</th>
+                  <th>Industry</th>
+                  <th style="text-align:right">Score</th>
+                  <th>Resonance</th>
+                  <th style="text-align:right">Close Price</th>
+                  <th style="text-align:right">1D Change</th>
+                  <th style="text-align:right">Rel Vol</th>
+                  <th style="text-align:center">Financial Health</th>
+                  <th>Next Earnings</th>
+                </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td><span class="dir-pill long">BULLISH</span></td>
+                <td><b>MARA</b></td>
+                <td>Data processing services</td>
+                <td class="num"><b>73.9</b></td>
+                <td><span class="res-plain">1/5</span></td>
+                <td class="num">$11.15</td>
+                <td class="num font-success"><b>+15.54%</b></td>
+                <td class="num">1.78x</td>
+                <td style="text-align:center"><span class="badge badge-risk" title="Piotroski F-score: 3/9, Altman Z-score: -0.39">Weak</span></td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td><span class="dir-pill long">BULLISH</span></td>
+                <td><b>AU</b></td>
+                <td>Precious metals</td>
+                <td class="num"><b>96.7</b></td>
+                <td><span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span></td>
+                <td class="num">$115.14</td>
+                <td class="num font-success"><b>+6.08%</b></td>
+                <td class="num">2.38x</td>
+                <td style="text-align:center"><span class="badge badge-safe" title="Piotroski F-score: 5/9, Altman Z-score: 7.34">Healthy</span></td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td><span class="dir-pill long">BULLISH</span></td>
+                <td><b>CF</b></td>
+                <td>Chemicals: agricultural</td>
+                <td class="num"><b>92.5</b></td>
+                <td><span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span></td>
+                <td class="num">$125.70</td>
+                <td class="num font-success"><b>+5.61%</b></td>
+                <td class="num">1.36x</td>
+                <td style="text-align:center"><span class="badge badge-safe" title="Piotroski F-score: 9/9, Altman Z-score: 3.49">Healthy</span></td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td><span class="dir-pill long">BULLISH</span></td>
+                <td><b>SM</b></td>
+                <td>Integrated oil</td>
+                <td class="num"><b>93.2</b></td>
+                <td><span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span></td>
+                <td class="num">$37.64</td>
+                <td class="num font-success"><b>+4.15%</b></td>
+                <td class="num">1.13x</td>
+                <td style="text-align:center"><span class="badge badge-risk" title="Piotroski F-score: 4/9, Altman Z-score: 1.20">Weak</span></td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td><span class="dir-pill long">BULLISH</span></td>
+                <td><b>SSRM</b></td>
+                <td>Precious metals</td>
+                <td class="num"><b>92.5</b></td>
+                <td><span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span></td>
+                <td class="num">$36.83</td>
+                <td class="num font-success"><b>+4.10%</b></td>
+                <td class="num">1.43x</td>
+                <td style="text-align:center"><span class="badge badge-safe" title="Piotroski F-score: 7/9, Altman Z-score: 5.75">Healthy</span></td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td><span class="dir-pill long">BULLISH</span></td>
+                <td><b>MGY</b></td>
+                <td>Oil &amp; gas production</td>
+                <td class="num"><b>90.3</b></td>
+                <td><span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span></td>
+                <td class="num">$28.22</td>
+                <td class="num font-success"><b>+2.66%</b></td>
+                <td class="num">0.94x</td>
+                <td style="text-align:center"><span class="badge badge-safe" title="Piotroski F-score: 9/9, Altman Z-score: 4.50">Healthy</span></td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td><span class="dir-pill long">BULLISH</span></td>
+                <td><b>BP</b></td>
+                <td>Integrated oil</td>
+                <td class="num"><b>90.0</b></td>
+                <td><span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span></td>
+                <td class="num">$45.14</td>
+                <td class="num font-success"><b>+3.22%</b></td>
+                <td class="num">1.54x</td>
+                <td style="text-align:center"><span class="badge badge-risk" title="Piotroski F-score: 9/9, Altman Z-score: 1.37">Weak</span></td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td><span class="dir-pill long">BULLISH</span></td>
+                <td><b>AEM</b></td>
+                <td>Precious metals</td>
+                <td class="num"><b>89.3</b></td>
+                <td><span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span></td>
+                <td class="num">$212.04</td>
+                <td class="num font-success"><b>+2.08%</b></td>
+                <td class="num">1.58x</td>
+                <td style="text-align:center"><span class="badge badge-safe" title="Piotroski F-score: 8/9, Altman Z-score: 6.65">Healthy</span></td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td><span class="dir-pill long">BULLISH</span></td>
+                <td><b>NTR</b></td>
+                <td>Chemicals: agricultural</td>
+                <td class="num"><b>89.2</b></td>
+                <td><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></td>
+                <td class="num">$73.12</td>
+                <td class="num font-success"><b>+3.72%</b></td>
+                <td class="num">1.10x</td>
+                <td style="text-align:center"><span class="badge badge-mid" title="Piotroski F-score: 9/9, Altman Z-score: 1.83">Fair</span></td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td><span class="dir-pill long">BULLISH</span></td>
+                <td><b>ASST</b></td>
+                <td>Investment trusts</td>
+                <td class="num"><b>93.4</b></td>
+                <td><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></td>
+                <td class="num">$16.13</td>
+                <td class="num font-success"><b>+9.50%</b></td>
+                <td class="num">3.04x</td>
+                <td style="text-align:center"><span class="badge badge-safe" title="Piotroski F-score: 5/9, Altman Z-score: 15.89">Healthy</span></td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td><span class="dir-pill short">BEARISH</span></td>
+                <td><b>AAP</b></td>
+                <td>Specialty stores</td>
+                <td class="num"><b>93.7</b></td>
+                <td><span class="res-plain">3/5</span></td>
+                <td class="num">$42.39</td>
+                <td class="num font-danger"><b>-24.55%</b></td>
+                <td class="num">11.34x</td>
+                <td style="text-align:center"><span class="badge badge-mid" title="Piotroski F-score: 7/9, Altman Z-score: 1.84">Fair</span></td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td><span class="dir-pill short">BEARISH</span></td>
+                <td><b>FLNC</b></td>
+                <td>Electrical products</td>
+                <td class="num"><b>96.0</b></td>
+                <td><span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span></td>
+                <td class="num">$11.39</td>
+                <td class="num font-danger"><b>-5.63%</b></td>
+                <td class="num">1.07x</td>
+                <td style="text-align:center"><span class="badge badge-risk" title="Piotroski F-score: 1/9, Altman Z-score: 1.77">Weak</span></td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td><span class="dir-pill short">BEARISH</span></td>
+                <td><b>ULCC</b></td>
+                <td>Airlines</td>
+                <td class="num"><b>91.8</b></td>
+                <td><span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span></td>
+                <td class="num">$5.76</td>
+                <td class="num font-danger"><b>-3.84%</b></td>
+                <td class="num">1.17x</td>
+                <td style="text-align:center"><span class="badge badge-risk" title="Piotroski F-score: 2/9, Altman Z-score: 0.19">Weak</span></td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td><span class="dir-pill short">BEARISH</span></td>
+                <td><b>JBLU</b></td>
+                <td>Airlines</td>
+                <td class="num"><b>91.8</b></td>
+                <td><span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span></td>
+                <td class="num">$4.74</td>
+                <td class="num font-danger"><b>-3.27%</b></td>
+                <td class="num">1.41x</td>
+                <td style="text-align:center"><span class="badge badge-risk" title="Piotroski F-score: 1/9, Altman Z-score: 0.47">Weak</span></td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td><span class="dir-pill short">BEARISH</span></td>
+                <td><b>ALK</b></td>
+                <td>Airlines</td>
+                <td class="num"><b>89.6</b></td>
+                <td><span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span></td>
+                <td class="num">$40.18</td>
+                <td class="num font-danger"><b>-2.55%</b></td>
+                <td class="num">1.41x</td>
+                <td style="text-align:center"><span class="badge badge-risk" title="Piotroski F-score: 4/9, Altman Z-score: 1.02">Weak</span></td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td><span class="dir-pill short">BEARISH</span></td>
+                <td><b>YSS</b></td>
+                <td>Aerospace &amp; defense</td>
+                <td class="num"><b>94.5</b></td>
+                <td><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></td>
+                <td class="num">$9.20</td>
+                <td class="num font-danger"><b>-9.63%</b></td>
+                <td class="num">1.27x</td>
+                <td style="text-align:center"><span class="badge badge-safe" title="Piotroski F-score: 5/9, Altman Z-score: 3.00">Healthy</span></td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td><span class="dir-pill short">BEARISH</span></td>
+                <td><b>AADX</b></td>
+                <td>Aerospace &amp; defense</td>
+                <td class="num"><b>93.1</b></td>
+                <td><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></td>
+                <td class="num">$15.50</td>
+                <td class="num font-danger"><b>-10.25%</b></td>
+                <td class="num">2.73x</td>
+                <td style="text-align:center"><span class="badge badge-safe" title="Piotroski F-score: 5/9, Altman Z-score: 3.71">Healthy</span></td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td><span class="dir-pill short">BEARISH</span></td>
+                <td><b>EOSE</b></td>
+                <td>Electrical products</td>
+                <td class="num"><b>94.0</b></td>
+                <td><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></td>
+                <td class="num">$3.46</td>
+                <td class="num font-danger"><b>-7.49%</b></td>
+                <td class="num">1.74x</td>
+                <td style="text-align:center"><span class="badge badge-risk" title="Piotroski F-score: 6/9, Altman Z-score: -3.10">Weak</span></td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td><span class="dir-pill short">BEARISH</span></td>
+                <td><b>INIO</b></td>
+                <td>Electrical products</td>
+                <td class="num"><b>91.5</b></td>
+                <td><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></td>
+                <td class="num">$23.00</td>
+                <td class="num font-danger"><b>-8.80%</b></td>
+                <td class="num">1.70x</td>
+                <td style="text-align:center"><span class="badge badge-safe" title="Piotroski F-score: 5/9, Altman Z-score: 3.00">Healthy</span></td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td><span class="dir-pill short">BEARISH</span></td>
+                <td><b>KSS</b></td>
+                <td>Department stores</td>
+                <td class="num"><b>89.3</b></td>
+                <td><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></td>
+                <td class="num">$17.33</td>
+                <td class="num font-danger"><b>-8.01%</b></td>
+                <td class="num">1.86x</td>
+                <td style="text-align:center"><span class="badge badge-mid" title="Piotroski F-score: 7/9, Altman Z-score: 1.64">Fair</span></td>
+                <td>—</td>
+              </tr></tbody>
+            </table>
+          </div>
+        </section>
+        <div class="report-disclaimer">
+          <div class="disclosure">
+            <div class="disc-title">[IMPORTANT DISCLAIMER]</div>
+            <p class="para">This report is prepared solely for market research, quantitative analysis, and educational purposes and does not constitute financial, investment, legal, or tax advice.</p>
+            <p class="para">All data, factor scores, and analytical insights presented herein are generated from publicly available market information and algorithmic models. Investors must conduct independent due diligence and assume full responsibility for their investment decisions.</p>
+          </div>
+        </div>
+<div class="foot">K2J Quantitative Research Lab · Resonance Engine v4.3 · US Equity Multi-Factor Resonance Market Research Report · For Market Research Only · 2026-08-20</div>
+</div>
+</body>
+</html>

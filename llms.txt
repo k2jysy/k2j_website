@@ -29,4 +29,4 @@
 
 - [Official Website](https://k2j.net/): Homepage with methodology, interactive FAQ, and report archive.
 - [Full LLM Knowledge Base](https://k2j.net/llms-full.txt): Complete detailed text representation for LLM context windows and deep retrieval.
-- [Daily Reports Archive](https://report.k2j.net/): Full repository of daily market quantitative analysis reports (Bilingual: English & Simplified Chinese).
+- [Daily Reports Archive](https://k2j.net/#archive): Full repository of daily market quantitative analysis reports (Bilingual: English & Simplified Chinese) under `/reports/`.

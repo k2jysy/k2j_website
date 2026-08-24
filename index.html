@@ -579,7 +579,10 @@
 
   footer{border-top:1px solid var(--hairline); padding:40px 0 50px;}
   .disclaimer{font-size:12.5px; color:var(--steel); max-width:880px; line-height:1.6; margin-bottom:18px; text-wrap:pretty;}
-  .footer-bottom{font-family:var(--mono); font-size:11.5px; color:var(--steel);}
+  .footer-bottom{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; font-family:var(--mono); font-size:11.5px; color:var(--steel);}
+  .footer-links{display:flex; gap:18px;}
+  .footer-links a{color:var(--steel); text-decoration:none; transition:color .15s;}
+  .footer-links a:hover{color:var(--ink); text-decoration:underline;}
 
   @media (max-width:720px){
     .nav-links{display:none;}
@@ -695,7 +698,7 @@
     </p>
 
     <div class="cta-row">
-      <a class="cta-primary" id="report-link" href="https://report.k2j.net/20260821.en" target="_blank" rel="noopener">
+      <a class="cta-primary" id="report-link" href="/reports/20260821.en.html" target="_blank" rel="noopener">
         <span data-lang="en">Read the Aug 21 US Equities report →</span>
         <span data-lang="zh">阅读美股市场8月21日报告 →</span>
       </a>
@@ -915,7 +918,15 @@
       <span data-lang="en">K2J AI Quantitative Lab publishes independent research for informational and educational purposes only. Nothing here constitutes investment advice, and Justin is not a registered investment adviser. Signal strength, statistical weighting, and stance descriptions reflect a systematic research process, not trade recommendations. Do your own research and consult a licensed professional before making investment decisions.</span>
       <span data-lang="zh">K2J AI量化实验室发布的内容仅供参考与学习交流之用，不构成投资建议。本人（Justin）并非注册投资顾问。文中出现的信号强度、统计权重与组合立场等描述，反映的是系统化研究过程的结果，而非具体的交易建议。请独立判断，并在做出投资决策前咨询持牌专业人士。</span>
     </p>
-    <p class="footer-bottom">© 2026 K2J AI Quantitative Lab</p>
+    <div class="footer-bottom">
+      <span>© 2026 K2J AI Quantitative Lab</span>
+      <div class="footer-links">
+        <a id="privacy-link" href="/privacy.en.html">
+          <span data-lang="en">Privacy Policy</span>
+          <span data-lang="zh">隐私政策</span>
+        </a>
+      </div>
+    </div>
   </div>
 </footer>
 
@@ -930,7 +941,7 @@
     '20260820'
   ];
 
-  var BASE_URL = 'https://report.k2j.net';
+  var BASE_URL = '/reports';
   var PAGE_LIMIT = 10;
   var currentLang = 'en';
   var selectedYear = 'all';
@@ -1133,6 +1144,11 @@
 
     updateHeroCTA();
     renderArchive();
+
+    var privacyLink = document.getElementById('privacy-link');
+    if (privacyLink) {
+      privacyLink.setAttribute('href', lang === 'zh' ? '/privacy.zh.html' : '/privacy.en.html');
+    }
   }
 
   toggle.addEventListener('click', function(){

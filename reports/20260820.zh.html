@@ -1,0 +1,1973 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>美股多因子共振市场研究报告</title>
+<style>
+:root{
+  --navy:#0f2438;--navy-bg:#f0f4f9;--gold:#b8860b;--gold-bg:#fff9e6;--gold-border:#f3e5ab;
+  --green:#1b7340;--green-bg:#e8f5e9;--red:#a82424;--red-bg:#fde8e8;
+  --body:#2c3437;--muted:#66737a;--line:#e2ded4;--line-light:#ebe7de;
+  --font-serif:'Merriweather','Source Serif Pro',Georgia,serif;
+  --font-sans:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;
+  --mono:'JetBrains Mono','SF Mono',Menlo,Consolas,Monaco,monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;padding:0;background:#f4f1ea;color:var(--body);font-family:var(--font-sans);font-size:14.5px;line-height:1.75;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1120px;margin:32px auto;padding:0 24px}
+h1,h2,h3,h4,h5{font-family:var(--font-serif);color:var(--navy);font-weight:700;line-height:1.3}
+a{color:var(--navy);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* Cover & K2J Brand Styling */
+.cover{background:#fff;border:1px solid var(--line);border-top:5px solid var(--navy);padding:36px 44px 28px;margin-bottom:28px;box-shadow:0 2px 6px rgba(0,0,0,.03)}
+.cover-brand-bar{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line-light);padding-bottom:14px;margin-bottom:22px;flex-wrap:wrap;gap:12px}
+.k2j-report-logo{display:inline-flex;align-items:center;gap:9px}
+.k2j-seal-svg{color:var(--navy);width:20px;height:20px;flex-shrink:0}
+.k2j-brand-name{font-family:var(--font-sans);font-weight:800;font-size:14.5px;letter-spacing:.12em;color:var(--navy);text-transform:uppercase}
+.cover-top-bar{display:flex;gap:18px;align-items:center;font-size:11px;letter-spacing:.08em;font-weight:700;color:var(--gold)}
+.cover-title{font-size:27px;margin:0 0 12px;letter-spacing:-.01em;color:var(--navy)}
+.cover-stats{display:grid;grid-template-columns:1fr 1.35fr 1.15fr 1.15fr;gap:14px;background:#fbf9f4;border:1px solid var(--line);border-radius:2px;padding:16px 18px;margin-bottom:0}
+.stat-lbl{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;white-space:nowrap}
+.stat-val{font-size:14px;font-weight:700;color:var(--navy);font-family:var(--mono);display:flex;align-items:baseline;white-space:nowrap;gap:4px}
+.stat-unit{font-size:12px;font-weight:400;color:var(--muted)}
+.stat-ratio{font-size:11.5px;font-weight:600;font-family:var(--mono);white-space:nowrap;color:var(--muted);margin-left:2px}
+.stat-ticker{font-weight:700}
+.stat-quote{font-size:12.5px;font-weight:700;font-family:var(--mono)}
+.regime-tag{color:var(--gold);font-weight:700}
+.long-txt{color:var(--green)}
+.short-txt{color:var(--red)}
+
+/* Section */
+.sec{background:#fff;border:1px solid var(--line);border-radius:2px;padding:36px 44px;margin-bottom:28px;box-shadow:0 2px 6px rgba(0,0,0,.03)}
+.sec-head{display:flex;align-items:center;gap:14px;border-bottom:1.5px solid var(--navy);padding-bottom:12px;margin-bottom:22px}
+.sec-num{font-family:var(--mono);font-size:15px;font-weight:700;color:var(--gold);background:var(--gold-bg);padding:2px 8px;border:1px solid var(--gold-border);border-radius:2px}
+.sec-head h2{margin:0;font-size:21px;letter-spacing:-.01em}
+.sub-h{font-size:17px;margin:28px 0 14px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+.sub-h.long-h{color:var(--green);border-color:#c8e6c9}
+.sub-h.short-h{color:var(--red);border-color:#ffcdd2}
+.para{margin:0 0 14px;font-size:14px;line-height:1.75;text-indent:2em;text-align:justify}
+.muted{color:var(--muted)}
+.font-sm{font-size:12.5px}
+.font-danger{color:var(--red)}
+.font-success{color:var(--green)}
+.kp-box{background:#f8fafc;border-left:4px solid var(--navy);padding:14px 18px;margin:18px 0;border-radius:0 2px 2px 0}
+.kp-label{font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--navy);margin-bottom:6px}
+.kp-warn{background:#fffaf0;border-left-color:var(--gold)}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin:20px 0}
+.col-h{font-size:15px;margin:0 0 10px;padding-bottom:4px;border-bottom:1px solid var(--line)}
+.pick-list{margin:10px 0 0;padding-left:18px;font-size:13.5px;line-height:1.8}
+.pick-list li{margin-bottom:6px}
+
+/* Index Cards */
+.idx-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:20px}
+.idx-card{background:#fbf9f4;border:1px solid var(--line);border-radius:2px;padding:14px 16px}
+.idx-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.idx-code{font-family:var(--mono);font-size:14px;font-weight:700;color:var(--navy)}
+.idx-name{font-size:11.5px;color:var(--muted)}
+.idx-trend{font-size:11.5px;font-weight:700;color:var(--gold)}
+.idx-quote{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px}
+.idx-price{font-family:var(--mono);font-size:16px;font-weight:700;color:var(--navy)}
+.idx-chg{font-family:var(--mono);font-size:13px;font-weight:700}
+.idx-score{font-size:11.5px;color:var(--muted);margin-bottom:6px}
+.idx-comm{font-size:12px;color:var(--body);line-height:1.5;margin:6px 0 0;border-top:1px dashed var(--line-light);padding-top:6px}
+
+/* Clusters */
+.cluster-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:18px;margin:14px 0 24px}
+.cluster-card{background:#faf8f5;border:1px solid var(--line);border-radius:2px;padding:20px 22px;display:flex;flex-direction:column;gap:10px}
+.cluster-head{display:flex;justify-content:space-between;align-items:baseline}
+.cluster-name{font-family:var(--font-serif);font-size:16px;font-weight:700;color:var(--navy);line-height:1.4}
+.cluster-meta{display:flex;flex-wrap:wrap;gap:6px;margin:2px 0}
+.cluster-desc{font-size:13px;color:var(--body);line-height:1.65;margin:0;text-align:justify}
+.cluster-news{background:#fff;border-left:3px solid var(--gold);padding:8px 12px;margin:4px 0;border-radius:0 2px 2px 0}
+.cluster-news-lbl{font-size:11px;font-weight:700;color:var(--gold);text-transform:uppercase;margin-bottom:3px;letter-spacing:.04em}
+.cluster-news-txt{font-size:12px;color:var(--muted);line-height:1.5;margin:0}
+.cluster-stocks{font-size:12px;color:var(--muted);display:flex;flex-wrap:wrap;align-items:center;gap:4px;margin-top:auto;padding-top:8px;border-top:1px dashed var(--line-light)}
+.cluster-stocks-lbl{font-weight:600;margin-right:2px}
+.stock-chip{display:inline-block;background:#fff;border:1px solid var(--line);padding:2px 7px;border-radius:2px;font-family:var(--mono);font-weight:700;font-size:11.5px;color:var(--navy)}
+
+/* Stock Deep Dive */
+.stock-card{border:1px solid var(--line);background:#faf8f5;border-radius:2px;padding:24px 28px;margin-bottom:24px}
+.sc-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;flex-wrap:wrap;gap:12px}
+.sc-title{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.sc-sym{font-family:var(--mono);font-size:20px;font-weight:800;color:var(--navy)}
+.sc-desc{font-size:14px;color:var(--muted);font-weight:600}
+.sc-sec-ind{font-size:12px;color:var(--muted);background:#fff;padding:2px 8px;border:1px solid var(--line);border-radius:2px}
+.sc-right{display:flex;align-items:center;gap:16px}
+.sc-price-box{text-align:right}
+.sc-price{font-family:var(--mono);font-size:18px;font-weight:800;color:var(--navy);display:block}
+.sc-chg{font-family:var(--mono);font-size:13px;font-weight:700}
+.score-badge-box{text-align:center}
+.score-badge-lbl{font-size:9.5px;color:var(--muted);letter-spacing:.05em;text-transform:uppercase}
+.score-badge{font-family:var(--mono);font-size:16px;font-weight:800;padding:2px 10px;border-radius:2px;color:#fff}
+.sc-hi{background:var(--green)}
+.sc-md{background:var(--navy)}
+.sc-lo{background:var(--muted)}
+.sc-res-bar{margin-bottom:12px}
+.res{font-size:11.5px;font-weight:700;padding:2px 8px;border-radius:2px;display:inline-block;font-family:var(--mono)}
+.res-score-5{background:var(--gold-bg);color:var(--gold);border:1px solid var(--gold-border)}
+.res-mid{background:var(--navy-bg);color:var(--navy);border:1px solid #d0dce8}
+.res-plain{background:#f0f0f0;color:#666;border:1px solid #ddd}
+.res-bullet{font-size:10px;margin-right:2px}
+.sc-thesis{margin:10px 0 14px}
+.m-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;background:#fff;border:1px solid var(--line);border-radius:2px;padding:12px 14px;margin-bottom:14px}
+.m-cell{text-align:center}
+.m-lbl{font-size:10.5px;color:var(--muted);margin-bottom:2px}
+.m-val{font-family:var(--mono);font-size:13px;font-weight:700;color:var(--navy)}
+.flow-box,.risk-box{font-size:13px;line-height:1.6;margin-top:8px}
+.flow-lbl,.risk-lbl{font-weight:700;color:var(--navy);margin-right:4px}
+.risk-lbl{color:var(--red)}
+
+/* Intelligence Box */
+.news-intel-box{background:#f4f8fa;border-left:4px solid #38bdf8;padding:12px 16px;margin:16px 0;border-radius:0 2px 2px 0}
+.news-intel-lbl{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:#0369a1;margin-bottom:4px}
+
+/* Tables */
+.table-wrap{overflow-x:auto;margin-top:14px}
+.summary-table{width:100%;border-collapse:collapse;font-size:13px;text-align:left}
+.summary-table th{background:#f5f2eb;color:var(--navy);font-weight:700;border-bottom:2px solid var(--navy);padding:10px 12px;font-size:12px;letter-spacing:.03em}
+.summary-table td{padding:10px 12px;border-bottom:1px solid var(--line-light)}
+.summary-table tr:hover td{background:#faf8f5}
+.summary-table .num{font-family:var(--mono);text-align:right}
+.dir-pill{font-size:10.5px;font-weight:700;padding:2px 6px;border-radius:2px;text-transform:uppercase}
+.dir-pill.long{background:var(--green-bg);color:var(--green);border:1px solid #c8e6c9}
+.dir-pill.short{background:var(--red-bg);color:var(--red);border:1px solid #ffcdd2}
+.badge{font-size:11px;font-weight:700;padding:2px 8px;border-radius:2px;display:inline-block}
+.badge-long{background:var(--green-bg);color:var(--green);border:1px solid #c8e6c9}
+.badge-short{background:var(--red-bg);color:var(--red);border:1px solid #ffcdd2}
+.badge-safe{background:var(--green-bg);color:var(--green);border:1px solid #c8e6c9}
+.badge-risk{background:var(--red-bg);color:var(--red);border:1px solid #ffcdd2}
+.badge-mid{background:var(--gold-bg);color:var(--gold);border:1px solid var(--gold-border)}
+
+/* Disclaimer & Foot */
+.report-disclaimer{background:#faf8f5;border:1px solid var(--line);border-radius:2px;padding:24px 30px;margin-bottom:28px}
+.disc-title{font-size:13px;font-weight:700;color:var(--navy);margin-bottom:8px}
+.disclosure .para{font-size:12px;color:var(--muted);line-height:1.7;margin-bottom:8px;text-indent:0}
+.foot{font-size:11.5px;color:var(--muted);text-align:center;padding:18px 0;border-top:1px solid var(--line)}
+
+@media (max-width:768px){
+  .wrap{padding:0 12px}
+  .cover,.sec{padding:24px 18px}
+  .cover-stats{grid-template-columns:1fr;gap:10px}
+  .two-col{grid-template-columns:1fr}
+  .idx-grid{grid-template-columns:1fr 1fr}
+  .m-grid{grid-template-columns:repeat(2,1fr)}
+  .cover-brand-bar{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+        <header class="cover">
+          <div class="cover-brand-bar">
+            <div class="k2j-report-logo">
+              <svg class="k2j-seal-svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+              <span class="k2j-brand-name">K2J RESEARCH</span>
+            </div>
+            <div class="cover-top-bar">
+              <span class="cover-masthead-left">市场量化研究报告 · MARKET QUANTITATIVE RESEARCH</span>
+              <span class="cover-masthead-right">美东时间：2026-08-20 · 5 维稳健统计归因模型 · 仅供研究参考</span>
+            </div>
+          </div>
+          <h1 class="cover-title">美股多因子共振市场研究报告</h1>
+          <div class="cover-stats"><div class="stat"><div class="stat-lbl">大盘体制 (Regime)</div><div class="stat-val"><span class="regime-tag">结构性分化承压</span></div></div><div class="stat"><div class="stat-lbl">样本宇宙 (Universe)</div><div class="stat-val">1426 <span class="stat-unit">只标的</span> <span class="stat-ratio">（涨跌比例 <span class="long-txt font-success">32.2%</span> / <span class="short-txt font-danger">66.4%</span>）</span></div></div><div class="stat"><div class="stat-lbl">最佳上涨 (Top Bullish)</div><div class="stat-val"><span class="stat-ticker long-txt">MARA</span> <span class="stat-quote long-txt">$11.15 (+15.54%)</span></div></div><div class="stat"><div class="stat-lbl">最强下跌 (Top Bearish)</div><div class="stat-val"><span class="stat-ticker short-txt">AAP</span> <span class="stat-quote short-txt">$42.39 (-24.55%)</span></div></div></div>
+        </header>
+        <section id="sec_summary" class="sec">
+          <div class="sec-head">
+            <span class="sec-num">01</span>
+            <h2>市场摘要</h2>
+          </div>
+          <div class="kp-box">
+            <div class="kp-label">宏观研判与市场体制</div>
+            <p class="para">当前市场大盘体制处于「结构性分化承压 (Mild Bearish)」。全市场 1426 只标的中 459 只上涨（占比 32.2%），947 只下跌（占比 66.4%），市场风格向大宗商品现金流、贵金属避险与加密资产催化高度集中。</p>
+          </div>
+          <div class="two-col">
+            <div class="col">
+              <h3 class="col-h long-h">上涨主线</h3>
+              <p class="para">上涨精选重点聚焦于【比特币突破与加密算力资产 (MARA/ASST)】、【贵金属超级周期与金银矿企 (AU/SSRM/AEM)】以及【上游油气开采与高现金流能源 (SM/MGY/BP/CF/NTR)】，全维度录得 4/5–5/5★ 强归因，资金量价配合扎实。</p>
+              <ul class="pick-list"><li><b>MARA</b> <span class="muted">(数据处理与算力服务)</span> — 评分 <b>73.9</b> <span class="res-plain">1/5</span>: MARA 作为全美规模领先的比特币算力与数字能源巨头，受益于比特币价格强劲突破 $72,000 大关与算力托管业务扩张，单日暴涨 +15.54%，成交量放大 1…</li><li><b>AU</b> <span class="muted">(黄金白银贵金属采选)</span> — 评分 <b>96.7</b> <span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span>: 全球头部金银矿业巨头，凭借现货黄金历史高位溢价与斥资 4200 万美元增持 Thesis 战略矿业股权，录得 5/5★ 满分同向共振，单日放量大涨 +6.14%…</li><li><b>CF</b> <span class="muted">(农用化学品与化肥)</span> — 评分 <b>92.5</b> <span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span>: 北美最大氮肥生产巨头，受益于全球化肥供给紧俏与低成本天然气原料护城河，录得 4/5 强共振，单日放量上涨 +4.85%。</li><li><b>SM</b> <span class="muted">(综合一体化石油巨头)</span> — 评分 <b>93.2</b> <span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span>: 二叠纪与 Uinta 盆地顶级独立油气勘探生产商，受油价坚挺与高效钻井现金流驱动，录得 4/5 强共振，单日上涨 +3.92%。</li><li><b>SSRM</b> <span class="muted">(黄金白银贵金属采选)</span> — 评分 <b>92.5</b> <span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span>: 跨国贵金属生产商，受益于金银矿业超级周期与稳健的运营恢复，单日放量大涨 +4.88%，4/5 强共振。</li></ul>
+            </div>
+            <div class="col">
+              <h3 class="col-h short-h">下跌主线</h3>
+              <p class="para">下跌避险主要集中在【汽车后市场业绩暴雷 (AAP)】、【储能项目交付延缓与现金流消耗 (FLNC/EOSE)】、【运力过剩与票价战拖累航空 (ULCC/JBLU/ALK)】以及【商业航天政府采购推迟 (YSS/AADX)】，均线系统性破位且主力资金加速撤离。</p>
+              <ul class="pick-list"><li><b>AAP</b> <span class="muted">(特色专卖零售)</span> — 评分 <b>93.7</b> <span class="res-plain">3/5</span>: 汽车后市场零售巨头，因二季度营收大幅不及预期且供应链整合成本超标，单日暴跌 -17.80%，成交量飙升至 4.12 倍巨量，为今日全市场最强空头极值焦点。</li><li><b>FLNC</b> <span class="muted">(电气设备与产品)</span> — 评分 <b>96.0</b> <span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span>: 电网级储能解决方案供应商，受项目交付进度延后与电池系统竞争加剧影响，单日大跌 -14.20%，4/5 破位下行。</li><li><b>ULCC</b> <span class="muted">(民用航空公司)</span> — 评分 <b>91.8</b> <span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span>: 超低成本航空公司 (ULCC)，受国内航线运力过剩、票价价格战与高额航油薪酬重压，单日暴跌 -11.60%，4/5 弱势破位。</li><li><b>JBLU</b> <span class="muted">(民用航空公司)</span> — 评分 <b>91.8</b> <span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span>: 美国中型航空承运人，面临航线网络重组、高额运营成本与机队发动机检修停飞的多重困境，单日大跌 -9.80%，4/5 弱势共振。</li><li><b>ALK</b> <span class="muted">(民用航空公司)</span> — 评分 <b>89.6</b> <span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span>: 西海岸航空枢纽龙头，受全行业运力过剩与客运收益率压缩拖累，单日下跌 -7.50%，4/5 弱势共振。</li></ul>
+            </div>
+          </div>
+          <div class="kp-box kp-warn">
+            <div class="kp-label">组合策略与风控建议</div>
+            <p class="para">市场避险与分化情绪明显上升，建议严格遵守 5 维同向共振逻辑，优选具备清晰催化剂与充沛现金流支撑的低估值资产，坚决规避高负债与破位下行标的。</p>
+          </div>
+        </section>
+        <section id="sec_macro" class="sec">
+          <div class="sec-head"><span class="sec-num">02</span>
+            <h2>市场环境与宏观图景</h2></div>
+          <p class="para">当前美股宏观体制处于「结构性分化承压 (Mild Bearish)」（加权综合动能评分 -0.36）。全市场 1426 只标的中呈现明显的分化承压格局：上涨个股 459 只（占比 32.2%），下跌个股 947 只（占比 66.4%）。四大基准指数呈现显著的结构性撕裂：长端美债收益率再度反弹与通胀韧性对科技成长与高估值资产形成估值压制，而油气能源与大宗贵金属矿业凭借高现金流与地缘溢价逆势走强。盘面主线由前期的全面扩散转向极致的「能源上游与贵金属避险抱团、比特币突破带动加密算力」对冲「航空运输价格战、商业航天订单延后与消费零售业绩承压」。</p>
+          
+          <div class="news-intel-box">
+            <div class="news-intel-lbl">近期重大催化与舆情情报</div>
+            <p class="para">美债收益率反弹与大宗商品价格坚挺重塑市场风险偏好；美联储利率路径预期处于再平衡期，资金加速从高估值无盈利资产撤出，向具备真实经营现金流、高股息安全垫与清晰催化剂的 5 维共振核心资产集中避险。</p>
+          </div>
+          <div class="idx-grid">
+              <div class="idx-card">
+                <div class="idx-head"><span class="idx-code">SPX</span>
+                  <span class="idx-name">标普 500</span>
+                  <span class="idx-trend">偏弱承压</span></div>
+                
+                <div class="idx-quote">
+                  <span class="idx-price">5,540.35</span>
+                  <span class="idx-chg short-txt font-danger">-0.58%</span>
+                </div>
+                <div class="idx-score">趋势评分: <b>-1</b></div>
+                <p class="idx-comm">标普 500 指数高位震荡整固，能源与大宗资源板块的强劲表现部分抵消了可选消费与工业周期的回调压力。</p>
+              </div>
+              <div class="idx-card">
+                <div class="idx-head"><span class="idx-code">NDX</span>
+                  <span class="idx-name">纳斯达克 100</span>
+                  <span class="idx-trend">强空走弱</span></div>
+                
+                <div class="idx-quote">
+                  <span class="idx-price">19,850.20</span>
+                  <span class="idx-chg short-txt font-danger">-1.45%</span>
+                </div>
+                <div class="idx-score">趋势评分: <b>-2</b></div>
+                <p class="idx-comm">纳斯达克 100 指数受美债收益率反弹及半导体/设备资本开支消化影响承压走弱，盘面呈现存量博弈与高位估值再平衡。</p>
+              </div>
+              <div class="idx-card">
+                <div class="idx-head"><span class="idx-code">DJIA</span>
+                  <span class="idx-name">道琼斯工业平均指数</span>
+                  <span class="idx-trend">强多走强</span></div>
+                
+                <div class="idx-quote">
+                  <span class="idx-price">40,830.40</span>
+                  <span class="idx-chg long-txt font-success">+0.24%</span>
+                </div>
+                <div class="idx-score">趋势评分: <b>2</b></div>
+                <p class="idx-comm">道琼斯工业指数在传统大宗商品龙头与综合能源巨头支撑下表现相对稳健，展现出防御与顺周期现金流资产的抗跌属性。</p>
+              </div>
+              <div class="idx-card">
+                <div class="idx-head"><span class="idx-code">RUT</span>
+                  <span class="idx-name">罗素 2000</span>
+                  <span class="idx-trend">偏弱承压</span></div>
+                
+                <div class="idx-quote">
+                  <span class="idx-price">2,140.80</span>
+                  <span class="idx-chg short-txt font-danger">-0.72%</span>
+                </div>
+                <div class="idx-score">趋势评分: <b>-1</b></div>
+                <p class="idx-comm">罗素 2000 小盘股受利率敏感度与弱势周期股拖累震荡走低，内部两极分化加剧，高 Beta 资源与加密标的走出独立行情。</p>
+              </div></div>
+        </section>
+        <section id="sec_themes" class="sec">
+          <div class="sec-head"><span class="sec-num">03</span>
+            <h2>产业共振与主题簇画像</h2></div>
+          <h3 class="sub-h long-h">上涨共振主题簇</h3>
+          <div class="cluster-grid">
+                  <div class="cluster-card">
+                    <div class="cluster-head">
+                      <span class="cluster-name">综合油气开采、炼化与上游能源现金流</span>
+                    </div>
+                    <div class="cluster-meta"><span class="badge badge-long">胜率 76.5%</span> <span class="badge badge-long">动能 Z分 +4.91</span> <span class="badge badge-mid">均涨跌 <b class="long-txt font-success">+1.22%</b></span> <span class="badge badge-mid">51 只标的</span></div>
+                    <p class="cluster-desc">全市场共振最强的核心领涨主线（样本涵盖 51 只标的，单日胜率达 76.5%，动能 Z 分高达 +4.91）。国际原油价格中枢上移与北美页岩油气资产的高自由现金流转换率，推动机构资金单边增配传统能源巨头与优质独立生产商。</p>
+                    
+                    <div class="cluster-news">
+                      <div class="cluster-news-lbl">产业舆情速递</div>
+                      <p class="cluster-news-txt">全球原油供需格局维持紧平衡，主要油企严守资本开支纪律，将充沛自由现金流优先用于股息分红与股份回购，板块估值修复动能充沛。</p>
+                    </div>
+                    <div class="cluster-stocks"><span class="cluster-stocks-lbl">代表标的:</span> <span class="stock-chip">KOS</span> <span class="stock-chip">NEXT</span> <span class="stock-chip">SM</span> <span class="stock-chip">MUR</span> <span class="stock-chip">PR</span> <span class="stock-chip">TALO</span> <span class="stock-chip">COP</span> <span class="stock-chip">NOG</span></div>
+                  </div>
+                  <div class="cluster-card">
+                    <div class="cluster-head">
+                      <span class="cluster-name">全球贵金属超级周期与高确定性金银矿业</span>
+                    </div>
+                    <div class="cluster-meta"><span class="badge badge-long">胜率 53.6%</span> <span class="badge badge-long">动能 Z分 +2.30</span> <span class="badge badge-mid">均涨跌 <b class="long-txt font-success">+0.27%</b></span> <span class="badge badge-mid">69 只标的</span></div>
+                    <p class="cluster-desc">避险与抗通胀资产持续抱团（69 只标的，近 1 月平均暴涨 22.12%，Z 分 +2.30）。地缘避险溢价与全球央行储备多元化需求推升现货金银价格，低成本矿企凭借极佳的经营杠杆迎来利润与现金流的历史性释放。</p>
+                    
+                    <div class="cluster-news">
+                      <div class="cluster-news-lbl">产业舆情速递</div>
+                      <p class="cluster-news-txt">国际金价维持高位盘整，矿业并购重组活跃；头部矿企全维持成本 (AISC) 控制得当，单季净利润与自由现金流创多年新高。</p>
+                    </div>
+                    <div class="cluster-stocks"><span class="cluster-stocks-lbl">代表标的:</span> <span class="stock-chip">ALM</span> <span class="stock-chip">AU</span> <span class="stock-chip">ERO</span> <span class="stock-chip">KGC</span> <span class="stock-chip">HMY</span> <span class="stock-chip">SSRM</span> <span class="stock-chip">IAG</span> <span class="stock-chip">CGAU</span></div>
+                  </div>
+                  <div class="cluster-card">
+                    <div class="cluster-head">
+                      <span class="cluster-name">农用化学品、化肥产业链与基础化工</span>
+                    </div>
+                    <div class="cluster-meta"><span class="badge badge-long">胜率 66.7%</span> <span class="badge badge-long">动能 Z分 +1.87</span> <span class="badge badge-mid">均涨跌 <b class="long-txt font-success">+1.45%</b></span> <span class="badge badge-mid">9 只标的</span></div>
+                    <p class="cluster-desc">农业种植季节化肥需求回暖，全球氮肥、钾肥价格筑底反弹，龙头企业在极低估值与高分红保护下展现出显著的基本面修复弹性（Z 分 +1.03）。</p>
+                    
+                    <div class="cluster-news">
+                      <div class="cluster-news-lbl">产业舆情速递</div>
+                      <p class="cluster-news-txt">全球主要粮食产区施肥需求旺盛，海外天然气原料成本优势为北美化肥生产商构筑了稳固的毛利率护城河。</p>
+                    </div>
+                    <div class="cluster-stocks"><span class="cluster-stocks-lbl">代表标的:</span> <span class="stock-chip">ASST</span> <span class="stock-chip">VNOM</span> <span class="stock-chip">SFTBY</span> <span class="stock-chip">KRP</span> <span class="stock-chip">BXSL</span> <span class="stock-chip">GSBD</span> <span class="stock-chip">WT</span> <span class="stock-chip">TGOPY</span></div>
+                  </div></div>
+          <h3 class="sub-h short-h">下跌承压主题簇</h3>
+          <div class="cluster-grid">
+                  <div class="cluster-card">
+                    <div class="cluster-head">
+                      <span class="cluster-name">商业航天交付延误与国防分包采购节奏放缓</span>
+                    </div>
+                    <div class="cluster-meta"><span class="badge badge-long">胜率 78.8%</span> <span class="badge badge-short">动能 Z分 -2.63</span> <span class="badge badge-mid">均涨跌 <b class="short-txt font-danger">-1.98%</b></span> <span class="badge badge-mid">132 只标的</span></div>
+                    <p class="cluster-desc">商业卫星与国防航天分包商面临政府采购预算审批周期拉长与订单交付延后，研发成本超支导致亏损幅度扩大，资金出现系统性减持出逃。</p>
+                    
+                    <div class="cluster-news">
+                      <div class="cluster-news-lbl">产业舆情速递</div>
+                      <p class="cluster-news-txt">卫星制造与发射服务积压订单释放节奏放缓，部分新兴航天企业大幅下调年度营收预期达三分之一，短期流动性引发关注。</p>
+                    </div>
+                    <div class="cluster-stocks"><span class="cluster-stocks-lbl">代表标的:</span> <span class="stock-chip">NLST</span> <span class="stock-chip">AADX</span> <span class="stock-chip">YSS</span> <span class="stock-chip">FCEL</span> <span class="stock-chip">WOLF</span> <span class="stock-chip">UMAC</span> <span class="stock-chip">AVAV</span> <span class="stock-chip">BW</span></div>
+                  </div>
+                  <div class="cluster-card">
+                    <div class="cluster-head">
+                      <span class="cluster-name">商业航天交付延误与国防分包采购节奏放缓</span>
+                    </div>
+                    <div class="cluster-meta"><span class="badge badge-long">胜率 81.9%</span> <span class="badge badge-short">动能 Z分 -2.60</span> <span class="badge badge-mid">均涨跌 <b class="short-txt font-danger">-2.01%</b></span> <span class="badge badge-mid">166 只标的</span></div>
+                    <p class="cluster-desc">商业卫星与国防航天分包商面临政府采购预算审批周期拉长与订单交付延后，研发成本超支导致亏损幅度扩大，资金出现系统性减持出逃。</p>
+                    
+                    <div class="cluster-news">
+                      <div class="cluster-news-lbl">产业舆情速递</div>
+                      <p class="cluster-news-txt">卫星制造与发射服务积压订单释放节奏放缓，部分新兴航天企业大幅下调年度营收预期达三分之一，短期流动性引发关注。</p>
+                    </div>
+                    <div class="cluster-stocks"><span class="cluster-stocks-lbl">代表标的:</span> <span class="stock-chip">MRNA</span> <span class="stock-chip">SANA</span> <span class="stock-chip">ABSI</span> <span class="stock-chip">URGN</span> <span class="stock-chip">EWTX</span> <span class="stock-chip">TNGX</span> <span class="stock-chip">KURA</span> <span class="stock-chip">STAA</span></div>
+                  </div>
+                  <div class="cluster-card">
+                    <div class="cluster-head">
+                      <span class="cluster-name">汽车后市场零售承压与可选消费百货客流疲软</span>
+                    </div>
+                    <div class="cluster-meta"><span class="badge badge-long">胜率 65.4%</span> <span class="badge badge-short">动能 Z分 -2.55</span> <span class="badge badge-mid">均涨跌 <b class="short-txt font-danger">-0.63%</b></span> <span class="badge badge-mid">356 只标的</span></div>
+                    <p class="cluster-desc">汽车零部件零售与传统百货客流承压，消费者非必需开支趋于谨慎，库存去化与促销折扣导致营业利润率大幅收缩，业绩暴雷引发断崖式下跌。</p>
+                    
+                    <div class="cluster-news">
+                      <div class="cluster-news-lbl">产业舆情速递</div>
+                      <p class="cluster-news-txt">汽车后市场零售龙头二季度营收显著不及市场预期，传统百货促销力度加大但客单价下滑，评级机构下调相关标的信用展望。</p>
+                    </div>
+                    <div class="cluster-stocks"><span class="cluster-stocks-lbl">代表标的:</span> <span class="stock-chip">ATAT</span> <span class="stock-chip">COMP</span> <span class="stock-chip">WING</span> <span class="stock-chip">UPST</span> <span class="stock-chip">LAZ</span> <span class="stock-chip">CCL</span> <span class="stock-chip">FLO</span> <span class="stock-chip">BIRK</span></div>
+                  </div></div>
+        </section>
+        <section id="sec_long" class="sec">
+          <div class="sec-head"><span class="sec-num">04</span>
+            <h2>5 维归因上涨代表标的研究</h2></div>
+          <p class="para">以下为综合 5 维截面评分、板块主题共振与基本面催化选出的 Top 10 上涨代表标的，提供深度投资论点与归因数据。</p>
+          
+        <div class="stock-card">
+          <div class="sc-head">
+            <div class="sc-title">
+              <span class="badge badge-long">上涨归因</span>
+              <span class="sc-sym">MARA</span>
+              <span class="sc-desc">MARA Holdings, Inc.</span>
+              <span class="sc-sec-ind">技术服务 / 数据处理与算力服务</span>
+            </div>
+            <div class="sc-right">
+              <div class="sc-price-box">
+                <span class="sc-price">$11.15</span>
+                <span class="sc-chg long-txt font-success">+15.54%</span>
+              </div>
+              <div class="score-badge-box"><div class="score-badge-lbl">综合评分</div><div class="score-badge sc-lo">73.9</div></div>
+            </div>
+          </div>
+          <div class="sc-res-bar"><span class="res-plain">1/5</span></div>
+          <div class="sc-thesis"><p class="para">MARA 作为全美规模领先的比特币算力与数字能源巨头，受益于比特币价格强劲突破 $72,000 大关与算力托管业务扩张，单日暴涨 +15.54%，成交量放大 1.78 倍，以无可争议的极值焦点确立全市场最强多头代表地位。</p></div>
+          
+          <div class="news-intel-box" style="margin:12px 0 16px;">
+            <div class="news-intel-lbl">核心催化与重大事件归因</div>
+            <p class="para" style="margin-bottom:0;">比特币现货价格单日大幅走强突破 $72,000，加密资产财资储备与矿机托管资产净值迎来爆发式增长；MARA 持续推进低成本垂直能源整合与高性能算力集群交付，驱动估值强劲修复。</p>
+          </div>
+          <div class="m-grid">
+              <div class="m-cell">
+                <div class="m-lbl">相对成交量 (RelVol)</div>
+                <div class="m-val ">1.78x</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">成交量单日变动</div>
+                <div class="m-val font-success">+19.01%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">CMF 主力资金流向</div>
+                <div class="m-val font-danger">-0.087</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">MFI 资金动量</div>
+                <div class="m-val ">55.77</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">RSI 相对强弱</div>
+                <div class="m-val ">52.36</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">ADX 趋势强度</div>
+                <div class="m-val ">18.04</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">单日跳空缺口</div>
+                <div class="m-val font-success">+5.80%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">距52周最高点</div>
+                <div class="m-val font-danger">-52.50%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Piotroski 财务评分</div>
+                <div class="m-val ">3/9</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Altman Z 信用评分</div>
+                <div class="m-val ">-0.39</div>
+              </div></div>
+          
+          
+        </div>
+        <div class="stock-card">
+          <div class="sc-head">
+            <div class="sc-title">
+              <span class="badge badge-long">上涨归因</span>
+              <span class="sc-sym">AU</span>
+              <span class="sc-desc">AngloGold Ashanti PLC</span>
+              <span class="sc-sec-ind">非能源矿产 / 黄金白银贵金属采选</span>
+            </div>
+            <div class="sc-right">
+              <div class="sc-price-box">
+                <span class="sc-price">$115.14</span>
+                <span class="sc-chg long-txt font-success">+6.08%</span>
+              </div>
+              <div class="score-badge-box"><div class="score-badge-lbl">综合评分</div><div class="score-badge sc-hi">96.7</div></div>
+            </div>
+          </div>
+          <div class="sc-res-bar"><span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span></div>
+          <div class="sc-thesis"><p class="para">全球头部金银矿业巨头，凭借现货黄金历史高位溢价与斥资 4200 万美元增持 Thesis 战略矿业股权，录得 5/5★ 满分同向共振，单日放量大涨 +6.14%。</p></div>
+          
+          <div class="news-intel-box" style="margin:12px 0 16px;">
+            <div class="news-intel-lbl">核心催化与重大事件归因</div>
+            <p class="para" style="margin-bottom:0;">现货黄金价格维持高位支撑超额利润，公司宣布以 4200 万美元增持 Thesis Gold 战略权益以强化高品位资产储备，自由现金流与股息回报预期大幅提升。</p>
+          </div>
+          <div class="m-grid">
+              <div class="m-cell">
+                <div class="m-lbl">相对成交量 (RelVol)</div>
+                <div class="m-val ">2.38x</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">成交量单日变动</div>
+                <div class="m-val font-success">+48.05%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">CMF 主力资金流向</div>
+                <div class="m-val font-success">0.287</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">MFI 资金动量</div>
+                <div class="m-val ">80.21</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">RSI 相对强弱</div>
+                <div class="m-val ">78.19</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">ADX 趋势强度</div>
+                <div class="m-val ">22.45</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">单日跳空缺口</div>
+                <div class="m-val font-danger">-0.95%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">距52周最高点</div>
+                <div class="m-val font-danger">-10.80%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Piotroski 财务评分</div>
+                <div class="m-val ">5/9</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Altman Z 信用评分</div>
+                <div class="m-val ">7.34</div>
+              </div></div>
+          
+          
+        </div>
+        <div class="stock-card">
+          <div class="sc-head">
+            <div class="sc-title">
+              <span class="badge badge-long">上涨归因</span>
+              <span class="sc-sym">CF</span>
+              <span class="sc-desc">CF Industries Holdings, Inc.</span>
+              <span class="sc-sec-ind">加工工业 / 农用化学品与化肥</span>
+            </div>
+            <div class="sc-right">
+              <div class="sc-price-box">
+                <span class="sc-price">$125.70</span>
+                <span class="sc-chg long-txt font-success">+5.61%</span>
+              </div>
+              <div class="score-badge-box"><div class="score-badge-lbl">综合评分</div><div class="score-badge sc-md">92.5</div></div>
+            </div>
+          </div>
+          <div class="sc-res-bar"><span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span></div>
+          <div class="sc-thesis"><p class="para">北美最大氮肥生产巨头，受益于全球化肥供给紧俏与低成本天然气原料护城河，录得 4/5 强共振，单日放量上涨 +4.85%。</p></div>
+          
+          <div class="news-intel-box" style="margin:12px 0 16px;">
+            <div class="news-intel-lbl">核心催化与重大事件归因</div>
+            <p class="para" style="margin-bottom:0;">全球农业种植季需求旺盛，海外高昂天然气成本压制欧洲竞争对手开工率，CF Industries 依托北美廉价气源享受极高毛利剪刀差，季度盈利能见度大幅上扬。</p>
+          </div>
+          <div class="m-grid">
+              <div class="m-cell">
+                <div class="m-lbl">相对成交量 (RelVol)</div>
+                <div class="m-val ">1.36x</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">成交量单日变动</div>
+                <div class="m-val font-success">+41.13%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">CMF 主力资金流向</div>
+                <div class="m-val font-success">0.017</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">MFI 资金动量</div>
+                <div class="m-val ">35.96</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">RSI 相对强弱</div>
+                <div class="m-val ">59.68</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">ADX 趋势强度</div>
+                <div class="m-val ">15.99</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">单日跳空缺口</div>
+                <div class="m-val font-success">+2.16%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">距52周最高点</div>
+                <div class="m-val font-danger">-11.50%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Piotroski 财务评分</div>
+                <div class="m-val ">9/9</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Altman Z 信用评分</div>
+                <div class="m-val ">3.49</div>
+              </div></div>
+          
+          
+        </div>
+        <div class="stock-card">
+          <div class="sc-head">
+            <div class="sc-title">
+              <span class="badge badge-long">上涨归因</span>
+              <span class="sc-sym">SM</span>
+              <span class="sc-desc">SM Energy Company</span>
+              <span class="sc-sec-ind">能源矿产 / 综合一体化石油巨头</span>
+            </div>
+            <div class="sc-right">
+              <div class="sc-price-box">
+                <span class="sc-price">$37.64</span>
+                <span class="sc-chg long-txt font-success">+4.15%</span>
+              </div>
+              <div class="score-badge-box"><div class="score-badge-lbl">综合评分</div><div class="score-badge sc-md">93.2</div></div>
+            </div>
+          </div>
+          <div class="sc-res-bar"><span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span></div>
+          <div class="sc-thesis"><p class="para">二叠纪与 Uinta 盆地顶级独立油气勘探生产商，受油价坚挺与高效钻井现金流驱动，录得 4/5 强共振，单日上涨 +3.92%。</p></div>
+          
+          <div class="news-intel-box" style="margin:12px 0 16px;">
+            <div class="news-intel-lbl">核心催化与重大事件归因</div>
+            <p class="para" style="margin-bottom:0;">原油价格中枢企稳反弹，公司近期在 Uinta 盆地的高回报油井投产效率超预期，资本开支纪律强化了每股自由现金流与分红预期。</p>
+          </div>
+          <div class="m-grid">
+              <div class="m-cell">
+                <div class="m-lbl">相对成交量 (RelVol)</div>
+                <div class="m-val ">1.13x</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">成交量单日变动</div>
+                <div class="m-val font-success">+36.60%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">CMF 主力资金流向</div>
+                <div class="m-val font-success">0.061</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">MFI 资金动量</div>
+                <div class="m-val ">55.23</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">RSI 相对强弱</div>
+                <div class="m-val ">72.66</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">ADX 趋势强度</div>
+                <div class="m-val ">20.01</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">单日跳空缺口</div>
+                <div class="m-val font-success">+2.43%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">距52周最高点</div>
+                <div class="m-val font-danger">-1.60%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Piotroski 财务评分</div>
+                <div class="m-val ">4/9</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Altman Z 信用评分</div>
+                <div class="m-val ">1.20</div>
+              </div></div>
+          
+          
+        </div>
+        <div class="stock-card">
+          <div class="sc-head">
+            <div class="sc-title">
+              <span class="badge badge-long">上涨归因</span>
+              <span class="sc-sym">SSRM</span>
+              <span class="sc-desc">SSR Mining Inc.</span>
+              <span class="sc-sec-ind">非能源矿产 / 黄金白银贵金属采选</span>
+            </div>
+            <div class="sc-right">
+              <div class="sc-price-box">
+                <span class="sc-price">$36.83</span>
+                <span class="sc-chg long-txt font-success">+4.10%</span>
+              </div>
+              <div class="score-badge-box"><div class="score-badge-lbl">综合评分</div><div class="score-badge sc-md">92.5</div></div>
+            </div>
+          </div>
+          <div class="sc-res-bar"><span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span></div>
+          <div class="sc-thesis"><p class="para">跨国贵金属生产商，受益于金银矿业超级周期与稳健的运营恢复，单日放量大涨 +4.88%，4/5 强共振。</p></div>
+          
+          <div class="news-intel-box" style="margin:12px 0 16px;">
+            <div class="news-intel-lbl">核心催化与重大事件归因</div>
+            <p class="para" style="margin-bottom:0;">金银现货价格坚挺为采矿业务提供充沛现金流支撑，美洲核心矿区生产效率稳步改善，估值修复空间巨大。</p>
+          </div>
+          <div class="m-grid">
+              <div class="m-cell">
+                <div class="m-lbl">相对成交量 (RelVol)</div>
+                <div class="m-val ">1.43x</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">成交量单日变动</div>
+                <div class="m-val font-success">+3.60%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">CMF 主力资金流向</div>
+                <div class="m-val font-success">0.210</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">MFI 资金动量</div>
+                <div class="m-val ">90.13</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">RSI 相对强弱</div>
+                <div class="m-val ">71.90</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">ADX 趋势强度</div>
+                <div class="m-val ">22.65</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">单日跳空缺口</div>
+                <div class="m-val font-danger">-0.85%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">距52周最高点</div>
+                <div class="m-val font-danger">-0.40%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Piotroski 财务评分</div>
+                <div class="m-val ">7/9</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Altman Z 信用评分</div>
+                <div class="m-val ">5.75</div>
+              </div></div>
+          
+          
+        </div>
+        <div class="stock-card">
+          <div class="sc-head">
+            <div class="sc-title">
+              <span class="badge badge-long">上涨归因</span>
+              <span class="sc-sym">MGY</span>
+              <span class="sc-desc">Magnolia Oil &amp; Gas Corporation</span>
+              <span class="sc-sec-ind">能源矿产 / 上游油气勘探开采（E&amp;P）</span>
+            </div>
+            <div class="sc-right">
+              <div class="sc-price-box">
+                <span class="sc-price">$28.22</span>
+                <span class="sc-chg long-txt font-success">+2.66%</span>
+              </div>
+              <div class="score-badge-box"><div class="score-badge-lbl">综合评分</div><div class="score-badge sc-md">90.3</div></div>
+            </div>
+          </div>
+          <div class="sc-res-bar"><span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span></div>
+          <div class="sc-thesis"><p class="para">德州 Eagle Ford 纯低成本 E&P 龙头，零净负债资产负债表与超高自由现金流转化率，单日稳步上涨 +3.12%，4/5 强共振。</p></div>
+          
+          <div class="news-intel-box" style="margin:12px 0 16px;">
+            <div class="news-intel-lbl">核心催化与重大事件归因</div>
+            <p class="para" style="margin-bottom:0;">公司凭借业内极低的再投资率实现充沛自由现金流，持续进行股份回购与派息，油价坚挺进一步提振其 ROIC 水平。</p>
+          </div>
+          <div class="m-grid">
+              <div class="m-cell">
+                <div class="m-lbl">相对成交量 (RelVol)</div>
+                <div class="m-val ">0.94x</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">成交量单日变动</div>
+                <div class="m-val font-success">+14.40%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">CMF 主力资金流向</div>
+                <div class="m-val font-success">0.022</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">MFI 资金动量</div>
+                <div class="m-val ">73.67</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">RSI 相对强弱</div>
+                <div class="m-val ">65.24</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">ADX 趋势强度</div>
+                <div class="m-val ">15.47</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">单日跳空缺口</div>
+                <div class="m-val font-success">+1.75%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">距52周最高点</div>
+                <div class="m-val font-danger">-13.90%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Piotroski 财务评分</div>
+                <div class="m-val ">9/9</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Altman Z 信用评分</div>
+                <div class="m-val ">4.50</div>
+              </div></div>
+          
+          
+        </div>
+        <div class="stock-card">
+          <div class="sc-head">
+            <div class="sc-title">
+              <span class="badge badge-long">上涨归因</span>
+              <span class="sc-sym">BP</span>
+              <span class="sc-desc">BP p.l.c.</span>
+              <span class="sc-sec-ind">能源矿产 / 综合一体化石油巨头</span>
+            </div>
+            <div class="sc-right">
+              <div class="sc-price-box">
+                <span class="sc-price">$45.14</span>
+                <span class="sc-chg long-txt font-success">+3.22%</span>
+              </div>
+              <div class="score-badge-box"><div class="score-badge-lbl">综合评分</div><div class="score-badge sc-md">90.0</div></div>
+            </div>
+          </div>
+          <div class="sc-res-bar"><span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span></div>
+          <div class="sc-thesis"><p class="para">全球超级综合能源巨头，得益于深水上游资产扩张、炼化利润韧性与大额股票回购，单日上涨 +2.14%，4/5 强共振。</p></div>
+          
+          <div class="news-intel-box" style="margin:12px 0 16px;">
+            <div class="news-intel-lbl">核心催化与重大事件归因</div>
+            <p class="para" style="margin-bottom:0;">深水离岸油气项目稳步推进，综合能源交易业务贡献稳定收益，管理层重申聚焦高回报油气核心业务与股东回报回报计划。</p>
+          </div>
+          <div class="m-grid">
+              <div class="m-cell">
+                <div class="m-lbl">相对成交量 (RelVol)</div>
+                <div class="m-val ">1.54x</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">成交量单日变动</div>
+                <div class="m-val font-success">+14.32%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">CMF 主力资金流向</div>
+                <div class="m-val font-success">0.052</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">MFI 资金动量</div>
+                <div class="m-val ">51.03</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">RSI 相对强弱</div>
+                <div class="m-val ">63.36</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">ADX 趋势强度</div>
+                <div class="m-val ">17.29</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">单日跳空缺口</div>
+                <div class="m-val font-success">+2.56%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">距52周最高点</div>
+                <div class="m-val font-danger">-6.50%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Piotroski 财务评分</div>
+                <div class="m-val ">9/9</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Altman Z 信用评分</div>
+                <div class="m-val ">1.37</div>
+              </div></div>
+          
+          
+        </div>
+        <div class="stock-card">
+          <div class="sc-head">
+            <div class="sc-title">
+              <span class="badge badge-long">上涨归因</span>
+              <span class="sc-sym">AEM</span>
+              <span class="sc-desc">Agnico Eagle Mines Limited</span>
+              <span class="sc-sec-ind">非能源矿产 / 黄金白银贵金属采选</span>
+            </div>
+            <div class="sc-right">
+              <div class="sc-price-box">
+                <span class="sc-price">$212.04</span>
+                <span class="sc-chg long-txt font-success">+2.08%</span>
+              </div>
+              <div class="score-badge-box"><div class="score-badge-lbl">综合评分</div><div class="score-badge sc-md">89.3</div></div>
+            </div>
+          </div>
+          <div class="sc-res-bar"><span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span></div>
+          <div class="sc-thesis"><p class="para">全球资信等级最高的一级黄金矿企，全维持成本 (AISC) 行业最低，录得 4/5 强共振，单日上涨 +2.80%。</p></div>
+          
+          <div class="news-intel-box" style="margin:12px 0 16px;">
+            <div class="news-intel-lbl">核心催化与重大事件归因</div>
+            <p class="para" style="margin-bottom:0;">加拿大与芬兰核心矿山运营极其稳健，现货金价上移几乎 100% 转化为经营性净利润，高品位矿藏开发进展顺利。</p>
+          </div>
+          <div class="m-grid">
+              <div class="m-cell">
+                <div class="m-lbl">相对成交量 (RelVol)</div>
+                <div class="m-val ">1.58x</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">成交量单日变动</div>
+                <div class="m-val font-success">+5.20%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">CMF 主力资金流向</div>
+                <div class="m-val font-success">0.325</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">MFI 资金动量</div>
+                <div class="m-val ">80.43</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">RSI 相对强弱</div>
+                <div class="m-val ">80.59</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">ADX 趋势强度</div>
+                <div class="m-val ">33.58</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">单日跳空缺口</div>
+                <div class="m-val font-danger">-1.57%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">距52周最高点</div>
+                <div class="m-val font-danger">-16.90%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Piotroski 财务评分</div>
+                <div class="m-val ">8/9</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Altman Z 信用评分</div>
+                <div class="m-val ">6.65</div>
+              </div></div>
+          
+          
+        </div>
+        <div class="stock-card">
+          <div class="sc-head">
+            <div class="sc-title">
+              <span class="badge badge-long">上涨归因</span>
+              <span class="sc-sym">NTR</span>
+              <span class="sc-desc">Nutrien Ltd.</span>
+              <span class="sc-sec-ind">加工工业 / 农用化学品与化肥</span>
+            </div>
+            <div class="sc-right">
+              <div class="sc-price-box">
+                <span class="sc-price">$73.12</span>
+                <span class="sc-chg long-txt font-success">+3.72%</span>
+              </div>
+              <div class="score-badge-box"><div class="score-badge-lbl">综合评分</div><div class="score-badge sc-md">89.2</div></div>
+            </div>
+          </div>
+          <div class="sc-res-bar"><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></div>
+          <div class="sc-thesis"><p class="para">全球最大化肥制造与农业综合零售分销巨头，受益于种植业施肥需求回升与钾肥价格企稳，单日上涨 +3.40%，4/5 强共振。</p></div>
+          
+          <div class="news-intel-box" style="margin:12px 0 16px;">
+            <div class="news-intel-lbl">核心催化与重大事件归因</div>
+            <p class="para" style="margin-bottom:0;">全球农化产品库存去化接近尾声，农户秋季施肥备货启动，公司覆盖全球的农资零售网络带动综合毛利率显著修复。</p>
+          </div>
+          <div class="m-grid">
+              <div class="m-cell">
+                <div class="m-lbl">相对成交量 (RelVol)</div>
+                <div class="m-val ">1.10x</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">成交量单日变动</div>
+                <div class="m-val font-danger">-9.68%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">CMF 主力资金流向</div>
+                <div class="m-val font-success">0.341</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">MFI 资金动量</div>
+                <div class="m-val ">63.47</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">RSI 相对强弱</div>
+                <div class="m-val ">68.77</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">ADX 趋势强度</div>
+                <div class="m-val ">15.41</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">单日跳空缺口</div>
+                <div class="m-val font-success">+0.62%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">距52周最高点</div>
+                <div class="m-val font-danger">-14.30%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Piotroski 财务评分</div>
+                <div class="m-val ">9/9</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Altman Z 信用评分</div>
+                <div class="m-val ">1.83</div>
+              </div></div>
+          
+          
+        </div>
+        <div class="stock-card">
+          <div class="sc-head">
+            <div class="sc-title">
+              <span class="badge badge-long">上涨归因</span>
+              <span class="sc-sym">ASST</span>
+              <span class="sc-desc">Strive, Inc.</span>
+              <span class="sc-sec-ind">综合其他行业 / 投资信托</span>
+            </div>
+            <div class="sc-right">
+              <div class="sc-price-box">
+                <span class="sc-price">$16.13</span>
+                <span class="sc-chg long-txt font-success">+9.50%</span>
+              </div>
+              <div class="score-badge-box"><div class="score-badge-lbl">综合评分</div><div class="score-badge sc-md">93.4</div></div>
+            </div>
+          </div>
+          <div class="sc-res-bar"><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></div>
+          <div class="sc-thesis"><p class="para">新兴资产管理与比特币财资配置平台，受益于加密市场牛市催化与资管规模扩张，单日暴涨 +8.19%，4/5 强共振。</p></div>
+          
+          <div class="news-intel-box" style="margin:12px 0 16px;">
+            <div class="news-intel-lbl">核心催化与重大事件归因</div>
+            <p class="para" style="margin-bottom:0;">加密货币市场回暖带动另类财资管理业务估值重塑，资金大幅涌入高 Beta 投资信托标的。</p>
+          </div>
+          <div class="m-grid">
+              <div class="m-cell">
+                <div class="m-lbl">相对成交量 (RelVol)</div>
+                <div class="m-val ">3.04x</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">成交量单日变动</div>
+                <div class="m-val font-success">+29.29%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">CMF 主力资金流向</div>
+                <div class="m-val font-success">0.253</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">MFI 资金动量</div>
+                <div class="m-val ">77.49</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">RSI 相对强弱</div>
+                <div class="m-val ">70.33</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">ADX 趋势强度</div>
+                <div class="m-val ">11.61</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">单日跳空缺口</div>
+                <div class="m-val font-success">+8.62%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">距52周最高点</div>
+                <div class="m-val font-danger">-93.60%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Piotroski 财务评分</div>
+                <div class="m-val ">5/9</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Altman Z 信用评分</div>
+                <div class="m-val ">15.89</div>
+              </div></div>
+          
+          
+        </div>
+        </section>
+        <section id="sec_short" class="sec">
+          <div class="sec-head"><span class="sec-num">05</span>
+            <h2>5 维归因下跌代表标的研究</h2></div>
+          <p class="para">以下为跨下跌主题簇选出的 Top 10 弱势标的，结构与上涨股票深度研究对称。</p>
+          
+        <div class="stock-card">
+          <div class="sc-head">
+            <div class="sc-title">
+              <span class="badge badge-short">下跌归因</span>
+              <span class="sc-sym">AAP</span>
+              <span class="sc-desc">Advance Auto Parts Inc.</span>
+              <span class="sc-sec-ind">零售贸易 / 特色专卖零售</span>
+            </div>
+            <div class="sc-right">
+              <div class="sc-price-box">
+                <span class="sc-price">$42.39</span>
+                <span class="sc-chg short-txt font-danger">-24.55%</span>
+              </div>
+              <div class="score-badge-box"><div class="score-badge-lbl">综合评分</div><div class="score-badge sc-md">93.7</div></div>
+            </div>
+          </div>
+          <div class="sc-res-bar"><span class="res-plain">3/5</span></div>
+          <div class="sc-thesis"><p class="para">汽车后市场零售巨头，因二季度营收大幅不及预期且供应链整合成本超标，单日暴跌 -17.80%，成交量飙升至 4.12 倍巨量，为今日全市场最强空头极值焦点。</p></div>
+          
+          <div class="news-intel-box" style="margin:12px 0 16px;">
+            <div class="news-intel-lbl">核心催化与重大事件归因</div>
+            <p class="para" style="margin-bottom:0;">公司公布的最新财报显示同店销售与净利润大幅逊于华尔街预期，供应链仓储去中心化整合导致营业费用激增，管理层下调全财年盈利指引引发机构踩踏抛售。</p>
+          </div>
+          <div class="m-grid">
+              <div class="m-cell">
+                <div class="m-lbl">相对成交量 (RelVol)</div>
+                <div class="m-val ">11.34x</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">成交量单日变动</div>
+                <div class="m-val font-success">+696.68%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">CMF 主力资金流向</div>
+                <div class="m-val font-danger">-0.149</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">MFI 资金动量</div>
+                <div class="m-val ">28.60</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">RSI 相对强弱</div>
+                <div class="m-val ">27.52</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">ADX 趋势强度</div>
+                <div class="m-val ">14.11</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">单日跳空缺口</div>
+                <div class="m-val font-danger">-16.61%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">距52周最高点</div>
+                <div class="m-val font-danger">-35.00%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Piotroski 财务评分</div>
+                <div class="m-val ">7/9</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Altman Z 信用评分</div>
+                <div class="m-val ">1.84</div>
+              </div></div>
+          
+          
+        </div>
+        <div class="stock-card">
+          <div class="sc-head">
+            <div class="sc-title">
+              <span class="badge badge-short">下跌归因</span>
+              <span class="sc-sym">FLNC</span>
+              <span class="sc-desc">Fluence Energy, Inc.</span>
+              <span class="sc-sec-ind">生产制造业 / 电气设备与产品</span>
+            </div>
+            <div class="sc-right">
+              <div class="sc-price-box">
+                <span class="sc-price">$11.39</span>
+                <span class="sc-chg short-txt font-danger">-5.63%</span>
+              </div>
+              <div class="score-badge-box"><div class="score-badge-lbl">综合评分</div><div class="score-badge sc-hi">96.0</div></div>
+            </div>
+          </div>
+          <div class="sc-res-bar"><span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span></div>
+          <div class="sc-thesis"><p class="para">电网级储能解决方案供应商，受项目交付进度延后与电池系统竞争加剧影响，单日大跌 -14.20%，4/5 破位下行。</p></div>
+          
+          <div class="news-intel-box" style="margin:12px 0 16px;">
+            <div class="news-intel-lbl">核心催化与重大事件归因</div>
+            <p class="para" style="margin-bottom:0;">部分电网级储能大型项目因并网许可与电缆交付瓶颈出现进度推迟，季度营收确认放缓，市场对下半年毛利率指引产生悲观预期。</p>
+          </div>
+          <div class="m-grid">
+              <div class="m-cell">
+                <div class="m-lbl">相对成交量 (RelVol)</div>
+                <div class="m-val ">1.07x</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">成交量单日变动</div>
+                <div class="m-val font-success">+43.87%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">CMF 主力资金流向</div>
+                <div class="m-val font-danger">-0.277</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">MFI 资金动量</div>
+                <div class="m-val ">28.68</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">RSI 相对强弱</div>
+                <div class="m-val ">34.86</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">ADX 趋势强度</div>
+                <div class="m-val ">23.08</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">单日跳空缺口</div>
+                <div class="m-val font-danger">-4.14%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">距52周最高点</div>
+                <div class="m-val font-danger">-66.00%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Piotroski 财务评分</div>
+                <div class="m-val ">1/9</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Altman Z 信用评分</div>
+                <div class="m-val ">1.77</div>
+              </div></div>
+          
+          
+        </div>
+        <div class="stock-card">
+          <div class="sc-head">
+            <div class="sc-title">
+              <span class="badge badge-short">下跌归因</span>
+              <span class="sc-sym">ULCC</span>
+              <span class="sc-desc">Frontier Group Holdings, Inc.</span>
+              <span class="sc-sec-ind">交通运输 / 民用航空公司</span>
+            </div>
+            <div class="sc-right">
+              <div class="sc-price-box">
+                <span class="sc-price">$5.76</span>
+                <span class="sc-chg short-txt font-danger">-3.84%</span>
+              </div>
+              <div class="score-badge-box"><div class="score-badge-lbl">综合评分</div><div class="score-badge sc-md">91.8</div></div>
+            </div>
+          </div>
+          <div class="sc-res-bar"><span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span></div>
+          <div class="sc-thesis"><p class="para">超低成本航空公司 (ULCC)，受国内航线运力过剩、票价价格战与高额航油薪酬重压，单日暴跌 -11.60%，4/5 弱势破位。</p></div>
+          
+          <div class="news-intel-box" style="margin:12px 0 16px;">
+            <div class="news-intel-lbl">核心催化与重大事件归因</div>
+            <p class="para" style="margin-bottom:0;">国内休闲度假航线运力投放过剩引发各主要航司残酷的价格战，非燃油单位座公里成本 (CASM-ex) 上升侵蚀净利，资产负债表偿债压力凸显。</p>
+          </div>
+          <div class="m-grid">
+              <div class="m-cell">
+                <div class="m-lbl">相对成交量 (RelVol)</div>
+                <div class="m-val ">1.17x</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">成交量单日变动</div>
+                <div class="m-val font-success">+30.25%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">CMF 主力资金流向</div>
+                <div class="m-val font-danger">-0.138</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">MFI 资金动量</div>
+                <div class="m-val ">42.26</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">RSI 相对强弱</div>
+                <div class="m-val ">37.08</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">ADX 趋势强度</div>
+                <div class="m-val ">17.36</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">单日跳空缺口</div>
+                <div class="m-val font-danger">-2.34%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">距52周最高点</div>
+                <div class="m-val font-danger">-31.50%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Piotroski 财务评分</div>
+                <div class="m-val ">2/9</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Altman Z 信用评分</div>
+                <div class="m-val ">0.19</div>
+              </div></div>
+          
+          
+        </div>
+        <div class="stock-card">
+          <div class="sc-head">
+            <div class="sc-title">
+              <span class="badge badge-short">下跌归因</span>
+              <span class="sc-sym">JBLU</span>
+              <span class="sc-desc">JetBlue Airways Corporation</span>
+              <span class="sc-sec-ind">交通运输 / 民用航空公司</span>
+            </div>
+            <div class="sc-right">
+              <div class="sc-price-box">
+                <span class="sc-price">$4.74</span>
+                <span class="sc-chg short-txt font-danger">-3.27%</span>
+              </div>
+              <div class="score-badge-box"><div class="score-badge-lbl">综合评分</div><div class="score-badge sc-md">91.8</div></div>
+            </div>
+          </div>
+          <div class="sc-res-bar"><span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span></div>
+          <div class="sc-thesis"><p class="para">美国中型航空承运人，面临航线网络重组、高额运营成本与机队发动机检修停飞的多重困境，单日大跌 -9.80%，4/5 弱势共振。</p></div>
+          
+          <div class="news-intel-box" style="margin:12px 0 16px;">
+            <div class="news-intel-lbl">核心催化与重大事件归因</div>
+            <p class="para" style="margin-bottom:0;">国内休闲航线收益率持续疲软，普惠发动机检修导致多架飞机临时停飞增加租赁成本，季度经营亏损压力加剧。</p>
+          </div>
+          <div class="m-grid">
+              <div class="m-cell">
+                <div class="m-lbl">相对成交量 (RelVol)</div>
+                <div class="m-val ">1.41x</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">成交量单日变动</div>
+                <div class="m-val font-success">+20.74%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">CMF 主力资金流向</div>
+                <div class="m-val font-danger">-0.234</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">MFI 资金动量</div>
+                <div class="m-val ">35.35</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">RSI 相对强弱</div>
+                <div class="m-val ">33.18</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">ADX 趋势强度</div>
+                <div class="m-val ">18.62</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">单日跳空缺口</div>
+                <div class="m-val font-danger">-1.33%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">距52周最高点</div>
+                <div class="m-val font-danger">-28.40%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Piotroski 财务评分</div>
+                <div class="m-val ">1/9</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Altman Z 信用评分</div>
+                <div class="m-val ">0.47</div>
+              </div></div>
+          
+          
+        </div>
+        <div class="stock-card">
+          <div class="sc-head">
+            <div class="sc-title">
+              <span class="badge badge-short">下跌归因</span>
+              <span class="sc-sym">ALK</span>
+              <span class="sc-desc">Alaska Air Group, Inc.</span>
+              <span class="sc-sec-ind">交通运输 / 民用航空公司</span>
+            </div>
+            <div class="sc-right">
+              <div class="sc-price-box">
+                <span class="sc-price">$40.18</span>
+                <span class="sc-chg short-txt font-danger">-2.55%</span>
+              </div>
+              <div class="score-badge-box"><div class="score-badge-lbl">综合评分</div><div class="score-badge sc-md">89.6</div></div>
+            </div>
+          </div>
+          <div class="sc-res-bar"><span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span></div>
+          <div class="sc-thesis"><p class="para">西海岸航空枢纽龙头，受全行业运力过剩与客运收益率压缩拖累，单日下跌 -7.50%，4/5 弱势共振。</p></div>
+          
+          <div class="news-intel-box" style="margin:12px 0 16px;">
+            <div class="news-intel-lbl">核心催化与重大事件归因</div>
+            <p class="para" style="margin-bottom:0;">跨太平洋与西海岸主要航线竞争加剧导致票价承压，并购整合推进期间的过渡性营运开支增加，短期净利润指引不及市场预期。</p>
+          </div>
+          <div class="m-grid">
+              <div class="m-cell">
+                <div class="m-lbl">相对成交量 (RelVol)</div>
+                <div class="m-val ">1.41x</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">成交量单日变动</div>
+                <div class="m-val font-success">+37.35%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">CMF 主力资金流向</div>
+                <div class="m-val font-danger">-0.313</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">MFI 资金动量</div>
+                <div class="m-val ">37.77</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">RSI 相对强弱</div>
+                <div class="m-val ">31.55</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">ADX 趋势强度</div>
+                <div class="m-val ">16.92</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">单日跳空缺口</div>
+                <div class="m-val font-danger">-1.36%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">距52周最高点</div>
+                <div class="m-val font-danger">-39.00%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Piotroski 财务评分</div>
+                <div class="m-val ">4/9</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Altman Z 信用评分</div>
+                <div class="m-val ">1.02</div>
+              </div></div>
+          
+          
+        </div>
+        <div class="stock-card">
+          <div class="sc-head">
+            <div class="sc-title">
+              <span class="badge badge-short">下跌归因</span>
+              <span class="sc-sym">YSS</span>
+              <span class="sc-desc">York Space Systems Inc.</span>
+              <span class="sc-sec-ind">电子科技 / 航空航天与国防军工</span>
+            </div>
+            <div class="sc-right">
+              <div class="sc-price-box">
+                <span class="sc-price">$9.20</span>
+                <span class="sc-chg short-txt font-danger">-9.63%</span>
+              </div>
+              <div class="score-badge-box"><div class="score-badge-lbl">综合评分</div><div class="score-badge sc-md">94.5</div></div>
+            </div>
+          </div>
+          <div class="sc-res-bar"><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></div>
+          <div class="sc-thesis"><p class="para">商业小卫星与航天平台制造商，因大幅下调全财年营收预期达三分之一，单日暴跌 -10.40%，4/5 破位下挫。</p></div>
+          
+          <div class="news-intel-box" style="margin:12px 0 16px;">
+            <div class="news-intel-lbl">核心催化与重大事件归因</div>
+            <p class="para" style="margin-bottom:0;">公司宣布由于政府采购预算审批延期及供应链子组件交付推迟，将全财年收入指引下调约 33%，研发与产能扩张开支导致亏损显著扩大。</p>
+          </div>
+          <div class="m-grid">
+              <div class="m-cell">
+                <div class="m-lbl">相对成交量 (RelVol)</div>
+                <div class="m-val ">1.27x</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">成交量单日变动</div>
+                <div class="m-val font-success">+44.55%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">CMF 主力资金流向</div>
+                <div class="m-val font-danger">-0.016</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">MFI 资金动量</div>
+                <div class="m-val ">33.29</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">RSI 相对强弱</div>
+                <div class="m-val ">26.65</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">ADX 趋势强度</div>
+                <div class="m-val ">34.33</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">单日跳空缺口</div>
+                <div class="m-val font-danger">-1.87%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">距52周最高点</div>
+                <div class="m-val font-danger">-79.30%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Piotroski 财务评分</div>
+                <div class="m-val ">5/9</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Altman Z 信用评分</div>
+                <div class="m-val ">3.00</div>
+              </div></div>
+          
+          
+        </div>
+        <div class="stock-card">
+          <div class="sc-head">
+            <div class="sc-title">
+              <span class="badge badge-short">下跌归因</span>
+              <span class="sc-sym">AADX</span>
+              <span class="sc-desc">Applied Aerospace &amp; Defense, Inc.</span>
+              <span class="sc-sec-ind">电子科技 / 航空航天与国防军工</span>
+            </div>
+            <div class="sc-right">
+              <div class="sc-price-box">
+                <span class="sc-price">$15.50</span>
+                <span class="sc-chg short-txt font-danger">-10.25%</span>
+              </div>
+              <div class="score-badge-box"><div class="score-badge-lbl">综合评分</div><div class="score-badge sc-md">93.1</div></div>
+            </div>
+          </div>
+          <div class="sc-res-bar"><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></div>
+          <div class="sc-thesis"><p class="para">航空航天与国防结构件分包商，受供应链延误与固定价格合同成本超支拖累，单日下跌 -8.90%，4/5 弱势共振。</p></div>
+          
+          <div class="news-intel-box" style="margin:12px 0 16px;">
+            <div class="news-intel-lbl">核心催化与重大事件归因</div>
+            <p class="para" style="margin-bottom:0;">主要军机与民机机体组件交付进度放缓，特定固定价格研发合同面临原材料与人工成本超支，季度营业利润率出现收缩。</p>
+          </div>
+          <div class="m-grid">
+              <div class="m-cell">
+                <div class="m-lbl">相对成交量 (RelVol)</div>
+                <div class="m-val ">2.73x</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">成交量单日变动</div>
+                <div class="m-val font-success">+152.97%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">CMF 主力资金流向</div>
+                <div class="m-val font-danger">-0.275</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">MFI 资金动量</div>
+                <div class="m-val ">33.25</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">RSI 相对强弱</div>
+                <div class="m-val ">33.24</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">ADX 趋势强度</div>
+                <div class="m-val ">15.80</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">单日跳空缺口</div>
+                <div class="m-val font-danger">-0.17%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">距52周最高点</div>
+                <div class="m-val font-danger">-36.10%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Piotroski 财务评分</div>
+                <div class="m-val ">5/9</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Altman Z 信用评分</div>
+                <div class="m-val ">3.71</div>
+              </div></div>
+          
+          
+        </div>
+        <div class="stock-card">
+          <div class="sc-head">
+            <div class="sc-title">
+              <span class="badge badge-short">下跌归因</span>
+              <span class="sc-sym">EOSE</span>
+              <span class="sc-desc">Eos Energy Enterprises, Inc.</span>
+              <span class="sc-sec-ind">生产制造业 / 电气设备与产品</span>
+            </div>
+            <div class="sc-right">
+              <div class="sc-price-box">
+                <span class="sc-price">$3.46</span>
+                <span class="sc-chg short-txt font-danger">-7.49%</span>
+              </div>
+              <div class="score-badge-box"><div class="score-badge-lbl">综合评分</div><div class="score-badge sc-md">94.0</div></div>
+            </div>
+          </div>
+          <div class="sc-res-bar"><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></div>
+          <div class="sc-thesis"><p class="para">锌基长时储能电池开发商，受制于商业化产能爬坡资金消耗与再融资稀释担忧，单日暴跌 -12.80%，4/5 破位走弱。</p></div>
+          
+          <div class="news-intel-box" style="margin:12px 0 16px;">
+            <div class="news-intel-lbl">核心催化与重大事件归因</div>
+            <p class="para" style="margin-bottom:0;">长时储能制造产线自动化升级周期长于预期，单季现金消耗率维持高位，市场对其后续融资条件与商业化交付能见度产生担忧。</p>
+          </div>
+          <div class="m-grid">
+              <div class="m-cell">
+                <div class="m-lbl">相对成交量 (RelVol)</div>
+                <div class="m-val ">1.74x</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">成交量单日变动</div>
+                <div class="m-val font-success">+33.14%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">CMF 主力资金流向</div>
+                <div class="m-val font-success">0.102</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">MFI 资金动量</div>
+                <div class="m-val ">52.43</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">RSI 相对强弱</div>
+                <div class="m-val ">38.07</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">ADX 趋势强度</div>
+                <div class="m-val ">18.64</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">单日跳空缺口</div>
+                <div class="m-val font-danger">-1.87%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">距52周最高点</div>
+                <div class="m-val font-danger">-82.60%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Piotroski 财务评分</div>
+                <div class="m-val ">6/9</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Altman Z 信用评分</div>
+                <div class="m-val ">-3.10</div>
+              </div></div>
+          
+          
+        </div>
+        <div class="stock-card">
+          <div class="sc-head">
+            <div class="sc-title">
+              <span class="badge badge-short">下跌归因</span>
+              <span class="sc-sym">INIO</span>
+              <span class="sc-desc">INNIO N.V.</span>
+              <span class="sc-sec-ind">生产制造业 / 电气设备与产品</span>
+            </div>
+            <div class="sc-right">
+              <div class="sc-price-box">
+                <span class="sc-price">$23.00</span>
+                <span class="sc-chg short-txt font-danger">-8.80%</span>
+              </div>
+              <div class="score-badge-box"><div class="score-badge-lbl">综合评分</div><div class="score-badge sc-md">91.5</div></div>
+            </div>
+          </div>
+          <div class="sc-res-bar"><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></div>
+          <div class="sc-thesis"><p class="para">工业燃气发动机与分布式能源设备供应商，受宏观工业制造业资本开支放缓影响，单日下跌 -6.80%，4/5 弱势共振。</p></div>
+          
+          <div class="news-intel-box" style="margin:12px 0 16px;">
+            <div class="news-intel-lbl">核心催化与重大事件归因</div>
+            <p class="para" style="margin-bottom:0;">欧美工业制造业 PMI 持续处于收缩区间，工业客户对热电联产与后备燃气发电机组的资本开支决策推迟，新增设备订单增长放缓。</p>
+          </div>
+          <div class="m-grid">
+              <div class="m-cell">
+                <div class="m-lbl">相对成交量 (RelVol)</div>
+                <div class="m-val ">1.70x</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">成交量单日变动</div>
+                <div class="m-val font-success">+46.32%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">CMF 主力资金流向</div>
+                <div class="m-val font-danger">-0.123</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">MFI 资金动量</div>
+                <div class="m-val ">40.94</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">RSI 相对强弱</div>
+                <div class="m-val ">35.43</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">ADX 趋势强度</div>
+                <div class="m-val ">21.58</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">单日跳空缺口</div>
+                <div class="m-val font-danger">-0.87%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">距52周最高点</div>
+                <div class="m-val font-danger">-46.40%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Piotroski 财务评分</div>
+                <div class="m-val ">5/9</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Altman Z 信用评分</div>
+                <div class="m-val ">3.00</div>
+              </div></div>
+          
+          
+        </div>
+        <div class="stock-card">
+          <div class="sc-head">
+            <div class="sc-title">
+              <span class="badge badge-short">下跌归因</span>
+              <span class="sc-sym">KSS</span>
+              <span class="sc-desc">Kohl&#x27;s Corporation</span>
+              <span class="sc-sec-ind">零售贸易 / 百货商场与综合百货</span>
+            </div>
+            <div class="sc-right">
+              <div class="sc-price-box">
+                <span class="sc-price">$17.33</span>
+                <span class="sc-chg short-txt font-danger">-8.01%</span>
+              </div>
+              <div class="score-badge-box"><div class="score-badge-lbl">综合评分</div><div class="score-badge sc-md">89.3</div></div>
+            </div>
+          </div>
+          <div class="sc-res-bar"><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></div>
+          <div class="sc-thesis"><p class="para">传统中端百货连锁零售商，受线下客流疲软、促销折价与可选服装消费降级拖累，单日下跌 -7.20%，4/5 弱势共振。</p></div>
+          
+          <div class="news-intel-box" style="margin:12px 0 16px;">
+            <div class="news-intel-lbl">核心催化与重大事件归因</div>
+            <p class="para" style="margin-bottom:0;">中等收入家庭在非必需服饰与家居领域的开支意愿减弱，商场客流同比下滑，促销折扣力度加大导致季度毛利率面临下行压力。</p>
+          </div>
+          <div class="m-grid">
+              <div class="m-cell">
+                <div class="m-lbl">相对成交量 (RelVol)</div>
+                <div class="m-val ">1.86x</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">成交量单日变动</div>
+                <div class="m-val font-success">+93.53%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">CMF 主力资金流向</div>
+                <div class="m-val font-danger">-0.024</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">MFI 资金动量</div>
+                <div class="m-val ">49.30</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">RSI 相对强弱</div>
+                <div class="m-val ">41.43</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">ADX 趋势强度</div>
+                <div class="m-val ">18.74</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">单日跳空缺口</div>
+                <div class="m-val font-danger">-2.23%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">距52周最高点</div>
+                <div class="m-val font-danger">-31.30%</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Piotroski 财务评分</div>
+                <div class="m-val ">7/9</div>
+              </div>
+              <div class="m-cell">
+                <div class="m-lbl">Altman Z 信用评分</div>
+                <div class="m-val ">1.64</div>
+              </div></div>
+          
+          
+        </div>
+        </section>
+        <section id="sec_roster" class="sec">
+          <div class="sec-head"><span class="sec-num">06</span>
+            <h2>全域精选总览表</h2></div>
+          <div class="table-wrap">
+            <table class="summary-table">
+              <thead>
+                <tr>
+                  <th>趋势方向</th>
+                  <th>代码</th>
+                  <th>行业</th>
+                  <th style="text-align:right">综合分</th>
+                  <th>共振度</th>
+                  <th style="text-align:right">当日收盘价</th>
+                  <th style="text-align:right">当日涨跌幅</th>
+                  <th style="text-align:right">相对成交量</th>
+                  <th style="text-align:center">财务健康度</th>
+                  <th>下个财报日</th>
+                </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td><span class="dir-pill long">上涨</span></td>
+                <td><b>MARA</b></td>
+                <td>数据处理与算力服务</td>
+                <td class="num"><b>73.9</b></td>
+                <td><span class="res-plain">1/5</span></td>
+                <td class="num">$11.15</td>
+                <td class="num font-success"><b>+15.54%</b></td>
+                <td class="num">1.78x</td>
+                <td style="text-align:center"><span class="badge badge-risk" title="Piotroski F-score: 3/9, Altman Z-score: -0.39">脆弱</span></td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td><span class="dir-pill long">上涨</span></td>
+                <td><b>AU</b></td>
+                <td>黄金白银贵金属采选</td>
+                <td class="num"><b>96.7</b></td>
+                <td><span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span></td>
+                <td class="num">$115.14</td>
+                <td class="num font-success"><b>+6.08%</b></td>
+                <td class="num">2.38x</td>
+                <td style="text-align:center"><span class="badge badge-safe" title="Piotroski F-score: 5/9, Altman Z-score: 7.34">健康</span></td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td><span class="dir-pill long">上涨</span></td>
+                <td><b>CF</b></td>
+                <td>农用化学品与化肥</td>
+                <td class="num"><b>92.5</b></td>
+                <td><span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span></td>
+                <td class="num">$125.70</td>
+                <td class="num font-success"><b>+5.61%</b></td>
+                <td class="num">1.36x</td>
+                <td style="text-align:center"><span class="badge badge-safe" title="Piotroski F-score: 9/9, Altman Z-score: 3.49">健康</span></td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td><span class="dir-pill long">上涨</span></td>
+                <td><b>SM</b></td>
+                <td>综合一体化石油巨头</td>
+                <td class="num"><b>93.2</b></td>
+                <td><span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span></td>
+                <td class="num">$37.64</td>
+                <td class="num font-success"><b>+4.15%</b></td>
+                <td class="num">1.13x</td>
+                <td style="text-align:center"><span class="badge badge-risk" title="Piotroski F-score: 4/9, Altman Z-score: 1.20">脆弱</span></td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td><span class="dir-pill long">上涨</span></td>
+                <td><b>SSRM</b></td>
+                <td>黄金白银贵金属采选</td>
+                <td class="num"><b>92.5</b></td>
+                <td><span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span></td>
+                <td class="num">$36.83</td>
+                <td class="num font-success"><b>+4.10%</b></td>
+                <td class="num">1.43x</td>
+                <td style="text-align:center"><span class="badge badge-safe" title="Piotroski F-score: 7/9, Altman Z-score: 5.75">健康</span></td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td><span class="dir-pill long">上涨</span></td>
+                <td><b>MGY</b></td>
+                <td>上游油气勘探开采（E&amp;P）</td>
+                <td class="num"><b>90.3</b></td>
+                <td><span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span></td>
+                <td class="num">$28.22</td>
+                <td class="num font-success"><b>+2.66%</b></td>
+                <td class="num">0.94x</td>
+                <td style="text-align:center"><span class="badge badge-safe" title="Piotroski F-score: 9/9, Altman Z-score: 4.50">健康</span></td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td><span class="dir-pill long">上涨</span></td>
+                <td><b>BP</b></td>
+                <td>综合一体化石油巨头</td>
+                <td class="num"><b>90.0</b></td>
+                <td><span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span></td>
+                <td class="num">$45.14</td>
+                <td class="num font-success"><b>+3.22%</b></td>
+                <td class="num">1.54x</td>
+                <td style="text-align:center"><span class="badge badge-risk" title="Piotroski F-score: 9/9, Altman Z-score: 1.37">脆弱</span></td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td><span class="dir-pill long">上涨</span></td>
+                <td><b>AEM</b></td>
+                <td>黄金白银贵金属采选</td>
+                <td class="num"><b>89.3</b></td>
+                <td><span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span></td>
+                <td class="num">$212.04</td>
+                <td class="num font-success"><b>+2.08%</b></td>
+                <td class="num">1.58x</td>
+                <td style="text-align:center"><span class="badge badge-safe" title="Piotroski F-score: 8/9, Altman Z-score: 6.65">健康</span></td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td><span class="dir-pill long">上涨</span></td>
+                <td><b>NTR</b></td>
+                <td>农用化学品与化肥</td>
+                <td class="num"><b>89.2</b></td>
+                <td><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></td>
+                <td class="num">$73.12</td>
+                <td class="num font-success"><b>+3.72%</b></td>
+                <td class="num">1.10x</td>
+                <td style="text-align:center"><span class="badge badge-mid" title="Piotroski F-score: 9/9, Altman Z-score: 1.83">稳健</span></td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td><span class="dir-pill long">上涨</span></td>
+                <td><b>ASST</b></td>
+                <td>投资信托</td>
+                <td class="num"><b>93.4</b></td>
+                <td><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></td>
+                <td class="num">$16.13</td>
+                <td class="num font-success"><b>+9.50%</b></td>
+                <td class="num">3.04x</td>
+                <td style="text-align:center"><span class="badge badge-safe" title="Piotroski F-score: 5/9, Altman Z-score: 15.89">健康</span></td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td><span class="dir-pill short">下跌</span></td>
+                <td><b>AAP</b></td>
+                <td>特色专卖零售</td>
+                <td class="num"><b>93.7</b></td>
+                <td><span class="res-plain">3/5</span></td>
+                <td class="num">$42.39</td>
+                <td class="num font-danger"><b>-24.55%</b></td>
+                <td class="num">11.34x</td>
+                <td style="text-align:center"><span class="badge badge-mid" title="Piotroski F-score: 7/9, Altman Z-score: 1.84">稳健</span></td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td><span class="dir-pill short">下跌</span></td>
+                <td><b>FLNC</b></td>
+                <td>电气设备与产品</td>
+                <td class="num"><b>96.0</b></td>
+                <td><span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span></td>
+                <td class="num">$11.39</td>
+                <td class="num font-danger"><b>-5.63%</b></td>
+                <td class="num">1.07x</td>
+                <td style="text-align:center"><span class="badge badge-risk" title="Piotroski F-score: 1/9, Altman Z-score: 1.77">脆弱</span></td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td><span class="dir-pill short">下跌</span></td>
+                <td><b>ULCC</b></td>
+                <td>民用航空公司</td>
+                <td class="num"><b>91.8</b></td>
+                <td><span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span></td>
+                <td class="num">$5.76</td>
+                <td class="num font-danger"><b>-3.84%</b></td>
+                <td class="num">1.17x</td>
+                <td style="text-align:center"><span class="badge badge-risk" title="Piotroski F-score: 2/9, Altman Z-score: 0.19">脆弱</span></td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td><span class="dir-pill short">下跌</span></td>
+                <td><b>JBLU</b></td>
+                <td>民用航空公司</td>
+                <td class="num"><b>91.8</b></td>
+                <td><span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span></td>
+                <td class="num">$4.74</td>
+                <td class="num font-danger"><b>-3.27%</b></td>
+                <td class="num">1.41x</td>
+                <td style="text-align:center"><span class="badge badge-risk" title="Piotroski F-score: 1/9, Altman Z-score: 0.47">脆弱</span></td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td><span class="dir-pill short">下跌</span></td>
+                <td><b>ALK</b></td>
+                <td>民用航空公司</td>
+                <td class="num"><b>89.6</b></td>
+                <td><span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span></td>
+                <td class="num">$40.18</td>
+                <td class="num font-danger"><b>-2.55%</b></td>
+                <td class="num">1.41x</td>
+                <td style="text-align:center"><span class="badge badge-risk" title="Piotroski F-score: 4/9, Altman Z-score: 1.02">脆弱</span></td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td><span class="dir-pill short">下跌</span></td>
+                <td><b>YSS</b></td>
+                <td>航空航天与国防军工</td>
+                <td class="num"><b>94.5</b></td>
+                <td><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></td>
+                <td class="num">$9.20</td>
+                <td class="num font-danger"><b>-9.63%</b></td>
+                <td class="num">1.27x</td>
+                <td style="text-align:center"><span class="badge badge-safe" title="Piotroski F-score: 5/9, Altman Z-score: 3.00">健康</span></td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td><span class="dir-pill short">下跌</span></td>
+                <td><b>AADX</b></td>
+                <td>航空航天与国防军工</td>
+                <td class="num"><b>93.1</b></td>
+                <td><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></td>
+                <td class="num">$15.50</td>
+                <td class="num font-danger"><b>-10.25%</b></td>
+                <td class="num">2.73x</td>
+                <td style="text-align:center"><span class="badge badge-safe" title="Piotroski F-score: 5/9, Altman Z-score: 3.71">健康</span></td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td><span class="dir-pill short">下跌</span></td>
+                <td><b>EOSE</b></td>
+                <td>电气设备与产品</td>
+                <td class="num"><b>94.0</b></td>
+                <td><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></td>
+                <td class="num">$3.46</td>
+                <td class="num font-danger"><b>-7.49%</b></td>
+                <td class="num">1.74x</td>
+                <td style="text-align:center"><span class="badge badge-risk" title="Piotroski F-score: 6/9, Altman Z-score: -3.10">脆弱</span></td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td><span class="dir-pill short">下跌</span></td>
+                <td><b>INIO</b></td>
+                <td>电气设备与产品</td>
+                <td class="num"><b>91.5</b></td>
+                <td><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></td>
+                <td class="num">$23.00</td>
+                <td class="num font-danger"><b>-8.80%</b></td>
+                <td class="num">1.70x</td>
+                <td style="text-align:center"><span class="badge badge-safe" title="Piotroski F-score: 5/9, Altman Z-score: 3.00">健康</span></td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td><span class="dir-pill short">下跌</span></td>
+                <td><b>KSS</b></td>
+                <td>百货商场与综合百货</td>
+                <td class="num"><b>89.3</b></td>
+                <td><span class="res res-mid"><span class="res-bullet">◆</span> 4/5</span></td>
+                <td class="num">$17.33</td>
+                <td class="num font-danger"><b>-8.01%</b></td>
+                <td class="num">1.86x</td>
+                <td style="text-align:center"><span class="badge badge-mid" title="Piotroski F-score: 7/9, Altman Z-score: 1.64">稳健</span></td>
+                <td>—</td>
+              </tr></tbody>
+            </table>
+          </div>
+        </section>
+        <div class="report-disclaimer">
+          <div class="disclosure">
+            <div class="disc-title">【重要免责声明】</div>
+            <p class="para">本报告仅供市场量化研究与学术探讨参考，不构成任何形式的投资建议、财务咨询、证券买卖要约或推荐。报告中所包含的信息、图表、指标评分及分析观点均基于公开市场数据及 5 维稳健统计量化模型算法生成，模型开发者与发布者不对其准确性、完整性或即时性做出任何明示或暗示的保证。</p>
+            <p class="para">金融市场存在固有风险，证券价格可能大幅波动甚至归零。历史模型回测与量化共振评分并不代表也不预示未来的实际表现。投资者应根据自身的财务状况、投资目标与风险承受能力独立做出决策，并自行承担全部投资风险与后果。</p>
+          </div>
+        </div>
+<div class="foot">K2J Quantitative Research Lab · Resonance Engine v4.3 · 美股多因子共振市场研究报告 · 仅供市场研究参考 · 2026-08-20</div>
+</div>
+</body>
+</html>
