@@ -141,14 +141,14 @@
           "@type": "Corporation",
           "name": "AngloGold Ashanti PLC",
           "tickerSymbol": "AU",
-          "description": "Premier global gold miner locking in a flawless 5/5★ full resonance and surging +6.14% on $42M strategic asset consolida",
+          "description": "AU (AngloGold Ashanti PLC) operates as a Bullish Leader in Non-energy minerals - Precious metals, moving +5.28% on 2.46x",
           "url": "https://k2j.net/reports/20260821.en.html#stock-AU"
         },
         {
           "@type": "Corporation",
           "name": "CF Industries Holdings, Inc.",
           "tickerSymbol": "CF",
-          "description": "Premier North American nitrogen fertilizer producer surging +4.85% on 4/5 robust resonance, powered by tight global ag c",
+          "description": "CF (CF Industries Holdings, Inc.) operates as a Bullish Leader in Process industries - Chemicals: agricultural, moving +",
           "url": "https://k2j.net/reports/20260821.en.html#stock-CF"
         },
         {
@@ -197,7 +197,7 @@
           "@type": "Corporation",
           "name": "Applied Aerospace & Defense, Inc.",
           "tickerSymbol": "AADX",
-          "description": "Aerospace and defense precision structural components subcontractor sliding -8.90% on 4/5 bearish resonance due to suppl",
+          "description": "AADX (Applied Aerospace & Defense, Inc.) operates as a Bearish Underperformer in Electronic technology - Aerospace & def",
           "url": "https://k2j.net/reports/20260821.en.html#stock-AADX"
         },
         {
@@ -317,16 +317,18 @@ a:hover{text-decoration:underline;color:var(--gold)}
 .short-txt{color:var(--red)}
 
 /* Key Takeaways (GEO Component) */
-.key-takeaways-card{background:#f8fafc;border:1.5px solid #cbd5e1;border-radius:4px;padding:20px 24px;margin-bottom:24px;box-shadow:0 1px 4px rgba(0,0,0,.02)}
+.key-takeaways-card{background:#f8fafc;border:1px solid #e2e8f0;border-radius:4px;padding:20px 24px;margin-bottom:24px;box-shadow:0 1px 4px rgba(0,0,0,.02)}
 .takeaways-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;border-bottom:1px solid #e2e8f0;padding-bottom:8px;flex-wrap:wrap;gap:8px}
-.takeaways-title{font-size:16px;margin:0;color:var(--navy);font-family:var(--font-sans);font-weight:700}
-.takeaways-badge{font-size:10px;font-weight:800;letter-spacing:.08em;background:var(--navy);color:#fff;padding:2px 8px;border-radius:2px;font-family:var(--mono)}
+.takeaways-title{font-size:16px;margin:0;color:var(--navy);font-family:var(--font-sans);font-weight:700;letter-spacing:-.01em}
 .takeaways-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.takeaway-item{display:flex;align-items:flex-start;gap:10px;background:#fff;border:1px solid #e2e8f0;padding:12px 14px;border-radius:3px}
-.takeaway-icon{font-size:18px;line-height:1;margin-top:2px}
+.takeaway-item{display:flex;align-items:flex-start;background:#fff;border:1px solid #e2e8f0;border-left:4px solid var(--navy);padding:14px 16px;border-radius:3px;box-shadow:0 1px 3px rgba(0,0,0,.01)}
+.takeaway-item.takeaway-regime{border-left-color:var(--navy)}
+.takeaway-item.takeaway-long{border-left-color:var(--green)}
+.takeaway-item.takeaway-short{border-left-color:var(--red)}
+.takeaway-item.takeaway-risk{border-left-color:var(--gold)}
 .takeaway-content{flex:1}
-.takeaway-lbl{font-size:11px;font-weight:700;text-transform:uppercase;color:var(--muted);letter-spacing:.04em;margin-bottom:3px}
-.takeaway-val{font-size:12.5px;color:var(--body);line-height:1.5}
+.takeaway-lbl{font-size:11px;font-weight:700;text-transform:uppercase;color:var(--muted);letter-spacing:.05em;margin-bottom:4px}
+.takeaway-val{font-size:13px;color:var(--body);line-height:1.55}
 
 /* Section */
 .sec{background:#fff;border:1px solid var(--line);border-radius:2px;padding:36px 44px;margin-bottom:28px;box-shadow:0 2px 6px rgba(0,0,0,.03)}
@@ -562,69 +564,64 @@ a:hover{text-decoration:underline;color:var(--gold)}
           
         <div id="key-takeaways" class="key-takeaways-card" itemscope itemtype="https://schema.org/SpecialAnnouncement">
           <div class="takeaways-head">
-            <span class="takeaways-badge">GEO · AI CITATIONS READY</span>
             <h2 class="takeaways-title">Key Takeaways · AI &amp; Executive Insights</h2>
           </div>
           <div class="takeaways-grid">
-            <div class="takeaway-item">
-              <div class="takeaway-icon">🏛️</div>
+            <div class="takeaway-item takeaway-regime">
               <div class="takeaway-content">
                 <div class="takeaway-lbl">Macro Regime &amp; Market Breadth</div>
                 <div class="takeaway-val">Operating under "<b>Mild Bullish</b>" regime across 1430 equities with <b>65.5%</b> advance ratio (936 adv / 477 dec).</div>
               </div>
             </div>
-            <div class="takeaway-item">
-              <div class="takeaway-icon">🚀</div>
+            <div class="takeaway-item takeaway-long">
               <div class="takeaway-content">
                 <div class="takeaway-lbl">Bullish Leaders (5D Resonance)</div>
                 <div class="takeaway-val"><a href="#stock-CRML"><b>CRML</b></a> (+22.6%, 5D: 86.8), <a href="#stock-ERO"><b>ERO</b></a> (+9.4%, 5D: 99.2), <a href="#stock-SCCO"><b>SCCO</b></a> (+8.7%, 5D: 97.5)</div>
               </div>
             </div>
-            <div class="takeaway-item">
-              <div class="takeaway-icon">⚠️</div>
+            <div class="takeaway-item takeaway-short">
               <div class="takeaway-content">
                 <div class="takeaway-lbl">Bearish &amp; Divergent Watchlist</div>
                 <div class="takeaway-val"><a href="#stock-SA"><b>SA</b></a> <span class="badge badge-risk" style="font-size:10px;">⚠️Divergent</span> (-9.3%, 5D: 40.8), <a href="#stock-CIFR"><b>CIFR</b></a> (-8.4%, 5D: 95.3), <a href="#stock-HUT"><b>HUT</b></a> (-8.8%, 5D: 93.4)</div>
               </div>
             </div>
-            <div class="takeaway-item">
-              <div class="takeaway-icon">🛡️</div>
+            <div class="takeaway-item takeaway-risk">
               <div class="takeaway-content">
                 <div class="takeaway-lbl">Quantitative Risk Guidance</div>
-                <div class="takeaway-val">Risk dispersion warrants strict adherence to 5-D resonant leadership, prioritizing cash-rich valuati…</div>
+                <div class="takeaway-val">Favor 5-D resonant leaders with visible commodity tailwinds and fortress cash flows, while enforcing…</div>
               </div>
             </div>
           </div>
         </div>
           <div class="kp-box">
             <div class="kp-label">Macro Call &amp; Market Regime</div>
-            <p class="para">The market operates under a "Mild Bullish" regime. Across the 1430 universe, 936 stocks advanced (65.5%) while 477 declined (33.4%), favoring commodity cash flows, precious metals hedging, and crypto asset catalysts.</p>
+            <p class="para">The market operates under a "Mild Bullish" regime. Across the 1430 universe, 936 stocks advanced (65.5%) while 477 declined (33.4%), displaying robust market breadth across mining and fintech.</p>
           </div>
           <div class="two-col">
             <div class="col">
               <h3 class="col-h long-h">Bullish Leaders</h3>
-              <p class="para">Bullish selections focus on Bitcoin treasury momentum (MARA, ASST), precious metals miners (AU, SSRM, AEM), and upstream E&P / fertilizer cash-flow leaders (SM, MGY, BP, CF, NTR), locking in 4/5 to 5/5★ robust attribution with solid volume confirmation.</p>
+              <p class="para">Bullish selections focus on critical minerals & copper/gold miners (CRML, ERO, SCCO, TECK, AU, WPM), fintech & payment enablement (FUTU, FLYW), and agricultural chemicals / downstream refining (CF, DINO), locking in robust 4/5 to 5/5★ resonance.</p>
               <ul class="pick-list"><li><a href="#stock-CRML"><b>CRML</b></a> <span class="muted">(Precious metals)</span> — Score <b>86.8</b> <span class="res-plain">3/5</span>: CRML (Critical Metals Corp.) operates as a Bullish Leader in Non-energy minerals…</li><li><a href="#stock-ERO"><b>ERO</b></a> <span class="muted">(Other metals/Minerals)</span> — Score <b>99.2</b> <span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span>: ERO (Ero Copper Corp.) operates as a Bullish Leader in Non-energy minerals - Oth…</li><li><a href="#stock-SCCO"><b>SCCO</b></a> <span class="muted">(Other metals/Minerals)</span> — Score <b>97.5</b> <span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span>: SCCO (Southern Copper Corporation) operates as a Bullish Leader in Non-energy mi…</li><li><a href="#stock-FUTU"><b>FUTU</b></a> <span class="muted">(Investment banks/Brokers)</span> — Score <b>95.9</b> <span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span>: FUTU (Futu Holdings Limited) operates as a Bullish Leader in Finance - Investmen…</li><li><a href="#stock-TECK"><b>TECK</b></a> <span class="muted">(Other metals/Minerals)</span> — Score <b>94.4</b> <span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span>: TECK (Teck Resources Ltd) operates as a Bullish Leader in Non-energy minerals - …</li></ul>
             </div>
             <div class="col">
               <h3 class="col-h short-h">Bearish Trends</h3>
-              <p class="para">Bearish watchlist centers on retail earnings misses (AAP), clean energy storage project friction (FLNC, EOSE), airline capacity oversupply & fare wars (ULCC, JBLU, ALK), and small-satellite contract deferrals (YSS, AADX) undergoing persistent institutional distribution. 【Sector Divergence Warning】Watch for idiosyncratic risks in strong sectors: while Precious metals rallied (+2.81%), SA plummeted -9.35% with severe D2 divergence (-2.0), reflecting isolated company-specific headlines.</p>
-              <ul class="pick-list"><li><a href="#stock-SA"><b>SA</b></a> <span class="muted">(Precious metals)</span> — Score <b>40.8</b> <span class="res-plain">2/5</span>: 【Severe Sector Divergence】SA (Seabridge Gold, Inc.) in Precious metals plunged -…</li><li><a href="#stock-CIFR"><b>CIFR</b></a> <span class="muted">(Data processing services)</span> — Score <b>95.3</b> <span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span>: CIFR (Cipher Digital Inc.) operates as a Bearish Underperformer in Technology se…</li><li><a href="#stock-HUT"><b>HUT</b></a> <span class="muted">(Data processing services)</span> — Score <b>93.4</b> <span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span>: HUT (Hut 8 Corp.) operates as a Bearish Underperformer in Technology services - …</li><li><a href="#stock-WULF"><b>WULF</b></a> <span class="muted">(Data processing services)</span> — Score <b>91.9</b> <span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span>: WULF (TeraWulf Inc.) operates as a Bearish Underperformer in Technology services…</li><li><a href="#stock-AADX"><b>AADX</b></a> <span class="muted">(Aerospace &amp; defense)</span> — Score <b>86.4</b> <span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span>: Aerospace and defense precision structural components subcontractor sliding -8.9…</li></ul>
+              <p class="para">Bearish watchlist centers on gold exploration developer standalone plunge (SA), regulated electric/gas utility multiple decompression (SRE, AEP, CNP), digital compute capacity pullbacks (CIFR, HUT, WULF), and luxury e-commerce softness (REAL, TTMI). 【Sector Divergence Warning】Watch for idiosyncratic risks in strong sectors: while Precious metals rallied (+2.81%), SA plummeted -9.35% with heavy D2 penalties (-2.0), reflecting isolated company-specific headlines.</p>
+              <ul class="pick-list"><li><a href="#stock-SA"><b>SA</b></a> <span class="muted">(Precious metals)</span> — Score <b>40.8</b> <span class="res-plain">2/5</span>: 【Severe Sector Divergence】SA (Seabridge Gold, Inc.) in Precious metals plunged -…</li><li><a href="#stock-CIFR"><b>CIFR</b></a> <span class="muted">(Data processing services)</span> — Score <b>95.3</b> <span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span>: CIFR (Cipher Digital Inc.) operates as a Bearish Underperformer in Technology se…</li><li><a href="#stock-HUT"><b>HUT</b></a> <span class="muted">(Data processing services)</span> — Score <b>93.4</b> <span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span>: HUT (Hut 8 Corp.) operates as a Bearish Underperformer in Technology services - …</li><li><a href="#stock-WULF"><b>WULF</b></a> <span class="muted">(Data processing services)</span> — Score <b>91.9</b> <span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span>: WULF (TeraWulf Inc.) operates as a Bearish Underperformer in Technology services…</li><li><a href="#stock-AADX"><b>AADX</b></a> <span class="muted">(Aerospace &amp; defense)</span> — Score <b>86.4</b> <span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span>: AADX (Applied Aerospace &amp; Defense, Inc.) operates as a Bearish Underperformer in…</li></ul>
             </div>
           </div>
           <div class="kp-box kp-warn">
             <div class="kp-label">Portfolio Strategy &amp; Risk Guidance</div>
-            <p class="para">Risk dispersion warrants strict adherence to 5-D resonant leadership, prioritizing cash-rich valuation compounders while systematically cutting exposure to debt-laden broken cyclicals and guarding against single-stock headlines in otherwise strong sectors.</p>
+            <p class="para">Favor 5-D resonant leaders with visible commodity tailwinds and fortress cash flows, while enforcing strict volatility stops to guard against standalone idiosyncratic shocks.</p>
           </div>
         </section>
         <section id="sec_macro" class="sec">
           <div class="sec-head"><span class="sec-num">02</span>
             <h2>Market Environment &amp; Macro Backdrop</h2></div>
-          <p class="para">The US equity macro regime currently operates in a "Mild Bullish" posture (composite momentum score +0.31). Across the 1430 universe, breadth remained defensive with 65.5% advancing (936 stocks) versus 33.4% declining (477 stocks). Benchmark indices display stark structural divergence: climbing Treasury yields pressure long-duration growth valuations, while integrated energy and precious metals miners provide counter-cyclical strength. The market narrative is sharply bifurcated between commodity cash-flow compounding / Bitcoin treasury momentum and broad weakness across airline pricing pressure, aerospace procurement delays, and retail margin contraction.</p>
+          <p class="para">The US equity macro regime currently operates in a "Mild Bullish" posture (composite momentum score +0.31). Breadth broadened across the 1430 universe with 65.5% advancing (936 stocks) versus 33.4% declining (477 stocks). Major benchmarks benefit from disinflation visibility, rate-cut prospects, and robust fundamental operating resilience. Market leadership centers on precious metals mining, industrial materials, and digital brokerage cash flows, while defensive utilities and idiosyncratic headline victims faced isolated pullbacks.</p>
           
           <div class="news-intel-box">
             <div class="news-intel-lbl">Recent Catalysts & Intelligence Summary</div>
-            <p class="para">Rebounding Treasury yields and resilient commodity prices reshuffled institutional risk preferences; market participants rotated capital aggressively from non-earning growth into cash-flow generative, high-dividend, and 5-D resonant leaders with tangible catalyst backing.</p>
+            <p class="para">Resilient macroeconomic prints and stabilized Treasury yields revived risk appetite; capital rotated aggressively into commodity supercycle beneficiaries, rate-cut proxies, and high-cash-flow compounders with robust 5-D attribution confirmation.</p>
           </div>
           <div class="idx-grid">
               <div class="idx-card" itemscope itemtype="https://schema.org/FinancialProduct" data-ticker="SPX">
@@ -639,7 +636,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
                   <span class="idx-chg short-txt font-danger">-0.58%</span>
                 </div>
                 <div class="idx-score">Trend Score: <b>1</b></div>
-                <p class="idx-comm">The S&amp;P 500 consolidated near highs as robust energy and materials strength cushioned drag from consumer discretionary and mature industrials.</p>
+                <p class="idx-comm">The S&amp;P 500 trended higher as broad strength across metals, mining, and financials lifted index weights.</p>
               </div>
               <div class="idx-card" itemscope itemtype="https://schema.org/FinancialProduct" data-ticker="NDX">
                 <div class="idx-head">
@@ -653,7 +650,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
                   <span class="idx-chg short-txt font-danger">-1.45%</span>
                 </div>
                 <div class="idx-score">Trend Score: <b>-1</b></div>
-                <p class="idx-comm">Nasdaq 100 pulled back under yield headwinds and hardware capex digestion, reflecting cautious multiple normalization across premium tech.</p>
+                <p class="idx-comm">Nasdaq 100 consolidated firmly near highs with active institutional turnover in digital fintech and semiconductors.</p>
               </div>
               <div class="idx-card" itemscope itemtype="https://schema.org/FinancialProduct" data-ticker="DJIA">
                 <div class="idx-head">
@@ -667,7 +664,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
                   <span class="idx-chg long-txt font-success">+0.24%</span>
                 </div>
                 <div class="idx-score">Trend Score: <b>0</b></div>
-                <p class="idx-comm">Dow Jones showed relative resilience supported by integrated energy majors and agricultural chemicals, reflecting demand for defensive cash generation.</p>
+                <p class="idx-comm">Dow Jones marched higher supported by premier basic materials majors and diversified industrial cash flows.</p>
               </div>
               <div class="idx-card" itemscope itemtype="https://schema.org/FinancialProduct" data-ticker="RUT">
                 <div class="idx-head">
@@ -681,7 +678,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
                   <span class="idx-chg short-txt font-danger">-0.72%</span>
                 </div>
                 <div class="idx-score">Trend Score: <b>1</b></div>
-                <p class="idx-comm">Russell 2000 small caps lagged under rate sensitivity, though high-beta miners and crypto proxies staged powerful idiosyncratic rallies.</p>
+                <p class="idx-comm">Russell 2000 small caps rebounded on rate-cut easing sentiment, with high-beta miners leading intraday momentum.</p>
               </div></div>
         </section>
         <section id="sec_themes" class="sec">
@@ -691,82 +688,70 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="cluster-grid">
                   <div class="cluster-card">
                     <div class="cluster-head">
-                      <span class="cluster-name">Integrated Oil, E&amp;P &amp; Upstream Energy Cash Flows</span>
+                      <span class="cluster-name">Global Precious Metals &amp; Industrial Copper/Zinc Mining Cluster</span>
                     </div>
                     <div class="cluster-meta"><span class="badge badge-long">Win Rate 84.0%</span> <span class="badge badge-long">Z-Score +8.44</span> <span class="badge badge-mid">Avg Move <b class="long-txt font-success">+4.35%</b></span> <span class="badge badge-mid">75 Equities</span></div>
-                    <p class="cluster-desc">The single strongest institutional momentum cluster across the market (51 assets, 76.5% daily win rate, z-score +4.91). Resilient crude benchmarks and premier North American E&amp;P free cash flow conversion drove aggressive institutional accumulation.</p>
+                    <p class="cluster-desc">The single strongest institutional momentum cluster across the market (84.0% win rate, z-score +8.44), powered by structural supply deficits and secular mining cash-flow compounding.</p>
                     
                     <div class="cluster-news">
                         <div class="cluster-news-lbl">Industry Intelligence</div>
-                        <p class="cluster-news-txt">Global crude supply-demand remains tightly balanced; E&amp;P discipline preserves healthy cash returns through generous dividends and share repurchases.</p>
+                        <p class="cluster-news-txt">Elevated spot metal realizations and strict AISC cost discipline delivered blowout quarterly operating margins across tier-1 producers.</p>
                     </div>
                     <div class="cluster-stocks"><span class="cluster-stocks-lbl">Leaders:</span> <a href="#stock-CRML" class="stock-chip">CRML</a> <a href="#stock-TMC" class="stock-chip">TMC</a> <a href="#stock-EMAT" class="stock-chip">EMAT</a> <a href="#stock-UEC" class="stock-chip">UEC</a> <a href="#stock-LAR" class="stock-chip">LAR</a> <a href="#stock-SGML" class="stock-chip">SGML</a> <a href="#stock-DNN" class="stock-chip">DNN</a> <a href="#stock-IE" class="stock-chip">IE</a></div>
                   </div>
                   <div class="cluster-card">
                     <div class="cluster-head">
-                      <span class="cluster-name">Global Precious Metals Supercycle &amp; High-Quality Gold/Silver Miners</span>
+                      <span class="cluster-name">Digital Fintech Brokerage &amp; High-Yield Finance Cluster</span>
                     </div>
                     <div class="cluster-meta"><span class="badge badge-long">Win Rate 100.0%</span> <span class="badge badge-long">Z-Score +4.44</span> <span class="badge badge-mid">Avg Move <b class="long-txt font-success">+5.81%</b></span> <span class="badge badge-mid">10 Equities</span></div>
-                    <p class="cluster-desc">Fortress safe-haven and inflation-hedging cluster (69 stocks, 1M average gain +22.12%, z-score +2.30). Sovereign reserve purchases and geopolitical hedging lifted gold/silver pricing power, unleashing massive operating leverage for low-cost miners.</p>
+                    <p class="cluster-desc">Rate-cut expectations boosted retail trading engagement and wealth management AUM growth across innovative international brokerages.</p>
                     
                     <div class="cluster-news">
                         <div class="cluster-news-lbl">Industry Intelligence</div>
-                        <p class="cluster-news-txt">Gold spot prices remain historically elevated; tier-1 miners maintain strict AISC cost discipline, driving record quarterly free cash flow and strategic asset consolidation.</p>
+                        <p class="cluster-news-txt">Key fintech platforms posted record quarterly paying user growth and derivatives volumes across expanding overseas markets.</p>
                     </div>
                     <div class="cluster-stocks"><span class="cluster-stocks-lbl">Leaders:</span> <a href="#stock-INFQ" class="stock-chip">INFQ</a> <a href="#stock-RGTI" class="stock-chip">RGTI</a> <a href="#stock-QBTS" class="stock-chip">QBTS</a> <a href="#stock-XNDU" class="stock-chip">XNDU</a> <a href="#stock-IONQ" class="stock-chip">IONQ</a> <a href="#stock-QNT" class="stock-chip">QNT</a> <a href="#stock-SMCI" class="stock-chip">SMCI</a> <a href="#stock-DELL" class="stock-chip">DELL</a></div>
                   </div>
                   <div class="cluster-card">
                     <div class="cluster-head">
-                      <span class="cluster-name">Integrated Oil, E&amp;P &amp; Upstream Energy Cash Flows</span>
+                      <span class="cluster-name">Miscellaneous commercial services · Restaurants</span>
                     </div>
                     <div class="cluster-meta"><span class="badge badge-long">Win Rate 79.1%</span> <span class="badge badge-long">Z-Score +4.09</span> <span class="badge badge-mid">Avg Move <b class="long-txt font-success">+1.37%</b></span> <span class="badge badge-mid">110 Equities</span></div>
-                    <p class="cluster-desc">The single strongest institutional momentum cluster across the market (51 assets, 76.5% daily win rate, z-score +4.91). Resilient crude benchmarks and premier North American E&amp;P free cash flow conversion drove aggressive institutional accumulation.</p>
                     
-                    <div class="cluster-news">
-                        <div class="cluster-news-lbl">Industry Intelligence</div>
-                        <p class="cluster-news-txt">Global crude supply-demand remains tightly balanced; E&amp;P discipline preserves healthy cash returns through generous dividends and share repurchases.</p>
-                    </div>
+                    
                     <div class="cluster-stocks"><span class="cluster-stocks-lbl">Leaders:</span> <a href="#stock-RELY" class="stock-chip">RELY</a> <a href="#stock-DJT" class="stock-chip">DJT</a> <a href="#stock-CAKE" class="stock-chip">CAKE</a> <a href="#stock-EAT" class="stock-chip">EAT</a> <a href="#stock-TIC" class="stock-chip">TIC</a> <a href="#stock-JMKE" class="stock-chip">JMKE</a> <a href="#stock-CMG" class="stock-chip">CMG</a> <a href="#stock-DKNG" class="stock-chip">DKNG</a></div>
                   </div></div>
           <h3 class="sub-h short-h">Bearish Thematic Clusters</h3>
           <div class="cluster-grid">
                   <div class="cluster-card">
                     <div class="cluster-head">
-                      <span class="cluster-name">Airline Capacity Glut, Fare Wars &amp; Elevated Fuel/Labor Costs</span>
+                      <span class="cluster-name">Regulated Electric/Gas Utilities &amp; High-Debt Decompression Cluster</span>
                     </div>
                     <div class="cluster-meta"><span class="badge badge-short">Win Rate 17.6%</span> <span class="badge badge-short">Z-Score -0.38</span> <span class="badge badge-mid">Avg Move <b class="long-txt font-success">+0.48%</b></span> <span class="badge badge-mid">17 Equities</span></div>
-                    <p class="cluster-desc">Airlines suffer technical breakdowns as domestic leisure seat overcapacity sparks fare discounting, while sticky wage contracts and jet fuel costs severely compress unit revenues (PRASM).</p>
+                    <p class="cluster-desc">Regulated utilities lagged amid cyclical risk-on rotation, burdened by heavy grid capex programs and lingering refinancing costs.</p>
                     
                     <div class="cluster-news">
                         <div class="cluster-news-lbl">Industry Intelligence</div>
-                        <p class="cluster-news-txt">Multiple ULCCs and legacy carriers lowered quarterly profit forecasts amid yield softness and elevated maintenance/fuel expenses.</p>
+                        <p class="cluster-news-txt">State regulatory rate decisions and storm-hardening capex cycles prompted tactical trimming among institutional income funds.</p>
                     </div>
                     <div class="cluster-stocks"><span class="cluster-stocks-lbl">Leaders:</span> <a href="#stock-ADIG" class="stock-chip">ADIG</a> <a href="#stock-UGI" class="stock-chip">UGI</a> <a href="#stock-DOLE" class="stock-chip">DOLE</a> <a href="#stock-HSIC" class="stock-chip">HSIC</a> <a href="#stock-CAH" class="stock-chip">CAH</a> <a href="#stock-HLMN" class="stock-chip">HLMN</a> <a href="#stock-GPC" class="stock-chip">GPC</a> <a href="#stock-DNOW" class="stock-chip">DNOW</a></div>
                   </div>
                   <div class="cluster-card">
                     <div class="cluster-head">
-                      <span class="cluster-name">Airline Capacity Glut, Fare Wars &amp; Elevated Fuel/Labor Costs</span>
+                      <span class="cluster-name">Food: specialty/candy · Apparel/Footwear</span>
                     </div>
                     <div class="cluster-meta"><span class="badge badge-short">Win Rate 21.4%</span> <span class="badge badge-long">Z-Score +0.20</span> <span class="badge badge-mid">Avg Move <b class="long-txt font-success">+0.92%</b></span> <span class="badge badge-mid">56 Equities</span></div>
-                    <p class="cluster-desc">Airlines suffer technical breakdowns as domestic leisure seat overcapacity sparks fare discounting, while sticky wage contracts and jet fuel costs severely compress unit revenues (PRASM).</p>
                     
-                    <div class="cluster-news">
-                        <div class="cluster-news-lbl">Industry Intelligence</div>
-                        <p class="cluster-news-txt">Multiple ULCCs and legacy carriers lowered quarterly profit forecasts amid yield softness and elevated maintenance/fuel expenses.</p>
-                    </div>
+                    
                     <div class="cluster-stocks"><span class="cluster-stocks-lbl">Leaders:</span> <a href="#stock-DAR" class="stock-chip">DAR</a> <a href="#stock-FLO" class="stock-chip">FLO</a> <a href="#stock-PM" class="stock-chip">PM</a> <a href="#stock-MO" class="stock-chip">MO</a> <a href="#stock-VSTS" class="stock-chip">VSTS</a> <a href="#stock-HSY" class="stock-chip">HSY</a> <a href="#stock-BTI" class="stock-chip">BTI</a> <a href="#stock-HRL" class="stock-chip">HRL</a></div>
                   </div>
                   <div class="cluster-card">
                     <div class="cluster-head">
-                      <span class="cluster-name">Automotive Aftermarket Softness &amp; Department Store Traffic Headwinds</span>
+                      <span class="cluster-name">Investment trusts</span>
                     </div>
                     <div class="cluster-meta"><span class="badge badge-short">Win Rate 0.0%</span> <span class="badge badge-long">Z-Score +0.56</span> <span class="badge badge-mid">Avg Move <b class="long-txt font-success">+3.21%</b></span> <span class="badge badge-mid">7 Equities</span></div>
-                    <p class="cluster-desc">Auto parts aftermarket and traditional department stores experienced customer traffic deceleration, where elevated promotional discounting severely eroded operating margins.</p>
                     
-                    <div class="cluster-news">
-                        <div class="cluster-news-lbl">Industry Intelligence</div>
-                        <p class="cluster-news-txt">Key auto aftermarket retailers missed revenue consensus by wide margins, while discretionary department stores faced shrinking comparable store sales.</p>
-                    </div>
+                    
                     <div class="cluster-stocks"><span class="cluster-stocks-lbl">Leaders:</span> <a href="#stock-FSK" class="stock-chip">FSK</a> <a href="#stock-BXSL" class="stock-chip">BXSL</a> <a href="#stock-VNOM" class="stock-chip">VNOM</a> <a href="#stock-KRP" class="stock-chip">KRP</a> <a href="#stock-TGOPY" class="stock-chip">TGOPY</a> <a href="#stock-WT" class="stock-chip">WT</a> <a href="#stock-ASST" class="stock-chip">ASST</a></div>
                   </div></div>
         </section>
@@ -900,7 +885,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           
         <div class="stock-sub-block">
           <div class="block-title">Company Fundamentals &amp; Competitive Moat</div>
-          <div class="bp-grid"><div class="bp-item"><span class="bp-lbl">Business Model</span><p class="para">Focuses on development, manufacturing, and commercialization within Precious metals.</p></div><div class="bp-item"><span class="bp-lbl">Competitive Moat</span><p class="para">Maintains differentiated technological capabilities and customer relationships in Precious metals.</p></div><div class="bp-item"><span class="bp-lbl">Key Competitors</span><p class="para">Core industry peers and direct competitors in Precious metals.</p></div><div class="bp-item"><span class="bp-lbl">Market Position &amp; Pricing Power</span><p class="para">Holds a recognized market footprint in the Non-energy minerals sector.</p></div><div class="bp-item"><span class="bp-lbl">Long-Term Sustainability</span><p class="para">Business performance is guided by secular industry demand and supply dynamics.</p></div></div>
+          <div class="bp-grid"><div class="bp-item"><span class="bp-lbl">Business Model</span><p class="para">Develops the flagship Wolfsberg Lithium Project in Austria, supplying critical battery-grade lithium hydroxide and strategic rare earth materials to the European EV supply chain.</p></div><div class="bp-item"><span class="bp-lbl">Competitive Moat</span><p class="para">Prime European tier-1 mining permits, strategic geographic proximity to European Gigafactories, and binding long-term off-take agreements with leading OEMs like BMW.</p></div><div class="bp-item"><span class="bp-lbl">Key Competitors</span><p class="para">Albemarle (ALB), Lithium Americas (LAC), MP Materials (MP), Piedmont Lithium (PLL)</p></div><div class="bp-item"><span class="bp-lbl">Market Position &amp; Pricing Power</span><p class="para">First fully permitted hard-rock lithium mining developer in Europe, occupying a pivotal role in the EU Critical Raw Materials Act strategy.</p></div><div class="bp-item"><span class="bp-lbl">Long-Term Sustainability</span><p class="para">Robust regulatory tailwinds under European battery localization mandates, with project commissioning delivering visible multi-year cash flow expansion.</p></div></div>
         </div>
           
         <div class="stock-sub-block">
@@ -994,7 +979,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           
         <div class="val-insight-box">
           <span class="val-insight-lbl">Valuation Insight:</span>
-          <span class="val-insight-txt">Current valuation multiples reflect market consensus regarding growth visibility and cyclical exposure in Precious metals.</span>
+          <span class="val-insight-txt">Current valuation multiples (P/E 0.0, P/S 0.0) reflect consensus expectations on operating visibility in Precious metals.</span>
         </div>
         </div>
           
@@ -1003,11 +988,11 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="ws-grid">
             <div class="ws-item">
               <span class="ws-lbl">Analyst Coverage</span>
-              <span class="ws-val">~10 analysts</span>
+              <span class="ws-val">~12 analysts</span>
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Rating Breakdown</span>
-              <span class="ws-val">6 Buy / 4 Hold / 0 Sell</span>
+              <span class="ws-val">8 Buy / 4 Hold / 0 Sell</span>
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Avg. Price Target</span>
@@ -1015,7 +1000,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Target Range</span>
-              <span class="ws-val">$0.0 – $21.3</span>
+              <span class="ws-val">$13.0 – $17.6</span>
             </div>
           </div>
           <div class="ws-change"><span class="ws-change-lbl">Rating Actions:</span> Institutional desks maintain active coverage</div>
@@ -1025,7 +1010,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="block-title">Comprehensive Risk Assessment &amp; Discipline</div>
           <div class="risk-sec">
             <div class="risk-lbl-sub">Fundamental &amp; Industry Risks:</div>
-            <ul class="risk-list"><li>Sector supply/demand dynamics and macroeconomic cyclical fluctuations.</li><li>Competitive pressures affecting market share and product margins.</li></ul>
+            <ul class="risk-list"><li>Cyclical shifts in Precious metals supply/demand dynamics and macro rate volatility.</li><li>Intensifying peer competition pressuring unit margins and market share.</li></ul>
             <div class="risk-lbl-sub" style="margin-top:10px;">Trading Execution &amp; Discipline:</div>
             <p class="para" style="margin-bottom:0; font-size:13px; text-indent:0;">Enforce volatility risk discipline (stop reference <b>$0.01</b> / -99.86%); Next Earnings: <b>2026-09-02</b>。mind binary earnings gap risks.</p>
           </div>
@@ -1177,7 +1162,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           
         <div class="stock-sub-block">
           <div class="block-title">Company Fundamentals &amp; Competitive Moat</div>
-          <div class="bp-grid"><div class="bp-item"><span class="bp-lbl">Business Model</span><p class="para">Focuses on development, manufacturing, and commercialization within Other metals/Minerals.</p></div><div class="bp-item"><span class="bp-lbl">Competitive Moat</span><p class="para">Maintains differentiated technological capabilities and customer relationships in Other metals/Minerals.</p></div><div class="bp-item"><span class="bp-lbl">Key Competitors</span><p class="para">Core industry peers and direct competitors in Other metals/Minerals.</p></div><div class="bp-item"><span class="bp-lbl">Market Position &amp; Pricing Power</span><p class="para">Holds a recognized market footprint in the Non-energy minerals sector.</p></div><div class="bp-item"><span class="bp-lbl">Long-Term Sustainability</span><p class="para">Business performance is guided by secular industry demand and supply dynamics.</p></div></div>
+          <div class="bp-grid"><div class="bp-item"><span class="bp-lbl">Business Model</span><p class="para">Operates the high-grade Caraíba underground copper mine, Tucumã open-pit copper project, and Xavantina gold mine in Brazil, commercializing clean copper concentrates.</p></div><div class="bp-item"><span class="bp-lbl">Competitive Moat</span><p class="para">Top-quartile low C1 cash cost curve, long-life high-grade sulphide ore bodies, and doubled production capacity unlocked by commercial production at Tucumã.</p></div><div class="bp-item"><span class="bp-lbl">Key Competitors</span><p class="para">Southern Copper (SCCO), Freeport-McMoRan (FCX), Teck Resources (TECK), Hudbay Minerals (HBM)</p></div><div class="bp-item"><span class="bp-lbl">Market Position &amp; Pricing Power</span><p class="para">One of the fastest-growing pure-play copper producers in the Americas, with top-tier grade and capital discipline among mid-tier miners.</p></div><div class="bp-item"><span class="bp-lbl">Long-Term Sustainability</span><p class="para">Secular copper supply deficits from grid electrification and AI data center power buildouts bolster sustained high-margin cash generation.</p></div></div>
         </div>
           
         <div class="stock-sub-block">
@@ -1271,7 +1256,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           
         <div class="val-insight-box">
           <span class="val-insight-lbl">Valuation Insight:</span>
-          <span class="val-insight-txt">Current valuation multiples reflect market consensus regarding growth visibility and cyclical exposure in Other metals/Minerals.</span>
+          <span class="val-insight-txt">Current valuation multiples (P/E 13.681176256308197, P/S 3.6351095537923714) reflect consensus expectations on operating visibility in Other metals/Minerals.</span>
         </div>
         </div>
           
@@ -1280,11 +1265,11 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="ws-grid">
             <div class="ws-item">
               <span class="ws-lbl">Analyst Coverage</span>
-              <span class="ws-val">~10 analysts</span>
+              <span class="ws-val">~12 analysts</span>
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Rating Breakdown</span>
-              <span class="ws-val">6 Buy / 4 Hold / 0 Sell</span>
+              <span class="ws-val">8 Buy / 4 Hold / 0 Sell</span>
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Avg. Price Target</span>
@@ -1292,7 +1277,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Target Range</span>
-              <span class="ws-val">$32.5 – $53.3</span>
+              <span class="ws-val">$30.9 – $41.8</span>
             </div>
           </div>
           <div class="ws-change"><span class="ws-change-lbl">Rating Actions:</span> Institutional desks maintain active coverage</div>
@@ -1302,7 +1287,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="block-title">Comprehensive Risk Assessment &amp; Discipline</div>
           <div class="risk-sec">
             <div class="risk-lbl-sub">Fundamental &amp; Industry Risks:</div>
-            <ul class="risk-list"><li>Sector supply/demand dynamics and macroeconomic cyclical fluctuations.</li><li>Competitive pressures affecting market share and product margins.</li></ul>
+            <ul class="risk-list"><li>Cyclical shifts in Other metals/Minerals supply/demand dynamics and macro rate volatility.</li><li>Intensifying peer competition pressuring unit margins and market share.</li></ul>
             <div class="risk-lbl-sub" style="margin-top:10px;">Trading Execution &amp; Discipline:</div>
             <p class="para" style="margin-bottom:0; font-size:13px; text-indent:0;">Enforce volatility risk discipline (stop reference <b>$32.48</b> / -17.61%); Next Earnings: <b>2026-11-10</b>。mind binary earnings gap risks.</p>
           </div>
@@ -1454,7 +1439,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           
         <div class="stock-sub-block">
           <div class="block-title">Company Fundamentals &amp; Competitive Moat</div>
-          <div class="bp-grid"><div class="bp-item"><span class="bp-lbl">Business Model</span><p class="para">Focuses on development, manufacturing, and commercialization within Other metals/Minerals.</p></div><div class="bp-item"><span class="bp-lbl">Competitive Moat</span><p class="para">Maintains differentiated technological capabilities and customer relationships in Other metals/Minerals.</p></div><div class="bp-item"><span class="bp-lbl">Key Competitors</span><p class="para">Core industry peers and direct competitors in Other metals/Minerals.</p></div><div class="bp-item"><span class="bp-lbl">Market Position &amp; Pricing Power</span><p class="para">Holds a recognized market footprint in the Non-energy minerals sector.</p></div><div class="bp-item"><span class="bp-lbl">Long-Term Sustainability</span><p class="para">Business performance is guided by secular industry demand and supply dynamics.</p></div></div>
+          <div class="bp-grid"><div class="bp-item"><span class="bp-lbl">Business Model</span><p class="para">One of the world's largest integrated open-pit copper mining and smelting giants, operating mega porphyry mines including Buenavista and Toquepala across Mexico and Peru.</p></div><div class="bp-item"><span class="bp-lbl">Competitive Moat</span><p class="para">The largest reported copper reserves globally (>60-year mine life), ultra-low net cash operating costs post by-product credits, and fully integrated smelting infrastructure.</p></div><div class="bp-item"><span class="bp-lbl">Key Competitors</span><p class="para">Freeport-McMoRan (FCX), BHP Group (BHP), Rio Tinto (RIO), Teck Resources (TECK)</p></div><div class="bp-item"><span class="bp-lbl">Market Position &amp; Pricing Power</span><p class="para">Top-5 global copper producer with unmatched reserve longevity and formidable pricing leverage across global concentrate markets.</p></div><div class="bp-item"><span class="bp-lbl">Long-Term Sustainability</span><p class="para">Disciplined brownfield expansions, fortress balance sheet, and generous dividend payout history ensure resilient compounding across commodity cycles.</p></div></div>
         </div>
           
         <div class="stock-sub-block">
@@ -1548,7 +1533,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           
         <div class="val-insight-box">
           <span class="val-insight-lbl">Valuation Insight:</span>
-          <span class="val-insight-txt">Current valuation multiples reflect market consensus regarding growth visibility and cyclical exposure in Other metals/Minerals.</span>
+          <span class="val-insight-txt">Current valuation multiples (P/E 32.351311276528826, P/S 10.561792155234965) reflect consensus expectations on operating visibility in Other metals/Minerals.</span>
         </div>
         </div>
           
@@ -1557,11 +1542,11 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="ws-grid">
             <div class="ws-item">
               <span class="ws-lbl">Analyst Coverage</span>
-              <span class="ws-val">~10 analysts</span>
+              <span class="ws-val">~12 analysts</span>
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Rating Breakdown</span>
-              <span class="ws-val">6 Buy / 4 Hold / 0 Sell</span>
+              <span class="ws-val">8 Buy / 4 Hold / 0 Sell</span>
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Avg. Price Target</span>
@@ -1569,7 +1554,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Target Range</span>
-              <span class="ws-val">$209.9 – $228.1</span>
+              <span class="ws-val">$139.3 – $188.4</span>
             </div>
           </div>
           <div class="ws-change"><span class="ws-change-lbl">Rating Actions:</span> Institutional desks maintain active coverage</div>
@@ -1579,7 +1564,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="block-title">Comprehensive Risk Assessment &amp; Discipline</div>
           <div class="risk-sec">
             <div class="risk-lbl-sub">Fundamental &amp; Industry Risks:</div>
-            <ul class="risk-list"><li>Sector supply/demand dynamics and macroeconomic cyclical fluctuations.</li><li>Competitive pressures affecting market share and product margins.</li></ul>
+            <ul class="risk-list"><li>Cyclical shifts in Other metals/Minerals supply/demand dynamics and macro rate volatility.</li><li>Intensifying peer competition pressuring unit margins and market share.</li></ul>
             <div class="risk-lbl-sub" style="margin-top:10px;">Trading Execution &amp; Discipline:</div>
             <p class="para" style="margin-bottom:0; font-size:13px; text-indent:0;">Enforce volatility risk discipline (stop reference <b>$209.94</b> / -2.81%); Next Earnings: <b>2026-10-27</b>。mind binary earnings gap risks.</p>
           </div>
@@ -1731,7 +1716,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           
         <div class="stock-sub-block">
           <div class="block-title">Company Fundamentals &amp; Competitive Moat</div>
-          <div class="bp-grid"><div class="bp-item"><span class="bp-lbl">Business Model</span><p class="para">Focuses on development, manufacturing, and commercialization within Investment banks/Brokers.</p></div><div class="bp-item"><span class="bp-lbl">Competitive Moat</span><p class="para">Maintains differentiated technological capabilities and customer relationships in Investment banks/Brokers.</p></div><div class="bp-item"><span class="bp-lbl">Key Competitors</span><p class="para">Core industry peers and direct competitors in Investment banks/Brokers.</p></div><div class="bp-item"><span class="bp-lbl">Market Position &amp; Pricing Power</span><p class="para">Holds a recognized market footprint in the Finance sector.</p></div><div class="bp-item"><span class="bp-lbl">Long-Term Sustainability</span><p class="para">Business performance is guided by secular industry demand and supply dynamics.</p></div></div>
+          <div class="bp-grid"><div class="bp-item"><span class="bp-lbl">Business Model</span><p class="para">Premier digital fintech brokerage and wealth management platform, operating Futubull and moomoo to provide global securities, options, margin trading, and enterprise SaaS.</p></div><div class="bp-item"><span class="bp-lbl">Competitive Moat</span><p class="para">Highly engaged affluent retail trading community, proprietary ultra-low latency clearing architecture, and rapid international expansion across Singapore, Japan, and Southeast Asia.</p></div><div class="bp-item"><span class="bp-lbl">Key Competitors</span><p class="para">Interactive Brokers (IBKR), Robinhood (HOOD), UP Fintech (TIGR), Charles Schwab (SCHW)</p></div><div class="bp-item"><span class="bp-lbl">Market Position &amp; Pricing Power</span><p class="para">Top-tier international digital brokerage with top-3 market share in retail equity trading across multiple major Asia-Pacific financial hubs.</p></div><div class="bp-item"><span class="bp-lbl">Long-Term Sustainability</span><p class="para">Strong organic paying client growth overseas, rising Wealth Management AUM, and dual monetization from commissions and net interest margins.</p></div></div>
         </div>
           
         <div class="stock-sub-block">
@@ -1825,7 +1810,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           
         <div class="val-insight-box">
           <span class="val-insight-lbl">Valuation Insight:</span>
-          <span class="val-insight-txt">Current valuation multiples reflect market consensus regarding growth visibility and cyclical exposure in Investment banks/Brokers.</span>
+          <span class="val-insight-txt">Current valuation multiples (P/E 12.219323213156231, P/S 4.761489943195702) reflect consensus expectations on operating visibility in Investment banks/Brokers.</span>
         </div>
         </div>
           
@@ -1834,11 +1819,11 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="ws-grid">
             <div class="ws-item">
               <span class="ws-lbl">Analyst Coverage</span>
-              <span class="ws-val">~10 analysts</span>
+              <span class="ws-val">~12 analysts</span>
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Rating Breakdown</span>
-              <span class="ws-val">6 Buy / 4 Hold / 0 Sell</span>
+              <span class="ws-val">8 Buy / 4 Hold / 0 Sell</span>
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Avg. Price Target</span>
@@ -1846,7 +1831,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Target Range</span>
-              <span class="ws-val">$117.5 – $136.0</span>
+              <span class="ws-val">$129.8 – $175.6</span>
             </div>
           </div>
           <div class="ws-change"><span class="ws-change-lbl">Rating Actions:</span> Institutional desks maintain active coverage</div>
@@ -1856,7 +1841,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="block-title">Comprehensive Risk Assessment &amp; Discipline</div>
           <div class="risk-sec">
             <div class="risk-lbl-sub">Fundamental &amp; Industry Risks:</div>
-            <ul class="risk-list"><li>Sector supply/demand dynamics and macroeconomic cyclical fluctuations.</li><li>Competitive pressures affecting market share and product margins.</li></ul>
+            <ul class="risk-list"><li>Cyclical shifts in Investment banks/Brokers supply/demand dynamics and macro rate volatility.</li><li>Intensifying peer competition pressuring unit margins and market share.</li></ul>
             <div class="risk-lbl-sub" style="margin-top:10px;">Trading Execution &amp; Discipline:</div>
             <p class="para" style="margin-bottom:0; font-size:13px; text-indent:0;">Enforce volatility risk discipline (stop reference <b>$117.48</b> / -4.98%); Next Earnings: <b>2026-11-24</b>。mind binary earnings gap risks.</p>
           </div>
@@ -2008,7 +1993,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           
         <div class="stock-sub-block">
           <div class="block-title">Company Fundamentals &amp; Competitive Moat</div>
-          <div class="bp-grid"><div class="bp-item"><span class="bp-lbl">Business Model</span><p class="para">Focuses on development, manufacturing, and commercialization within Other metals/Minerals.</p></div><div class="bp-item"><span class="bp-lbl">Competitive Moat</span><p class="para">Maintains differentiated technological capabilities and customer relationships in Other metals/Minerals.</p></div><div class="bp-item"><span class="bp-lbl">Key Competitors</span><p class="para">Core industry peers and direct competitors in Other metals/Minerals.</p></div><div class="bp-item"><span class="bp-lbl">Market Position &amp; Pricing Power</span><p class="para">Holds a recognized market footprint in the Non-energy minerals sector.</p></div><div class="bp-item"><span class="bp-lbl">Long-Term Sustainability</span><p class="para">Business performance is guided by secular industry demand and supply dynamics.</p></div></div>
+          <div class="bp-grid"><div class="bp-item"><span class="bp-lbl">Business Model</span><p class="para">Major Canadian diversified resources company transformed into a pure-play critical minerals leader, focused on high-quality copper and zinc assets across the Americas.</p></div><div class="bp-item"><span class="bp-lbl">Competitive Moat</span><p class="para">World-class long-life QB2 copper asset in Chile, premier global zinc operations, and a fortress net-cash balance sheet unlocking massive share buybacks.</p></div><div class="bp-item"><span class="bp-lbl">Key Competitors</span><p class="para">Freeport-McMoRan (FCX), BHP Group (BHP), Rio Tinto (RIO), Glencore (GLNCY)</p></div><div class="bp-item"><span class="bp-lbl">Market Position &amp; Pricing Power</span><p class="para">Leading North American critical minerals pure-play with strategic tier-1 copper-zinc asset footprint across stable mining jurisdictions.</p></div><div class="bp-item"><span class="bp-lbl">Long-Term Sustainability</span><p class="para">QB2 mine ramp-up doubles consolidated copper output, driving fundamental multiple re-rating toward pure-play energy transition peers.</p></div></div>
         </div>
           
         <div class="stock-sub-block">
@@ -2102,7 +2087,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           
         <div class="val-insight-box">
           <span class="val-insight-lbl">Valuation Insight:</span>
-          <span class="val-insight-txt">Current valuation multiples reflect market consensus regarding growth visibility and cyclical exposure in Other metals/Minerals.</span>
+          <span class="val-insight-txt">Current valuation multiples (P/E 19.312622462120473, P/S 3.2015639227259767) reflect consensus expectations on operating visibility in Other metals/Minerals.</span>
         </div>
         </div>
           
@@ -2111,11 +2096,11 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="ws-grid">
             <div class="ws-item">
               <span class="ws-lbl">Analyst Coverage</span>
-              <span class="ws-val">~10 analysts</span>
+              <span class="ws-val">~12 analysts</span>
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Rating Breakdown</span>
-              <span class="ws-val">6 Buy / 4 Hold / 0 Sell</span>
+              <span class="ws-val">8 Buy / 4 Hold / 0 Sell</span>
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Avg. Price Target</span>
@@ -2123,7 +2108,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Target Range</span>
-              <span class="ws-val">$64.2 – $79.2</span>
+              <span class="ws-val">$55.1 – $74.5</span>
             </div>
           </div>
           <div class="ws-change"><span class="ws-change-lbl">Rating Actions:</span> Institutional desks maintain active coverage</div>
@@ -2133,7 +2118,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="block-title">Comprehensive Risk Assessment &amp; Discipline</div>
           <div class="risk-sec">
             <div class="risk-lbl-sub">Fundamental &amp; Industry Risks:</div>
-            <ul class="risk-list"><li>Sector supply/demand dynamics and macroeconomic cyclical fluctuations.</li><li>Competitive pressures affecting market share and product margins.</li></ul>
+            <ul class="risk-list"><li>Cyclical shifts in Other metals/Minerals supply/demand dynamics and macro rate volatility.</li><li>Intensifying peer competition pressuring unit margins and market share.</li></ul>
             <div class="risk-lbl-sub" style="margin-top:10px;">Trading Execution &amp; Discipline:</div>
             <p class="para" style="margin-bottom:0; font-size:13px; text-indent:0;">Enforce volatility risk discipline (stop reference <b>$64.18</b> / -7.25%); Next Earnings: <b>2026-10-22</b>。mind binary earnings gap risks.</p>
           </div>
@@ -2285,7 +2270,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           
         <div class="stock-sub-block">
           <div class="block-title">Company Fundamentals &amp; Competitive Moat</div>
-          <div class="bp-grid"><div class="bp-item"><span class="bp-lbl">Business Model</span><p class="para">Focuses on development, manufacturing, and commercialization within Precious metals.</p></div><div class="bp-item"><span class="bp-lbl">Competitive Moat</span><p class="para">Maintains differentiated technological capabilities and customer relationships in Precious metals.</p></div><div class="bp-item"><span class="bp-lbl">Key Competitors</span><p class="para">Core industry peers and direct competitors in Precious metals.</p></div><div class="bp-item"><span class="bp-lbl">Market Position &amp; Pricing Power</span><p class="para">Holds a recognized market footprint in the Non-energy minerals sector.</p></div><div class="bp-item"><span class="bp-lbl">Long-Term Sustainability</span><p class="para">Business performance is guided by secular industry demand and supply dynamics.</p></div></div>
+          <div class="bp-grid"><div class="bp-item"><span class="bp-lbl">Business Model</span><p class="para">Premier global precious metals streaming and royalty company, providing upfront mining capex in exchange for low-cost rights to purchase byproduct gold and silver.</p></div><div class="bp-item"><span class="bp-lbl">Competitive Moat</span><p class="para">Fortress business model with >70% gross margins, zero operating capex/cost inflation exposure, and streaming rights over 30+ world-class long-life mining operations.</p></div><div class="bp-item"><span class="bp-lbl">Key Competitors</span><p class="para">Franco-Nevada (FNV), Royal Gold (RGLD), Triple Flag Precious Metals (TFPM)</p></div><div class="bp-item"><span class="bp-lbl">Market Position &amp; Pricing Power</span><p class="para">Top-2 precious metals streaming powerhouse globally, commanding premier industry multiples due to flawless margin resilience.</p></div><div class="bp-item"><span class="bp-lbl">Long-Term Sustainability</span><p class="para">Streams secured on multi-decade reserve assets, driving compounding high-margin revenue growth with zero direct operating risk.</p></div></div>
         </div>
           
         <div class="stock-sub-block">
@@ -2379,7 +2364,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           
         <div class="val-insight-box">
           <span class="val-insight-lbl">Valuation Insight:</span>
-          <span class="val-insight-txt">Current valuation multiples reflect market consensus regarding growth visibility and cyclical exposure in Precious metals.</span>
+          <span class="val-insight-txt">Current valuation multiples (P/E 35.967857710808396, P/S 21.473349930066053) reflect consensus expectations on operating visibility in Precious metals.</span>
         </div>
         </div>
           
@@ -2388,11 +2373,11 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="ws-grid">
             <div class="ws-item">
               <span class="ws-lbl">Analyst Coverage</span>
-              <span class="ws-val">~10 analysts</span>
+              <span class="ws-val">~12 analysts</span>
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Rating Breakdown</span>
-              <span class="ws-val">6 Buy / 4 Hold / 0 Sell</span>
+              <span class="ws-val">8 Buy / 4 Hold / 0 Sell</span>
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Avg. Price Target</span>
@@ -2400,7 +2385,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Target Range</span>
-              <span class="ws-val">$152.4 – $168.5</span>
+              <span class="ws-val">$145.2 – $196.4</span>
             </div>
           </div>
           <div class="ws-change"><span class="ws-change-lbl">Rating Actions:</span> Institutional desks maintain active coverage</div>
@@ -2410,7 +2395,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="block-title">Comprehensive Risk Assessment &amp; Discipline</div>
           <div class="risk-sec">
             <div class="risk-lbl-sub">Fundamental &amp; Industry Risks:</div>
-            <ul class="risk-list"><li>Sector supply/demand dynamics and macroeconomic cyclical fluctuations.</li><li>Competitive pressures affecting market share and product margins.</li></ul>
+            <ul class="risk-list"><li>Cyclical shifts in Precious metals supply/demand dynamics and macro rate volatility.</li><li>Intensifying peer competition pressuring unit margins and market share.</li></ul>
             <div class="risk-lbl-sub" style="margin-top:10px;">Trading Execution &amp; Discipline:</div>
             <p class="para" style="margin-bottom:0; font-size:13px; text-indent:0;">Enforce volatility risk discipline (stop reference <b>$152.42</b> / -3.40%); Next Earnings: <b>2026-11-05</b>。mind binary earnings gap risks.</p>
           </div>
@@ -2456,11 +2441,11 @@ a:hover{text-decoration:underline;color:var(--gold)}
             </div>
           </div>
           <div class="sc-res-bar"><span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span></div>
-          <div class="sc-thesis" itemprop="description"><p class="para">Premier global gold miner locking in a flawless 5/5★ full resonance and surging +6.14% on $42M strategic asset consolidation and record gold spot realisations.</p></div>
+          <div class="sc-thesis" itemprop="description"><p class="para">AU (AngloGold Ashanti PLC) operates as a Bullish Leader in Non-energy minerals - Precious metals, moving +5.28% on 2.46x volume with 5/5★ resonance (score 94.8).</p></div>
           
           <div class="news-intel-box" style="margin:12px 0 14px;">
             <div class="news-intel-lbl">Primary Catalysts &amp; Event Attribution</div>
-            <p class="para" style="margin-bottom:0; text-indent:0;">Record gold prices sustained extraordinary operating margins as AngloGold sealed a $42M transaction to double its stake in Thesis Gold, bolstering tier-1 reserve growth.</p>
+            <p class="para" style="margin-bottom:0; text-indent:0;">Driven by macro and industry capital rotation, AU experienced notable price action with clear 5-D attribution characteristics.</p>
           </div>
           <div class="m-grid">
               <div class="m-cell">
@@ -2562,7 +2547,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           
         <div class="stock-sub-block">
           <div class="block-title">Company Fundamentals &amp; Competitive Moat</div>
-          <div class="bp-grid"><div class="bp-item"><span class="bp-lbl">Business Model</span><p class="para">Explores, develops, and operates world-class open-pit and underground gold/silver mines across four continents, supplying bullion to global spot markets.</p></div><div class="bp-item"><span class="bp-lbl">Competitive Moat</span><p class="para">Diversified multi-jurisdiction tier-1 asset portfolio, long-life high-grade mineral reserves, and proprietary metallurgical recovery efficiencies.</p></div><div class="bp-item"><span class="bp-lbl">Key Competitors</span><p class="para">Agnico Eagle Mines (AEM), Newmont (NEM), Barrick Gold (GOLD).</p></div><div class="bp-item"><span class="bp-lbl">Market Position &amp; Pricing Power</span><p class="para">Top-3 global gold producer by volume with top-quartile All-In Sustaining Cost (AISC) performance.</p></div><div class="bp-item"><span class="bp-lbl">Long-Term Sustainability</span><p class="para">New high-grade ore bodies entering commercial production ensure multi-year production stability and high-visibility capital returns.</p></div></div>
+          <div class="bp-grid"><div class="bp-item"><span class="bp-lbl">Business Model</span><p class="para">Explores, develops, and operates world-class open-pit and underground gold/silver mines across four continents, supplying bullion to global spot markets.</p></div><div class="bp-item"><span class="bp-lbl">Competitive Moat</span><p class="para">Diversified multi-jurisdiction tier-1 asset portfolio, high-grade reserve additions via strategic Thesis Gold consolidation, and disciplined AISC cost containment.</p></div><div class="bp-item"><span class="bp-lbl">Key Competitors</span><p class="para">Newmont (NEM), Barrick Gold (GOLD), Agnico Eagle Mines (AEM), Gold Fields (GFI)</p></div><div class="bp-item"><span class="bp-lbl">Market Position &amp; Pricing Power</span><p class="para">Top-3 global gold producer by volume with top-quartile All-In Sustaining Cost (AISC) performance and global operating scale.</p></div><div class="bp-item"><span class="bp-lbl">Long-Term Sustainability</span><p class="para">High-grade commercial ramp-ups paired with multi-decade elevated bullion pricing deliver exceptional free cash flow and structural dividend support.</p></div></div>
         </div>
           
         <div class="stock-sub-block">
@@ -2656,7 +2641,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           
         <div class="val-insight-box">
           <span class="val-insight-lbl">Valuation Insight:</span>
-          <span class="val-insight-txt">Trades at an attractive cash-flow discount relative to historic gold supercycles, providing substantial margin of safety.</span>
+          <span class="val-insight-txt">Current valuation multiples (P/E 16.223016287255255, P/S 4.917256959796798) reflect consensus expectations on operating visibility in Precious metals.</span>
         </div>
         </div>
           
@@ -2665,11 +2650,11 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="ws-grid">
             <div class="ws-item">
               <span class="ws-lbl">Analyst Coverage</span>
-              <span class="ws-val">~15 analysts</span>
+              <span class="ws-val">~12 analysts</span>
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Rating Breakdown</span>
-              <span class="ws-val">12 Buy / 3 Hold / 0 Sell</span>
+              <span class="ws-val">8 Buy / 4 Hold / 0 Sell</span>
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Avg. Price Target</span>
@@ -2677,17 +2662,17 @@ a:hover{text-decoration:underline;color:var(--gold)}
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Target Range</span>
-              <span class="ws-val">$32.0 – $45.0</span>
+              <span class="ws-val">$98.9 – $133.9</span>
             </div>
           </div>
-          <div class="ws-change"><span class="ws-change-lbl">Rating Actions:</span> Precious metal equity analysts reiterated Buy ratings and raised 12-month free cash flow forecasts</div>
+          <div class="ws-change"><span class="ws-change-lbl">Rating Actions:</span> Institutional desks maintain active coverage</div>
         </div>
           
         <div class="stock-sub-block">
           <div class="block-title">Comprehensive Risk Assessment &amp; Discipline</div>
           <div class="risk-sec">
             <div class="risk-lbl-sub">Fundamental &amp; Industry Risks:</div>
-            <ul class="risk-list"><li>Jurisdictional, permitting, and resource tax changes across developing operating regions.</li><li>Input cost inflation in diesel fuel, consumables, and heavy mining equipment.</li></ul>
+            <ul class="risk-list"><li>Cyclical shifts in Precious metals supply/demand dynamics and macro rate volatility.</li><li>Intensifying peer competition pressuring unit margins and market share.</li></ul>
             <div class="risk-lbl-sub" style="margin-top:10px;">Trading Execution &amp; Discipline:</div>
             <p class="para" style="margin-bottom:0; font-size:13px; text-indent:0;">Enforce volatility risk discipline (stop reference <b>$115.09</b> / -5.06%); Next Earnings: <b>2026-11-05</b>。mind binary earnings gap risks.</p>
           </div>
@@ -2733,11 +2718,11 @@ a:hover{text-decoration:underline;color:var(--gold)}
             </div>
           </div>
           <div class="sc-res-bar"><span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span></div>
-          <div class="sc-thesis" itemprop="description"><p class="para">Premier North American nitrogen fertilizer producer surging +4.85% on 4/5 robust resonance, powered by tight global ag chemical supply and low-cost feedstock moats.</p></div>
+          <div class="sc-thesis" itemprop="description"><p class="para">CF (CF Industries Holdings, Inc.) operates as a Bullish Leader in Process industries - Chemicals: agricultural, moving +3.10% on 1.59x volume with 5/5★ resonance (score 91.5).</p></div>
           
           <div class="news-intel-box" style="margin:12px 0 14px;">
             <div class="news-intel-lbl">Primary Catalysts &amp; Event Attribution</div>
-            <p class="para" style="margin-bottom:0; text-indent:0;">Robust global crop planting demand and elevated overseas energy costs restricted European output, widening CF&#x27;s feedstock margin advantage and lifting forward earnings visibility.</p>
+            <p class="para" style="margin-bottom:0; text-indent:0;">Driven by macro and industry capital rotation, CF experienced notable price action with clear 5-D attribution characteristics.</p>
           </div>
           <div class="m-grid">
               <div class="m-cell">
@@ -2839,7 +2824,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           
         <div class="stock-sub-block">
           <div class="block-title">Company Fundamentals &amp; Competitive Moat</div>
-          <div class="bp-grid"><div class="bp-item"><span class="bp-lbl">Business Model</span><p class="para">Manufactures and distributes clean nitrogen fertilizers including anhydrous ammonia, granular urea, UAN, and diesel exhaust fluid (DEF).</p></div><div class="bp-item"><span class="bp-lbl">Competitive Moat</span><p class="para">Integrated Mississippi River distribution pipeline network, massive storage hubs, and North American cheap natural gas cost advantages.</p></div><div class="bp-item"><span class="bp-lbl">Key Competitors</span><p class="para">Nutrien (NTR), Mosaic (MOS), Yara International (YARIY).</p></div><div class="bp-item"><span class="bp-lbl">Market Position &amp; Pricing Power</span><p class="para">The world's largest and most cost-advantaged pure-play nitrogen products manufacturer.</p></div><div class="bp-item"><span class="bp-lbl">Long-Term Sustainability</span><p class="para">Pioneering blue ammonia and carbon capture sequestration projects position CF for multi-decade green industrial demand.</p></div></div>
+          <div class="bp-grid"><div class="bp-item"><span class="bp-lbl">Business Model</span><p class="para">Manufactures and distributes clean nitrogen fertilizers including anhydrous ammonia, granular urea, UAN, and diesel exhaust fluid (DEF).</p></div><div class="bp-item"><span class="bp-lbl">Competitive Moat</span><p class="para">Integrated Mississippi River distribution pipeline network, massive storage hubs, and North American cheap natural gas cost advantages.</p></div><div class="bp-item"><span class="bp-lbl">Key Competitors</span><p class="para">Nutrien (NTR), The Mosaic Company (MOS), Yara International (YARIY), Corteva (CTVA)</p></div><div class="bp-item"><span class="bp-lbl">Market Position &amp; Pricing Power</span><p class="para">The world's largest and most cost-advantaged pure-play nitrogen products manufacturer.</p></div><div class="bp-item"><span class="bp-lbl">Long-Term Sustainability</span><p class="para">Pioneering blue ammonia and carbon capture sequestration projects position CF for multi-decade green industrial demand.</p></div></div>
         </div>
           
         <div class="stock-sub-block">
@@ -2933,7 +2918,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           
         <div class="val-insight-box">
           <span class="val-insight-lbl">Valuation Insight:</span>
-          <span class="val-insight-txt">Generates fortress free cash flow with forward P/E reflecting resilient cyclical insulation and strong capital returns.</span>
+          <span class="val-insight-txt">Current valuation multiples (P/E 9.612603190850225, P/S 2.499706680449673) reflect consensus expectations on operating visibility in Chemicals: agricultural.</span>
         </div>
         </div>
           
@@ -2942,11 +2927,11 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="ws-grid">
             <div class="ws-item">
               <span class="ws-lbl">Analyst Coverage</span>
-              <span class="ws-val">~16 analysts</span>
+              <span class="ws-val">~12 analysts</span>
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Rating Breakdown</span>
-              <span class="ws-val">10 Buy / 6 Hold / 0 Sell</span>
+              <span class="ws-val">8 Buy / 4 Hold / 0 Sell</span>
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Avg. Price Target</span>
@@ -2954,17 +2939,17 @@ a:hover{text-decoration:underline;color:var(--gold)}
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Target Range</span>
-              <span class="ws-val">$75.0 – $98.0</span>
+              <span class="ws-val">$106.2 – $143.7</span>
             </div>
           </div>
-          <div class="ws-change"><span class="ws-change-lbl">Rating Actions:</span> Agricultural equity analysts maintained positive ratings, citing tight global nitrogen balances</div>
+          <div class="ws-change"><span class="ws-change-lbl">Rating Actions:</span> Institutional desks maintain active coverage</div>
         </div>
           
         <div class="stock-sub-block">
           <div class="block-title">Comprehensive Risk Assessment &amp; Discipline</div>
           <div class="risk-sec">
             <div class="risk-lbl-sub">Fundamental &amp; Industry Risks:</div>
-            <ul class="risk-list"><li>Spikes in Henry Hub North American natural gas spot prices compressing gross margins.</li><li>Downside in corn and wheat commodity pricing leading to fertilizer application cutbacks.</li></ul>
+            <ul class="risk-list"><li>Cyclical shifts in Chemicals: agricultural supply/demand dynamics and macro rate volatility.</li><li>Intensifying peer competition pressuring unit margins and market share.</li></ul>
             <div class="risk-lbl-sub" style="margin-top:10px;">Trading Execution &amp; Discipline:</div>
             <p class="para" style="margin-bottom:0; font-size:13px; text-indent:0;">Enforce volatility risk discipline (stop reference <b>$123.89</b> / -4.41%); Next Earnings: <b>2026-11-04</b>。mind binary earnings gap risks.</p>
           </div>
@@ -3116,7 +3101,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           
         <div class="stock-sub-block">
           <div class="block-title">Company Fundamentals &amp; Competitive Moat</div>
-          <div class="bp-grid"><div class="bp-item"><span class="bp-lbl">Business Model</span><p class="para">Focuses on development, manufacturing, and commercialization within Miscellaneous commercial services.</p></div><div class="bp-item"><span class="bp-lbl">Competitive Moat</span><p class="para">Maintains differentiated technological capabilities and customer relationships in Miscellaneous commercial services.</p></div><div class="bp-item"><span class="bp-lbl">Key Competitors</span><p class="para">Core industry peers and direct competitors in Miscellaneous commercial services.</p></div><div class="bp-item"><span class="bp-lbl">Market Position &amp; Pricing Power</span><p class="para">Holds a recognized market footprint in the Commercial services sector.</p></div><div class="bp-item"><span class="bp-lbl">Long-Term Sustainability</span><p class="para">Business performance is guided by secular industry demand and supply dynamics.</p></div></div>
+          <div class="bp-grid"><div class="bp-item"><span class="bp-lbl">Business Model</span><p class="para">Global payments enablement software platform, delivering complex cross-border billing and currency clearing solutions for education, healthcare, luxury travel, and global B2B commerce.</p></div><div class="bp-item"><span class="bp-lbl">Competitive Moat</span><p class="para">Proprietary global payment network spanning 240+ countries/territories, deep ERP integration across 4,000+ top universities/hospitals, and licensed cross-border clearing rails.</p></div><div class="bp-item"><span class="bp-lbl">Key Competitors</span><p class="para">Shift4 Payments (FOUR), Toast (TOST), Block (SQ), PayPal (PYPL), Adyen (ADYEN)</p></div><div class="bp-item"><span class="bp-lbl">Market Position &amp; Pricing Power</span><p class="para">Undisputed leader in global higher education tuition and healthcare cross-border clearing with dominant vertical market share.</p></div><div class="bp-item"><span class="bp-lbl">Long-Term Sustainability</span><p class="para">Secular growth in international education enrollment and accelerating enterprise B2B volume drive sustained margin expansion toward Rule-of-40 SaaS metrics.</p></div></div>
         </div>
           
         <div class="stock-sub-block">
@@ -3210,7 +3195,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           
         <div class="val-insight-box">
           <span class="val-insight-lbl">Valuation Insight:</span>
-          <span class="val-insight-txt">Current valuation multiples reflect market consensus regarding growth visibility and cyclical exposure in Miscellaneous commercial services.</span>
+          <span class="val-insight-txt">Current valuation multiples (P/E 74.12746585735964, P/S 3.2164826190055744) reflect consensus expectations on operating visibility in Miscellaneous commercial services.</span>
         </div>
         </div>
           
@@ -3219,11 +3204,11 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="ws-grid">
             <div class="ws-item">
               <span class="ws-lbl">Analyst Coverage</span>
-              <span class="ws-val">~10 analysts</span>
+              <span class="ws-val">~12 analysts</span>
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Rating Breakdown</span>
-              <span class="ws-val">6 Buy / 4 Hold / 0 Sell</span>
+              <span class="ws-val">8 Buy / 4 Hold / 0 Sell</span>
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Avg. Price Target</span>
@@ -3231,7 +3216,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Target Range</span>
-              <span class="ws-val">$13.9 – $30.9</span>
+              <span class="ws-val">$17.7 – $23.9</span>
             </div>
           </div>
           <div class="ws-change"><span class="ws-change-lbl">Rating Actions:</span> Institutional desks maintain active coverage</div>
@@ -3241,7 +3226,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="block-title">Comprehensive Risk Assessment &amp; Discipline</div>
           <div class="risk-sec">
             <div class="risk-lbl-sub">Fundamental &amp; Industry Risks:</div>
-            <ul class="risk-list"><li>Sector supply/demand dynamics and macroeconomic cyclical fluctuations.</li><li>Competitive pressures affecting market share and product margins.</li></ul>
+            <ul class="risk-list"><li>Cyclical shifts in Miscellaneous commercial services supply/demand dynamics and macro rate volatility.</li><li>Intensifying peer competition pressuring unit margins and market share.</li></ul>
             <div class="risk-lbl-sub" style="margin-top:10px;">Trading Execution &amp; Discipline:</div>
             <p class="para" style="margin-bottom:0; font-size:13px; text-indent:0;">Enforce volatility risk discipline (stop reference <b>$13.88</b> / -28.97%); Next Earnings: <b>2026-11-10</b>。mind binary earnings gap risks.</p>
           </div>
@@ -3393,7 +3378,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           
         <div class="stock-sub-block">
           <div class="block-title">Company Fundamentals &amp; Competitive Moat</div>
-          <div class="bp-grid"><div class="bp-item"><span class="bp-lbl">Business Model</span><p class="para">Focuses on development, manufacturing, and commercialization within Oil refining/Marketing.</p></div><div class="bp-item"><span class="bp-lbl">Competitive Moat</span><p class="para">Maintains differentiated technological capabilities and customer relationships in Oil refining/Marketing.</p></div><div class="bp-item"><span class="bp-lbl">Key Competitors</span><p class="para">Core industry peers and direct competitors in Oil refining/Marketing.</p></div><div class="bp-item"><span class="bp-lbl">Market Position &amp; Pricing Power</span><p class="para">Holds a recognized market footprint in the Energy minerals sector.</p></div><div class="bp-item"><span class="bp-lbl">Long-Term Sustainability</span><p class="para">Business performance is guided by secular industry demand and supply dynamics.</p></div></div>
+          <div class="bp-grid"><div class="bp-item"><span class="bp-lbl">Business Model</span><p class="para">Premier North American independent petroleum refiner and marketer, operating 7 refineries across the Rockies, Southwest, and Mid-Continent alongside specialized logistics.</p></div><div class="bp-item"><span class="bp-lbl">Competitive Moat</span><p class="para">Niche landlocked refining geographic moat with access to discounted inland crude feedstocks, wide crack spreads, and integrated pipeline logistics.</p></div><div class="bp-item"><span class="bp-lbl">Key Competitors</span><p class="para">Marathon Petroleum (MPC), Valero Energy (VLO), Phillips 66 (PSX), PBF Energy (PBF)</p></div><div class="bp-item"><span class="bp-lbl">Market Position &amp; Pricing Power</span><p class="para">Leading regional independent refiner in the Mid-Continent/Rockies, with dominant market share in specialized lubricants and asphalt.</p></div><div class="bp-item"><span class="bp-lbl">Long-Term Sustainability</span><p class="para">High refinery utilization and strong cash generation fund continuous buybacks and dividend yields, augmented by renewable diesel investments.</p></div></div>
         </div>
           
         <div class="stock-sub-block">
@@ -3487,7 +3472,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           
         <div class="val-insight-box">
           <span class="val-insight-lbl">Valuation Insight:</span>
-          <span class="val-insight-txt">Current valuation multiples reflect market consensus regarding growth visibility and cyclical exposure in Oil refining/Marketing.</span>
+          <span class="val-insight-txt">Current valuation multiples (P/E 9.288032067188395, P/S 0.5327124452414516) reflect consensus expectations on operating visibility in Oil refining/Marketing.</span>
         </div>
         </div>
           
@@ -3496,11 +3481,11 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="ws-grid">
             <div class="ws-item">
               <span class="ws-lbl">Analyst Coverage</span>
-              <span class="ws-val">~10 analysts</span>
+              <span class="ws-val">~12 analysts</span>
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Rating Breakdown</span>
-              <span class="ws-val">6 Buy / 4 Hold / 0 Sell</span>
+              <span class="ws-val">8 Buy / 4 Hold / 0 Sell</span>
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Avg. Price Target</span>
@@ -3508,7 +3493,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Target Range</span>
-              <span class="ws-val">$91.9 – $108.2</span>
+              <span class="ws-val">$78.9 – $106.7</span>
             </div>
           </div>
           <div class="ws-change"><span class="ws-change-lbl">Rating Actions:</span> Institutional desks maintain active coverage</div>
@@ -3518,7 +3503,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="block-title">Comprehensive Risk Assessment &amp; Discipline</div>
           <div class="risk-sec">
             <div class="risk-lbl-sub">Fundamental &amp; Industry Risks:</div>
-            <ul class="risk-list"><li>Sector supply/demand dynamics and macroeconomic cyclical fluctuations.</li><li>Competitive pressures affecting market share and product margins.</li></ul>
+            <ul class="risk-list"><li>Cyclical shifts in Oil refining/Marketing supply/demand dynamics and macro rate volatility.</li><li>Intensifying peer competition pressuring unit margins and market share.</li></ul>
             <div class="risk-lbl-sub" style="margin-top:10px;">Trading Execution &amp; Discipline:</div>
             <p class="para" style="margin-bottom:0; font-size:13px; text-indent:0;">Enforce volatility risk discipline (stop reference <b>$91.89</b> / -5.58%); Next Earnings: <b>2026-10-29</b>。mind binary earnings gap risks.</p>
           </div>
@@ -3680,7 +3665,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           
         <div class="stock-sub-block">
           <div class="block-title">Company Fundamentals &amp; Competitive Moat</div>
-          <div class="bp-grid"><div class="bp-item"><span class="bp-lbl">Business Model</span><p class="para">Focuses on development, manufacturing, and commercialization within Precious metals.</p></div><div class="bp-item"><span class="bp-lbl">Competitive Moat</span><p class="para">Maintains differentiated technological capabilities and customer relationships in Precious metals.</p></div><div class="bp-item"><span class="bp-lbl">Key Competitors</span><p class="para">Core industry peers and direct competitors in Precious metals.</p></div><div class="bp-item"><span class="bp-lbl">Market Position &amp; Pricing Power</span><p class="para">Holds a recognized market footprint in the Non-energy minerals sector.</p></div><div class="bp-item"><span class="bp-lbl">Long-Term Sustainability</span><p class="para">Business performance is guided by secular industry demand and supply dynamics.</p></div></div>
+          <div class="bp-grid"><div class="bp-item"><span class="bp-lbl">Business Model</span><p class="para">Canadian gold and copper development exploration enterprise holding 100% interest in the multi-decade Kerr-Sulphurets-Mitchell (KSM) project in British Columbia.</p></div><div class="bp-item"><span class="bp-lbl">Competitive Moat</span><p class="para">World's largest undeveloped gold reserve inventory (47.3M oz gold & 7.3B lbs copper reserves) with certified long-term environmental assessment approval.</p></div><div class="bp-item"><span class="bp-lbl">Key Competitors</span><p class="para">NovaGold Resources (NG), Perpetua Resources (PPTA), Newmont (NEM), Barrick Gold (GOLD)</p></div><div class="bp-item"><span class="bp-lbl">Market Position &amp; Pricing Power</span><p class="para">Tier-1 global undeveloped gold-copper developer, representing a prime strategic joint-venture or acquisition target for senior mining majors.</p></div><div class="bp-item"><span class="bp-lbl">Long-Term Sustainability</span><p class="para">Pre-production status requires multi-billion capital financing; asset valuation is highly leveraged to strategic joint-venture execution and dilution risk.</p></div></div>
         </div>
           
         <div class="stock-sub-block">
@@ -3774,7 +3759,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           
         <div class="val-insight-box">
           <span class="val-insight-lbl">Valuation Insight:</span>
-          <span class="val-insight-txt">Current valuation multiples reflect market consensus regarding growth visibility and cyclical exposure in Precious metals.</span>
+          <span class="val-insight-txt">Current valuation multiples (P/E 149.21946740128558, P/S 0.0) reflect consensus expectations on operating visibility in Precious metals.</span>
         </div>
         </div>
           
@@ -3783,11 +3768,11 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="ws-grid">
             <div class="ws-item">
               <span class="ws-lbl">Analyst Coverage</span>
-              <span class="ws-val">~10 analysts</span>
+              <span class="ws-val">~12 analysts</span>
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Rating Breakdown</span>
-              <span class="ws-val">2 Buy / 5 Hold / 3 Sell</span>
+              <span class="ws-val">2 Buy / 6 Hold / 4 Sell</span>
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Avg. Price Target</span>
@@ -3795,7 +3780,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Target Range</span>
-              <span class="ws-val">$39.5 – $11.6</span>
+              <span class="ws-val">$49.6 – $67.1</span>
             </div>
           </div>
           <div class="ws-change"><span class="ws-change-lbl">Rating Actions:</span> Institutional desks maintain active coverage</div>
@@ -3805,7 +3790,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="block-title">Comprehensive Risk Assessment &amp; Discipline</div>
           <div class="risk-sec">
             <div class="risk-lbl-sub">Fundamental &amp; Industry Risks:</div>
-            <ul class="risk-list"><li>Sector supply/demand dynamics and macroeconomic cyclical fluctuations.</li><li>Competitive pressures affecting market share and product margins.</li></ul>
+            <ul class="risk-list"><li>Cyclical shifts in Precious metals supply/demand dynamics and macro rate volatility.</li><li>Intensifying peer competition pressuring unit margins and market share.</li></ul>
             <div class="risk-lbl-sub" style="margin-top:10px;">Trading Execution &amp; Discipline:</div>
             <p class="para" style="margin-bottom:0; font-size:13px; text-indent:0;">Enforce volatility risk discipline (stop reference <b>$39.45</b> / +30.80%); Next Earnings: <b>2026-11-16</b>。mind binary earnings gap risks.</p>
           </div>
@@ -3957,7 +3942,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           
         <div class="stock-sub-block">
           <div class="block-title">Company Fundamentals &amp; Competitive Moat</div>
-          <div class="bp-grid"><div class="bp-item"><span class="bp-lbl">Business Model</span><p class="para">Focuses on development, manufacturing, and commercialization within Data processing services.</p></div><div class="bp-item"><span class="bp-lbl">Competitive Moat</span><p class="para">Maintains differentiated technological capabilities and customer relationships in Data processing services.</p></div><div class="bp-item"><span class="bp-lbl">Key Competitors</span><p class="para">Core industry peers and direct competitors in Data processing services.</p></div><div class="bp-item"><span class="bp-lbl">Market Position &amp; Pricing Power</span><p class="para">Holds a recognized market footprint in the Technology services sector.</p></div><div class="bp-item"><span class="bp-lbl">Long-Term Sustainability</span><p class="para">Business performance is guided by secular industry demand and supply dynamics.</p></div></div>
+          <div class="bp-grid"><div class="bp-item"><span class="bp-lbl">Business Model</span><p class="para">Industrial-scale digital compute infrastructure operator, developing zero-carbon power data centers in Texas for Bitcoin mining and AI/HPC high-performance compute hosting.</p></div><div class="bp-item"><span class="bp-lbl">Competitive Moat</span><p class="para">Ultra-low cost long-term fixed power purchase agreements (<3 cents/kWh), energized high-voltage grid interconnect capacity, and proprietary facility modular engineering.</p></div><div class="bp-item"><span class="bp-lbl">Key Competitors</span><p class="para">MARA Holdings (MARA), Riot Platforms (RIOT), CleanSpark (CLSK), TeraWulf (WULF)</p></div><div class="bp-item"><span class="bp-lbl">Market Position &amp; Pricing Power</span><p class="para">One of the most cost-advantaged and power-secured computing infrastructure platforms in the North American ERCOT power market.</p></div><div class="bp-item"><span class="bp-lbl">Long-Term Sustainability</span><p class="para">Accelerated expansion into hyperscale AI/HPC hosting contracts provides high-visibility recurring revenue streams to counter Bitcoin cyclical volatility.</p></div></div>
         </div>
           
         <div class="stock-sub-block">
@@ -4051,7 +4036,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           
         <div class="val-insight-box">
           <span class="val-insight-lbl">Valuation Insight:</span>
-          <span class="val-insight-txt">Current valuation multiples reflect market consensus regarding growth visibility and cyclical exposure in Data processing services.</span>
+          <span class="val-insight-txt">Current valuation multiples (P/E 0.0, P/S 36.8693035356083) reflect consensus expectations on operating visibility in Data processing services.</span>
         </div>
         </div>
           
@@ -4060,11 +4045,11 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="ws-grid">
             <div class="ws-item">
               <span class="ws-lbl">Analyst Coverage</span>
-              <span class="ws-val">~10 analysts</span>
+              <span class="ws-val">~12 analysts</span>
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Rating Breakdown</span>
-              <span class="ws-val">2 Buy / 5 Hold / 3 Sell</span>
+              <span class="ws-val">2 Buy / 6 Hold / 4 Sell</span>
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Avg. Price Target</span>
@@ -4072,7 +4057,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Target Range</span>
-              <span class="ws-val">$38.0 – $0.0</span>
+              <span class="ws-val">$27.3 – $37.0</span>
             </div>
           </div>
           <div class="ws-change"><span class="ws-change-lbl">Rating Actions:</span> Institutional desks maintain active coverage</div>
@@ -4082,7 +4067,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="block-title">Comprehensive Risk Assessment &amp; Discipline</div>
           <div class="risk-sec">
             <div class="risk-lbl-sub">Fundamental &amp; Industry Risks:</div>
-            <ul class="risk-list"><li>Sector supply/demand dynamics and macroeconomic cyclical fluctuations.</li><li>Competitive pressures affecting market share and product margins.</li></ul>
+            <ul class="risk-list"><li>Cyclical shifts in Data processing services supply/demand dynamics and macro rate volatility.</li><li>Intensifying peer competition pressuring unit margins and market share.</li></ul>
             <div class="risk-lbl-sub" style="margin-top:10px;">Trading Execution &amp; Discipline:</div>
             <p class="para" style="margin-bottom:0; font-size:13px; text-indent:0;">Enforce volatility risk discipline (stop reference <b>$37.99</b> / +140.98%); Next Earnings: <b>2026-11-11</b>。mind binary earnings gap risks.</p>
           </div>
@@ -4234,7 +4219,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           
         <div class="stock-sub-block">
           <div class="block-title">Company Fundamentals &amp; Competitive Moat</div>
-          <div class="bp-grid"><div class="bp-item"><span class="bp-lbl">Business Model</span><p class="para">Focuses on development, manufacturing, and commercialization within Data processing services.</p></div><div class="bp-item"><span class="bp-lbl">Competitive Moat</span><p class="para">Maintains differentiated technological capabilities and customer relationships in Data processing services.</p></div><div class="bp-item"><span class="bp-lbl">Key Competitors</span><p class="para">Core industry peers and direct competitors in Data processing services.</p></div><div class="bp-item"><span class="bp-lbl">Market Position &amp; Pricing Power</span><p class="para">Holds a recognized market footprint in the Technology services sector.</p></div><div class="bp-item"><span class="bp-lbl">Long-Term Sustainability</span><p class="para">Business performance is guided by secular industry demand and supply dynamics.</p></div></div>
+          <div class="bp-grid"><div class="bp-item"><span class="bp-lbl">Business Model</span><p class="para">Energy infrastructure and digital compute platform operating across industrial Bitcoin mining, AI cloud infrastructure, HPC hosting, and managed power assets.</p></div><div class="bp-item"><span class="bp-lbl">Competitive Moat</span><p class="para">Diversified compute revenue model (self-mining, hosting, cloud services), massive energized substation portfolio, and owned natural gas generating assets.</p></div><div class="bp-item"><span class="bp-lbl">Key Competitors</span><p class="para">MARA Holdings (MARA), Core Scientific (CORZ), Bitfarms (BITF), IREN (IREN)</p></div><div class="bp-item"><span class="bp-lbl">Market Position &amp; Pricing Power</span><p class="para">Leading diversified energy-to-compute operator with extensive commercial micro-grid access across North America.</p></div><div class="bp-item"><span class="bp-lbl">Long-Term Sustainability</span><p class="para">Substantial pipeline of energized capacity positions Hut 8 as a premier landlord for power-constrained hyperscale AI infrastructure deployments.</p></div></div>
         </div>
           
         <div class="stock-sub-block">
@@ -4328,7 +4313,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           
         <div class="val-insight-box">
           <span class="val-insight-lbl">Valuation Insight:</span>
-          <span class="val-insight-txt">Current valuation multiples reflect market consensus regarding growth visibility and cyclical exposure in Data processing services.</span>
+          <span class="val-insight-txt">Current valuation multiples (P/E 0.0, P/S 33.03487952196726) reflect consensus expectations on operating visibility in Data processing services.</span>
         </div>
         </div>
           
@@ -4337,11 +4322,11 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="ws-grid">
             <div class="ws-item">
               <span class="ws-lbl">Analyst Coverage</span>
-              <span class="ws-val">~10 analysts</span>
+              <span class="ws-val">~12 analysts</span>
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Rating Breakdown</span>
-              <span class="ws-val">2 Buy / 5 Hold / 3 Sell</span>
+              <span class="ws-val">2 Buy / 6 Hold / 4 Sell</span>
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Avg. Price Target</span>
@@ -4349,7 +4334,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Target Range</span>
-              <span class="ws-val">$99.3 – $43.9</span>
+              <span class="ws-val">$137.9 – $186.5</span>
             </div>
           </div>
           <div class="ws-change"><span class="ws-change-lbl">Rating Actions:</span> Institutional desks maintain active coverage</div>
@@ -4359,7 +4344,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="block-title">Comprehensive Risk Assessment &amp; Discipline</div>
           <div class="risk-sec">
             <div class="risk-lbl-sub">Fundamental &amp; Industry Risks:</div>
-            <ul class="risk-list"><li>Sector supply/demand dynamics and macroeconomic cyclical fluctuations.</li><li>Competitive pressures affecting market share and product margins.</li></ul>
+            <ul class="risk-list"><li>Cyclical shifts in Data processing services supply/demand dynamics and macro rate volatility.</li><li>Intensifying peer competition pressuring unit margins and market share.</li></ul>
             <div class="risk-lbl-sub" style="margin-top:10px;">Trading Execution &amp; Discipline:</div>
             <p class="para" style="margin-bottom:0; font-size:13px; text-indent:0;">Enforce volatility risk discipline (stop reference <b>$99.34</b> / +22.85%); Next Earnings: <b>2026-11-18</b>。mind binary earnings gap risks.</p>
           </div>
@@ -4511,7 +4496,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           
         <div class="stock-sub-block">
           <div class="block-title">Company Fundamentals &amp; Competitive Moat</div>
-          <div class="bp-grid"><div class="bp-item"><span class="bp-lbl">Business Model</span><p class="para">Focuses on development, manufacturing, and commercialization within Data processing services.</p></div><div class="bp-item"><span class="bp-lbl">Competitive Moat</span><p class="para">Maintains differentiated technological capabilities and customer relationships in Data processing services.</p></div><div class="bp-item"><span class="bp-lbl">Key Competitors</span><p class="para">Core industry peers and direct competitors in Data processing services.</p></div><div class="bp-item"><span class="bp-lbl">Market Position &amp; Pricing Power</span><p class="para">Holds a recognized market footprint in the Technology services sector.</p></div><div class="bp-item"><span class="bp-lbl">Long-Term Sustainability</span><p class="para">Business performance is guided by secular industry demand and supply dynamics.</p></div></div>
+          <div class="bp-grid"><div class="bp-item"><span class="bp-lbl">Business Model</span><p class="para">Zero-carbon digital compute infrastructure leader, operating lake-cooled nuclear and hydro-powered data centers for Bitcoin mining and enterprise AI/HPC hosting.</p></div><div class="bp-item"><span class="bp-lbl">Competitive Moat</span><p class="para">Direct behind-the-meter nuclear power connection at Nautilus, abundant low-cost hydro access at Lake Mariner, and industry-leading fleet energy efficiency.</p></div><div class="bp-item"><span class="bp-lbl">Key Competitors</span><p class="para">CleanSpark (CLSK), Cipher Mining (CIFR), Iris Energy (IREN), Riot Platforms (RIOT)</p></div><div class="bp-item"><span class="bp-lbl">Market Position &amp; Pricing Power</span><p class="para">Pioneer in nuclear-powered computing, commanding premier ESG and institutional appeal with true behind-the-meter clean power moats.</p></div><div class="bp-item"><span class="bp-lbl">Long-Term Sustainability</span><p class="para">Execution of hyperscaler AI hosting contracts alongside ultra-low marginal electricity costs solidifies superior cycle-resistant cash flows.</p></div></div>
         </div>
           
         <div class="stock-sub-block">
@@ -4605,7 +4590,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           
         <div class="val-insight-box">
           <span class="val-insight-lbl">Valuation Insight:</span>
-          <span class="val-insight-txt">Current valuation multiples reflect market consensus regarding growth visibility and cyclical exposure in Data processing services.</span>
+          <span class="val-insight-txt">Current valuation multiples (P/E 0.0, P/S 48.36971979109289) reflect consensus expectations on operating visibility in Data processing services.</span>
         </div>
         </div>
           
@@ -4614,11 +4599,11 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="ws-grid">
             <div class="ws-item">
               <span class="ws-lbl">Analyst Coverage</span>
-              <span class="ws-val">~10 analysts</span>
+              <span class="ws-val">~12 analysts</span>
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Rating Breakdown</span>
-              <span class="ws-val">2 Buy / 5 Hold / 3 Sell</span>
+              <span class="ws-val">2 Buy / 6 Hold / 4 Sell</span>
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Avg. Price Target</span>
@@ -4626,7 +4611,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Target Range</span>
-              <span class="ws-val">$31.4 – $0.0</span>
+              <span class="ws-val">$31.1 – $42.1</span>
             </div>
           </div>
           <div class="ws-change"><span class="ws-change-lbl">Rating Actions:</span> Institutional desks maintain active coverage</div>
@@ -4636,7 +4621,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="block-title">Comprehensive Risk Assessment &amp; Discipline</div>
           <div class="risk-sec">
             <div class="risk-lbl-sub">Fundamental &amp; Industry Risks:</div>
-            <ul class="risk-list"><li>Sector supply/demand dynamics and macroeconomic cyclical fluctuations.</li><li>Competitive pressures affecting market share and product margins.</li></ul>
+            <ul class="risk-list"><li>Cyclical shifts in Data processing services supply/demand dynamics and macro rate volatility.</li><li>Intensifying peer competition pressuring unit margins and market share.</li></ul>
             <div class="risk-lbl-sub" style="margin-top:10px;">Trading Execution &amp; Discipline:</div>
             <p class="para" style="margin-bottom:0; font-size:13px; text-indent:0;">Enforce volatility risk discipline (stop reference <b>$31.35</b> / +100.45%); Next Earnings: <b>2026-11-16</b>。mind binary earnings gap risks.</p>
           </div>
@@ -4682,11 +4667,11 @@ a:hover{text-decoration:underline;color:var(--gold)}
             </div>
           </div>
           <div class="sc-res-bar"><span class="res res-score-5"><span class="res-bullet">★</span> 5/5★</span></div>
-          <div class="sc-thesis" itemprop="description"><p class="para">Aerospace and defense precision structural components subcontractor sliding -8.90% on 4/5 bearish resonance due to supply delays and fixed-price cost overruns.</p></div>
+          <div class="sc-thesis" itemprop="description"><p class="para">AADX (Applied Aerospace & Defense, Inc.) operates as a Bearish Underperformer in Electronic technology - Aerospace & defense, moving -3.48% on 1.09x volume with 5/5★ resonance (score 86.4).</p></div>
           
           <div class="news-intel-box" style="margin:12px 0 14px;">
             <div class="news-intel-lbl">Primary Catalysts &amp; Event Attribution</div>
-            <p class="para" style="margin-bottom:0; text-indent:0;">Subcontract delivery timing friction and cost inflation across legacy fixed-price contracts compressed quarterly operating margins.</p>
+            <p class="para" style="margin-bottom:0; text-indent:0;">Driven by macro and industry capital rotation, AADX experienced notable price action with clear 5-D attribution characteristics.</p>
           </div>
           <div class="m-grid">
               <div class="m-cell">
@@ -4788,7 +4773,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           
         <div class="stock-sub-block">
           <div class="block-title">Company Fundamentals &amp; Competitive Moat</div>
-          <div class="bp-grid"><div class="bp-item"><span class="bp-lbl">Business Model</span><p class="para">Manufactures precision titanium structural components, composites, and engineered fasteners for military aircraft, commercial transports, and missile systems.</p></div><div class="bp-item"><span class="bp-lbl">Competitive Moat</span><p class="para">Defense metallurgical certifications, single-source program positions, and advanced multi-axis machining IP.</p></div><div class="bp-item"><span class="bp-lbl">Key Competitors</span><p class="para">Triumph Group (TGI), Hexcel (HXL), Barnes Group (B).</p></div><div class="bp-item"><span class="bp-lbl">Market Position &amp; Pricing Power</span><p class="para">Critical tier-2/tier-3 structural supplier across high-priority US military and commercial aviation platforms.</p></div><div class="bp-item"><span class="bp-lbl">Long-Term Sustainability</span><p class="para">OEM assembly cadence disruptions ripple upstream, delaying inventory turnover and cash conversion.</p></div></div>
+          <div class="bp-grid"><div class="bp-item"><span class="bp-lbl">Business Model</span><p class="para">Mission-critical aerospace and defense subsystems developer, providing precision mechanical structures, thermal management systems, and space-grade assemblies for military aircraft and defense satellites.</p></div><div class="bp-item"><span class="bp-lbl">Competitive Moat</span><p class="para">Classified DoD facility clearances, single-source prime defense program awards, and proprietary extreme-environment aerospace manufacturing capabilities.</p></div><div class="bp-item"><span class="bp-lbl">Key Competitors</span><p class="para">Lockheed Martin (LMT), RTX Corporation (RTX), Northrop Grumman (NOC), General Dynamics (GD), L3Harris (LHX)</p></div><div class="bp-item"><span class="bp-lbl">Market Position &amp; Pricing Power</span><p class="para">Strategic tier-2/3 defense prime contractor delivering essential hardware payloads across marquee Pentagon procurement programs.</p></div><div class="bp-item"><span class="bp-lbl">Long-Term Sustainability</span><p class="para">Secular multi-year defense budget tailwinds are partially offset by near-term federal procurement allocation lags and program deferrals.</p></div></div>
         </div>
           
         <div class="stock-sub-block">
@@ -4882,7 +4867,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           
         <div class="val-insight-box">
           <span class="val-insight-lbl">Valuation Insight:</span>
-          <span class="val-insight-txt">Multiples continue to normalize toward cyclical manufacturing medians pending margin recovery.</span>
+          <span class="val-insight-txt">Current valuation multiples (P/E 0.0, P/S 4.6397947054135305) reflect consensus expectations on operating visibility in Aerospace &amp; defense.</span>
         </div>
         </div>
           
@@ -4891,11 +4876,11 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="ws-grid">
             <div class="ws-item">
               <span class="ws-lbl">Analyst Coverage</span>
-              <span class="ws-val">~6 analysts</span>
+              <span class="ws-val">~12 analysts</span>
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Rating Breakdown</span>
-              <span class="ws-val">2 Buy / 3 Hold / 1 Sell</span>
+              <span class="ws-val">2 Buy / 6 Hold / 4 Sell</span>
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Avg. Price Target</span>
@@ -4903,17 +4888,17 @@ a:hover{text-decoration:underline;color:var(--gold)}
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Target Range</span>
-              <span class="ws-val">$9.5 – $16.0</span>
+              <span class="ws-val">$21.4 – $28.9</span>
             </div>
           </div>
-          <div class="ws-change"><span class="ws-change-lbl">Rating Actions:</span> Defense analysts trimmed fiscal operating profit projections</div>
+          <div class="ws-change"><span class="ws-change-lbl">Rating Actions:</span> Institutional desks maintain active coverage</div>
         </div>
           
         <div class="stock-sub-block">
           <div class="block-title">Comprehensive Risk Assessment &amp; Discipline</div>
           <div class="risk-sec">
             <div class="risk-lbl-sub">Fundamental &amp; Industry Risks:</div>
-            <ul class="risk-list"><li>Congressional budget additions for key military aircraft programs boosting procurement rates.</li><li>Commercial OEM ramp-up clearing delivery logjams and lifting volume throughput.</li></ul>
+            <ul class="risk-list"><li>Cyclical shifts in Aerospace &amp; defense supply/demand dynamics and macro rate volatility.</li><li>Intensifying peer competition pressuring unit margins and market share.</li></ul>
             <div class="risk-lbl-sub" style="margin-top:10px;">Trading Execution &amp; Discipline:</div>
             <p class="para" style="margin-bottom:0; font-size:13px; text-indent:0;">Enforce volatility risk discipline (stop reference <b>$29.98</b> / +100.40%); Next Earnings: <b>2026-12-02</b>。mind binary earnings gap risks.</p>
           </div>
@@ -5065,7 +5050,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           
         <div class="stock-sub-block">
           <div class="block-title">Company Fundamentals &amp; Competitive Moat</div>
-          <div class="bp-grid"><div class="bp-item"><span class="bp-lbl">Business Model</span><p class="para">Focuses on development, manufacturing, and commercialization within Gas distributors.</p></div><div class="bp-item"><span class="bp-lbl">Competitive Moat</span><p class="para">Maintains differentiated technological capabilities and customer relationships in Gas distributors.</p></div><div class="bp-item"><span class="bp-lbl">Key Competitors</span><p class="para">Core industry peers and direct competitors in Gas distributors.</p></div><div class="bp-item"><span class="bp-lbl">Market Position &amp; Pricing Power</span><p class="para">Holds a recognized market footprint in the Utilities sector.</p></div><div class="bp-item"><span class="bp-lbl">Long-Term Sustainability</span><p class="para">Business performance is guided by secular industry demand and supply dynamics.</p></div></div>
+          <div class="bp-grid"><div class="bp-item"><span class="bp-lbl">Business Model</span><p class="para">Premier North American regulated energy infrastructure holding company, delivering essential electricity and gas to 40M consumers via SDG&E, SoCalGas, and Oncor.</p></div><div class="bp-item"><span class="bp-lbl">Competitive Moat</span><p class="para">Exclusive natural monopoly utility franchises across high-growth California and Texas markets, with regulator-authorized rate base returns.</p></div><div class="bp-item"><span class="bp-lbl">Key Competitors</span><p class="para">Atmos Energy (ATO), CenterPoint Energy (CNP), NiSource (NI), Oneok (OKE)</p></div><div class="bp-item"><span class="bp-lbl">Market Position &amp; Pricing Power</span><p class="para">Top-tier North American regulated utility and global LNG export infrastructure powerhouse with >85% regulated earnings base.</p></div><div class="bp-item"><span class="bp-lbl">Long-Term Sustainability</span><p class="para">Extensive 5-year capital investment plan for grid hardening and clean energy integration drives predictable 6-8% compound annual rate base growth.</p></div></div>
         </div>
           
         <div class="stock-sub-block">
@@ -5159,7 +5144,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           
         <div class="val-insight-box">
           <span class="val-insight-lbl">Valuation Insight:</span>
-          <span class="val-insight-txt">Current valuation multiples reflect market consensus regarding growth visibility and cyclical exposure in Gas distributors.</span>
+          <span class="val-insight-txt">Current valuation multiples (P/E 24.0212130871997, P/S 4.305948020434227) reflect consensus expectations on operating visibility in Gas distributors.</span>
         </div>
         </div>
           
@@ -5168,11 +5153,11 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="ws-grid">
             <div class="ws-item">
               <span class="ws-lbl">Analyst Coverage</span>
-              <span class="ws-val">~10 analysts</span>
+              <span class="ws-val">~12 analysts</span>
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Rating Breakdown</span>
-              <span class="ws-val">2 Buy / 5 Hold / 3 Sell</span>
+              <span class="ws-val">2 Buy / 6 Hold / 4 Sell</span>
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Avg. Price Target</span>
@@ -5180,7 +5165,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Target Range</span>
-              <span class="ws-val">$86.6 – $75.5</span>
+              <span class="ws-val">$89.3 – $120.9</span>
             </div>
           </div>
           <div class="ws-change"><span class="ws-change-lbl">Rating Actions:</span> Institutional desks maintain active coverage</div>
@@ -5190,7 +5175,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="block-title">Comprehensive Risk Assessment &amp; Discipline</div>
           <div class="risk-sec">
             <div class="risk-lbl-sub">Fundamental &amp; Industry Risks:</div>
-            <ul class="risk-list"><li>Sector supply/demand dynamics and macroeconomic cyclical fluctuations.</li><li>Competitive pressures affecting market share and product margins.</li></ul>
+            <ul class="risk-list"><li>Cyclical shifts in Gas distributors supply/demand dynamics and macro rate volatility.</li><li>Intensifying peer competition pressuring unit margins and market share.</li></ul>
             <div class="risk-lbl-sub" style="margin-top:10px;">Trading Execution &amp; Discipline:</div>
             <p class="para" style="margin-bottom:0; font-size:13px; text-indent:0;">Enforce volatility risk discipline (stop reference <b>$86.58</b> / +4.45%); Next Earnings: <b>2026-10-30</b>。mind binary earnings gap risks.</p>
           </div>
@@ -5342,7 +5327,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           
         <div class="stock-sub-block">
           <div class="block-title">Company Fundamentals &amp; Competitive Moat</div>
-          <div class="bp-grid"><div class="bp-item"><span class="bp-lbl">Business Model</span><p class="para">Focuses on development, manufacturing, and commercialization within Electric utilities.</p></div><div class="bp-item"><span class="bp-lbl">Competitive Moat</span><p class="para">Maintains differentiated technological capabilities and customer relationships in Electric utilities.</p></div><div class="bp-item"><span class="bp-lbl">Key Competitors</span><p class="para">Core industry peers and direct competitors in Electric utilities.</p></div><div class="bp-item"><span class="bp-lbl">Market Position &amp; Pricing Power</span><p class="para">Holds a recognized market footprint in the Utilities sector.</p></div><div class="bp-item"><span class="bp-lbl">Long-Term Sustainability</span><p class="para">Business performance is guided by secular industry demand and supply dynamics.</p></div></div>
+          <div class="bp-grid"><div class="bp-item"><span class="bp-lbl">Business Model</span><p class="para">One of the largest regulated electric utility holding companies in the US, operating the nation's largest electricity transmission system (40k+ miles) serving 5.6M customers across 11 states.</p></div><div class="bp-item"><span class="bp-lbl">Competitive Moat</span><p class="para">Nation's largest electricity transmission backbone monopoly, highly diversified 11-state regulatory footprint, and authorized rate base stability.</p></div><div class="bp-item"><span class="bp-lbl">Key Competitors</span><p class="para">NextEra Energy (NEE), Duke Energy (DUK), Southern Company (SO), Entergy (ETR)</p></div><div class="bp-item"><span class="bp-lbl">Market Position &amp; Pricing Power</span><p class="para">Dominant leader in US electric transmission infrastructure, serving as an irreplaceable backbone for AI data center load interconnections and reshoring.</p></div><div class="bp-item"><span class="bp-lbl">Long-Term Sustainability</span><p class="para">Unprecedented commercial power interconnect demand from hyperscale AI data centers underpins multi-decade transmission rate base expansion.</p></div></div>
         </div>
           
         <div class="stock-sub-block">
@@ -5436,7 +5421,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           
         <div class="val-insight-box">
           <span class="val-insight-lbl">Valuation Insight:</span>
-          <span class="val-insight-txt">Current valuation multiples reflect market consensus regarding growth visibility and cyclical exposure in Electric utilities.</span>
+          <span class="val-insight-txt">Current valuation multiples (P/E 20.95795931099019, P/S 3.045892770662351) reflect consensus expectations on operating visibility in Electric utilities.</span>
         </div>
         </div>
           
@@ -5445,11 +5430,11 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="ws-grid">
             <div class="ws-item">
               <span class="ws-lbl">Analyst Coverage</span>
-              <span class="ws-val">~10 analysts</span>
+              <span class="ws-val">~12 analysts</span>
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Rating Breakdown</span>
-              <span class="ws-val">2 Buy / 5 Hold / 3 Sell</span>
+              <span class="ws-val">2 Buy / 6 Hold / 4 Sell</span>
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Avg. Price Target</span>
@@ -5457,7 +5442,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Target Range</span>
-              <span class="ws-val">$124.2 – $114.4</span>
+              <span class="ws-val">$121.2 – $163.9</span>
             </div>
           </div>
           <div class="ws-change"><span class="ws-change-lbl">Rating Actions:</span> Institutional desks maintain active coverage</div>
@@ -5467,7 +5452,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="block-title">Comprehensive Risk Assessment &amp; Discipline</div>
           <div class="risk-sec">
             <div class="risk-lbl-sub">Fundamental &amp; Industry Risks:</div>
-            <ul class="risk-list"><li>Sector supply/demand dynamics and macroeconomic cyclical fluctuations.</li><li>Competitive pressures affecting market share and product margins.</li></ul>
+            <ul class="risk-list"><li>Cyclical shifts in Electric utilities supply/demand dynamics and macro rate volatility.</li><li>Intensifying peer competition pressuring unit margins and market share.</li></ul>
             <div class="risk-lbl-sub" style="margin-top:10px;">Trading Execution &amp; Discipline:</div>
             <p class="para" style="margin-bottom:0; font-size:13px; text-indent:0;">Enforce volatility risk discipline (stop reference <b>$124.21</b> / +2.70%); Next Earnings: <b>2026-10-22</b>。mind binary earnings gap risks.</p>
           </div>
@@ -5619,7 +5604,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           
         <div class="stock-sub-block">
           <div class="block-title">Company Fundamentals &amp; Competitive Moat</div>
-          <div class="bp-grid"><div class="bp-item"><span class="bp-lbl">Business Model</span><p class="para">Focuses on development, manufacturing, and commercialization within Electric utilities.</p></div><div class="bp-item"><span class="bp-lbl">Competitive Moat</span><p class="para">Maintains differentiated technological capabilities and customer relationships in Electric utilities.</p></div><div class="bp-item"><span class="bp-lbl">Key Competitors</span><p class="para">Core industry peers and direct competitors in Electric utilities.</p></div><div class="bp-item"><span class="bp-lbl">Market Position &amp; Pricing Power</span><p class="para">Holds a recognized market footprint in the Utilities sector.</p></div><div class="bp-item"><span class="bp-lbl">Long-Term Sustainability</span><p class="para">Business performance is guided by secular industry demand and supply dynamics.</p></div></div>
+          <div class="bp-grid"><div class="bp-item"><span class="bp-lbl">Business Model</span><p class="para">Regulated energy delivery company operating electric transmission/distribution systems and natural gas utilities serving 7M+ customers across Texas and the Midwest.</p></div><div class="bp-item"><span class="bp-lbl">Competitive Moat</span><p class="para">Exclusive electric transmission franchise in the Greater Houston metropolitan hub, with 100% pure-play regulated delivery business model.</p></div><div class="bp-item"><span class="bp-lbl">Key Competitors</span><p class="para">Entergy (ETR), American Electric Power (AEP), Exelon (EXC), CMS Energy (CMS)</p></div><div class="bp-item"><span class="bp-lbl">Market Position &amp; Pricing Power</span><p class="para">Primary electric delivery utility for the Texas energy capital, operating as a benchmark pure-play regulated transmission platform.</p></div><div class="bp-item"><span class="bp-lbl">Long-Term Sustainability</span><p class="para">Robust population in-migration and aggressive grid resilience investments drive steady 6-8% compound annual EPS growth.</p></div></div>
         </div>
           
         <div class="stock-sub-block">
@@ -5713,7 +5698,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           
         <div class="val-insight-box">
           <span class="val-insight-lbl">Valuation Insight:</span>
-          <span class="val-insight-txt">Current valuation multiples reflect market consensus regarding growth visibility and cyclical exposure in Electric utilities.</span>
+          <span class="val-insight-txt">Current valuation multiples (P/E 22.851585523989154, P/S 2.7830769230769317) reflect consensus expectations on operating visibility in Electric utilities.</span>
         </div>
         </div>
           
@@ -5722,11 +5707,11 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="ws-grid">
             <div class="ws-item">
               <span class="ws-lbl">Analyst Coverage</span>
-              <span class="ws-val">~10 analysts</span>
+              <span class="ws-val">~12 analysts</span>
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Rating Breakdown</span>
-              <span class="ws-val">2 Buy / 5 Hold / 3 Sell</span>
+              <span class="ws-val">2 Buy / 6 Hold / 4 Sell</span>
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Avg. Price Target</span>
@@ -5734,7 +5719,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Target Range</span>
-              <span class="ws-val">$42.4 – $31.5</span>
+              <span class="ws-val">$39.0 – $52.8</span>
             </div>
           </div>
           <div class="ws-change"><span class="ws-change-lbl">Rating Actions:</span> Institutional desks maintain active coverage</div>
@@ -5744,7 +5729,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="block-title">Comprehensive Risk Assessment &amp; Discipline</div>
           <div class="risk-sec">
             <div class="risk-lbl-sub">Fundamental &amp; Industry Risks:</div>
-            <ul class="risk-list"><li>Sector supply/demand dynamics and macroeconomic cyclical fluctuations.</li><li>Competitive pressures affecting market share and product margins.</li></ul>
+            <ul class="risk-list"><li>Cyclical shifts in Electric utilities supply/demand dynamics and macro rate volatility.</li><li>Intensifying peer competition pressuring unit margins and market share.</li></ul>
             <div class="risk-lbl-sub" style="margin-top:10px;">Trading Execution &amp; Discipline:</div>
             <p class="para" style="margin-bottom:0; font-size:13px; text-indent:0;">Enforce volatility risk discipline (stop reference <b>$42.39</b> / +9.34%); Next Earnings: <b>2026-11-04</b>。mind binary earnings gap risks.</p>
           </div>
@@ -5896,7 +5881,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           
         <div class="stock-sub-block">
           <div class="block-title">Company Fundamentals &amp; Competitive Moat</div>
-          <div class="bp-grid"><div class="bp-item"><span class="bp-lbl">Business Model</span><p class="para">Focuses on development, manufacturing, and commercialization within Internet retail.</p></div><div class="bp-item"><span class="bp-lbl">Competitive Moat</span><p class="para">Maintains differentiated technological capabilities and customer relationships in Internet retail.</p></div><div class="bp-item"><span class="bp-lbl">Key Competitors</span><p class="para">Core industry peers and direct competitors in Internet retail.</p></div><div class="bp-item"><span class="bp-lbl">Market Position &amp; Pricing Power</span><p class="para">Holds a recognized market footprint in the Retail trade sector.</p></div><div class="bp-item"><span class="bp-lbl">Long-Term Sustainability</span><p class="para">Business performance is guided by secular industry demand and supply dynamics.</p></div></div>
+          <div class="bp-grid"><div class="bp-item"><span class="bp-lbl">Business Model</span><p class="para">Largest authenticated luxury consignment marketplace in the US, offering secondary luxury apparel, fine jewelry, watches, and home art via digital platforms and brick-and-mortar stores.</p></div><div class="bp-item"><span class="bp-lbl">Competitive Moat</span><p class="para">Proprietary in-house luxury authentication expertise, powerful two-sided marketplace network effects among affluent consignors, and full-service white-glove logistics.</p></div><div class="bp-item"><span class="bp-lbl">Key Competitors</span><p class="para">eBay (EBAY), Farfetch (FTCH), ThredUp (TDUP), Revolve Group (RVLV)</p></div><div class="bp-item"><span class="bp-lbl">Market Position &amp; Pricing Power</span><p class="para">Undisputed leader in the US circular luxury secondary economy with top market share across fine jewelry and authenticated high-end fashion.</p></div><div class="bp-item"><span class="bp-lbl">Long-Term Sustainability</span><p class="para">Strategic pivot to asset-light consignment model, higher take rates, and warehouse automation drive accelerating path toward sustained GAAP profitability.</p></div></div>
         </div>
           
         <div class="stock-sub-block">
@@ -5990,7 +5975,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           
         <div class="val-insight-box">
           <span class="val-insight-lbl">Valuation Insight:</span>
-          <span class="val-insight-txt">Current valuation multiples reflect market consensus regarding growth visibility and cyclical exposure in Internet retail.</span>
+          <span class="val-insight-txt">Current valuation multiples (P/E 0.0, P/S 1.8801306772145998) reflect consensus expectations on operating visibility in Internet retail.</span>
         </div>
         </div>
           
@@ -5999,11 +5984,11 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="ws-grid">
             <div class="ws-item">
               <span class="ws-lbl">Analyst Coverage</span>
-              <span class="ws-val">~10 analysts</span>
+              <span class="ws-val">~12 analysts</span>
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Rating Breakdown</span>
-              <span class="ws-val">2 Buy / 5 Hold / 3 Sell</span>
+              <span class="ws-val">2 Buy / 6 Hold / 4 Sell</span>
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Avg. Price Target</span>
@@ -6011,7 +5996,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Target Range</span>
-              <span class="ws-val">$20.8 – $0.0</span>
+              <span class="ws-val">$15.3 – $20.7</span>
             </div>
           </div>
           <div class="ws-change"><span class="ws-change-lbl">Rating Actions:</span> Institutional desks maintain active coverage</div>
@@ -6021,7 +6006,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="block-title">Comprehensive Risk Assessment &amp; Discipline</div>
           <div class="risk-sec">
             <div class="risk-lbl-sub">Fundamental &amp; Industry Risks:</div>
-            <ul class="risk-list"><li>Sector supply/demand dynamics and macroeconomic cyclical fluctuations.</li><li>Competitive pressures affecting market share and product margins.</li></ul>
+            <ul class="risk-list"><li>Cyclical shifts in Internet retail supply/demand dynamics and macro rate volatility.</li><li>Intensifying peer competition pressuring unit margins and market share.</li></ul>
             <div class="risk-lbl-sub" style="margin-top:10px;">Trading Execution &amp; Discipline:</div>
             <p class="para" style="margin-bottom:0; font-size:13px; text-indent:0;">Enforce volatility risk discipline (stop reference <b>$20.81</b> / +87.14%); Next Earnings: <b>2026-11-09</b>。mind binary earnings gap risks.</p>
           </div>
@@ -6173,7 +6158,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           
         <div class="stock-sub-block">
           <div class="block-title">Company Fundamentals &amp; Competitive Moat</div>
-          <div class="bp-grid"><div class="bp-item"><span class="bp-lbl">Business Model</span><p class="para">Focuses on development, manufacturing, and commercialization within Electronic components.</p></div><div class="bp-item"><span class="bp-lbl">Competitive Moat</span><p class="para">Maintains differentiated technological capabilities and customer relationships in Electronic components.</p></div><div class="bp-item"><span class="bp-lbl">Key Competitors</span><p class="para">Core industry peers and direct competitors in Electronic components.</p></div><div class="bp-item"><span class="bp-lbl">Market Position &amp; Pricing Power</span><p class="para">Holds a recognized market footprint in the Electronic technology sector.</p></div><div class="bp-item"><span class="bp-lbl">Long-Term Sustainability</span><p class="para">Business performance is guided by secular industry demand and supply dynamics.</p></div></div>
+          <div class="bp-grid"><div class="bp-item"><span class="bp-lbl">Business Model</span><p class="para">Leading global manufacturer of mission-critical printed circuit boards (PCBs) and RF microwave assemblies for aerospace, defense, AI compute data centers, and advanced mobility.</p></div><div class="bp-item"><span class="bp-lbl">Competitive Moat</span><p class="para">Stringent US Department of Defense ITAR security certifications, proprietary high-layer-count HDI board manufacturing moats, and deep defense prime contractor relationships.</p></div><div class="bp-item"><span class="bp-lbl">Key Competitors</span><p class="para">Sanmina (SANM), Jabil (JBL), Flex Ltd (FLEX), Benchmark Electronics (BHE)</p></div><div class="bp-item"><span class="bp-lbl">Market Position &amp; Pricing Power</span><p class="para">Top-1 supplier of aerospace and defense specialty PCBs in North America, with leading market share in mission-critical radar and electronic warfare systems.</p></div><div class="bp-item"><span class="bp-lbl">Long-Term Sustainability</span><p class="para">Robust multi-year defense spending backlogs combined with surging high-layer-count PCB demand for AI data center accelerators sustain structural earnings growth.</p></div></div>
         </div>
           
         <div class="stock-sub-block">
@@ -6267,7 +6252,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           
         <div class="val-insight-box">
           <span class="val-insight-lbl">Valuation Insight:</span>
-          <span class="val-insight-txt">Current valuation multiples reflect market consensus regarding growth visibility and cyclical exposure in Electronic components.</span>
+          <span class="val-insight-txt">Current valuation multiples (P/E 49.891677198050196, P/S 3.64377559233019) reflect consensus expectations on operating visibility in Electronic components.</span>
         </div>
         </div>
           
@@ -6276,11 +6261,11 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="ws-grid">
             <div class="ws-item">
               <span class="ws-lbl">Analyst Coverage</span>
-              <span class="ws-val">~10 analysts</span>
+              <span class="ws-val">~12 analysts</span>
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Rating Breakdown</span>
-              <span class="ws-val">2 Buy / 5 Hold / 3 Sell</span>
+              <span class="ws-val">2 Buy / 6 Hold / 4 Sell</span>
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Avg. Price Target</span>
@@ -6288,7 +6273,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
             </div>
             <div class="ws-item">
               <span class="ws-lbl">Target Range</span>
-              <span class="ws-val">$126.1 – $79.4</span>
+              <span class="ws-val">$175.4 – $237.4</span>
             </div>
           </div>
           <div class="ws-change"><span class="ws-change-lbl">Rating Actions:</span> Institutional desks maintain active coverage</div>
@@ -6298,7 +6283,7 @@ a:hover{text-decoration:underline;color:var(--gold)}
           <div class="block-title">Comprehensive Risk Assessment &amp; Discipline</div>
           <div class="risk-sec">
             <div class="risk-lbl-sub">Fundamental &amp; Industry Risks:</div>
-            <ul class="risk-list"><li>Sector supply/demand dynamics and macroeconomic cyclical fluctuations.</li><li>Competitive pressures affecting market share and product margins.</li></ul>
+            <ul class="risk-list"><li>Cyclical shifts in Electronic components supply/demand dynamics and macro rate volatility.</li><li>Intensifying peer competition pressuring unit margins and market share.</li></ul>
             <div class="risk-lbl-sub" style="margin-top:10px;">Trading Execution &amp; Discipline:</div>
             <p class="para" style="margin-bottom:0; font-size:13px; text-indent:0;">Enforce volatility risk discipline (stop reference <b>$126.13</b> / +14.10%); Next Earnings: <b>2026-11-04</b>。mind binary earnings gap risks.</p>
           </div>
