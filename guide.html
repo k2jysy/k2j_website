@@ -91,6 +91,7 @@
   })();
 </script>
 <style>
+  * { box-sizing: border-box; }
   body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     background: #EEF0EB;
@@ -109,19 +110,30 @@
     padding: 32px 40px;
     border-radius: 4px;
     max-width: 480px;
+    width: 100%;
   }
-  h1 { font-size: 18px; margin: 0 0 16px; font-weight: 600; }
-  .links { display: flex; gap: 16px; justify-content: center; margin-top: 20px; }
+  h1 { font-size: 18px; margin: 0 0 16px; font-weight: 600; line-height: 1.4; }
+  .links { display: flex; gap: 14px; justify-content: center; margin-top: 20px; flex-wrap: wrap; }
   .links a {
     color: #14181F;
     text-decoration: none;
     font-size: 14px;
-    padding: 8px 16px;
+    font-weight: 500;
+    padding: 10px 18px;
     border: 1px solid #D7DAD2;
     border-radius: 2px;
     background: #EEF0EB;
+    transition: all .15s;
+    touch-action: manipulation;
   }
   .links a:hover { border-color: #B8823A; color: #B8823A; }
+  @media (max-width: 480px) {
+    body { padding: 16px; }
+    .card { padding: 24px 18px; }
+    h1 { font-size: 16px; margin-bottom: 12px; }
+    .links { flex-direction: column; gap: 10px; }
+    .links a { display: block; width: 100%; text-align: center; padding: 12px 14px; }
+  }
 </style>
 </head>
 <body>

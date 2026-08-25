@@ -122,18 +122,23 @@
     font-family:var(--sans);
     line-height:1.7;
     -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
   }
 
   a{color:var(--amber-dim); text-decoration:underline; text-underline-offset:3px;}
   a:hover{color:var(--amber);}
 
   .wrap{max-width:880px; margin:0 auto; padding:0 24px;}
+  @media (max-width:640px){
+    .wrap{padding:0 16px;}
+  }
 
   /* nav */
   .nav{
     position:sticky; top:0; z-index:20;
     background:rgba(238,240,235,0.92);
     backdrop-filter:blur(8px);
+    -webkit-backdrop-filter:blur(8px);
     border-bottom:1px solid var(--hairline);
   }
   .nav .wrap{display:flex; align-items:center; justify-content:space-between; height:64px;}
@@ -146,8 +151,18 @@
     font-family:var(--mono); font-size:13px; letter-spacing:0.03em;
     background:none; border:1px solid var(--hairline); border-radius:20px;
     padding:5px 14px; color:var(--ink); text-decoration:none; transition:all .15s;
+    touch-action:manipulation;
   }
   .lang-btn:hover{border-color:var(--amber); color:var(--amber);}
+
+  @media (max-width:640px){
+    .nav .wrap{height:56px;}
+    .brand{font-size:14px;}
+    .brand-sub{font-size:8.5px; letter-spacing:0.1em;}
+    .nav-right{gap:10px;}
+    .nav-back{font-size:12.5px;}
+    .lang-btn{padding:4px 10px; font-size:11.5px;}
+  }
 
   /* header banner */
   .header-banner{
@@ -161,11 +176,18 @@
     color:var(--amber); margin:0 0 14px;
   }
   h1{
-    font-family:var(--serif); font-weight:600; font-size:clamp(26px, 3.8vw, 40px);
+    font-family:var(--serif); font-weight:600; font-size:clamp(24px, 3.8vw, 40px);
     margin:0 0 16px; line-height:1.25;
   }
   .meta-info{
     font-family:var(--mono); font-size:12.5px; color:#9BA1A8;
+  }
+
+  @media (max-width:640px){
+    .header-banner{padding:40px 0 30px;}
+    .eyebrow{font-size:11px; margin:0 0 10px;}
+    h1{margin:0 0 12px;}
+    .meta-info{font-size:11.5px;}
   }
 
   /* content area */
@@ -218,8 +240,16 @@
   .footer-links{display:flex; gap:20px;}
 
   @media (max-width:640px){
-    .policy-section{padding:24px 20px;}
-    .footer-bottom{flex-direction:column; align-items:flex-start;}
+    .content-body{padding:30px 0 50px;}
+    .policy-section{padding:20px 16px; margin-bottom:20px;}
+    .policy-section h2{font-size:17.5px; margin:0 0 12px;}
+    .policy-section p, .policy-section li{font-size:14px; line-height:1.65;}
+    ul, ol{margin:0 0 14px 16px;}
+    .highlight-box{padding:14px 14px; margin:14px 0;}
+    .highlight-box p{font-size:13.5px;}
+    .policy-section a{word-break:break-all;}
+    .footer-bottom{flex-direction:column; align-items:flex-start; gap:12px;}
+    .footer-links{gap:14px; flex-wrap:wrap;}
   }
 </style>
 </head>

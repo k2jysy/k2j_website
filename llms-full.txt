@@ -61,6 +61,7 @@ The entire platform is designed, engineered, and operated independently by Justi
 ## 4. Institutional 8-Pillar Data Architecture (100+ Granular Metrics)
 
 Every post-close trading session, K2J filters the broader US market for optimal liquidity and tradability, ingesting and computing across 8 comprehensive data pillars for over 1,500 liquid US equities:
+
 1. **Asset Metadata, Share Structure & Wall Street Consensus** (20+ metrics): CUSIP/ISIN identifiers, Free Float %, institutional ownership, upcoming earnings proximity alerts, analyst ratings, and 1-year target price upside dispersion.
 2. **Multi-Period Price, Volume & Microstructure** (50+ metrics): Candlestick intent (`BULLISH_DRIVE` vs `FADING_GAP_DUMP`), VWAP deviation %, relative volume (10D/30D/60D/90D averages), turnover, multi-period highs/lows (ATH, 52W, 6M, 3M), and extended-hours pre/post-market quotes.
 3. **Full-Period Technical Indicators & Pivot Systems** (50+ metrics): Multi-timeframe moving averages (SMA/EMA/Hull), Ichimoku cloud, momentum oscillators (RSI, Stochastic, ADX, ATR, CCI), institutional money channels (VWAP, Bollinger Bands, CMF, MFI), and 5 classic pivot point systems (Camarilla, Classic, DeMark, Fibonacci, Woodie).
@@ -76,14 +77,25 @@ Every post-close trading session, K2J filters the broader US market for optimal 
 
 ---
 
-## 5. Daily 20 Focus Equities Selection & Sector Divergence Forensics
+## 5. NLP-Powered Causal News Intelligence Engine (70+ Wire Feeds)
 
-### 5.1 Three-Layer Screening Funnel
+In addition to the multi-factor quantitative data pillars, K2J runs an NLP-powered news intelligence engine providing continuous market surveillance:
+- **Real-Time Surveillance Across 70+ Sources**: Ingests and parses wire services, financial media, and regulatory filings 24/7.
+- **Causal Event–Ticker Relevance Scoring**: Employs deep NLP models to score the true causal impact between breaking news and targeted liquid equities.
+- **Bullish/Bearish Sentiment Polarity Decomposition**: Dissects sentiment magnitude, directional conviction, and institutional narrative weight.
+- **Event-Driven Tail-Risk Signal Extraction**: Filters out background noise and isolates asymmetric tail-risk catalysts (earnings surprises, regulatory actions, dilutive financing, management turnover).
+- **Alpha Overlay**: Synthesizes unstructured news signals into a forward-looking catalytic layer that resonates with price/volume and factor data.
+
+---
+
+## 6. Daily 20 Focus Equities Selection & Sector Divergence Forensics
+
+### 6.1 Three-Layer Screening Funnel
 - **Layer 1 (2 Extreme Movers)**: Single largest daily gainer and single largest decliner automatically qualify, ensuring market extremes and black-swan anomalies are tracked.
 - **Layer 2 (18 5-D Resonance Leaders)**: Sorted by 5-D factor resonance tier (`5/5★` → `4/5` → `3/5`), composite attribution score, and an Industry Alignment filter (≥50%) to discard isolated noise.
 - **Layer 3 (Diversity Cap)**: Maximum 3 tickers per thematic cluster and 3 tickers per sub-industry to prevent sector clustering and preserve macro market breadth.
 
-### 5.2 5-D Factor Attribution Formula
+### 6.2 5-D Factor Attribution Formula
 $$\text{Narrative Score} = \Phi\left(0.20 D_1 + 0.25 D_2 + 0.25 D_3 + 0.15 D_4 + 0.15 D_5\right) \times 100$$
 - **D1 (20%)**: Index Alignment & Systematic Beta co-movement.
 - **D2 (25%)**: Sector Clustering, residual Alpha, and sub-industry win rate.
@@ -91,7 +103,7 @@ $$\text{Narrative Score} = \Phi\left(0.20 D_1 + 0.25 D_2 + 0.25 D_3 + 0.15 D_4 +
 - **D4 (15%)**: Price Action, ATH/52W breakout badges, and moving average momentum.
 - **D5 (15%)**: Fundamentals, cash flow multiples, and forensic accounting red lines.
 
-### 5.3 Sector Divergence (⚠️) Forensic Alerts
+### 6.3 Sector Divergence (⚠️) Forensic Alerts
 When a stock collapses while its sub-industry surges (e.g. gold mining up +2.81% across 80% of peers, but SA drops -9.35%), the system tags it as **Sector Divergence**:
 - D2 Sector dimension receives a punitive `-2.0` score.
 - Composite Z-score is reduced by `-0.50`, classifying the move as an *Isolated Divergence Drop* rather than a resonant short.
@@ -99,7 +111,7 @@ When a stock collapses while its sub-industry surges (e.g. gold mining up +2.81%
 
 ---
 
-## 6. Top-Down Reading Blueprint (Macro → Sector → Equities)
+## 7. Top-Down Reading Blueprint (Macro → Sector → Equities)
 
 Readers are guided through a disciplined 4-step 5-minute workflow:
 1. **Step 1 (1 Min) · Macro Regime**: Check Section 01 for macro climate (Risk-On vs Risk-Off) and full-market advance/decline breadth to calibrate overall portfolio risk budget.
@@ -109,7 +121,7 @@ Readers are guided through a disciplined 4-step 5-minute workflow:
 
 ---
 
-## 7. Frequently Asked Questions (FAQ)
+## 8. Frequently Asked Questions (FAQ)
 
 ### Q1: What makes K2J AI Quantitative Lab unique?
 A1: Unlike purely discretionary commentary or black-box academic models, K2J combines rigorous multi-factor statistical mechanics with production-grade autonomous agentic AI. It is built to institutional rigor by a veteran practitioner who actively trades the signals daily.
@@ -125,7 +137,7 @@ A4: Justin is open to strategic advisory, technical consulting, and collaborativ
 
 ---
 
-## 8. Contact & Key Resources
+## 9. Contact & Key Resources
 
 - **Website**: https://k2j.net/
 - **Methodology Guide**: https://k2j.net/guide.html

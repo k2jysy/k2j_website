@@ -99,7 +99,9 @@
         "Piotroski F-Score",
         "Altman Z-Score",
         "Sloan Ratio",
-        "Sector Divergence Forensics"
+        "Sector Divergence Forensics",
+        "Financial News Sentiment Surveillance",
+        "Event-Driven Tail Risk Extraction"
       ],
       "contactPoint": {
         "@type": "ContactPoint",
@@ -244,6 +246,7 @@
     font-family:var(--sans);
     line-height:1.55;
     -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
   }
 
   a{color:inherit;}
@@ -262,12 +265,16 @@
   html.lang-zh h1, html.lang-zh h2{font-family:'Noto Serif SC', var(--serif);}
 
   .wrap{max-width:1040px; margin:0 auto; padding:0 28px;}
+  @media (max-width:640px){
+    .wrap{padding:0 16px;}
+  }
 
   /* nav */
   .nav{
     position:sticky; top:0; z-index:20;
-    background:rgba(238,240,235,0.88);
-    backdrop-filter:blur(6px);
+    background:rgba(238,240,235,0.92);
+    backdrop-filter:blur(8px);
+    -webkit-backdrop-filter:blur(8px);
     border-bottom:1px solid var(--hairline);
   }
   .nav .wrap{display:flex; align-items:center; justify-content:space-between; height:64px;}
@@ -280,15 +287,24 @@
     font-family:var(--mono); font-size:13px; letter-spacing:0.03em;
     background:none; border:1px solid var(--hairline); border-radius:20px;
     padding:6px 14px; cursor:pointer; color:var(--ink);
+    -webkit-tap-highlight-color:transparent;
+    touch-action:manipulation;
   }
   .lang-toggle span{opacity:0.4; transition:opacity .15s, font-weight .15s;}
   html.lang-en .lang-toggle .lt-en{opacity:1; font-weight:600;}
   html.lang-zh .lang-toggle .lt-zh{opacity:1; font-weight:600;}
 
+  @media (max-width:640px){
+    .nav .wrap{height:56px;}
+    .brand{font-size:14px;}
+    .brand-sub{font-size:8.5px; letter-spacing:0.1em;}
+    .lang-toggle{padding:4px 11px; font-size:12px;}
+  }
+
   /* hero */
   .hero{
     background:var(--hero-bg); color:var(--hero-text);
-    padding:88px 0 72px;
+    padding:84px 0 68px;
     position:relative;
     overflow:hidden;
   }
@@ -312,25 +328,19 @@
   .u-nowrap{white-space:nowrap;}
   .hero-phrase{display:inline-block;}
   .hero h1{
-    font-size:clamp(28px, 3.9vw, 47px);
-    line-height:1.24;
+    font-size:clamp(26px, 3.9vw, 47px);
+    line-height:1.26;
     max-width:940px;
     margin-bottom:22px;
     text-wrap:pretty;
     letter-spacing:-0.01em;
   }
   html.lang-zh .hero h1{
-    font-size:clamp(26px, 3.4vw, 42px);
+    font-size:clamp(24px, 3.4vw, 42px);
     max-width:880px;
     font-weight:600;
     line-height:1.4;
     letter-spacing:0.02em;
-  }
-  html.lang-zh .hero .subhead{
-    font-size:15.5px;
-    line-height:1.78;
-    max-width:820px;
-    letter-spacing:0.01em;
   }
   .hero .subhead{
     font-size:16px;
@@ -342,10 +352,24 @@
     hyphens:none;
     -webkit-hyphens:none;
   }
+  html.lang-zh .hero .subhead{
+    font-size:15.5px;
+    line-height:1.78;
+    max-width:820px;
+    letter-spacing:0.01em;
+  }
+
+  @media (max-width:720px){
+    .hero{padding:44px 0 36px;}
+    .eyebrow{margin:0 0 14px; font-size:11px;}
+    .hero h1{margin-bottom:16px;}
+    .hero .subhead{font-size:14.5px; line-height:1.65; margin-bottom:26px;}
+    html.lang-zh .hero .subhead{font-size:14.5px; line-height:1.7;}
+  }
 
   .signal-strip{
     display:grid;
-    grid-template-columns:repeat(4, 1fr);
+    grid-template-columns:repeat(5, 1fr);
     gap:0;
     border-top:1px solid var(--hero-line);
     border-bottom:1px solid var(--hero-line);
@@ -353,7 +377,7 @@
     margin-bottom:16px;
   }
   .signal{
-    padding:22px 24px 22px 20px;
+    padding:20px 18px 20px 16px;
     border-right:1px solid var(--hero-line);
     display:flex;
     flex-direction:column;
@@ -365,38 +389,40 @@
   }
   .signal:last-child{border-right:none;}
   .signal-label{
-    display:block; font-family:var(--mono); font-size:11px; letter-spacing:0.14em;
+    display:block; font-family:var(--mono); font-size:11px; letter-spacing:0.12em;
     color:var(--amber); margin-bottom:8px; font-weight:600; text-transform:uppercase;
   }
   .signal-value.trust-num{
-    display:block; font-family:var(--mono); font-size:26px; font-weight:700; color:#FFFFFF;
+    display:block; font-family:var(--mono); font-size:24px; font-weight:700; color:#FFFFFF;
     margin-bottom:6px; letter-spacing:-0.02em; line-height:1.15;
   }
   .trust-title{
-    display:block; font-size:14px; font-weight:600; color:#E6EDF3;
+    display:block; font-size:13.5px; font-weight:600; color:#E6EDF3;
     margin-bottom:6px; line-height:1.35;
   }
   .signal-desc{
-    display:block; font-size:12px; color:#8B949E; line-height:1.5; font-weight:400;
+    display:block; font-size:11.5px; color:#8B949E; line-height:1.5; font-weight:400;
   }
-  html.lang-zh .signal-desc{font-size:12px; color:#8B949E;}
+  html.lang-zh .signal-desc{font-size:11.5px; color:#8B949E;}
   .signal-caption{
     font-family:var(--mono); font-size:11.5px; color:#767C73; margin:0 0 36px; line-height:1.6;
   }
 
-  @media (max-width:900px){
+  @media (max-width:1020px){
     .signal-strip{grid-template-columns:repeat(2, 1fr);}
-    .signal:nth-child(2){border-right:none;}
-    .signal:nth-child(1), .signal:nth-child(2){border-bottom:1px solid var(--hero-line); padding-bottom:18px;}
-    .signal:nth-child(3), .signal:nth-child(4){padding-top:18px;}
+    .signal{border-right:1px solid var(--hero-line); border-bottom:1px solid var(--hero-line); padding:18px 16px;}
+    .signal:nth-child(2n){border-right:none;}
+    .signal:nth-child(5){grid-column:span 2; border-right:none; border-bottom:none;}
   }
   @media (max-width:540px){
     .signal-strip{grid-template-columns:1fr;}
-    .signal{border-right:none; border-bottom:1px solid var(--hero-line); padding:16px 12px;}
-    .signal:last-child{border-bottom:none;}
+    .signal{border-right:none; border-bottom:1px solid var(--hero-line); padding:14px 12px;}
+    .signal:nth-child(5){grid-column:auto; border-bottom:none;}
+    .signal-value.trust-num{font-size:22px;}
+    .signal-caption{margin:0 0 26px; font-size:11px;}
   }
 
-  .cta-row{display:flex; gap:16px; flex-wrap:wrap; align-items:center;}
+  .cta-row{display:flex; gap:14px; flex-wrap:wrap; align-items:center;}
   .cta-primary{
     display:inline-flex; align-items:center; gap:8px;
     background:var(--amber); color:#181207;
@@ -404,6 +430,7 @@
     padding:13px 22px; border-radius:2px;
     text-decoration:none;
     transition:background .15s;
+    touch-action:manipulation;
   }
   .cta-primary:hover{background:#CB934A;}
   .cta-secondary{
@@ -414,6 +441,7 @@
     border:1px solid rgba(233,234,228,0.28);
     text-decoration:none;
     transition:all .15s;
+    touch-action:manipulation;
   }
   .cta-secondary:hover{
     background:rgba(184,130,58,0.12);
@@ -421,15 +449,28 @@
     color:var(--amber);
   }
 
+  @media (max-width:540px){
+    .cta-row{flex-direction:column; align-items:stretch; gap:10px;}
+    .cta-primary, .cta-secondary{
+      justify-content:center; text-align:center; width:100%; padding:12px 16px; font-size:14.5px;
+    }
+  }
+
   /* sections */
-  section{padding:76px 0;}
-  .section-head{margin-bottom:40px; max-width:780px;}
+  section{padding:72px 0;}
+  .section-head{margin-bottom:38px; max-width:780px;}
   .section-eyebrow{
     font-family:var(--mono); font-size:11.5px; letter-spacing:0.14em; text-transform:uppercase;
     color:var(--amber-dim); margin-bottom:12px; display:block;
   }
-  h2{font-size:clamp(24px,2.6vw,32px); margin-bottom:14px;}
+  h2{font-size:clamp(22px,2.6vw,32px); margin-bottom:14px; line-height:1.35;}
   .section-lede{color:var(--steel); font-size:15.5px;}
+
+  @media (max-width:720px){
+    section{padding:44px 0;}
+    .section-head{margin-bottom:26px;}
+    .section-lede{font-size:14.5px;}
+  }
 
   .research{background:var(--paper-raise); border-top:1px solid var(--hairline); border-bottom:1px solid var(--hairline);}
   .method-grid{
@@ -442,6 +483,11 @@
   .method-item h3{font-family:var(--sans); font-size:15px; font-weight:600; margin-bottom:8px;}
   html.lang-zh .method-item h3{font-family:'Noto Sans SC', var(--sans);}
   .method-item p{font-size:14px; color:var(--steel); margin:0;}
+
+  @media (max-width:540px){
+    .method-grid{grid-template-columns:1fr; margin-bottom:20px;}
+    .method-item{padding:18px 16px;}
+  }
 
   /* research trust & logic boxes */
   .research-trust-box{
@@ -475,7 +521,9 @@
     .trust-mini-grid{grid-template-columns:repeat(3, 1fr);}
   }
   @media (max-width:480px){
-    .trust-mini-grid{grid-template-columns:repeat(2, 1fr);}
+    .trust-mini-grid{grid-template-columns:repeat(2, 1fr); gap:8px;}
+    .trust-mini-card{padding:10px 8px;}
+    .trust-mini-num{font-size:16px;}
   }
 
   .research-logic-box{
@@ -483,6 +531,7 @@
     border:1px solid var(--hairline);
     border-radius:2px;
     padding:28px 32px;
+    margin-bottom:24px;
   }
   .logic-steps-strip{
     display:grid;
@@ -503,7 +552,24 @@
   .logic-step-card h4{font-size:14.5px; font-weight:600; margin:0 0 6px;}
   .logic-step-card p{font-size:13px; color:var(--steel); margin:0; line-height:1.5;}
   @media (max-width:760px){
-    .logic-steps-strip{grid-template-columns:1fr;}
+    .logic-steps-strip{grid-template-columns:1fr; gap:12px;}
+  }
+
+  .news-mini-grid{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:12px;
+    margin-top:18px;
+  }
+  @media (max-width:860px){
+    .news-mini-grid{grid-template-columns:repeat(2, 1fr);}
+  }
+  @media (max-width:480px){
+    .news-mini-grid{grid-template-columns:repeat(2, 1fr); gap:8px;}
+  }
+
+  @media (max-width:640px){
+    .research-trust-box, .research-logic-box{padding:20px 16px;}
   }
 
   .research-cta-row{
@@ -516,8 +582,14 @@
     background:var(--amber-bg); border:1px solid var(--amber-dim);
     color:var(--amber-dim); text-decoration:none; font-weight:600;
     transition:all .15s;
+    touch-action:manipulation;
   }
   .guide-pill-btn:hover{background:var(--amber); color:#181207; border-color:var(--amber);}
+
+  @media (max-width:540px){
+    .research-cta-row{flex-direction:column; align-items:stretch;}
+    .guide-pill-btn{justify-content:center; width:100%; text-align:center; padding:10px 16px;}
+  }
 
   .about{}
   .about-grid{display:grid; grid-template-columns:1.4fr 1fr; gap:56px; align-items:start;}
@@ -527,17 +599,35 @@
   .fact-label{display:block; font-family:var(--mono); font-size:10.5px; letter-spacing:0.1em; color:var(--amber-dim); margin-bottom:4px;}
   .fact-value{font-size:14.5px;}
 
+  @media (max-width:720px){
+    .about-grid{grid-template-columns:1fr; gap:28px;}
+    .about p{font-size:15px;}
+    .fact{padding:12px 0;}
+  }
+
   .archive{background:var(--ink); color:var(--hero-text);}
   .archive .section-lede{color:#9BA1A8;}
-  .archive-filters{display:flex; gap:8px; flex-wrap:wrap; margin:28px 0 20px; align-items:center;}
+  .archive-filters{
+    display:flex; gap:8px; flex-wrap:wrap; margin:24px 0 18px; align-items:center;
+  }
   .filter-pill{
     font-family:var(--mono); font-size:12px; letter-spacing:0.04em;
     padding:5px 14px; border-radius:16px;
     background:rgba(233,234,228,0.06); border:1px solid rgba(233,234,228,0.18);
     color:#C7CAC1; cursor:pointer; transition:all .15s;
+    touch-action:manipulation;
   }
   .filter-pill:hover{background:rgba(233,234,228,0.12); color:#fff; border-color:var(--amber);}
   .filter-pill.active{background:var(--amber); color:#181207; font-weight:600; border-color:var(--amber);}
+
+  @media (max-width:640px){
+    .archive-filters{
+      overflow-x:auto; flex-wrap:nowrap; padding-bottom:6px; -webkit-overflow-scrolling:touch;
+      scrollbar-width:none;
+    }
+    .archive-filters::-webkit-scrollbar{display:none;}
+    .filter-pill{flex-shrink:0;}
+  }
 
   .archive-latest-card{
     display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;
@@ -566,9 +656,10 @@
   .report-pill-link{
     display:inline-flex; align-items:center; justify-content:center;
     font-family:var(--mono); font-size:12px; letter-spacing:0.04em;
-    padding:4px 12px; border-radius:2px;
+    padding:6px 14px; border-radius:2px;
     border:1px solid rgba(233,234,228,0.22); color:var(--hero-text); text-decoration:none;
     transition:all .15s;
+    touch-action:manipulation;
   }
   .report-pill-link:hover{border-color:var(--amber); color:var(--amber); background:rgba(184,130,58,0.08);}
   .report-pill-link.primary{background:var(--amber); color:#181207; border-color:var(--amber); font-weight:600;}
@@ -581,6 +672,7 @@
     padding:10px 24px; border:1px dashed rgba(233,234,228,0.28);
     color:#C7CAC1; background:none; cursor:pointer; border-radius:2px;
     transition:all .15s;
+    touch-action:manipulation;
   }
   .archive-more-btn:hover{border-color:var(--amber); color:var(--amber); background:rgba(233,234,228,0.04);}
 
@@ -621,6 +713,7 @@
     align-items:center;
     user-select:none;
     color:var(--ink);
+    touch-action:manipulation;
   }
   html.lang-zh .faq-question{
     font-family:'Noto Sans SC', var(--sans);
@@ -746,16 +839,19 @@
 
   @media (max-width:720px){
     .nav-links{display:none;}
-    .about-grid{grid-template-columns:1fr;}
-    .signal{flex:1 1 45%;}
     .report-row{flex-direction:column; align-items:flex-start; gap:10px; padding:14px 4px;}
-    .report-meta{flex-direction:column; gap:4px;}
-    .report-links{margin-left:0; width:100%; justify-content:flex-start;}
-    .archive-latest-card{padding:18px;}
-    .faq-question{padding:16px 18px; font-size:15px;}
-    .faq-answer{padding:0 18px 18px; font-size:14px;}
-    .contact-profile-grid{grid-template-columns:1fr; gap:24px;}
-    .contact-avatar-column{align-items:flex-start; text-align:left;}
+    .report-meta{flex-direction:column; gap:4px; width:100%;}
+    .report-row-title{white-space:normal; line-height:1.4;}
+    .report-links{margin-left:0; width:100%; justify-content:flex-start; flex-wrap:wrap;}
+    .archive-latest-card{padding:18px 16px; flex-direction:column; align-items:flex-start;}
+    .archive-actions{width:100%; justify-content:flex-start;}
+    .faq-question{padding:16px 16px; font-size:15px;}
+    .faq-answer{padding:0 16px 16px; font-size:14px;}
+    .contact-profile-grid{grid-template-columns:1fr; gap:20px;}
+    .contact-avatar-column{align-items:center; text-align:center;}
+    .contact-row{gap:18px; flex-direction:column; margin-top:20px;}
+    .contact-value{word-break:break-all;}
+    .footer-bottom{flex-direction:column; align-items:flex-start; gap:12px;}
   }
 </style>
 </head>
@@ -797,7 +893,10 @@
 
     <div class="signal-strip trust-strip" aria-label="Core Quantitative Research Standards">
       <div class="signal trust-card">
-        <span class="signal-label">01 · COVERAGE</span>
+        <span class="signal-label">
+          <span data-lang="en">01 · COVERAGE</span>
+          <span data-lang="zh">01 · 标的覆盖</span>
+        </span>
         <span class="signal-value trust-num">1,500+</span>
         <span class="trust-title">
           <span data-lang="en">Liquid Equities Universe</span>
@@ -809,7 +908,10 @@
         </span>
       </div>
       <div class="signal trust-card">
-        <span class="signal-label">02 · DEPTH</span>
+        <span class="signal-label">
+          <span data-lang="en">02 · DEPTH</span>
+          <span data-lang="zh">02 · 数据深度</span>
+        </span>
         <span class="signal-value trust-num">100+</span>
         <span class="trust-title">
           <span data-lang="en">Comprehensive Metric Data</span>
@@ -821,7 +923,25 @@
         </span>
       </div>
       <div class="signal trust-card">
-        <span class="signal-label">03 · CADENCE</span>
+        <span class="signal-label">
+          <span data-lang="en">03 · INTELLIGENCE</span>
+          <span data-lang="zh">03 · 舆情情报</span>
+        </span>
+        <span class="signal-value trust-num">70+</span>
+        <span class="trust-title">
+          <span data-lang="en">Real-Time News Intelligence</span>
+          <span data-lang="zh">实时舆情情报引擎</span>
+        </span>
+        <span class="signal-desc">
+          <span data-lang="en">70+ financial wire feeds, event-ticker causality &amp; risk weighting</span>
+          <span data-lang="zh">70+主流财经信源监控，事件因果与多空风险权重解构</span>
+        </span>
+      </div>
+      <div class="signal trust-card">
+        <span class="signal-label">
+          <span data-lang="en">04 · CADENCE</span>
+          <span data-lang="zh">04 · 发布时效</span>
+        </span>
         <span class="signal-value trust-num">
           <span data-lang="en">DAILY</span>
           <span data-lang="zh">每日</span>
@@ -836,7 +956,10 @@
         </span>
       </div>
       <div class="signal trust-card">
-        <span class="signal-label">04 · RIGOR</span>
+        <span class="signal-label">
+          <span data-lang="en">05 · RIGOR</span>
+          <span data-lang="zh">05 · 机构标准</span>
+        </span>
         <span class="signal-value trust-num">
           <span data-lang="en">INSTITUTIONAL</span>
           <span data-lang="zh">机构级</span>
@@ -1015,6 +1138,45 @@
           </span>
           <h4><span data-lang="en">20 Focus Equities</span><span data-lang="zh">20 股深度归因与破案</span></h4>
           <p><span data-lang="en">5-D attribution, Causal News Intelligence, and Divergence alerts.</span><span data-lang="zh">5 维共振锁定 20 支代表，深度推理异动因果并预警逆势背离闪崩。</span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Feature News Intelligence Banner C -->
+    <div class="research-trust-box research-news-box">
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:12px;">
+        <div>
+          <span class="section-eyebrow" style="margin-bottom:6px;">
+            <span data-lang="en">NEWS INTELLIGENCE ENGINE</span>
+            <span data-lang="zh">实时舆情情报引擎</span>
+          </span>
+          <h3 style="font-size:18px; margin:0;">
+            <span data-lang="en">Real-Time Sentiment Surveillance Across 70+ Financial Wire Sources</span>
+            <span data-lang="zh">横跨 70+ 主流财经信源的实时舆情监控与事件驱动因子分析</span>
+          </h3>
+        </div>
+      </div>
+      <p style="font-size:13.5px; color:var(--steel); margin:10px 0 0; line-height:1.6;">
+        <span data-lang="en">Beyond pure quantitative factors, K2J deploys an NLP-powered Causal News Intelligence engine that continuously monitors and ingests 70+ authoritative financial wire services, Tier-1 business media, and regulatory filing feeds. For each liquid equity, the engine computes multi-dimensional event–ticker relevance scoring, bullish/bearish sentiment polarity decomposition, and event-driven tail-risk signal extraction — transforming unstructured news flow into a structured alpha overlay that enriches statistical factor models with forward-looking catalytic event awareness.</span>
+        <span data-lang="zh">在量化因子体系之上，K2J 独创性地部署了一套 NLP 驱动的因果新闻情报引擎：对 70+ 家权威财经通讯社、主流商业媒体及监管公告信源进行 7×24 小时全天候实时抓取与深度解析。针对每一只个股标的，引擎执行多维度「事件–标的因果关联度评分」「多空情绪极性解构」以及「事件驱动尾部风险信号提取」——将非结构化新闻流转化为高信息密度的结构化 Alpha 信号层，为统计因子模型注入前瞻性催化事件感知，实现“量价因子 + 舆情因子”的双引擎共振研判。</span>
+      </p>
+
+      <div class="news-mini-grid">
+        <div class="trust-mini-card">
+          <span class="trust-mini-num">70+</span>
+          <span class="trust-mini-label"><span data-lang="en">Wire Sources Monitored</span><span data-lang="zh">主流财经信源监控</span></span>
+        </div>
+        <div class="trust-mini-card">
+          <span class="trust-mini-num">24/7</span>
+          <span class="trust-mini-label"><span data-lang="en">Real-Time Surveillance</span><span data-lang="zh">全天候实时抓取解析</span></span>
+        </div>
+        <div class="trust-mini-card">
+          <span class="trust-mini-num">3-Layer</span>
+          <span class="trust-mini-label"><span data-lang="en">NLP Scoring Engine</span><span data-lang="zh">三维NLP评分体系</span></span>
+        </div>
+        <div class="trust-mini-card">
+          <span class="trust-mini-num">&alpha;</span>
+          <span class="trust-mini-label"><span data-lang="en">Alpha Signal Overlay</span><span data-lang="zh">舆情Alpha信号叠加</span></span>
         </div>
       </div>
     </div>

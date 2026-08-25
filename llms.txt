@@ -8,6 +8,7 @@
 - [Market Breadth Analysis](https://k2j.net/#research): Full-market cross-sectional participation metric measuring internal equity breadth beyond headline indices.
 - [5-D Orthogonal Factor Attribution](https://k2j.net/#research): Five-dimensional cross-sectional statistical attribution using robust WLS and PCA to isolate true alpha drivers from noise.
 - [Latent Theme Clustering](https://k2j.net/#research): High-dimensional mover clustering using HDBSCAN and dense semantic embeddings to identify emergent market narrative clusters.
+- [Real-Time Financial News Intelligence](https://k2j.net/#research): 24/7 NLP surveillance across 70+ financial wire sources performing causal event-ticker relevance scoring, polarity decomposition, and tail-risk extraction.
 - [Portfolio & Tail-Risk Optimization](https://k2j.net/#research): Dynamic portfolio stance modeling constrained by CVaR (Conditional Value-at-Risk) and Bayesian Risk Parity.
 
 ## AI Systems Architecture
