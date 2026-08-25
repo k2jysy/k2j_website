@@ -12,6 +12,7 @@
 <meta name="author" content="Justin">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="theme-color" content="#0F1319">
+<meta name="format-detection" content="telephone=no">
 
 <!-- Canonical and Alternates -->
 <link rel="canonical" href="https://k2j.net/guide.zh.html">
@@ -24,7 +25,14 @@
 <link rel="alternate" type="text/plain" href="https://k2j.net/llms.txt" title="LLM Knowledge Summary">
 <link rel="alternate" type="text/plain" href="https://k2j.net/llms-full.txt" title="Full LLM Knowledge Base">
 
-<!-- Open Graph / Twitter Card -->
+<!-- Academic & GEO Citation Metadata -->
+<meta name="citation_title" content="K2J 美股量化多因子投研方法论与研报导读指南">
+<meta name="citation_author" content="Justin">
+<meta name="citation_publication_date" content="2026/08/20">
+<meta name="citation_online_date" content="2026/08/25">
+<meta name="ai-content-declaration" content="Deterministic multi-factor quantitative methodology and reading architecture">
+
+<!-- Open Graph / Facebook / LinkedIn -->
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="K2J AI Quantitative Lab">
 <meta property="og:url" content="https://k2j.net/guide.zh.html">
@@ -37,6 +45,15 @@
 <meta property="og:image:alt" content="K2J AI Quantitative Lab — 量化投研方法论与研报导读指南">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:locale:alternate" content="en_US">
+<meta property="article:published_time" content="2026-08-20T08:00:00+12:00">
+<meta property="article:modified_time" content="2026-08-25T22:00:00+12:00">
+<meta property="article:author" content="Justin">
+<meta property="article:section" content="Quantitative Finance">
+<meta property="article:tag" content="Multi-Factor Models">
+<meta property="article:tag" content="US Equities">
+<meta property="article:tag" content="Agentic AI">
+
+<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://k2j.net/guide.zh.html">
 <meta name="twitter:title" content="量化投研方法论与研报导读指南 | K2J AI Quantitative Lab">
@@ -62,6 +79,11 @@
       "description": "K2J 美股每日多因子量化研报导读指南：全景拆解 1,500+ 只高流动性核心标的的 8 大维度 100+ 项底层数据体系、「宏观→板块→个股」自上而下分析逻辑、20 支焦点股票 5 维共振遴选机制与「板块逆势背离」量化破案。",
       "inLanguage": "zh-CN",
       "mainEntityOfPage": "https://k2j.net/guide.zh.html",
+      "datePublished": "2026-08-20T08:00:00+12:00",
+      "dateModified": "2026-08-25T22:00:00+12:00",
+      "image": "https://k2j.net/og-image.png",
+      "proficiencyLevel": "Expert / Institutional",
+      "dependencies": "LangGraph, Python 3.13, Agentic RAG, Pinecone, GBDT, HDBSCAN",
       "author": {
         "@type": "Person",
         "@id": "https://k2j.net/#founder",
@@ -77,13 +99,128 @@
         "logo": "https://k2j.net/og-image.png"
       },
       "about": [
-        {"@type": "Thing", "name": "Quantitative Finance"},
-        {"@type": "Thing", "name": "Multi-Factor Models"},
-        {"@type": "Thing", "name": "Market Regime Classification"},
-        {"@type": "Thing", "name": "Sector Divergence"},
-        {"@type": "Thing", "name": "Piotroski F-Score"},
-        {"@type": "Thing", "name": "Altman Z-Score"},
-        {"@type": "Thing", "name": "Sloan Ratio"}
+        {
+          "@type": "Thing",
+          "name": "Quantitative Finance",
+          "sameAs": "https://en.wikipedia.org/wiki/Mathematical_finance"
+        },
+        {
+          "@type": "Thing",
+          "name": "Multi-Factor Models",
+          "sameAs": "https://en.wikipedia.org/wiki/Factor_investing"
+        },
+        {
+          "@type": "Thing",
+          "name": "Market Regime Classification",
+          "sameAs": "https://en.wikipedia.org/wiki/Regime_shift"
+        },
+        {
+          "@type": "Thing",
+          "name": "Sector Divergence",
+          "sameAs": "https://en.wikipedia.org/wiki/Divergence_(finance)"
+        },
+        {
+          "@type": "Thing",
+          "name": "Piotroski F-Score",
+          "sameAs": "https://en.wikipedia.org/wiki/Piotroski_F-score"
+        },
+        {
+          "@type": "Thing",
+          "name": "Altman Z-Score",
+          "sameAs": "https://en.wikipedia.org/wiki/Altman_Z-score"
+        },
+        {
+          "@type": "Thing",
+          "name": "Sloan Ratio",
+          "sameAs": "https://en.wikipedia.org/wiki/Accrual#Forensic_accounting"
+        }
+      ],
+      "isBasedOn": [
+        {
+          "@type": "ScholarlyArticle",
+          "name": "Value Investing: The Use of Historical Financial Statement Information to Separate Winners from Losers",
+          "author": "Joseph D. Piotroski",
+          "datePublished": "2000"
+        },
+        {
+          "@type": "ScholarlyArticle",
+          "name": "Financial Ratios, Discriminant Analysis and the Prediction of Corporate Bankruptcy",
+          "author": "Edward I. Altman",
+          "datePublished": "1968"
+        },
+        {
+          "@type": "ScholarlyArticle",
+          "name": "Do Stock Prices Fully Reflect Information in Accruals and Cash Flows about Future Earnings?",
+          "author": "Richard G. Sloan",
+          "datePublished": "1996"
+        },
+        {
+          "@type": "ScholarlyArticle",
+          "name": "On Persistence in Mutual Fund Performance",
+          "author": "Mark M. Carhart",
+          "datePublished": "1997"
+        }
+      ]
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://k2j.net/guide.zh.html#defined-terms",
+      "name": "K2J 美股量化多因子与法务排雷指标字典",
+      "description": "K2J AI Quantitative Lab 核心量化指标与法务排雷模型标准定义词典",
+      "hasDefinedTerm": [
+        {
+          "@type": "DefinedTerm",
+          "name": "CMF (Chaikin Money Flow · 蔡金资金流向指标)",
+          "termCode": "CMF",
+          "description": "度量特定周期内资金流入与流出的量价加权指标。取值在 -1.0 到 +1.0 之间。CMF > 0 确认有增量机构资金主动推升股价；CMF < 0 表示资金处于净流出状态。",
+          "sameAs": "https://en.wikipedia.org/wiki/Chaikin_Analytics"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "VWAP Deviation % (成交量加权平均价偏离度)",
+          "termCode": "VWAP_DEV",
+          "description": "度量当日收盘价相对全天机构加权建仓均价 (VWAP) 的偏离百分比。收盘价在 VWAP 之上为正偏离，表明日内买入的机构筹码整体处于盈利状态（顺风优势）。",
+          "sameAs": "https://en.wikipedia.org/wiki/Volume-weighted_average_price"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Piotroski F-Score (皮尔托斯基 9 维财务健康分)",
+          "termCode": "F_SCORE",
+          "description": "斯坦福大学教授 Joseph Piotroski 提出的经典 9 维度基本面体检模型（涵盖盈利性、运营效率与杠杆流动性）。满分 9 分。F-Score ≥ 7 为优质造血健康标的；F < 3 提示基本面恶化风险。",
+          "sameAs": "https://en.wikipedia.org/wiki/Piotroski_F-score"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Altman Z-Score (阿特曼 Z 分破产风险模型)",
+          "termCode": "Z_SCORE",
+          "description": "纽约大学教授 Edward Altman 提出的国际通用企业破产与信用违约预警模型。Z > 2.99 为安全区；1.81 ≤ Z ≤ 2.99 为灰色缓冲带；Z < 1.81 为破产困境预警区。",
+          "sameAs": "https://en.wikipedia.org/wiki/Altman_Z-score"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Sloan Ratio % (斯隆应计利润异常比率)",
+          "termCode": "SLOAN_RATIO",
+          "description": "密歇根大学理查德·斯隆教授提出的法务会计排雷指标，度量净利润中有多少比例来自于没有实际现金支撑的应计项目。Sloan Ratio > 10% 触发严重盈余操纵红旗。",
+          "sameAs": "https://en.wikipedia.org/wiki/Accrual#Forensic_accounting"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Sector Divergence (板块逆势背离)",
+          "termCode": "SECTOR_DIV",
+          "description": "当某只个股的涨跌事实与所属细分行业整体大势发生严重背离时触发的警示标签，模型予以 D2 惩罚性负分并扣减综合 Z 分，揭示特异性突发黑天鹅风险。"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Relative Volume (相对成交量 / 10D均量倍数)",
+          "termCode": "REL_VOL",
+          "description": "当日成交量相对过去 10 个交易日平均成交量的倍数。Rel Vol > 2.0 代表单日出现 2 倍以上的显著放量异动。"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Total Shareholder Yield (股东综合回报率)",
+          "termCode": "SHAREHOLDER_YIELD",
+          "description": "股票回购收益率 (Buyback Yield) 与现金股息率 (Dividend Yield) 的加总，全面反映成熟企业通过自由现金流回馈股东的真实资本配置实力。"
+        }
       ]
     },
     {
@@ -666,6 +803,28 @@
     .cta-primary, .cta-secondary{justify-content:center; text-align:center; width:100%; padding:12px 16px; font-size:14.5px;}
   }
 
+  /* Key Takeaways & GEO Citation Box */
+  .takeaway-section{padding:48px 0 0;}
+  .takeaway-box{
+    background:var(--paper-raise);
+    border:1.5px solid var(--hairline);
+    border-left:4px solid var(--amber);
+    padding:28px 32px;
+    border-radius:2px;
+  }
+  .takeaway-grid{
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:20px; margin-top:18px;
+  }
+  .takeaway-card{
+    background:var(--paper); border:1px solid var(--hairline); padding:16px 18px; border-radius:2px;
+  }
+  .takeaway-card h3{font-size:14.5px; margin-bottom:6px; color:var(--ink); font-weight:600;}
+  .takeaway-card p{font-size:13px; color:var(--steel); margin:0; line-height:1.5;}
+  @media (max-width:768px){
+    .takeaway-grid{grid-template-columns:1fr; gap:12px;}
+    .takeaway-box{padding:20px 16px;}
+  }
+
   footer{border-top:1px solid var(--hairline); padding:40px 0 50px;}
   .disclaimer{font-size:12.5px; color:var(--steel); max-width:880px; line-height:1.6; margin-bottom:18px;}
   .footer-bottom{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; font-family:var(--mono); font-size:11.5px; color:var(--steel);}
@@ -702,12 +861,12 @@
   </div>
 </header>
 
-<main>
+<main id="main-content">
 
-<section class="hero">
+<section class="hero" aria-labelledby="guide-hero-title">
   <div class="wrap">
     <p class="eyebrow">K2J 投研方法论与研报导读指南</p>
-    <h1>如何理解与高效利用 K2J 美股量化多因子研究报告</h1>
+    <h1 id="guide-hero-title">如何理解与高效利用 K2J 美股量化多因子研究报告</h1>
     <p class="subhead">
       K2J 每日美股量化研报并非无脑荐股或买卖点播报，而是一套机构级的市场叙事量化解构系统。美股市场标的数千，本系统基于严格流动性门槛精选 1,500+ 只高流动性核心股票池作为底层全景数据网络，全方位拆解「宏观 → 板块 → 个股」自上而下的严密推导逻辑、20 支焦点股票的 5 维共振遴选机制与「板块逆势背离」量化破案真相。
     </p>
@@ -746,12 +905,39 @@
   </div>
 </section>
 
+<!-- GEO / AI Direct Answer: Key Takeaways & Executive Summary -->
+<section class="takeaway-section" aria-labelledby="takeaways-title">
+  <div class="wrap">
+    <div class="takeaway-box">
+      <span class="section-eyebrow" style="margin-bottom:6px;">EXECUTIVE SUMMARY · 核心要点速览</span>
+      <h2 id="takeaways-title" style="font-size:18px; margin:0 0 10px;">K2J 量化投研框架三大核心支柱 (Key Takeaways)</h2>
+      <p style="font-size:13.5px; color:var(--steel); margin:0; line-height:1.6;">
+        供投资者与 AI 搜索引擎快速引用的核心技术结论：
+      </p>
+      <div class="takeaway-grid">
+        <div class="takeaway-card">
+          <h3>1. 自上而下三层推导</h3>
+          <p>从 <strong>宏观体制 (GBDT)</strong> 判定风险预算，到 <strong>产业主题簇 (HDBSCAN)</strong> 跟踪万亿聪明资金轮动，再到 <strong>20 支标的</strong> 精准归因，杜绝孤立看股。</p>
+        </div>
+        <div class="takeaway-card">
+          <h3>2. 8 大数据底座与 5 维归因</h3>
+          <p>覆盖 1,500+ 只标的 100+ 项指标，以 <code>大盘/行业/资金/技术/基本面</code> 5 维正交模型量化共振星级 (5/5★)，穿透表面涨跌杂音。</p>
+        </div>
+        <div class="takeaway-card">
+          <h3>3. 逆势背离量化破案与排雷</h3>
+          <p>独创 <strong>「板块逆势背离」</strong> 闪崩预警机制，集成 Piotroski F、Altman Z、Sloan Ratio % 四大经典法务排雷模型，严防接飞刀。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Module 1: Positioning & Mission -->
-<section>
+<section aria-labelledby="module-1-title">
   <div class="wrap">
     <div class="section-head">
       <span class="section-eyebrow">01 · 产品定位与设计哲学</span>
-      <h2>量化解构每日市场叙事，而非提供买卖点位</h2>
+      <h2 id="module-1-title">量化解构每日市场叙事，而非提供买卖点位</h2>
       <p class="section-lede">
         在充满噪音的金融市场中，投资者最常面临的困惑是“表面指数涨了，为什么我的股票在跌？”或者“某只股票暴涨，到底是因为行业利好、主力资金抢筹，还是高开诱多出货？”
       </p>
@@ -1281,17 +1467,17 @@
 </section>
 
 <!-- Module 9: Indicator Dictionary -->
-<section id="dictionary">
+<section id="dictionary" aria-labelledby="dictionary-title">
   <div class="wrap">
     <div class="section-head">
       <span class="section-eyebrow">09 · 量化速查字典</span>
-      <h2>研报核心量化与排雷指标字典 (Quick Dictionary)</h2>
+      <h2 id="dictionary-title">研报核心量化与排雷指标字典 (Quick Dictionary)</h2>
       <p class="section-lede">
         快速查阅研报中出现的专业量化术语与排雷阈值定义：
       </p>
     </div>
 
-    <div class="dict-list">
+    <div class="dict-list" role="list">
       <details class="dict-item" open>
         <summary class="dict-summary">
           <span class="dict-term">CMF (Chaikin Money Flow · 蔡金资金流向指标)</span>
@@ -1366,10 +1552,10 @@
 </section>
 
 <!-- Module 10: Bottom CTA -->
-<section class="bg-raise" style="text-align:center;">
+<section class="bg-raise" style="text-align:center;" aria-labelledby="cta-bottom-title">
   <div class="wrap" style="max-width:720px;">
     <span class="section-eyebrow" style="margin-bottom:12px;">立即体验</span>
-    <h2 style="font-size:28px; margin-bottom:16px;">开始阅读最新的美股量化多因子日报</h2>
+    <h2 id="cta-bottom-title" style="font-size:28px; margin-bottom:16px;">开始阅读最新的美股量化多因子日报</h2>
     <p class="section-lede" style="margin:0 auto 28px;">
       现在您已经掌握了 K2J 的底层数据底座、量化分析逻辑与 4 步阅读法，点击下方按钮，直接打开最新一期报告开始实战体验。
     </p>

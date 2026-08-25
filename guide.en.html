@@ -12,6 +12,7 @@
 <meta name="author" content="Justin">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="theme-color" content="#0F1319">
+<meta name="format-detection" content="telephone=no">
 
 <!-- Canonical and Alternates -->
 <link rel="canonical" href="https://k2j.net/guide.en.html">
@@ -24,7 +25,14 @@
 <link rel="alternate" type="text/plain" href="https://k2j.net/llms.txt" title="LLM Knowledge Summary">
 <link rel="alternate" type="text/plain" href="https://k2j.net/llms-full.txt" title="Full LLM Knowledge Base">
 
-<!-- Open Graph / Twitter Card -->
+<!-- Academic & GEO Citation Metadata -->
+<meta name="citation_title" content="Quantitative Methodology &amp; Daily Report Reading Guide | K2J AI Quantitative Lab">
+<meta name="citation_author" content="Justin">
+<meta name="citation_publication_date" content="2026/08/20">
+<meta name="citation_online_date" content="2026/08/25">
+<meta name="ai-content-declaration" content="Deterministic multi-factor quantitative methodology and reading architecture">
+
+<!-- Open Graph / Facebook / LinkedIn -->
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="K2J AI Quantitative Lab">
 <meta property="og:url" content="https://k2j.net/guide.en.html">
@@ -37,6 +45,15 @@
 <meta property="og:image:alt" content="K2J AI Quantitative Lab — Quantitative Methodology &amp; Daily Report Reading Guide">
 <meta property="og:locale" content="en_US">
 <meta property="og:locale:alternate" content="zh_CN">
+<meta property="article:published_time" content="2026-08-20T08:00:00+12:00">
+<meta property="article:modified_time" content="2026-08-25T22:00:00+12:00">
+<meta property="article:author" content="Justin">
+<meta property="article:section" content="Quantitative Finance">
+<meta property="article:tag" content="Multi-Factor Models">
+<meta property="article:tag" content="US Equities">
+<meta property="article:tag" content="Agentic AI">
+
+<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://k2j.net/guide.en.html">
 <meta name="twitter:title" content="Quantitative Methodology &amp; Daily Report Reading Guide | K2J AI Quantitative Lab">
@@ -62,6 +79,11 @@
       "description": "Official reading guide & methodology for K2J Daily US Equities Quantitative Reports: 1,500+ liquid stock universe, 8 data categories (100+ metrics), top-down macro-to-stock logic, 20 focus stock 5-D resonance screening, and sector divergence forensics.",
       "inLanguage": "en",
       "mainEntityOfPage": "https://k2j.net/guide.en.html",
+      "datePublished": "2026-08-20T08:00:00+12:00",
+      "dateModified": "2026-08-25T22:00:00+12:00",
+      "image": "https://k2j.net/og-image.png",
+      "proficiencyLevel": "Expert / Institutional",
+      "dependencies": "LangGraph, Python 3.13, Agentic RAG, Pinecone, GBDT, HDBSCAN",
       "author": {
         "@type": "Person",
         "@id": "https://k2j.net/#founder",
@@ -77,13 +99,128 @@
         "logo": "https://k2j.net/og-image.png"
       },
       "about": [
-        {"@type": "Thing", "name": "Quantitative Finance"},
-        {"@type": "Thing", "name": "Multi-Factor Models"},
-        {"@type": "Thing", "name": "Market Regime Classification"},
-        {"@type": "Thing", "name": "Sector Divergence"},
-        {"@type": "Thing", "name": "Piotroski F-Score"},
-        {"@type": "Thing", "name": "Altman Z-Score"},
-        {"@type": "Thing", "name": "Sloan Ratio"}
+        {
+          "@type": "Thing",
+          "name": "Quantitative Finance",
+          "sameAs": "https://en.wikipedia.org/wiki/Mathematical_finance"
+        },
+        {
+          "@type": "Thing",
+          "name": "Multi-Factor Models",
+          "sameAs": "https://en.wikipedia.org/wiki/Factor_investing"
+        },
+        {
+          "@type": "Thing",
+          "name": "Market Regime Classification",
+          "sameAs": "https://en.wikipedia.org/wiki/Regime_shift"
+        },
+        {
+          "@type": "Thing",
+          "name": "Sector Divergence",
+          "sameAs": "https://en.wikipedia.org/wiki/Divergence_(finance)"
+        },
+        {
+          "@type": "Thing",
+          "name": "Piotroski F-Score",
+          "sameAs": "https://en.wikipedia.org/wiki/Piotroski_F-score"
+        },
+        {
+          "@type": "Thing",
+          "name": "Altman Z-Score",
+          "sameAs": "https://en.wikipedia.org/wiki/Altman_Z-score"
+        },
+        {
+          "@type": "Thing",
+          "name": "Sloan Ratio",
+          "sameAs": "https://en.wikipedia.org/wiki/Accrual#Forensic_accounting"
+        }
+      ],
+      "isBasedOn": [
+        {
+          "@type": "ScholarlyArticle",
+          "name": "Value Investing: The Use of Historical Financial Statement Information to Separate Winners from Losers",
+          "author": "Joseph D. Piotroski",
+          "datePublished": "2000"
+        },
+        {
+          "@type": "ScholarlyArticle",
+          "name": "Financial Ratios, Discriminant Analysis and the Prediction of Corporate Bankruptcy",
+          "author": "Edward I. Altman",
+          "datePublished": "1968"
+        },
+        {
+          "@type": "ScholarlyArticle",
+          "name": "Do Stock Prices Fully Reflect Information in Accruals and Cash Flows about Future Earnings?",
+          "author": "Richard G. Sloan",
+          "datePublished": "1996"
+        },
+        {
+          "@type": "ScholarlyArticle",
+          "name": "On Persistence in Mutual Fund Performance",
+          "author": "Mark M. Carhart",
+          "datePublished": "1997"
+        }
+      ]
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://k2j.net/guide.en.html#defined-terms",
+      "name": "K2J US Equities Quantitative Multi-Factor & Forensic Accounting Metric Glossary",
+      "description": "Standard definitions and thresholds for quantitative factor models and forensic accounting metrics used in K2J AI Quantitative Lab reports.",
+      "hasDefinedTerm": [
+        {
+          "@type": "DefinedTerm",
+          "name": "CMF (Chaikin Money Flow)",
+          "termCode": "CMF",
+          "description": "A volume-weighted momentum indicator measuring institutional accumulation and distribution over a specified period, bounded between -1.0 and +1.0. CMF > 0 indicates net accumulation; CMF < 0 indicates distribution.",
+          "sameAs": "https://en.wikipedia.org/wiki/Chaikin_Analytics"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "VWAP Deviation %",
+          "termCode": "VWAP_DEV",
+          "description": "The percentage distance between the current price and the day's Volume-Weighted Average Price (institutional execution benchmark). Positive values confirm institutional buyers are in profit.",
+          "sameAs": "https://en.wikipedia.org/wiki/Volume-weighted_average_price"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Piotroski F-Score",
+          "termCode": "F_SCORE",
+          "description": "A 9-criteria fundamental health score developed by Stanford Professor Joseph Piotroski evaluating profitability, leverage, and efficiency. F-Score >= 7 indicates strong financial health; F < 3 flags severe deterioration.",
+          "sameAs": "https://en.wikipedia.org/wiki/Piotroski_F-score"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Altman Z-Score",
+          "termCode": "Z_SCORE",
+          "description": "An internationally recognized bankruptcy risk formula developed by NYU Professor Edward Altman. Z > 2.99 indicates a Safe Zone; 1.81 <= Z <= 2.99 is a Grey Buffer Zone; Z < 1.81 warns of distress.",
+          "sameAs": "https://en.wikipedia.org/wiki/Altman_Z-score"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Sloan Ratio %",
+          "termCode": "SLOAN_RATIO",
+          "description": "A forensic accounting metric developed by Michigan Professor Richard Sloan that measures earnings derived from non-cash accruals. Ratios > 10% flag aggressive earnings manipulation.",
+          "sameAs": "https://en.wikipedia.org/wiki/Accrual#Forensic_accounting"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Sector Divergence",
+          "termCode": "SECTOR_DIV",
+          "description": "A warning flag triggered when an individual equity's price direction starkly contradicts its sub-industry trend, assigning punitive scores and isolating idiosyncratic catalysts."
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Relative Volume (Rel Vol)",
+          "termCode": "REL_VOL",
+          "description": "Ratio of current volume relative to 10-day moving average volume. Rel Vol > 2.0 flags institutional volume surges."
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Total Shareholder Yield",
+          "termCode": "SHAREHOLDER_YIELD",
+          "description": "The sum of Buyback Yield and Dividend Yield, providing a holistic metric of cash return to shareholders."
+        }
       ]
     },
     {
@@ -659,6 +796,28 @@
   }
   .cta-secondary:hover{border-color:var(--amber); color:var(--amber);}
 
+  /* Key Takeaways & GEO Citation Box */
+  .takeaway-section{padding:48px 0 0;}
+  .takeaway-box{
+    background:var(--paper-raise);
+    border:1.5px solid var(--hairline);
+    border-left:4px solid var(--amber);
+    padding:28px 32px;
+    border-radius:2px;
+  }
+  .takeaway-grid{
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:20px; margin-top:18px;
+  }
+  .takeaway-card{
+    background:var(--paper); border:1px solid var(--hairline); padding:16px 18px; border-radius:2px;
+  }
+  .takeaway-card h3{font-size:14.5px; margin-bottom:6px; color:var(--ink); font-weight:600;}
+  .takeaway-card p{font-size:13px; color:var(--steel); margin:0; line-height:1.5;}
+  @media (max-width:768px){
+    .takeaway-grid{grid-template-columns:1fr; gap:12px;}
+    .takeaway-box{padding:20px 16px;}
+  }
+
   @media (max-width:540px){
     .cta-row{flex-direction:column; align-items:stretch;}
     .cta-primary, .cta-secondary{justify-content:center; text-align:center; width:100%; padding:12px 16px; font-size:14.5px;}
@@ -700,12 +859,12 @@
   </div>
 </header>
 
-<main>
+<main id="main-content">
 
-<section class="hero">
+<section class="hero" aria-labelledby="guide-hero-title">
   <div class="wrap">
     <p class="eyebrow">K2J Quantitative Methodology &amp; Daily Report Guide</p>
-    <h1>How to Understand and Leverage K2J Daily US Equities Quantitative Research</h1>
+    <h1 id="guide-hero-title">How to Understand and Leverage K2J Daily US Equities Quantitative Research</h1>
     <p class="subhead">
       K2J Daily US Equities Quantitative Research is not a stock-tipping newsletter. It is an institutional-grade market narrative deconstruction engine. This guide breaks down the institutional 1,500+ liquid equity universe (filtered from thousands of US stocks for optimal liquidity and tradability), the strict top-down "Macro → Sector → Equities" analytical pipeline, the 5-dimensional resonance selection of 20 focus tickers, and sector divergence forensics.
     </p>
@@ -744,12 +903,39 @@
   </div>
 </section>
 
+<!-- GEO / AI Direct Answer: Key Takeaways & Executive Summary -->
+<section class="takeaway-section" aria-labelledby="takeaways-title">
+  <div class="wrap">
+    <div class="takeaway-box">
+      <span class="section-eyebrow" style="margin-bottom:6px;">EXECUTIVE SUMMARY · KEY TAKEAWAYS</span>
+      <h2 id="takeaways-title" style="font-size:18px; margin:0 0 10px;">Three Core Pillars of K2J Quantitative Research Framework</h2>
+      <p style="font-size:13.5px; color:var(--steel); margin:0; line-height:1.6;">
+        Quotable takeaways and system highlights for investors and generative AI search engines:
+      </p>
+      <div class="takeaway-grid">
+        <div class="takeaway-card">
+          <h3>1. Strict Top-Down Pipeline</h3>
+          <p>From <strong>Macro Regime (GBDT)</strong> risk budgeting to <strong>Thematic Clusters (HDBSCAN)</strong> institutional rotation tracking, down to <strong>20 Focus Equities</strong> 5-D attribution.</p>
+        </div>
+        <div class="takeaway-card">
+          <h3>2. 8-Pillar Data &amp; 5-D Attribution</h3>
+          <p>Scanning 1,500+ liquid US equities across 100+ metrics, scoring <code>Index/Sector/Capital/Tech/Fundamentals</code> to award 5/5★ Golden Resonance badges.</p>
+        </div>
+        <div class="takeaway-card">
+          <h3>3. Sector Divergence &amp; Forensics</h3>
+          <p>Automated <strong>Sector Divergence</strong> detection coupled with 4 forensic accounting models (Piotroski F, Altman Z, Sloan Ratio %, Zmijewski) to prevent catching falling knives.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Module 1: Positioning & Mission -->
-<section>
+<section aria-labelledby="module-1-title">
   <div class="wrap">
     <div class="section-head">
       <span class="section-eyebrow">01 · Mission &amp; Philosophy</span>
-      <h2>Deconstruct Market Narratives with Math, Not Discretionary Stock Tips</h2>
+      <h2 id="module-1-title">Deconstructing Market Narrative via Quant Mechanics, Not Tipping Stocks</h2>
       <p class="section-lede">
         In noisy markets, traders often struggle with questions like: "Why is my portfolio down when headline indices are hitting all-time highs?" or "Did a stock surge due to real institutional accumulation or a gap-and-trap pump?"
       </p>
@@ -1279,17 +1465,17 @@
 </section>
 
 <!-- Module 9: Indicator Dictionary -->
-<section id="dictionary">
+<section id="dictionary" aria-labelledby="dictionary-title">
   <div class="wrap">
     <div class="section-head">
       <span class="section-eyebrow">09 · Quantitative Glossary</span>
-      <h2>Core Quantitative &amp; Forensic Indicator Glossary</h2>
+      <h2 id="dictionary-title">Core Quantitative &amp; Forensic Indicator Glossary</h2>
       <p class="section-lede">
         Quick reference dictionary defining the key quantitative metrics and forensic thresholds used across the report:
       </p>
     </div>
 
-    <div class="dict-list">
+    <div class="dict-list" role="list">
       <details class="dict-item" open>
         <summary class="dict-summary">
           <span class="dict-term">CMF (Chaikin Money Flow)</span>
@@ -1364,10 +1550,10 @@
 </section>
 
 <!-- Module 10: Bottom CTA -->
-<section class="bg-raise" style="text-align:center;">
+<section class="bg-raise" style="text-align:center;" aria-labelledby="cta-bottom-title">
   <div class="wrap" style="max-width:720px;">
     <span class="section-eyebrow" style="margin-bottom:12px;">Get Started</span>
-    <h2 style="font-size:28px; margin-bottom:16px;">Explore the Latest Daily US Equities Quantitative Report</h2>
+    <h2 id="cta-bottom-title" style="font-size:28px; margin-bottom:16px;">Explore the Latest Daily US Equities Quantitative Report</h2>
     <p class="section-lede" style="margin:0 auto 28px;">
       Now that you understand our 8-pillar dataset, factor models, and the 4-step workflow, open today's report to experience institutional quantitative research in practice.
     </p>

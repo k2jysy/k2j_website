@@ -7,11 +7,12 @@
 
 <!-- Primary SEO Meta Tags -->
 <meta name="title" content="Methodology &amp; Stock Selection Guide | K2J AI Quantitative Lab">
-<meta name="description" content="Official methodology &amp; reading guide for K2J Daily US Equities Quantitative Reports. Comprehensive guide to 8 data pillars, 5-D orthogonal attribution, and sector divergence forensics.">
-<meta name="keywords" content="US Equities Quantitative Research, Methodology Guide, Multi-Factor Attribution, Market Regime, Piotroski F-Score, Altman Z-Score, K2J AI Quantitative Lab">
+<meta name="description" content="Official methodology &amp; reading guide for K2J Daily US Equities Quantitative Reports. Comprehensive guide to 8 data pillars (100+ metrics), 5-D orthogonal attribution, 20 focus equity funnel, and sector divergence forensics.">
+<meta name="keywords" content="US Equities Quantitative Research, Methodology Guide, Multi-Factor Attribution, Market Regime, Piotroski F-Score, Altman Z-Score, Sloan Ratio, K2J AI Quantitative Lab">
 <meta name="author" content="Justin">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="theme-color" content="#0F1319">
+<meta name="format-detection" content="telephone=no">
 
 <!-- Canonical and Alternate Links -->
 <link rel="canonical" href="https://k2j.net/guide.html">
@@ -51,6 +52,20 @@
       "url": "https://k2j.net/guide.html",
       "name": "Methodology & Stock Selection Guide | K2J AI Quantitative Lab",
       "description": "Language router and gateway for K2J Daily US Equities Quantitative Research Methodology Guide.",
+      "hasPart": [
+        {
+          "@type": "TechArticle",
+          "name": "量化投研方法论与研报导读指南 (Simplified Chinese)",
+          "url": "https://k2j.net/guide.zh.html",
+          "inLanguage": "zh-CN"
+        },
+        {
+          "@type": "TechArticle",
+          "name": "Quantitative Methodology & Daily Report Reading Guide (English)",
+          "url": "https://k2j.net/guide.en.html",
+          "inLanguage": "en"
+        }
+      ],
       "isPartOf": {
         "@type": "WebSite",
         "@id": "https://k2j.net/#website",
@@ -109,17 +124,19 @@
     border: 1px solid #D7DAD2;
     padding: 32px 40px;
     border-radius: 4px;
-    max-width: 480px;
+    max-width: 560px;
     width: 100%;
+    text-align: left;
   }
-  h1 { font-size: 18px; margin: 0 0 16px; font-weight: 600; line-height: 1.4; }
+  h1 { font-size: 19px; margin: 0 0 14px; font-weight: 600; line-height: 1.4; text-align: center; }
+  .summary { font-size: 13.5px; color: #5B6472; line-height: 1.6; margin: 12px 0 20px; }
   .links { display: flex; gap: 14px; justify-content: center; margin-top: 20px; flex-wrap: wrap; }
   .links a {
     color: #14181F;
     text-decoration: none;
     font-size: 14px;
-    font-weight: 500;
-    padding: 10px 18px;
+    font-weight: 600;
+    padding: 10px 20px;
     border: 1px solid #D7DAD2;
     border-radius: 2px;
     background: #EEF0EB;
@@ -130,23 +147,26 @@
   @media (max-width: 480px) {
     body { padding: 16px; }
     .card { padding: 24px 18px; }
-    h1 { font-size: 16px; margin-bottom: 12px; }
+    h1 { font-size: 17px; margin-bottom: 12px; }
     .links { flex-direction: column; gap: 10px; }
     .links a { display: block; width: 100%; text-align: center; padding: 12px 14px; }
   }
 </style>
 </head>
 <body>
-<div class="card">
-  <h1>Redirecting to Methodology &amp; Stock Selection Guide... / 正在跳转至研报导读指南...</h1>
-  <p style="font-size: 13.5px; color: #5B6472; margin: 0;">Please select your language if you are not automatically redirected / 若未自动跳转，请选择您的语言：</p>
+<main id="main-content" class="card">
+  <h1>Methodology &amp; Stock Selection Guide<br><span style="font-size:15px; font-weight:500; color:#5B6472;">量化投研方法论与研报导读指南</span></h1>
+  <p class="summary">
+    Official methodology &amp; reading guide for K2J Daily US Equities Quantitative Reports — 8 data pillars across 1,500+ liquid equities, top-down macro-to-stock logic, 5-D orthogonal factor attribution, 20 focus equities funnel, and sector divergence forensics.<br><br>
+    K2J 美股每日多因子量化研报导读指南：全景拆解 1,500+ 只高流动性核心标的的 8 大维度 100+ 项底层数据体系、「宏观→板块→个股」自上而下分析逻辑、20 支焦点股票 5 维共振遴选机制与「板块逆势背离」量化破案。
+  </p>
   <noscript>
-    <p style="font-size: 12.5px; color: #B8823A; margin-top: 10px;">JavaScript is disabled in your browser. Please choose a language below:</p>
+    <p style="font-size: 12.5px; color: #B8823A; margin: 10px 0; text-align:center;">JavaScript is disabled in your browser. Please select your language below / 请选择您的语言：</p>
   </noscript>
   <div class="links">
-    <a href="./guide.zh.html">中文版 (Chinese)</a>
-    <a href="./guide.en.html">English Version</a>
+    <a href="./guide.zh.html">中文完整导读指南 (Chinese) →</a>
+    <a href="./guide.en.html">English Reading Guide →</a>
   </div>
-</div>
+</main>
 </body>
 </html>
