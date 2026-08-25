@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>量化投研方法论与研报导读指南 | K2J AI Quantitative Lab</title>
+
+<!-- Primary SEO Meta Tags -->
+<meta name="title" content="量化投研方法论与研报导读指南 | K2J AI Quantitative Lab">
+<meta name="description" content="K2J 美股每日多因子量化研报导读指南：全景拆解 1,500+ 只高流动性核心标的的 8 大维度 100+ 项底层数据体系、「宏观→板块→个股」自上而下分析逻辑、20 支焦点股票 5 维共振遴选机制与「板块逆势背离」量化破案。">
+<meta name="keywords" content="美股量化, 投研方法论, 研报导读, 多因子归因, 宏观体制, 主题聚类, 板块逆势背离, Piotroski, Altman Z, Sloan Ratio, K2J AI Quantitative Lab">
+<meta name="author" content="Justin">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#0F1319">
+
+<!-- Canonical and Alternates -->
+<link rel="canonical" href="https://k2j.net/guide.zh.html">
+<link rel="alternate" hreflang="zh-CN" href="https://k2j.net/guide.zh.html">
+<link rel="alternate" hreflang="zh" href="https://k2j.net/guide.zh.html">
+<link rel="alternate" hreflang="en" href="https://k2j.net/guide.en.html">
+<link rel="alternate" hreflang="x-default" href="https://k2j.net/guide.en.html">
+
+<!-- LLM Discovery / GEO Resource Link -->
+<link rel="alternate" type="text/plain" href="https://k2j.net/llms.txt" title="LLM Knowledge Summary">
+<link rel="alternate" type="text/plain" href="https://k2j.net/llms-full.txt" title="Full LLM Knowledge Base">
+
+<!-- Open Graph / Twitter Card -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="K2J AI Quantitative Lab">
+<meta property="og:url" content="https://k2j.net/guide.zh.html">
+<meta property="og:title" content="量化投研方法论与研报导读指南 | K2J AI Quantitative Lab">
+<meta property="og:description" content="深入理解 K2J 美股量化研报：8 大类 100+ 项底层数据体系、5 维共振归因模型、20 股遴选漏斗与板块逆势背离深度解析。">
+<meta property="og:image" content="https://k2j.net/og-image.png">
+<meta property="og:image:secure_url" content="https://k2j.net/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="K2J AI Quantitative Lab — 量化投研方法论与研报导读指南">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://k2j.net/guide.zh.html">
+<meta name="twitter:title" content="量化投研方法论与研报导读指南 | K2J AI Quantitative Lab">
+<meta name="twitter:description" content="深入理解 K2J 美股量化研报：8 大类 100+ 项底层数据体系、5 维共振归因模型、20 股遴选漏斗与板块逆势背离深度解析。">
+<meta name="twitter:image" content="https://k2j.net/og-image.png">
+<meta name="twitter:image:alt" content="K2J AI Quantitative Lab — 量化投研方法论与研报导读指南">
+
+<!-- Structured Data / JSON-LD Schema Graph for SEO & GEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "@id": "https://k2j.net/guide.zh.html#article",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://k2j.net/#website",
+        "name": "K2J AI Quantitative Lab",
+        "url": "https://k2j.net/"
+      },
+      "headline": "量化投研方法论与研报导读指南",
+      "description": "K2J 美股每日多因子量化研报导读指南：全景拆解 1,500+ 只高流动性核心标的的 8 大维度 100+ 项底层数据体系、「宏观→板块→个股」自上而下分析逻辑、20 支焦点股票 5 维共振遴选机制与「板块逆势背离」量化破案。",
+      "inLanguage": "zh-CN",
+      "mainEntityOfPage": "https://k2j.net/guide.zh.html",
+      "author": {
+        "@type": "Person",
+        "@id": "https://k2j.net/#founder",
+        "name": "Justin",
+        "jobTitle": "AI Quantitative Systems Architect & Quantitative Trader",
+        "url": "https://k2j.net/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://k2j.net/#organization",
+        "name": "K2J AI Quantitative Lab",
+        "url": "https://k2j.net/",
+        "logo": "https://k2j.net/og-image.png"
+      },
+      "about": [
+        {"@type": "Thing", "name": "Quantitative Finance"},
+        {"@type": "Thing", "name": "Multi-Factor Models"},
+        {"@type": "Thing", "name": "Market Regime Classification"},
+        {"@type": "Thing", "name": "Sector Divergence"},
+        {"@type": "Thing", "name": "Piotroski F-Score"},
+        {"@type": "Thing", "name": "Altman Z-Score"},
+        {"@type": "Thing", "name": "Sloan Ratio"}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://k2j.net/guide.zh.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://k2j.net/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "研报导读指南",
+          "item": "https://k2j.net/guide.zh.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://k2j.net/guide.zh.html#dict-faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "什么是 CMF (Chaikin Money Flow · 蔡金资金流向指标)？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "度量特定周期内资金流入与流出的量价加权指标。取值在 -1.0 到 +1.0 之间。CMF > 0 确认有增量机构资金主动推升股价；CMF < 0 表示资金处于净流出状态；若股价上涨但 CMF 为负，提示警惕无量虚涨与出货风险。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "什么是 VWAP Deviation % (成交量加权平均价偏离度)？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "度量当日收盘价相对全天机构加权建仓均价 (VWAP) 的偏离百分比。收盘价在 VWAP 之上为正偏离，表明日内买入的机构筹码整体处于盈利状态（顺风优势）；收盘价在 VWAP 之下为负偏离，表明筹码被套牢承压。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "什么是 Piotroski F-Score (皮尔托斯基 9 维财务健康分)？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "斯坦福大学教授 Joseph Piotroski 提出的经典 9 维度基本面体检模型（涵盖盈利性、运营效率与杠杆流动性）。满分 9 分。F-Score ≥ 7 为优质造血健康标的；F-Score 3-6 为稳健标的；F-Score < 3 提示基本面恶化风险。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "什么是 Altman Z-Score (阿特曼 Z 分破产风险模型)？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "纽约大学教授 Edward Altman 提出的国际通用企业破产与信用违约预警模型。Z > 2.99 为安全区（财务坚固）；1.81 ≤ Z ≤ 2.99 为灰色缓冲带；Z < 1.81 为破产困境预警区，提示公司债务重压与偿债违约隐患。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "什么是 Sloan Ratio % (斯隆应计利润异常比率)？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "密歇根大学理查德·斯隆教授提出的法务会计排雷指标，度量净利润中有多少比例来自于没有实际现金支撑的应计项目。Sloan Ratio > 10% 触发严重盈余操搞红旗，提示公司可能通过激进会计手段虚增利润；负值通常代表利润现金含量极高。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "什么是 Relative Volume (相对成交量 / 10D均量倍数)？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "当日成交量相对过去 10 个交易日平均成交量的倍数。Rel Vol > 2.0 代表单日出现 2 倍以上的显著放量异动；结合 K 线实体意图可明确判定是放量逼空抢筹还是放量恐慌杀跌。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "什么是 Total Shareholder Yield (股东综合回报率)？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "股票回购收益率 (Buyback Yield) 与现金股息率 (Dividend Yield) 的加总。相比单一股息率，股东综合回报率更真实地反映了成熟企业通过自由现金流回馈股东的资本配置综合实力。"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Noto+Serif+SC:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --ink:#14181F;
+    --paper:#EEF0EB;
+    --paper-raise:#E4E7DF;
+    --steel:#5B6472;
+    --hairline:#D7DAD2;
+    --amber:#B8823A;
+    --amber-dim:#8E6A32;
+    --amber-bg:rgba(184,130,58,0.08);
+    --green:#2F6F52;
+    --green-bg:rgba(47,111,82,0.1);
+    --red:#9C3A3A;
+    --red-bg:rgba(156,58,58,0.1);
+    --navy:#1C2D42;
+    --hero-bg:#0F1319;
+    --hero-text:#E9EAE4;
+    --hero-line:rgba(233,234,228,0.14);
+    --serif: 'Noto Serif SC', 'Fraunces', Georgia, serif;
+    --sans: 'Noto Sans SC', 'IBM Plex Sans', -apple-system, sans-serif;
+    --mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.001ms !important; transition-duration:0.001ms !important;}
+  }
+
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--sans);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  a{color:inherit;}
+  h1,h2,h3,h4{font-family:var(--serif); font-weight:600; margin:0;}
+
+  :focus-visible{
+    outline:2px solid var(--amber);
+    outline-offset:3px;
+  }
+
+  .wrap{max-width:1080px; margin:0 auto; padding:0 28px;}
+
+  /* nav */
+  .nav{
+    position:sticky; top:0; z-index:20;
+    background:rgba(238,240,235,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--hairline);
+  }
+  .nav .wrap{display:flex; align-items:center; justify-content:space-between; height:64px;}
+  .brand{font-family:var(--mono); font-weight:600; font-size:15px; letter-spacing:0.02em; text-decoration:none;}
+  .brand-sub{display:block; font-size:9.5px; letter-spacing:0.14em; color:var(--steel); font-weight:500; margin-top:2px;}
+  .nav-links{display:flex; gap:22px; font-size:13.5px; align-items:center;}
+  .nav-links a{text-decoration:none; color:var(--ink); opacity:0.8; transition:opacity .15s;}
+  .nav-links a:hover{opacity:1; color:var(--amber-dim);}
+  .lang-toggle{
+    font-family:var(--mono); font-size:12.5px; letter-spacing:0.03em;
+    background:none; border:1px solid var(--hairline); border-radius:20px;
+    padding:5px 12px; cursor:pointer; color:var(--ink); text-decoration:none;
+    display:inline-flex; align-items:center; gap:4px;
+    transition:all .15s;
+  }
+  .lang-toggle:hover{border-color:var(--amber); color:var(--amber);}
+
+  /* hero */
+  .hero{
+    background:var(--hero-bg); color:var(--hero-text);
+    padding:72px 0 60px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";
+    position:absolute; inset:0;
+    background-image:
+      linear-gradient(var(--hero-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--hero-line) 1px, transparent 1px);
+    background-size:56px 56px;
+    -webkit-mask-image:linear-gradient(to bottom, black, transparent 85%);
+    mask-image:linear-gradient(to bottom, black, transparent 85%);
+    opacity:0.5;
+    pointer-events:none;
+  }
+  .hero .wrap{position:relative;}
+  .eyebrow{
+    font-family:var(--mono); font-size:12px; letter-spacing:0.16em; text-transform:uppercase;
+    color:var(--amber); margin:0 0 16px; font-weight:600;
+  }
+  .hero h1{
+    font-size:clamp(26px, 3.4vw, 40px);
+    line-height:1.35;
+    max-width:920px;
+    margin-bottom:18px;
+    letter-spacing:0.01em;
+  }
+  .hero .subhead{
+    font-size:15.5px;
+    color:#C2C6BD;
+    max-width:860px;
+    margin-bottom:36px;
+    line-height:1.75;
+  }
+
+  /* trust stats strip */
+  .trust-strip{
+    display:grid;
+    grid-template-columns:repeat(6, 1fr);
+    gap:1px;
+    background:var(--hero-line);
+    border:1px solid var(--hero-line);
+    margin-bottom:28px;
+    border-radius:2px;
+    overflow:hidden;
+  }
+  .trust-item{
+    background:rgba(15,19,25,0.85);
+    padding:16px 14px;
+    text-align:center;
+  }
+  .trust-num{
+    display:block; font-family:var(--mono); font-size:22px; font-weight:600;
+    color:var(--amber); margin-bottom:4px;
+  }
+  .trust-label{
+    display:block; font-size:11.5px; color:#A0A6AF; line-height:1.3;
+  }
+
+  @media (max-width:860px){
+    .trust-strip{grid-template-columns:repeat(3, 1fr);}
+  }
+  @media (max-width:520px){
+    .trust-strip{grid-template-columns:repeat(2, 1fr);}
+  }
+
+  /* section general */
+  section{padding:68px 0;}
+  .section-head{margin-bottom:36px;}
+  .section-eyebrow{
+    font-family:var(--mono); font-size:11.5px; letter-spacing:0.14em; text-transform:uppercase;
+    color:var(--amber-dim); margin-bottom:10px; display:block; font-weight:600;
+  }
+  h2{font-size:clamp(22px,2.4vw,28px); margin-bottom:12px; line-height:1.4;}
+  .section-lede{color:var(--steel); font-size:15px; max-width:840px; margin:0;}
+
+  .bg-raise{background:var(--paper-raise); border-top:1px solid var(--hairline); border-bottom:1px solid var(--hairline);}
+  .bg-dark{background:var(--hero-bg); color:var(--hero-text); border-top:1px solid rgba(233,234,228,0.1); border-bottom:1px solid rgba(233,234,228,0.1);}
+  .bg-dark .section-lede{color:#9BA1A8;}
+  .bg-dark .section-eyebrow{color:var(--amber);}
+
+  /* chapter table */
+  .chapter-grid{
+    display:flex; flex-direction:column; gap:12px; margin-top:24px;
+  }
+  .chapter-card{
+    background:var(--paper);
+    border:1px solid var(--hairline);
+    border-radius:2px;
+    padding:20px 24px;
+    display:grid;
+    grid-template-columns:56px 200px 1fr 220px;
+    gap:20px;
+    align-items:center;
+    transition:border-color .15s, box-shadow .15s;
+  }
+  .chapter-card:hover{border-color:var(--amber); box-shadow:0 2px 10px rgba(0,0,0,0.04);}
+  .chapter-num{
+    font-family:var(--mono); font-size:16px; font-weight:600; color:var(--amber-dim);
+  }
+  .chapter-title{font-size:15.5px; font-weight:600;}
+  .chapter-desc{font-size:13.5px; color:var(--steel); margin:0;}
+  .chapter-goal{
+    font-size:12.5px; font-family:var(--mono); background:var(--paper-raise);
+    padding:8px 12px; border-radius:2px; border-left:2px solid var(--amber);
+    color:var(--ink);
+  }
+
+  @media (max-width:860px){
+    .chapter-card{grid-template-columns:1fr; gap:10px; padding:18px;}
+    .chapter-goal{margin-top:6px;}
+  }
+
+  /* top-down flow chart */
+  .flow-banner{
+    background:var(--paper-raise);
+    border:1px solid var(--hairline);
+    border-radius:2px;
+    padding:28px 32px;
+    margin-bottom:32px;
+  }
+  .flow-title{
+    font-family:var(--mono); font-size:12px; letter-spacing:0.12em; text-transform:uppercase;
+    color:var(--amber-dim); font-weight:600; margin-bottom:18px; display:block;
+  }
+  .flow-steps{
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:20px; position:relative;
+  }
+  .flow-step{
+    background:var(--paper);
+    border:1px solid var(--hairline);
+    padding:20px;
+    border-radius:2px;
+    position:relative;
+  }
+  .flow-step-num{
+    font-family:var(--mono); font-size:11px; color:var(--amber-dim); font-weight:600; margin-bottom:6px; display:block;
+  }
+  .flow-step h3{font-size:15px; margin-bottom:8px;}
+  .flow-step p{font-size:13px; color:var(--steel); margin:0; line-height:1.5;}
+
+  @media (max-width:760px){
+    .flow-steps{grid-template-columns:1fr;}
+  }
+
+  /* 8 data categories grid */
+  .data-cat-grid{
+    display:grid; grid-template-columns:repeat(2, 1fr); gap:18px; margin-top:28px;
+  }
+  .data-cat-card{
+    background:var(--paper);
+    border:1px solid var(--hairline);
+    border-radius:2px;
+    padding:24px;
+    display:flex; flex-direction:column; justify-content:space-between;
+    transition:border-color .15s;
+  }
+  .data-cat-card:hover{border-color:var(--amber);}
+  .data-cat-header{
+    display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:12px;
+  }
+  .data-cat-badge{
+    font-family:var(--mono); font-size:11px; font-weight:600; color:var(--amber-dim);
+    background:var(--amber-bg); padding:3px 8px; border-radius:2px;
+  }
+  .data-cat-count{
+    font-family:var(--mono); font-size:11px; color:var(--steel);
+  }
+  .data-cat-card h3{font-size:16px; margin-bottom:8px;}
+  .data-cat-question{
+    font-size:13px; color:var(--ink); font-weight:500; margin-bottom:12px;
+    background:rgba(184,130,58,0.06); padding:6px 10px; border-radius:2px; border-left:2px solid var(--amber);
+  }
+  .data-cat-fields{
+    font-family:var(--mono); font-size:11.5px; color:var(--steel); line-height:1.55;
+    background:var(--paper-raise); padding:10px 12px; border-radius:2px; margin-bottom:12px; word-break:break-word;
+  }
+  .data-cat-role{
+    font-size:12.5px; color:#444B56; margin:0; line-height:1.5;
+  }
+
+  @media (max-width:760px){
+    .data-cat-grid{grid-template-columns:1fr;}
+  }
+
+  /* 3-layer funnel */
+  .funnel-wrap{
+    display:grid; grid-template-columns:1fr 1fr; gap:36px; align-items:center; margin-top:28px;
+  }
+  .funnel-steps{
+    display:flex; flex-direction:column; gap:14px;
+  }
+  .funnel-box{
+    padding:18px 20px; border-radius:2px; border:1px solid var(--hairline);
+    background:var(--paper); position:relative;
+  }
+  .funnel-box.l1{border-left:4px solid var(--amber-dim); width:100%;}
+  .funnel-box.l2{border-left:4px solid var(--amber); width:95%;}
+  .funnel-box.l3{border-left:4px solid var(--green); width:90%;}
+  .funnel-box h3{font-size:15px; margin-bottom:6px;}
+  .funnel-box p{font-size:13px; color:var(--steel); margin:0;}
+
+  /* 5D matrix cards */
+  .matrix-grid{
+    display:grid; grid-template-columns:repeat(5, 1fr); gap:12px; margin-top:24px;
+  }
+  .matrix-card{
+    background:var(--paper); border:1px solid var(--hairline);
+    padding:18px 16px; border-radius:2px;
+  }
+  .matrix-code{font-family:var(--mono); font-size:13px; font-weight:600; color:var(--amber-dim); margin-bottom:4px; display:block;}
+  .matrix-weight{font-family:var(--mono); font-size:11px; color:var(--steel); margin-bottom:10px; display:block;}
+  .matrix-card h3{font-size:14.5px; margin-bottom:8px;}
+  .matrix-card p{font-size:12.5px; color:var(--steel); margin:0; line-height:1.45;}
+
+  @media (max-width:960px){
+    .matrix-grid{grid-template-columns:repeat(2, 1fr);}
+  }
+  @media (max-width:540px){
+    .matrix-grid{grid-template-columns:1fr;}
+  }
+
+  /* divergence highlight banner */
+  .divergence-box{
+    background:linear-gradient(135deg, rgba(156,58,58,0.06) 0%, rgba(184,130,58,0.06) 100%);
+    border:1.5px solid rgba(184,130,58,0.5);
+    border-radius:2px;
+    padding:32px 36px;
+    margin-top:24px;
+  }
+  .divergence-tag{
+    display:inline-flex; align-items:center; gap:6px;
+    background:var(--amber); color:#181207; font-weight:600; font-family:var(--mono);
+    font-size:11.5px; letter-spacing:0.06em; padding:3px 10px; border-radius:2px; margin-bottom:14px;
+  }
+  .divergence-grid{
+    display:grid; grid-template-columns:1.2fr 1fr; gap:32px; align-items:start; margin-top:20px;
+  }
+  .divergence-card{
+    background:var(--paper); border:1px solid var(--hairline); padding:20px; border-radius:2px;
+  }
+  .divergence-card h4{font-size:14.5px; margin-bottom:8px; color:var(--red);}
+
+  @media (max-width:800px){
+    .divergence-grid{grid-template-columns:1fr; gap:20px;}
+    .divergence-box{padding:22px;}
+  }
+
+  /* case study cards */
+  .case-grid{
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:18px; margin-top:28px;
+  }
+  .case-card{
+    background:var(--paper); border:1px solid var(--hairline);
+    border-radius:2px; padding:22px; display:flex; flex-direction:column; justify-content:space-between;
+    transition:border-color .15s;
+  }
+  .case-card:hover{border-color:var(--amber);}
+  .case-badge-row{display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;}
+  .case-ticker{font-family:var(--mono); font-size:18px; font-weight:600; letter-spacing:0.02em;}
+  .case-ret{font-family:var(--mono); font-size:14px; font-weight:600; padding:2px 8px; border-radius:2px;}
+  .case-ret.up{background:var(--green-bg); color:var(--green);}
+  .case-ret.down{background:var(--red-bg); color:var(--red);}
+  .case-type{font-family:var(--mono); font-size:11px; color:var(--amber-dim); margin-bottom:10px; display:block; font-weight:600;}
+  .case-card h3{font-size:15px; margin-bottom:8px;}
+  .case-card p{font-size:13px; color:var(--steel); margin:0 0 14px; line-height:1.5;}
+  .case-metrics{
+    background:var(--paper-raise); padding:10px 12px; border-radius:2px; font-family:var(--mono);
+    font-size:11.5px; color:var(--ink); line-height:1.6;
+  }
+
+  @media (max-width:860px){
+    .case-grid{grid-template-columns:1fr;}
+  }
+
+  /* 4-step workflow */
+  .workflow-grid{
+    display:grid; grid-template-columns:repeat(4, 1fr); gap:14px; margin-top:28px;
+  }
+  .workflow-card{
+    background:var(--paper); border:1px solid var(--hairline);
+    border-radius:2px; padding:22px 18px; text-align:left;
+  }
+  .workflow-step{
+    font-family:var(--mono); font-size:12px; color:var(--amber-dim); font-weight:600; margin-bottom:6px; display:block;
+  }
+  .workflow-time{
+    display:inline-block; font-family:var(--mono); font-size:10.5px; background:var(--amber-bg);
+    color:var(--amber-dim); padding:2px 6px; border-radius:2px; margin-bottom:12px;
+  }
+  .workflow-card h3{font-size:15px; margin-bottom:8px;}
+  .workflow-card p{font-size:13px; color:var(--steel); margin:0; line-height:1.5;}
+
+  @media (max-width:860px){
+    .workflow-grid{grid-template-columns:repeat(2, 1fr);}
+  }
+  @media (max-width:480px){
+    .workflow-grid{grid-template-columns:1fr;}
+  }
+
+  /* accordion dictionary */
+  .dict-list{display:flex; flex-direction:column; gap:10px; margin-top:28px;}
+  .dict-item{
+    background:var(--paper); border:1px solid var(--hairline); border-radius:2px;
+    transition:border-color .15s;
+  }
+  .dict-item:hover{border-color:var(--amber);}
+  .dict-item[open]{border-color:var(--amber-dim);}
+  .dict-summary{
+    padding:16px 20px; font-weight:600; cursor:pointer; list-style:none;
+    display:flex; justify-content:space-between; align-items:center; font-size:15px;
+  }
+  .dict-summary::-webkit-details-marker{display:none;}
+  .dict-term{font-family:var(--mono); font-size:14.5px; color:var(--ink);}
+  .dict-tag{font-family:var(--mono); font-size:11px; color:var(--amber-dim); background:var(--amber-bg); padding:2px 8px; border-radius:2px;}
+  .dict-body{
+    padding:0 20px 18px; font-size:13.5px; color:var(--steel); line-height:1.6;
+    border-top:1px solid var(--hairline); padding-top:12px; margin-top:4px;
+  }
+
+  /* CTA row */
+  .cta-row{display:flex; gap:16px; flex-wrap:wrap;}
+  .cta-primary{
+    display:inline-flex; align-items:center; gap:8px;
+    background:var(--amber); color:#181207;
+    font-weight:600; font-size:15px;
+    padding:13px 24px; border-radius:2px;
+    text-decoration:none;
+    transition:background .15s;
+  }
+  .cta-primary:hover{background:#CB934A;}
+  .cta-secondary{
+    display:inline-flex; align-items:center; gap:8px;
+    background:none; color:var(--ink);
+    font-weight:600; font-size:15px;
+    padding:12px 22px; border-radius:2px;
+    border:1px solid var(--hairline);
+    text-decoration:none;
+    transition:all .15s;
+  }
+  .cta-secondary:hover{border-color:var(--amber); color:var(--amber);}
+
+  footer{border-top:1px solid var(--hairline); padding:40px 0 50px;}
+  .disclaimer{font-size:12.5px; color:var(--steel); max-width:880px; line-height:1.6; margin-bottom:18px;}
+  .footer-bottom{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; font-family:var(--mono); font-size:11.5px; color:var(--steel);}
+  .footer-links{display:flex; gap:18px;}
+  .footer-links a{color:var(--steel); text-decoration:none;}
+  .footer-links a:hover{color:var(--ink); text-decoration:underline;}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/">K2J<span class="brand-sub">AI QUANTITATIVE LAB</span></a>
+    <nav class="nav-links" aria-label="Main Navigation">
+      <a href="/#research">研究方法</a>
+      <a href="#structure">章节结构</a>
+      <a href="#data-system">8大类数据</a>
+      <a href="#funnel">标的筛选</a>
+      <a href="#attribution">5维归因</a>
+      <a href="#divergence">逆势背离</a>
+      <a href="#cases">案例拆解</a>
+      <a href="#workflow">4步解读</a>
+      <a href="#dictionary">指标字典</a>
+      <a href="/#archive">报告归档</a>
+    </nav>
+    <a class="lang-toggle" href="./guide.en.html">
+      <span>EN</span> / <strong>中文</strong>
+    </a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">K2J 投研方法论与研报导读指南</p>
+    <h1>如何理解与高效利用 K2J 美股量化多因子研究报告</h1>
+    <p class="subhead">
+      K2J 每日美股量化研报并非无脑荐股或买卖点播报，而是一套机构级的市场叙事量化解构系统。美股市场标的数千，本系统基于严格流动性门槛精选 1,500+ 只高流动性核心股票池作为底层全景数据网络，全方位拆解「宏观 → 板块 → 个股」自上而下的严密推导逻辑、20 支焦点股票的 5 维共振遴选机制与「板块逆势背离」量化破案真相。
+    </p>
+
+    <div class="trust-strip">
+      <div class="trust-item">
+        <span class="trust-num">1,500+</span>
+        <span class="trust-label">高流动性核心标的</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-num">8 大类</span>
+        <span class="trust-label">底层数据采集维度</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-num">100+</span>
+        <span class="trust-label">项个股精细化指标</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-num">5 维</span>
+        <span class="trust-label">截面稳健正交归因</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-num">20 支</span>
+        <span class="trust-label">每日焦点代表深度解构</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-num">双语</span>
+        <span class="trust-label">中英文每日准时发布</span>
+      </div>
+    </div>
+
+    <div class="cta-row">
+      <a class="cta-primary" href="/#archive">查阅最新每日报告 →</a>
+      <a class="cta-secondary" href="#structure" style="color:var(--hero-text); border-color:var(--hero-line);">开始阅读导读指南 ↓</a>
+    </div>
+  </div>
+</section>
+
+<!-- Module 1: Positioning & Mission -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-eyebrow">01 · 产品定位与设计哲学</span>
+      <h2>量化解构每日市场叙事，而非提供买卖点位</h2>
+      <p class="section-lede">
+        在充满噪音的金融市场中，投资者最常面临的困惑是“表面指数涨了，为什么我的股票在跌？”或者“某只股票暴涨，到底是因为行业利好、主力资金抢筹，还是高开诱多出货？”
+      </p>
+    </div>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:28px;">
+      <div style="background:var(--paper-raise); border:1px solid var(--hairline); padding:26px; border-radius:2px;">
+        <h3 style="font-size:16px; margin-bottom:12px; color:var(--red);">❌ 我们坚决不做的（彻底剥离）</h3>
+        <ul style="margin:0; padding-left:18px; font-size:14px; color:var(--steel); line-height:1.8;">
+          <li><strong>无脑量化荐股</strong>：不提供任何诱导性买入/卖出指令。</li>
+          <li><strong>机械点位预测</strong>：不给出主观的所谓“精准支撑位与止盈点”。</li>
+          <li><strong>单一消息面解读</strong>：不依据单条新闻做断章取义的行情猜测。</li>
+          <li><strong>黑盒黑箱输出</strong>：绝不给出无法量化审计的神秘分数。</li>
+        </ul>
+      </div>
+      <div style="background:var(--paper-raise); border:1px solid var(--hairline); padding:26px; border-radius:2px;">
+        <h3 style="font-size:16px; margin-bottom:12px; color:var(--green);">✅ 研报真正回答的核心问题</h3>
+        <ul style="margin:0; padding-left:18px; font-size:14px; color:var(--ink); line-height:1.8;">
+          <li><strong>大盘处于什么体制？</strong> 宏观风险偏好是进攻 (Risk-On) 还是防御 (Risk-Off)？</li>
+          <li><strong>聪明资金流向了哪里？</strong> 万亿机构资金在哪些细分产业悄然抱团？</li>
+          <li><strong>哪些个股出现显著异动？</strong> 是盘中逼空抢筹还是高开诱多出货？</li>
+          <li><strong>企业基本面是否有造血护城河？</strong> 真实现金流与财务排雷是否健康？</li>
+          <li><strong>为什么今天涨/跌 (Why it moved)？</strong> 深度还原 20 支标的真实异动因果。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Module 2: Report Architecture & Top-Down Logic -->
+<section id="structure" class="bg-raise">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-eyebrow">02 · 研报架构与推导逻辑</span>
+      <h2>自上而下的「宏观 → 板块 → 个股」严密推导流水线</h2>
+      <p class="section-lede">
+        “不谋全局者，不足谋一域”。K2J 研报严格遵循顶级对冲基金的投研标准，自上而下逐层收敛推导，绝不孤立分析单只股票。
+      </p>
+    </div>
+
+    <div class="flow-banner">
+      <span class="flow-title">自上而下 3 步推导工作流</span>
+      <div class="flow-steps">
+        <div class="flow-step">
+          <span class="flow-step-num">STEP 1 · 宏观定调</span>
+          <h3>大盘体制与风险预算</h3>
+          <p>基于 GBDT 集成模型与四大基准 ETF，判定宏观多空体制，评估 1,500+ 核心股票池的广度中枢，决定总仓位顺逆风方向。</p>
+        </div>
+        <div class="flow-step">
+          <span class="flow-step-num">STEP 2 · 板块扫描</span>
+          <h3>产业共振与主题簇画像</h3>
+          <p>通过无监督动态聚类算法提取领涨/领跌主题簇，分析细分行业同向率与资金流动强度，锁定机构抱团赛道。</p>
+        </div>
+        <div class="flow-step">
+          <span class="flow-step-num">STEP 3 · 个股聚焦</span>
+          <h3>5 维归因与 20 股深度解构</h3>
+          <p>在宏观与板块确立的基础上，运用 5 维正交归因模型严格选拔 Top 10 上涨 + Top 10 下跌标的，结合 AI 深度推理异动因果。</p>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="font-size:18px; margin:28px 0 16px;">研报 8 大标准章节逐章拆解</h3>
+    <div class="chapter-grid">
+      <div class="chapter-card">
+        <span class="chapter-num">00</span>
+        <div class="chapter-title">核心要点速览</div>
+        <p class="chapter-desc">AI 驱动的事实高密度速览摘要，包含大盘体制、多头主线、承压逆势背离与核心看点。</p>
+        <div class="chapter-goal">⏱️ 30 秒速览核心全局结论</div>
+      </div>
+      <div class="chapter-card">
+        <span class="chapter-num">01</span>
+        <div class="chapter-title">市场环境与宏观图景</div>
+        <p class="chapter-desc">大盘体制评定看板、四大基准 ETF 点位涨跌幅、全市场上涨/下跌标的数量及比例、宏观深度叙事。</p>
+        <div class="chapter-goal">🎯 先定大局：明确顺风或逆风</div>
+      </div>
+      <div class="chapter-card">
+        <span class="chapter-num">02</span>
+        <div class="chapter-title">产业共振与主题簇画像</div>
+        <p class="chapter-desc">展示上涨共振主题簇与下跌承压主题簇，呈现各簇样本数、同向率、1D/1M 均值、Z-Score 与代表标的。</p>
+        <div class="chapter-goal">🧭 再看赛道：追踪资金轮动主线</div>
+      </div>
+      <div class="chapter-card">
+        <span class="chapter-num">03</span>
+        <div class="chapter-title">个股摘要与核心洞察</div>
+        <p class="chapter-desc">多头与空头精选标的摘要列表（代码下划线直达卡片）、逆势背离标的高亮警示与组合策略风控建议。</p>
+        <div class="chapter-goal">⚡ 一屏速查 20 股多空全貌</div>
+      </div>
+      <div class="chapter-card">
+        <span class="chapter-num">04</span>
+        <div class="chapter-title">5 维归因上涨代表标的研究</div>
+        <p class="chapter-desc">Top 10 上涨标的深度卡片：异动因果、5 维归因与量价微观解构、6 维商业护城河、华尔街目标价与财报预警。</p>
+        <div class="chapter-goal">🔍 深入多头：讲透为什么涨</div>
+      </div>
+      <div class="chapter-card">
+        <span class="chapter-num">05</span>
+        <div class="chapter-title">5 维归因下跌代表标的研究</div>
+        <p class="chapter-desc">Top 10 下跌标的深度卡片：破位杀跌因果、法务排雷体检、极端逆势背离独立 AI 破案分析。</p>
+        <div class="chapter-goal">🛡️ 深入空头：拆解为什么跌与排雷</div>
+      </div>
+      <div class="chapter-card">
+        <span class="chapter-num">06</span>
+        <div class="chapter-title">全域精选总览表</div>
+        <p class="chapter-desc">20 支入选标的的 10 列核心指标横向矩阵对比（方向、代码、行业、得分、共振度、现价、涨跌幅、相对成交量、健康度、财报日）。</p>
+        <div class="chapter-goal">📊 一表横向对比多空全阵营</div>
+      </div>
+      <div class="chapter-card">
+        <span class="chapter-num">07</span>
+        <div class="chapter-title">量化模型方法论</div>
+        <p class="chapter-desc">5 维量化归因权重公式、D1–D5 指标映射与排雷四大模型阈值说明，保证全流程可量化、可审计。</p>
+        <div class="chapter-goal">📐 验证评分机制与算法数学严谨度</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Module 3: 8 Data Categories -->
+<section id="data-system">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-eyebrow">03 · 严苛的数据底座</span>
+      <h2>8 大维度 100+ 项个股全量底层数据体系</h2>
+      <p class="section-lede">
+        一份具有真正参考价值的量化报告，绝不可能只看一两个涨跌幅数字。美股标的众多但流动性分化巨大，K2J 设立严格的流动性准入门槛（过滤无成交量的微盘僵尸股），在每个交易日收盘后对 1,500+ 只高流动性核心标的逐一采集并计算以下 8 大维度超过 100 项专业级数据字段：
+      </p>
+    </div>
+
+    <div class="data-cat-grid">
+      <!-- Category 1 -->
+      <div class="data-cat-card">
+        <div>
+          <div class="data-cat-header">
+            <span class="data-cat-badge">01 · 基础元数据与分析师共识</span>
+            <span class="data-cat-count">≈ 22 项指标</span>
+          </div>
+          <h3>资产身份、股本流动性与华尔街预期</h3>
+          <div class="data-cat-question">💡 解决问题：标的属于什么赛道？盘子有多大？华尔街预期差有多大？</div>
+          <div class="data-cat-fields">
+            type, subtype, exchange, market, sector, industry, cusip, isin, figi, number_of_shareholders, total_shares_outstanding, float_shares_outstanding, float_shares_percent_calc, earnings_release_date, earnings_release_next_date, price_target_average, target_price_performance, Recommend.All
+          </div>
+        </div>
+        <p class="data-cat-role"><strong>归因价值</strong>：度量自由流通盘大小（小盘股需警惕庄股操纵，大盘股需资金合力）；提前 3 天对下次财报日进行二元巨震风险预警；对比华尔街目标价与实盘价格的预期差。</p>
+      </div>
+
+      <!-- Category 2 -->
+      <div class="data-cat-card">
+        <div>
+          <div class="data-cat-header">
+            <span class="data-cat-badge">02 · 多周期价格、量能与微观结构</span>
+            <span class="data-cat-count">≈ 52 项指标</span>
+          </div>
+          <h3>盘中实体、多周期突破与夜盘异动</h3>
+          <div class="data-cat-question">💡 解决问题：是主力真金白银逼空抢筹，还是高开低走诱多出货？</div>
+          <div class="data-cat-fields">
+            open, high, low, close, gap, change, change_from_open, volume, volume_change, average_volume_10d/30d/60d/90d, relative_volume, Value.Traded (Turnover), Volatility.D/W/M, beta_1/3/5Y, Perf.W/1M/3M/6M/Y/YTD, High/Low.1M/3M/6M/52W/ATH/ATL, premarket/postmarket_open/high/low/close/volume/gap
+          </div>
+        </div>
+        <p class="data-cat-role"><strong>归因价值</strong>：支撑 <strong>D3 资金流向微观结构</strong>（通过 `change_from_open` 与 VWAP 偏离度打标 `BULLISH_DRIVE` vs `FADING_GAP_DUMP` 出货惩罚）；支撑 <strong>D4 突破判定</strong>（ATH 新高、52周突破 vs 破位新低）。</p>
+      </div>
+
+      <!-- Category 3 -->
+      <div class="data-cat-card">
+        <div>
+          <div class="data-cat-header">
+            <span class="data-cat-badge">03 · 全周期技术指标与枢轴点矩阵</span>
+            <span class="data-cat-count">≈ 56 项指标</span>
+          </div>
+          <h3>均线通道、动量震荡器与 5 大流派枢轴点</h3>
+          <div class="data-cat-question">💡 解决问题：当前趋势强度如何？机构平均建仓成本线在哪里？</div>
+          <div class="data-cat-fields">
+            SMA 5/20/50/100/200, EMA 5/10/20/50/100/200, HullMA9, Ichimoku (Tenkan/Kijun/Span A/B), RSI (14), Stochastic, Stoch.RSI, ADX (+DI/-DI), ATR, ADR, CCI20, Williams %R, Momentum, ROC, UO, AO, BBPower, VWAP, VWMA, BB.upper/lower/basis, ChaikinMoneyFlow (CMF), MoneyFlow (MFI), P.SAR, Pivot Points (Camarilla, Classic, DeMark, Fibonacci, Woodie)
+          </div>
+        </div>
+        <p class="data-cat-role"><strong>归因价值</strong>：多指标正交去噪；CMF > 0 与 MFI 确认增量资金进场；收盘价站上 VWAP 确认机构日内筹码处于盈利顺风状态；枢轴点矩阵精准锚定关键支撑与阻力区间。</p>
+      </div>
+
+      <!-- Category 4 -->
+      <div class="data-cat-card">
+        <div>
+          <div class="data-cat-header">
+            <span class="data-cat-badge">04 · 财务三大报表深度数据</span>
+            <span class="data-cat-count">≈ 31 项指标</span>
+          </div>
+          <h3>利润表、现金流量表与资产负债表 (TTM &amp; FQ)</h3>
+          <div class="data-cat-question">💡 解决问题：公司真实造血能力如何？账面繁荣是否有真实现金流支撑？</div>
+          <div class="data-cat-fields">
+            total_revenue_ttm/fq, gross_profit_ttm/fq, ebit_ttm, ebitda_ttm/fq, net_income_ttm/fq, basic/diluted_eps_ttm, research_and_dev_ttm/fq, cash_f_operating_activities_ttm/fq, free_cash_flow_ttm/fq, capital_expenditures_ttm/fq, cash_n_equivalents_fq, total_assets_fq, total_liabilities_fq, net_debt_fq, total_equity_fq, goodwill_fq
+          </div>
+        </div>
+        <p class="data-cat-role"><strong>归因价值</strong>：穿透会计做账数字，通过自由现金流 (FCF) 与经营现金流验证盈利真实性，杜绝“有营业收入无现金流入”的虚假繁荣标的。</p>
+      </div>
+
+      <!-- Category 5 -->
+      <div class="data-cat-card">
+        <div>
+          <div class="data-cat-header">
+            <span class="data-cat-badge">05 · 先进企业价值与估值倍数</span>
+            <span class="data-cat-count">≈ 15 项指标</span>
+          </div>
+          <h3>经典估值乘数与真实企业现金流倍数</h3>
+          <div class="data-cat-question">💡 解决问题：股价是否被高估？基于企业现金流的安全边际有多大？</div>
+          <div class="data-cat-fields">
+            market_cap_basic, price_earnings_ttm (P/E), price_earnings_growth_ttm (PEG), price_sales (P/S), price_book_fq (P/B), price_free_cash_flow_ttm (P/FCF), ev_to_ebitda_ttm, enterprise_value_to_ebit_ttm, enterprise_value_to_revenue_ttm, enterprise_value_to_free_cash_flow_ttm, earnings_yield_recent, buyback_yield_recent
+          </div>
+        </div>
+        <p class="data-cat-role"><strong>归因价值</strong>：支撑 <strong>D5 基本面与估值维度</strong>；以 EV/EBITDA 与 P/FCF 等现金流乘数替代传统容易被一次性损益扭曲的静态 P/E，为高研发科技与周期股提供自适应估值基准。</p>
+      </div>
+
+      <!-- Category 6 -->
+      <div class="data-cat-card">
+        <div>
+          <div class="data-cat-header">
+            <span class="data-cat-badge">06 · 跨周期复合增长率</span>
+            <span class="data-cat-count">≈ 8 项指标</span>
+          </div>
+          <h3>营收、利润、现金流与资产负债扩张速度</h3>
+          <div class="data-cat-question">💡 解决问题：公司处于成长加速期、成熟平台期还是衰退出清期？</div>
+          <div class="data-cat-fields">
+            total_revenue_yoy_growth_ttm, gross_profit_yoy_growth_ttm, ebitda_yoy_growth_ttm, net_income_yoy_growth_ttm, free_cash_flow_yoy_growth_ttm, capital_expenditures_yoy_growth_ttm, total_assets_yoy_growth_fq, total_debt_yoy_growth_fq
+          </div>
+        </div>
+        <p class="data-cat-role"><strong>归因价值</strong>：敏锐捕捉基本面边际加速改善（主升浪初期）或盈利断崖失速的拐点，辅助研判行情的可持续性。</p>
+      </div>
+
+      <!-- Category 7 -->
+      <div class="data-cat-card">
+        <div>
+          <div class="data-cat-header">
+            <span class="data-cat-badge">07 · 财务比率与法务排雷四大家族</span>
+            <span class="data-cat-count">≈ 20 项指标</span>
+          </div>
+          <h3>回报率质量与经典信用/破产/盈余操纵排雷</h3>
+          <div class="data-cat-question">💡 解决问题：是否存在财务暴雷、盈余操纵或破产隐患？</div>
+          <div class="data-cat-fields">
+            return_on_equity (ROE), return_on_assets (ROA), return_on_invested_capital (ROIC), gross_margin, operating_margin, net_margin, current_ratio, quick_ratio, debt_to_equity, altman_z_score_ttm, piotroski_f_score_ttm, sloan_ratio_ttm, zmijewski_score_ttm
+          </div>
+        </div>
+        <p class="data-cat-role"><strong>归因价值</strong>：构筑强大的多空风控护城河。多头标的必须通过 <strong>Piotroski F ≥ 3、Sloan ≤ 10%、Altman Z ≥ 1.81</strong> 三重硬性排雷；空头标的则精准定位受财务硬伤拖累的脆弱标的。</p>
+      </div>
+
+      <!-- Category 8 -->
+      <div class="data-cat-card">
+        <div>
+          <div class="data-cat-header">
+            <span class="data-cat-badge">08 · 股东回报与分红政策</span>
+            <span class="data-cat-count">≈ 8 项指标</span>
+          </div>
+          <h3>股息收益率、回购分红与资本配置质量</h3>
+          <div class="data-cat-question">💡 解决问题：管理层是否注重股东回报？现金分红是否具备可持续性？</div>
+          <div class="data-cat-fields">
+            dividends_yield, dividend_yield_indicated, dps_ttm, dps_common_stock_prim_issue_yoy_growth_fy, continuous_dividend_growth, continuous_dividend_payout, dividend_payout_ratio_ttm, total_cash_dividends_paid_ttm
+          </div>
+        </div>
+        <p class="data-cat-role"><strong>归因价值</strong>：结合股票回购收益率计算「股东综合收益率 (Total Shareholder Yield)」，识别现金流造血充沛、抵御熊市波动的防御型价值压舱石。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Module 4: 3-Layer Screening Funnel -->
+<section id="funnel" class="bg-raise">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-eyebrow">04 · 标的遴选漏斗</span>
+      <h2>每日 20 支焦点股票的三层遴选机制</h2>
+      <p class="section-lede">
+        在 1,500+ 只高流动性核心标的池中，研报如何精确选出最能代表今日市场行情的 20 支标的（Top 10 上涨 + Top 10 下跌）？
+      </p>
+    </div>
+
+    <div class="funnel-wrap">
+      <div class="funnel-steps">
+        <div class="funnel-box l1">
+          <span style="font-family:var(--mono); font-size:11px; color:var(--amber-dim); font-weight:600;">第 1 层 · 极值焦点必选 (2 席)</span>
+          <h3>全市场极值焦点锁定</h3>
+          <p>全市场单日涨幅最大个股与跌幅最大个股自动占位。若个股与板块严重背离，打标为 <code>EXTREMA_DIVERGENCE</code>（逆势背离焦点），确保市场极端暴涨或暴跌黑天鹅不被漏掉。</p>
+        </div>
+        <div class="funnel-box l2">
+          <span style="font-family:var(--mono); font-size:11px; color:var(--amber); font-weight:600;">第 2 层 · 5 维共振主线选拔 (18 席)</span>
+          <h3>多因子共振引擎排序</h3>
+          <p>剩余 18 席严格由 5 维归因模型筛选：共振星级 (<code>5/5★</code> → <code>4/5</code> → <code>3/5</code>) 优先 + 综合归因得分 + 行业同向率 (≥50%) 抗噪音过滤，剔除孤立无合力的杂音个案。</p>
+        </div>
+        <div class="funnel-box l3">
+          <span style="font-family:var(--mono); font-size:11px; color:var(--green); font-weight:600;">第 3 层 · 产业多样性硬约束</span>
+          <h3>防止行业过度集中</h3>
+          <p>同一主题簇最多允许 3 只入选，同一细分行业最多允许 3 只入选。强制分散以全面覆盖当日市场上所有核心产业主线，杜绝整份研报被单一板块刷屏。</p>
+        </div>
+      </div>
+
+      <div style="background:var(--paper); border:1px solid var(--hairline); padding:24px; border-radius:2px;">
+        <h3 style="font-size:16px; margin-bottom:12px;">遴选出来的标的有什么鲜明特征？</h3>
+        <div style="margin-bottom:14px;">
+          <span style="font-family:var(--mono); font-size:12px; color:var(--green); font-weight:600; display:block; margin-bottom:4px;">🟢 多头核心代表标的特征</span>
+          <p style="font-size:13px; color:var(--steel); margin:0;">
+            高归因共振星级 (`5/5★` 或 `4/5`)、K 线实体真实抢筹 (`BULLISH_DRIVE`)、收盘价站上 VWAP、多周期平台突破 (ATH/52W)、财务造血健康 (Piotroski ≥ 3, Altman Z ≥ 1.81, Sloan ≤ 10%)、行业资金抱团顺风。
+          </p>
+        </div>
+        <div>
+          <span style="font-family:var(--mono); font-size:12px; color:var(--red); font-weight:600; display:block; margin-bottom:4px;">🔴 空头承压与排雷标的特征</span>
+          <p style="font-size:13px; color:var(--steel); margin:0;">
+            板块系统性破位杀跌 (`BEARISH_DUMP`)、资金持续净流出 (CMF < 0)、财务脆弱 (低 F-Score、困境 Altman Z、盈余操纵 Sloan 红旗)，或者触发突发公司特异性利空导致的**板块逆势背离闪崩**。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Module 5: 5-D Attribution Model -->
+<section id="attribution">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-eyebrow">05 · 5 维稳健归因模型</span>
+      <h2>五维正交解耦度量体系与评分公式</h2>
+      <p class="section-lede">
+        在 K2J 体系中，<strong>5 维共振代表“归因解释的完整性”</strong>——即一只股票的异动能被多少个独立正交维度同时合理解释：
+      </p>
+    </div>
+
+    <div style="background:var(--paper-raise); border:1px solid var(--hairline); padding:20px 24px; border-radius:2px; font-family:var(--mono); font-size:14px; text-align:center; margin-bottom:24px;">
+      Narrative Attribution Score = Φ( 0.20 D₁ + 0.25 D₂ + 0.25 D₃ + 0.15 D₄ + 0.15 D₅ ) × 100
+    </div>
+
+    <div class="matrix-grid">
+      <div class="matrix-card">
+        <span class="matrix-code">D1 · 股指联动</span>
+        <span class="matrix-weight">权重 20% · 宏观天时</span>
+        <h3>顺应大势 vs 逆势背离</h3>
+        <p>相对大盘超额收益 Robust Z-Score + Beta 敏感度 + 宏观体制硬性门控。大盘普涨时空头 D1 硬性不达标。</p>
+      </div>
+      <div class="matrix-card">
+        <span class="matrix-code">D2 · 板块共动</span>
+        <span class="matrix-weight">权重 25% · 产业地利</span>
+        <h3>产业抱团 vs 孤立事件</h3>
+        <p>纯行业超额收益 Alpha + 行业同向率检验 (≥50%) + 主题簇动能 Z-Score。板块逆势背离强行惩罚 -2.0 分。</p>
+      </div>
+      <div class="matrix-card">
+        <span class="matrix-code">D3 · 资金流向</span>
+        <span class="matrix-weight">权重 25% · 主力人和</span>
+        <h3>真实买盘 vs 诱多出货</h3>
+        <p>盘中实体涨跌 (Change_From_Open) + K线操盘意图打标 + VWAP 偏离度 + 成交总额 (Turnover) + 蔡金资金流 (CMF)。</p>
+      </div>
+      <div class="matrix-card">
+        <span class="matrix-code">D4 · 价格行为</span>
+        <span class="matrix-weight">权重 15% · 技术势能</span>
+        <h3>多周期突破 vs 破位</h3>
+        <p>突破徽章阶梯加分 (ATH +1.0, 52W/6M +0.7, 3M +0.4, BREAKDOWN -0.7) + 均线偏离度 + 布林通道位置 + MACD 加速度。</p>
+      </div>
+      <div class="matrix-card">
+        <span class="matrix-code">D5 · 基本面质量</span>
+        <span class="matrix-weight">权重 15% · 价值护城河</span>
+        <h3>现金流支撑 vs 法务排雷</h3>
+        <p>真实 EV/EBITDA 与 P/FCF 估值 + Piotroski F 健康度 + Altman Z 破产防线 + Sloan 盈余操纵扣分 + 行业自适应。</p>
+      </div>
+    </div>
+
+    <div style="margin-top:24px; display:flex; gap:12px; flex-wrap:wrap; align-items:center;">
+      <span style="font-size:13px; font-weight:600; color:var(--steel);">共振星级标识说明：</span>
+      <span style="font-family:var(--mono); font-size:12px; background:var(--amber); color:#181207; font-weight:600; padding:2px 8px; border-radius:2px;">5/5★ 五维全能共振 (顶级重点 Highlight)</span>
+      <span style="font-family:var(--mono); font-size:12px; background:rgba(28,45,66,0.12); color:var(--navy); font-weight:600; padding:2px 8px; border-radius:2px; border:1px solid rgba(28,45,66,0.3);">4/5 强共振归因 (次级重点)</span>
+      <span style="font-family:var(--mono); font-size:12px; background:var(--paper-raise); color:var(--steel); padding:2px 8px; border-radius:2px; border:1px solid var(--hairline);">3/5 主流归因 (常规展示)</span>
+    </div>
+  </div>
+</section>
+
+<!-- Module 6: Sector Divergence Deep-Dive -->
+<section id="divergence" class="bg-raise">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-eyebrow">06 · 专项破案警示</span>
+      <h2>什么是「板块逆势背离异动」与量化破案？</h2>
+      <p class="section-lede">
+        在美股交易中，脱离板块大势的独立暴跌是投资者最容易踩坑的“夺命飞刀”。K2J 独创了逆势背离量化监控与 AI 破案机制。
+      </p>
+    </div>
+
+    <div class="divergence-box">
+      <span class="divergence-tag">⚠️ 核心警示机制 · SECTOR DIVERGENCE</span>
+      <h3 style="font-size:20px; margin-bottom:12px;">个股走势脱离行业大势：绝非单纯的领跌或做空代表</h3>
+      <p style="font-size:14.5px; color:var(--ink); line-height:1.7; margin:0;">
+        当一只个股的涨跌事实与所属细分行业整体行情发生严重矛盾与撕裂时（例如黄金板块全线均涨 +2.81%，80% 个股大涨，但某只金矿股却突发暴跌 -9.35%），这绝不是正常的顺势回调，而是触发了<strong>公司特异性突发黑天鹅</strong>。
+      </p>
+
+      <div class="divergence-grid">
+        <div>
+          <h4 style="font-size:15px; margin-bottom:10px; color:var(--amber-dim);">⚙️ K2J 模型的量化处理与惩罚逻辑</h4>
+          <ul style="margin:0; padding-left:18px; font-size:13.5px; color:var(--steel); line-height:1.75;">
+            <li><strong>D2 板块共动强行扣分</strong>：强制赋予惩罚性负分 <code>-2.0</code>（❌ 板块背离），判定其严重缺乏板块资金合力。</li>
+            <li><strong>综合归因分合理压低</strong>：综合 Z 分直接扣减 <code>-0.50</code>（例如将某股 62.7 分压至 38.2 分），确保其<strong>绝不会被误判为“领跌共振第一名”</strong>。</li>
+            <li><strong>角色清晰打标</strong>：前端打标为 <code>EXTREMA_DIVERGENCE</code>，展示为「单日最大跌幅 (逆势背离)」而非「顺板块做空代表」。</li>
+            <li><strong>AI 定向深度破案</strong>：触发专属新闻因果推理，挖掘导致其背离的公司特异性事件并在研报卡片顶部悬挂醒目的 <code>⚠️ 逆势背离</code> 橙色预警横幅。</li>
+          </ul>
+        </div>
+
+        <div class="divergence-card">
+          <h4>📌 真实研报经典案例 · SA (2026-08-24)</h4>
+          <p style="font-size:13px; color:var(--ink); margin-bottom:8px; line-height:1.6;">
+            <strong>行情反差</strong>：所属【非能源矿产 - 黄金白银】板块当日均涨 <strong>+2.81%</strong>（IAG、BTG 等全线大涨），但 SA 却逆势暴跌 <strong>-9.35%</strong>。
+          </p>
+          <p style="font-size:13px; color:var(--steel); margin:0; line-height:1.6;">
+            <strong>AI 破案因果</strong>：研报定向检索精准捕获该公司突发折价增发稀释股票的公告。背离警示提醒投资者：切勿因为黄金大涨而盲目抄底 SA，避开接飞刀陷阱！
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Module 7: Case Studies -->
+<section id="cases">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-eyebrow">07 · 真实案例拆解</span>
+      <h2>研报标的特征画像与真实案例对比</h2>
+      <p class="section-lede">
+        通过 2026-08-24 真实研报中的典型标的，直观感受多因子共振与量化归因的实战价值：
+      </p>
+    </div>
+
+    <div class="case-grid">
+      <!-- Case 1 -->
+      <div class="case-card">
+        <div>
+          <div class="case-badge-row">
+            <span class="case-ticker">CART</span>
+            <span class="case-ret up">+3.91%</span>
+          </div>
+          <span class="case-type">🟢 多头共振突破龙头 · 4/5 共振</span>
+          <h3>52 周平台突破 + 盘中逼空抢筹</h3>
+          <p>
+            交通运输物流赛道。收盘创 52 周新高，盘中收盘相对开盘 +3.9% 单边逼空拉升，收盘价相对 VWAP 偏离 +1.6%，D3 资金流与 D4 突破双强，行业资金形成合力。
+          </p>
+        </div>
+        <div class="case-metrics">
+          <strong>量化画像</strong>：<br>
+          • 52W 平台突破 (Badge: 52W_6M)<br>
+          • 操盘意图: BULLISH_DRIVE<br>
+          • 归因得分: 88.4 / 4/5 共振<br>
+          • 支撑维度: D1, D3, D4, D5 ✓
+        </div>
+      </div>
+
+      <!-- Case 2 -->
+      <div class="case-card">
+        <div>
+          <div class="case-badge-row">
+            <span class="case-ticker">ALVO</span>
+            <span class="case-ret up">+18.51%</span>
+          </div>
+          <span class="case-type">⚡ 独立利好突破极值 · 3/5 归因</span>
+          <h3>单日极值暴涨 + 真实做多实体</h3>
+          <p>
+            生物制药赛道。所属板块当日整体均跌，该股受 FDA 监管利好刺激逆势暴拉 +18.5%，成交量达平日 3.4 倍。虽然触发逆势背离，但盘中真实抢筹实体确认了极强做多力量。
+          </p>
+        </div>
+        <div class="case-metrics">
+          <strong>量化画像</strong>：<br>
+          • 相对成交量: 3.40x 显著放量<br>
+          • 操盘意图: BULLISH_DRIVE<br>
+          • 特异性利好: FDA 审查解除<br>
+          • 角色: EXTREMA_DIVERGENCE
+        </div>
+      </div>
+
+      <!-- Case 3 -->
+      <div class="case-card">
+        <div>
+          <div class="case-badge-row">
+            <span class="case-ticker">AAOI</span>
+            <span class="case-ret down">-13.82%</span>
+          </div>
+          <span class="case-type">🔴 空头破位杀跌 · 财务排雷预警</span>
+          <h3>破位新低 + 资金加速出逃</h3>
+          <p>
+            电子科技光模块赛道。单边破位杀跌，盘中较开盘 -7.8%，CMF 资金流加速为负，多周期技术指标全面破位，模型提示警惕流动性失速与接飞刀风险。
+          </p>
+        </div>
+        <div class="case-metrics">
+          <strong>量化画像</strong>：<br>
+          • 技术形态: BREAKDOWN 破位<br>
+          • 操盘意图: BEARISH_DUMP<br>
+          • CMF: -0.12 资金持续流出<br>
+          • 角色: EXTREMA_ALIGNED (领跌)
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Module 8: 4-Step Reading Workflow -->
+<section id="workflow" class="bg-raise">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-eyebrow">08 · 研报使用说明书</span>
+      <h2>4 步研报高效阅读工作流 (5 分钟速读法)</h2>
+      <p class="section-lede">
+        一份完整的 K2J 研报包含大量深度数据，如何用最短的时间提取最高价值的投研信息？
+      </p>
+    </div>
+
+    <div class="workflow-grid">
+      <div class="workflow-card">
+        <span class="workflow-step">STEP 01 · 观大盘体制</span>
+        <span class="workflow-time">⏱️ 耗时 1 分钟</span>
+        <h3>看清顺逆风方向</h3>
+        <p>翻开报告先看 <code>01 宏观图景</code>：大盘是「强多进攻」还是「分化承压」？四大 ETF 谁强谁弱？1,500+ 核心标的上涨比例是否超过 50%？据此定下今日多空仓位总预算。</p>
+      </div>
+      <div class="workflow-card">
+        <span class="workflow-step">STEP 02 · 察板块资金</span>
+        <span class="workflow-time">⏱️ 耗时 2 分钟</span>
+        <h3>锁定资金抱团赛道</h3>
+        <p>浏览 <code>02 主题簇画像</code>：哪些细分行业在逆势上涨？哪些板块资金正在溃逃？同向率超过 70% 的领涨簇即为今日最具合力的主线赛道。</p>
+      </div>
+      <div class="workflow-card">
+        <span class="workflow-step">STEP 03 · 览 20 股总览</span>
+        <span class="workflow-time">⏱️ 耗时 2 分钟</span>
+        <h3>一屏掌握多空代表</h3>
+        <p>阅读 <code>03 核心摘要</code> 与 <code>06 全域总览表</code>：快速扫视 Top 10 上涨与 Top 10 下跌标的，重点关注带有 <code>5/5★</code> 金色徽章与 <code>⚠️ 逆势背离</code> 警示的个股。</p>
+      </div>
+      <div class="workflow-card">
+        <span class="workflow-step">STEP 04 · 研个股深度</span>
+        <span class="workflow-time">⏱️ 按需深读</span>
+        <h3>穿透商业因果与排雷</h3>
+        <p>点击感兴趣的股票代码，直达 <code>04/05 深度研究卡片</code>：精读 AI 提炼的异动因果 (Why it moved)、6 维商业护城河、华尔街目标价空间与财报日前瞻预警。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Module 9: Indicator Dictionary -->
+<section id="dictionary">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-eyebrow">09 · 量化速查字典</span>
+      <h2>研报核心量化与排雷指标字典 (Quick Dictionary)</h2>
+      <p class="section-lede">
+        快速查阅研报中出现的专业量化术语与排雷阈值定义：
+      </p>
+    </div>
+
+    <div class="dict-list">
+      <details class="dict-item" open>
+        <summary class="dict-summary">
+          <span class="dict-term">CMF (Chaikin Money Flow · 蔡金资金流向指标)</span>
+          <span class="dict-tag">资金流向</span>
+        </summary>
+        <div class="dict-body">
+          度量特定周期内资金流入与流出的量价加权指标。取值在 -1.0 到 +1.0 之间。<strong>CMF > 0</strong> 确认有增量机构资金主动推升股价；<strong>CMF < 0</strong> 表示资金处于净流出状态；若股价上涨但 CMF 为负，提示警惕无量虚涨与出货风险。
+        </div>
+      </details>
+
+      <details class="dict-item">
+        <summary class="dict-summary">
+          <span class="dict-term">VWAP Deviation % (成交量加权平均价偏离度)</span>
+          <span class="dict-tag">微观结构</span>
+        </summary>
+        <div class="dict-body">
+          度量当日收盘价相对全天机构加权建仓均价 (VWAP) 的偏离百分比。收盘价在 VWAP 之上为正偏离，表明日内买入的机构筹码整体处于盈利状态（顺风优势）；收盘价在 VWAP 之下为负偏离，表明筹码被套牢承压。
+        </div>
+      </details>
+
+      <details class="dict-item">
+        <summary class="dict-summary">
+          <span class="dict-term">Piotroski F-Score (皮尔托斯基 9 维财务健康分)</span>
+          <span class="dict-tag">法务排雷</span>
+        </summary>
+        <div class="dict-body">
+          斯坦福大学教授 Joseph Piotroski 提出的经典 9 维度基本面体检模型（涵盖盈利性、运营效率与杠杆流动性）。满分 9 分。<strong>F-Score ≥ 7</strong> 为优质造血健康标的；<strong>F-Score 3-6</strong> 为稳健标的；<strong>F-Score < 3</strong> 提示基本面恶化风险。
+        </div>
+      </details>
+
+      <details class="dict-item">
+        <summary class="dict-summary">
+          <span class="dict-term">Altman Z-Score (阿特曼 Z 分破产风险模型)</span>
+          <span class="dict-tag">法务排雷</span>
+        </summary>
+        <div class="dict-body">
+          纽约大学教授 Edward Altman 提出的国际通用企业破产与信用违约预警模型。<strong>Z > 2.99</strong> 为安全区（财务坚固）；<strong>1.81 ≤ Z ≤ 2.99</strong> 为灰色缓冲带；<strong>Z < 1.81</strong> 为破产困境预警区，提示公司债务重压与偿债违约隐患。
+        </div>
+      </details>
+
+      <details class="dict-item">
+        <summary class="dict-summary">
+          <span class="dict-term">Sloan Ratio % (斯隆应计利润异常比率)</span>
+          <span class="dict-tag">盈余操纵排雷</span>
+        </summary>
+        <div class="dict-body">
+          密歇根大学理查德·斯隆教授提出的法务会计排雷指标，度量净利润中有多少比例来自于没有实际现金支撑的应计项目。<strong>Sloan Ratio > 10%</strong> 触发严重盈余操纵红旗，提示公司可能通过激进会计手段虚增利润；负值通常代表利润现金含量极高。
+        </div>
+      </details>
+
+      <details class="dict-item">
+        <summary class="dict-summary">
+          <span class="dict-term">Relative Volume (相对成交量 / 10D均量倍数)</span>
+          <span class="dict-tag">量价异动</span>
+        </summary>
+        <div class="dict-body">
+          当日成交量相对过去 10 个交易日平均成交量的倍数。<strong>Rel Vol > 2.0</strong> 代表单日出现 2 倍以上的显著放量异动；结合 K 线实体意图可明确判定是放量逼空抢筹还是放量恐慌杀跌。
+        </div>
+      </details>
+
+      <details class="dict-item">
+        <summary class="dict-summary">
+          <span class="dict-term">Total Shareholder Yield (股东综合回报率)</span>
+          <span class="dict-tag">股东价值</span>
+        </summary>
+        <div class="dict-body">
+          股票回购收益率 (Buyback Yield) 与现金股息率 (Dividend Yield) 的加总。相比单一股息率，股东综合回报率更真实地反映了成熟企业通过自由现金流回馈股东的资本配置综合实力。
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- Module 10: Bottom CTA -->
+<section class="bg-raise" style="text-align:center;">
+  <div class="wrap" style="max-width:720px;">
+    <span class="section-eyebrow" style="margin-bottom:12px;">立即体验</span>
+    <h2 style="font-size:28px; margin-bottom:16px;">开始阅读最新的美股量化多因子日报</h2>
+    <p class="section-lede" style="margin:0 auto 28px;">
+      现在您已经掌握了 K2J 的底层数据底座、量化分析逻辑与 4 步阅读法，点击下方按钮，直接打开最新一期报告开始实战体验。
+    </p>
+    <div class="cta-row" style="justify-content:center;">
+      <a class="cta-primary" href="/#archive">打开最新美股量化研报 →</a>
+      <a class="cta-secondary" href="/">返回实验室首页</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="disclaimer">
+      K2J AI量化实验室发布的内容仅供参考与学习交流之用，不构成投资建议。本人（Justin）并非注册投资顾问。文中出现的信号强度、统计权重与组合立场等描述，反映的是系统化量化研究过程的结果，而非具体的交易建议。请独立判断，并在做出投资决策前咨询持牌专业人士。
+    </p>
+    <div class="footer-bottom">
+      <span>© 2026 K2J AI Quantitative Lab</span>
+      <div class="footer-links">
+        <a href="/">首页</a>
+        <a href="./guide.zh.html">研报导读指南</a>
+        <a href="/privacy.zh.html">隐私政策</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

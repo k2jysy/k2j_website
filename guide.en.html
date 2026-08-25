@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quantitative Methodology &amp; Daily Report Reading Guide | K2J AI Quantitative Lab</title>
+
+<!-- Primary SEO Meta Tags -->
+<meta name="title" content="Quantitative Methodology &amp; Daily Report Reading Guide | K2J AI Quantitative Lab">
+<meta name="description" content="Official reading guide &amp; methodology for K2J Daily US Equities Quantitative Reports: 1,500+ liquid stock universe, 8 data categories (100+ metrics), top-down macro-to-stock logic, 20 focus stock 5-D resonance screening, and sector divergence forensics.">
+<meta name="keywords" content="US Equities Quantitative Research, Methodology Guide, Multi-Factor Attribution, Market Regime, Thematic Clustering, Sector Divergence, Piotroski F-Score, Altman Z-Score, Sloan Ratio, K2J AI Quantitative Lab">
+<meta name="author" content="Justin">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#0F1319">
+
+<!-- Canonical and Alternates -->
+<link rel="canonical" href="https://k2j.net/guide.en.html">
+<link rel="alternate" hreflang="zh-CN" href="https://k2j.net/guide.zh.html">
+<link rel="alternate" hreflang="zh" href="https://k2j.net/guide.zh.html">
+<link rel="alternate" hreflang="en" href="https://k2j.net/guide.en.html">
+<link rel="alternate" hreflang="x-default" href="https://k2j.net/guide.en.html">
+
+<!-- LLM Discovery / GEO Resource Link -->
+<link rel="alternate" type="text/plain" href="https://k2j.net/llms.txt" title="LLM Knowledge Summary">
+<link rel="alternate" type="text/plain" href="https://k2j.net/llms-full.txt" title="Full LLM Knowledge Base">
+
+<!-- Open Graph / Twitter Card -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="K2J AI Quantitative Lab">
+<meta property="og:url" content="https://k2j.net/guide.en.html">
+<meta property="og:title" content="Quantitative Methodology &amp; Daily Report Reading Guide | K2J AI Quantitative Lab">
+<meta property="og:description" content="In-depth guide to K2J Daily US Equities Quantitative Research: 8 data categories (100+ metrics), 5-D orthogonal attribution model, 20 focus stocks screening funnel, and sector divergence forensics.">
+<meta property="og:image" content="https://k2j.net/og-image.png">
+<meta property="og:image:secure_url" content="https://k2j.net/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="K2J AI Quantitative Lab — Quantitative Methodology &amp; Daily Report Reading Guide">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://k2j.net/guide.en.html">
+<meta name="twitter:title" content="Quantitative Methodology &amp; Daily Report Reading Guide | K2J AI Quantitative Lab">
+<meta name="twitter:description" content="In-depth guide to K2J Daily US Equities Quantitative Research: 8 data categories (100+ metrics), 5-D orthogonal attribution model, 20 focus stocks screening funnel, and sector divergence forensics.">
+<meta name="twitter:image" content="https://k2j.net/og-image.png">
+<meta name="twitter:image:alt" content="K2J AI Quantitative Lab — Quantitative Methodology &amp; Daily Report Reading Guide">
+
+<!-- Structured Data / JSON-LD Schema Graph for SEO & GEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "@id": "https://k2j.net/guide.en.html#article",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://k2j.net/#website",
+        "name": "K2J AI Quantitative Lab",
+        "url": "https://k2j.net/"
+      },
+      "headline": "Quantitative Methodology & Daily Report Reading Guide",
+      "description": "Official reading guide & methodology for K2J Daily US Equities Quantitative Reports: 1,500+ liquid stock universe, 8 data categories (100+ metrics), top-down macro-to-stock logic, 20 focus stock 5-D resonance screening, and sector divergence forensics.",
+      "inLanguage": "en",
+      "mainEntityOfPage": "https://k2j.net/guide.en.html",
+      "author": {
+        "@type": "Person",
+        "@id": "https://k2j.net/#founder",
+        "name": "Justin",
+        "jobTitle": "AI Quantitative Systems Architect & Quantitative Trader",
+        "url": "https://k2j.net/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://k2j.net/#organization",
+        "name": "K2J AI Quantitative Lab",
+        "url": "https://k2j.net/",
+        "logo": "https://k2j.net/og-image.png"
+      },
+      "about": [
+        {"@type": "Thing", "name": "Quantitative Finance"},
+        {"@type": "Thing", "name": "Multi-Factor Models"},
+        {"@type": "Thing", "name": "Market Regime Classification"},
+        {"@type": "Thing", "name": "Sector Divergence"},
+        {"@type": "Thing", "name": "Piotroski F-Score"},
+        {"@type": "Thing", "name": "Altman Z-Score"},
+        {"@type": "Thing", "name": "Sloan Ratio"}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://k2j.net/guide.en.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://k2j.net/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Methodology Guide",
+          "item": "https://k2j.net/guide.en.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://k2j.net/guide.en.html#dict-faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is CMF (Chaikin Money Flow)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A volume-weighted indicator measuring money accumulation or distribution over a given period, bounded between -1.0 and +1.0. CMF > 0 confirms active institutional net accumulation; CMF < 0 signals distribution. When price rises but CMF is negative, it warns of low-volume divergence and distribution risk."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is VWAP Deviation %?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The percentage distance between the current price and the day's Volume-Weighted Average Price (institutional benchmark execution price). Trading above VWAP indicates institutional buyers are in profit (tailwind support); trading below indicates overhead supply pressure."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Piotroski F-Score?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A 9-criteria fundamental health scoring system devised by Stanford Professor Joseph Piotroski covering profitability, leverage/liquidity, and operating efficiency. F-Score >= 7 indicates stellar financial health; 3-6 indicates stable; F < 3 triggers severe fundamental deterioration warnings."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Altman Z-Score?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An internationally recognized bankruptcy risk formula developed by NYU Professor Edward Altman. Z > 2.99 indicates a Safe Zone (strong balance sheet); 1.81 <= Z <= 2.99 represents a Grey Buffer Zone; Z < 1.81 warns of imminent financial distress and default risk."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Sloan Ratio %?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A forensic accounting metric developed by Michigan Professor Richard Sloan that measures the proportion of earnings derived from non-cash accruals. Sloan Ratio > 10% flags aggressive earnings manipulation; negative ratios signify high cash-backed earnings quality."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Relative Volume (Rel Vol)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The ratio of the current session's volume compared to its 10-day moving average volume. Rel Vol > 2.0 indicates an institutional liquidity surge of 2x normal participation; combined with candlestick intent, it confirms genuine breakout accumulation or capitulation selling."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Total Shareholder Yield?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The sum of Buyback Yield and Dividend Yield. It offers a more holistic measure of how effectively mature companies return free cash flow to shareholders compared to dividend yield alone."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --ink:#14181F;
+    --paper:#EEF0EB;
+    --paper-raise:#E4E7DF;
+    --steel:#5B6472;
+    --hairline:#D7DAD2;
+    --amber:#B8823A;
+    --amber-dim:#8E6A32;
+    --amber-bg:rgba(184,130,58,0.08);
+    --green:#2F6F52;
+    --green-bg:rgba(47,111,82,0.1);
+    --red:#9C3A3A;
+    --red-bg:rgba(156,58,58,0.1);
+    --navy:#1C2D42;
+    --hero-bg:#0F1319;
+    --hero-text:#E9EAE4;
+    --hero-line:rgba(233,234,228,0.14);
+    --serif: 'Fraunces', Georgia, serif;
+    --sans: 'IBM Plex Sans', -apple-system, sans-serif;
+    --mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.001ms !important; transition-duration:0.001ms !important;}
+  }
+
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--sans);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  a{color:inherit;}
+  h1,h2,h3,h4{font-family:var(--serif); font-weight:500; margin:0;}
+
+  :focus-visible{
+    outline:2px solid var(--amber);
+    outline-offset:3px;
+  }
+
+  .wrap{max-width:1080px; margin:0 auto; padding:0 28px;}
+
+  /* nav */
+  .nav{
+    position:sticky; top:0; z-index:20;
+    background:rgba(238,240,235,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--hairline);
+  }
+  .nav .wrap{display:flex; align-items:center; justify-content:space-between; height:64px;}
+  .brand{font-family:var(--mono); font-weight:600; font-size:15px; letter-spacing:0.02em; text-decoration:none;}
+  .brand-sub{display:block; font-size:9.5px; letter-spacing:0.14em; color:var(--steel); font-weight:500; margin-top:2px;}
+  .nav-links{display:flex; gap:22px; font-size:13.5px; align-items:center;}
+  .nav-links a{text-decoration:none; color:var(--ink); opacity:0.8; transition:opacity .15s;}
+  .nav-links a:hover{opacity:1; color:var(--amber-dim);}
+  .lang-toggle{
+    font-family:var(--mono); font-size:12.5px; letter-spacing:0.03em;
+    background:none; border:1px solid var(--hairline); border-radius:20px;
+    padding:5px 12px; cursor:pointer; color:var(--ink); text-decoration:none;
+    display:inline-flex; align-items:center; gap:4px;
+    transition:all .15s;
+  }
+  .lang-toggle:hover{border-color:var(--amber); color:var(--amber);}
+
+  /* hero */
+  .hero{
+    background:var(--hero-bg); color:var(--hero-text);
+    padding:72px 0 60px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";
+    position:absolute; inset:0;
+    background-image:
+      linear-gradient(var(--hero-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--hero-line) 1px, transparent 1px);
+    background-size:56px 56px;
+    -webkit-mask-image:linear-gradient(to bottom, black, transparent 85%);
+    mask-image:linear-gradient(to bottom, black, transparent 85%);
+    opacity:0.5;
+    pointer-events:none;
+  }
+  .hero .wrap{position:relative;}
+  .eyebrow{
+    font-family:var(--mono); font-size:12px; letter-spacing:0.16em; text-transform:uppercase;
+    color:var(--amber); margin:0 0 16px; font-weight:600;
+  }
+  .hero h1{
+    font-size:clamp(26px, 3.4vw, 42px);
+    line-height:1.25;
+    max-width:920px;
+    margin-bottom:18px;
+    letter-spacing:-0.01em;
+  }
+  .hero .subhead{
+    font-size:15.5px;
+    color:#C2C6BD;
+    max-width:860px;
+    margin-bottom:36px;
+    line-height:1.75;
+  }
+
+  /* trust stats strip */
+  .trust-strip{
+    display:grid;
+    grid-template-columns:repeat(6, 1fr);
+    gap:1px;
+    background:var(--hero-line);
+    border:1px solid var(--hero-line);
+    margin-bottom:28px;
+    border-radius:2px;
+    overflow:hidden;
+  }
+  .trust-item{
+    background:rgba(15,19,25,0.85);
+    padding:16px 14px;
+    text-align:center;
+  }
+  .trust-num{
+    display:block; font-family:var(--mono); font-size:22px; font-weight:600;
+    color:var(--amber); margin-bottom:4px;
+  }
+  .trust-label{
+    display:block; font-size:11.5px; color:#A0A6AF; line-height:1.3;
+  }
+
+  @media (max-width:860px){
+    .trust-strip{grid-template-columns:repeat(3, 1fr);}
+  }
+  @media (max-width:520px){
+    .trust-strip{grid-template-columns:repeat(2, 1fr);}
+  }
+
+  /* section general */
+  section{padding:68px 0;}
+  .section-head{margin-bottom:36px;}
+  .section-eyebrow{
+    font-family:var(--mono); font-size:11.5px; letter-spacing:0.14em; text-transform:uppercase;
+    color:var(--amber-dim); margin-bottom:10px; display:block; font-weight:600;
+  }
+  h2{font-size:clamp(22px,2.4vw,30px); margin-bottom:12px; line-height:1.35;}
+  .section-lede{color:var(--steel); font-size:15px; max-width:840px; margin:0;}
+
+  .bg-raise{background:var(--paper-raise); border-top:1px solid var(--hairline); border-bottom:1px solid var(--hairline);}
+  .bg-dark{background:var(--hero-bg); color:var(--hero-text); border-top:1px solid rgba(233,234,228,0.1); border-bottom:1px solid rgba(233,234,228,0.1);}
+
+  /* chapter table */
+  .chapter-grid{
+    display:flex; flex-direction:column; gap:12px; margin-top:24px;
+  }
+  .chapter-card{
+    background:var(--paper);
+    border:1px solid var(--hairline);
+    border-radius:2px;
+    padding:20px 24px;
+    display:grid;
+    grid-template-columns:56px 220px 1fr 220px;
+    gap:20px;
+    align-items:center;
+    transition:border-color .15s, box-shadow .15s;
+  }
+  .chapter-card:hover{border-color:var(--amber); box-shadow:0 2px 10px rgba(0,0,0,0.04);}
+  .chapter-num{
+    font-family:var(--mono); font-size:16px; font-weight:600; color:var(--amber-dim);
+  }
+  .chapter-title{font-size:15.5px; font-weight:600;}
+  .chapter-desc{font-size:13.5px; color:var(--steel); margin:0;}
+  .chapter-goal{
+    font-size:12px; font-family:var(--mono); background:var(--paper-raise);
+    padding:8px 12px; border-radius:2px; border-left:2px solid var(--amber);
+    color:var(--ink);
+  }
+
+  @media (max-width:860px){
+    .chapter-card{grid-template-columns:1fr; gap:10px; padding:18px;}
+    .chapter-goal{margin-top:6px;}
+  }
+
+  /* top-down flow chart */
+  .flow-banner{
+    background:var(--paper-raise);
+    border:1px solid var(--hairline);
+    border-radius:2px;
+    padding:28px 32px;
+    margin-bottom:32px;
+  }
+  .flow-title{
+    font-family:var(--mono); font-size:12px; letter-spacing:0.12em; text-transform:uppercase;
+    color:var(--amber-dim); font-weight:600; margin-bottom:18px; display:block;
+  }
+  .flow-steps{
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:20px; position:relative;
+  }
+  .flow-step{
+    background:var(--paper);
+    border:1px solid var(--hairline);
+    padding:20px;
+    border-radius:2px;
+    position:relative;
+  }
+  .flow-step-num{
+    font-family:var(--mono); font-size:11px; color:var(--amber-dim); font-weight:600; margin-bottom:6px; display:block;
+  }
+  .flow-step h3{font-size:15px; margin-bottom:8px;}
+  .flow-step p{font-size:13px; color:var(--steel); margin:0; line-height:1.5;}
+
+  @media (max-width:760px){
+    .flow-steps{grid-template-columns:1fr;}
+  }
+
+  /* 8 data categories grid */
+  .data-cat-grid{
+    display:grid; grid-template-columns:repeat(2, 1fr); gap:18px; margin-top:28px;
+  }
+  .data-cat-card{
+    background:var(--paper);
+    border:1px solid var(--hairline);
+    border-radius:2px;
+    padding:24px;
+    display:flex; flex-direction:column; justify-content:space-between;
+    transition:border-color .15s;
+  }
+  .data-cat-card:hover{border-color:var(--amber);}
+  .data-cat-header{
+    display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:12px;
+  }
+  .data-cat-badge{
+    font-family:var(--mono); font-size:11px; font-weight:600; color:var(--amber-dim);
+    background:var(--amber-bg); padding:3px 8px; border-radius:2px;
+  }
+  .data-cat-count{
+    font-family:var(--mono); font-size:11px; color:var(--steel);
+  }
+  .data-cat-card h3{font-size:16px; margin-bottom:8px;}
+  .data-cat-question{
+    font-size:13px; color:var(--ink); font-weight:500; margin-bottom:12px;
+    background:rgba(184,130,58,0.06); padding:6px 10px; border-radius:2px; border-left:2px solid var(--amber);
+  }
+  .data-cat-fields{
+    font-family:var(--mono); font-size:11.5px; color:var(--steel); line-height:1.55;
+    background:var(--paper-raise); padding:10px 12px; border-radius:2px; margin-bottom:12px; word-break:break-word;
+  }
+  .data-cat-role{
+    font-size:12.5px; color:#444B56; margin:0; line-height:1.5;
+  }
+
+  @media (max-width:760px){
+    .data-cat-grid{grid-template-columns:1fr;}
+  }
+
+  /* 3-layer funnel */
+  .funnel-wrap{
+    display:grid; grid-template-columns:1fr 1fr; gap:36px; align-items:center; margin-top:28px;
+  }
+  .funnel-steps{
+    display:flex; flex-direction:column; gap:14px;
+  }
+  .funnel-box{
+    padding:18px 20px; border-radius:2px; border:1px solid var(--hairline);
+    background:var(--paper); position:relative;
+  }
+  .funnel-box.l1{border-left:4px solid var(--amber-dim); width:100%;}
+  .funnel-box.l2{border-left:4px solid var(--amber); width:95%;}
+  .funnel-box.l3{border-left:4px solid var(--green); width:90%;}
+  .funnel-box h3{font-size:15px; margin-bottom:6px;}
+  .funnel-box p{font-size:13px; color:var(--steel); margin:0;}
+
+  /* 5D matrix cards */
+  .matrix-grid{
+    display:grid; grid-template-columns:repeat(5, 1fr); gap:12px; margin-top:24px;
+  }
+  .matrix-card{
+    background:var(--paper); border:1px solid var(--hairline);
+    padding:18px 16px; border-radius:2px;
+  }
+  .matrix-code{font-family:var(--mono); font-size:13px; font-weight:600; color:var(--amber-dim); margin-bottom:4px; display:block;}
+  .matrix-weight{font-family:var(--mono); font-size:11px; color:var(--steel); margin-bottom:10px; display:block;}
+  .matrix-card h3{font-size:14.5px; margin-bottom:8px;}
+  .matrix-card p{font-size:12.5px; color:var(--steel); margin:0; line-height:1.45;}
+
+  @media (max-width:960px){
+    .matrix-grid{grid-template-columns:repeat(2, 1fr);}
+  }
+  @media (max-width:540px){
+    .matrix-grid{grid-template-columns:1fr;}
+  }
+
+  /* divergence highlight banner */
+  .divergence-box{
+    background:linear-gradient(135deg, rgba(156,58,58,0.06) 0%, rgba(184,130,58,0.06) 100%);
+    border:1.5px solid rgba(184,130,58,0.5);
+    border-radius:2px;
+    padding:32px 36px;
+    margin-top:24px;
+  }
+  .divergence-tag{
+    display:inline-flex; align-items:center; gap:6px;
+    background:var(--amber); color:#181207; font-weight:600; font-family:var(--mono);
+    font-size:11.5px; letter-spacing:0.06em; padding:3px 10px; border-radius:2px; margin-bottom:14px;
+  }
+  .divergence-grid{
+    display:grid; grid-template-columns:1.2fr 1fr; gap:32px; align-items:start; margin-top:20px;
+  }
+  .divergence-card{
+    background:var(--paper); border:1px solid var(--hairline); padding:20px; border-radius:2px;
+  }
+  .divergence-card h4{font-size:14.5px; margin-bottom:8px; color:var(--red);}
+
+  @media (max-width:800px){
+    .divergence-grid{grid-template-columns:1fr; gap:20px;}
+    .divergence-box{padding:22px;}
+  }
+
+  /* case study cards */
+  .case-grid{
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:18px; margin-top:28px;
+  }
+  .case-card{
+    background:var(--paper); border:1px solid var(--hairline);
+    border-radius:2px; padding:22px; display:flex; flex-direction:column; justify-content:space-between;
+    transition:border-color .15s;
+  }
+  .case-card:hover{border-color:var(--amber);}
+  .case-badge-row{display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;}
+  .case-ticker{font-family:var(--mono); font-size:18px; font-weight:600; letter-spacing:0.02em;}
+  .case-ret{font-family:var(--mono); font-size:14px; font-weight:600; padding:2px 8px; border-radius:2px;}
+  .case-ret.up{background:var(--green-bg); color:var(--green);}
+  .case-ret.down{background:var(--red-bg); color:var(--red);}
+  .case-type{font-family:var(--mono); font-size:11px; color:var(--amber-dim); margin-bottom:10px; display:block; font-weight:600;}
+  .case-card h3{font-size:15px; margin-bottom:8px;}
+  .case-card p{font-size:13px; color:var(--steel); margin:0 0 14px; line-height:1.5;}
+  .case-metrics{
+    background:var(--paper-raise); padding:10px 12px; border-radius:2px; font-family:var(--mono);
+    font-size:11.5px; color:var(--ink); line-height:1.6;
+  }
+
+  @media (max-width:860px){
+    .case-grid{grid-template-columns:1fr;}
+  }
+
+  /* 4-step workflow */
+  .workflow-grid{
+    display:grid; grid-template-columns:repeat(4, 1fr); gap:14px; margin-top:28px;
+  }
+  .workflow-card{
+    background:var(--paper); border:1px solid var(--hairline);
+    border-radius:2px; padding:22px 18px; text-align:left;
+  }
+  .workflow-step{
+    font-family:var(--mono); font-size:12px; color:var(--amber-dim); font-weight:600; margin-bottom:6px; display:block;
+  }
+  .workflow-time{
+    display:inline-block; font-family:var(--mono); font-size:10.5px; background:var(--amber-bg);
+    color:var(--amber-dim); padding:2px 6px; border-radius:2px; margin-bottom:12px;
+  }
+  .workflow-card h3{font-size:15px; margin-bottom:8px;}
+  .workflow-card p{font-size:13px; color:var(--steel); margin:0; line-height:1.5;}
+
+  @media (max-width:860px){
+    .workflow-grid{grid-template-columns:repeat(2, 1fr);}
+  }
+  @media (max-width:480px){
+    .workflow-grid{grid-template-columns:1fr;}
+  }
+
+  /* accordion dictionary */
+  .dict-list{display:flex; flex-direction:column; gap:10px; margin-top:28px;}
+  .dict-item{
+    background:var(--paper); border:1px solid var(--hairline); border-radius:2px;
+    transition:border-color .15s;
+  }
+  .dict-item:hover{border-color:var(--amber);}
+  .dict-item[open]{border-color:var(--amber-dim);}
+  .dict-summary{
+    padding:16px 20px; font-weight:600; cursor:pointer; list-style:none;
+    display:flex; justify-content:space-between; align-items:center; font-size:15px;
+  }
+  .dict-summary::-webkit-details-marker{display:none;}
+  .dict-term{font-family:var(--mono); font-size:14px; color:var(--ink);}
+  .dict-tag{font-family:var(--mono); font-size:11px; color:var(--amber-dim); background:var(--amber-bg); padding:2px 8px; border-radius:2px;}
+  .dict-body{
+    padding:0 20px 18px; font-size:13.5px; color:var(--steel); line-height:1.6;
+    border-top:1px solid var(--hairline); padding-top:12px; margin-top:4px;
+  }
+
+  /* CTA row */
+  .cta-row{display:flex; gap:16px; flex-wrap:wrap;}
+  .cta-primary{
+    display:inline-flex; align-items:center; gap:8px;
+    background:var(--amber); color:#181207;
+    font-weight:600; font-size:15px;
+    padding:13px 24px; border-radius:2px;
+    text-decoration:none;
+    transition:background .15s;
+  }
+  .cta-primary:hover{background:#CB934A;}
+  .cta-secondary{
+    display:inline-flex; align-items:center; gap:8px;
+    background:none; color:var(--ink);
+    font-weight:600; font-size:15px;
+    padding:12px 22px; border-radius:2px;
+    border:1px solid var(--hairline);
+    text-decoration:none;
+    transition:all .15s;
+  }
+  .cta-secondary:hover{border-color:var(--amber); color:var(--amber);}
+
+  footer{border-top:1px solid var(--hairline); padding:40px 0 50px;}
+  .disclaimer{font-size:12.5px; color:var(--steel); max-width:880px; line-height:1.6; margin-bottom:18px;}
+  .footer-bottom{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; font-family:var(--mono); font-size:11.5px; color:var(--steel);}
+  .footer-links{display:flex; gap:18px;}
+  .footer-links a{color:var(--steel); text-decoration:none;}
+  .footer-links a:hover{color:var(--ink); text-decoration:underline;}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/">K2J<span class="brand-sub">AI QUANTITATIVE LAB</span></a>
+    <nav class="nav-links" aria-label="Main Navigation">
+      <a href="/#research">Methodology</a>
+      <a href="#structure">Structure</a>
+      <a href="#data-system">8 Data Pillars</a>
+      <a href="#funnel">Funnel</a>
+      <a href="#attribution">5-D Attribution</a>
+      <a href="#divergence">Divergence</a>
+      <a href="#cases">Case Studies</a>
+      <a href="#workflow">4-Step Guide</a>
+      <a href="#dictionary">Dictionary</a>
+      <a href="/#archive">Archive</a>
+    </nav>
+    <a class="lang-toggle" href="./guide.zh.html">
+      <span>中文</span> / <strong>EN</strong>
+    </a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">K2J Quantitative Methodology &amp; Daily Report Guide</p>
+    <h1>How to Understand and Leverage K2J Daily US Equities Quantitative Research</h1>
+    <p class="subhead">
+      K2J Daily US Equities Quantitative Research is not a stock-tipping newsletter. It is an institutional-grade market narrative deconstruction engine. This guide breaks down the institutional 1,500+ liquid equity universe (filtered from thousands of US stocks for optimal liquidity and tradability), the strict top-down "Macro → Sector → Equities" analytical pipeline, the 5-dimensional resonance selection of 20 focus tickers, and sector divergence forensics.
+    </p>
+
+    <div class="trust-strip">
+      <div class="trust-item">
+        <span class="trust-num">1,500+</span>
+        <span class="trust-label">Liquid Equities Scanned Daily</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-num">8 Pillars</span>
+        <span class="trust-label">Underlying Data Categories</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-num">100+</span>
+        <span class="trust-label">Granular Quantitative Metrics</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-num">5-D</span>
+        <span class="trust-label">Orthogonal Factor Attribution</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-num">20 Tickers</span>
+        <span class="trust-label">Daily Focus Deep-Dives</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-num">Bilingual</span>
+        <span class="trust-label">English &amp; Chinese Daily Release</span>
+      </div>
+    </div>
+
+    <div class="cta-row">
+      <a class="cta-primary" href="/#archive">Read the Latest Daily Report →</a>
+      <a class="cta-secondary" href="#structure" style="color:var(--hero-text); border-color:var(--hero-line);">Start Reading Guide ↓</a>
+    </div>
+  </div>
+</section>
+
+<!-- Module 1: Positioning & Mission -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-eyebrow">01 · Mission &amp; Philosophy</span>
+      <h2>Deconstruct Market Narratives with Math, Not Discretionary Stock Tips</h2>
+      <p class="section-lede">
+        In noisy markets, traders often struggle with questions like: "Why is my portfolio down when headline indices are hitting all-time highs?" or "Did a stock surge due to real institutional accumulation or a gap-and-trap pump?"
+      </p>
+    </div>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:28px;">
+      <div style="background:var(--paper-raise); border:1px solid var(--hairline); padding:26px; border-radius:2px;">
+        <h3 style="font-size:16px; margin-bottom:12px; color:var(--red);">❌ What We Strictly Avoid</h3>
+        <ul style="margin:0; padding-left:18px; font-size:14px; color:var(--steel); line-height:1.8;">
+          <li><strong>Discretionary Stock Tipping</strong>: Zero buy/sell calls or trade recommendations.</li>
+          <li><strong>Mechanical Price Targets</strong>: No subjective "support / resistance" guesswork.</li>
+          <li><strong>Single-Headline Speculation</strong>: No narrative chasing based on isolated headlines.</li>
+          <li><strong>Black-Box Scoring</strong>: Every single score is mathematically auditable.</li>
+        </ul>
+      </div>
+      <div style="background:var(--paper-raise); border:1px solid var(--hairline); padding:26px; border-radius:2px;">
+        <h3 style="font-size:16px; margin-bottom:12px; color:var(--green);">✅ Core Questions Answered Daily</h3>
+        <ul style="margin:0; padding-left:18px; font-size:14px; color:var(--ink); line-height:1.8;">
+          <li><strong>What is the macro regime?</strong> Is the market Risk-On, Risk-Off, or in Compression?</li>
+          <li><strong>Where is institutional capital rotating?</strong> Which sub-industries are accumulating?</li>
+          <li><strong>What are the standout movers?</strong> Is price action driven by genuine buying volume?</li>
+          <li><strong>Are fundamentals resilient?</strong> Do balance sheets pass forensic distress checks?</li>
+          <li><strong>Why did it move today?</strong> Causal AI synthesis connecting price action to catalysts.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Module 2: Report Architecture & Top-Down Logic -->
+<section id="structure" class="bg-raise">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-eyebrow">02 · Report Architecture</span>
+      <h2>Strict Top-Down "Macro → Sector → Equities" Analytical Pipeline</h2>
+      <p class="section-lede">
+        "Never analyze an individual stock in isolation without first establishing the macro climate." K2J adheres to institutional hedge-fund standards, narrowing from broad market regimes down to 20 focus equities.
+      </p>
+    </div>
+
+    <div class="flow-banner">
+      <span class="flow-title">Top-Down 3-Stage Workflow</span>
+      <div class="flow-steps">
+        <div class="flow-step">
+          <span class="flow-step-num">STEP 1 · MACRO REGIME</span>
+          <h3>Market State &amp; Risk Budget</h3>
+          <p>GBDT ensemble and benchmark ETFs establish the macro regime, evaluating cross-sectional breadth across 1,500+ liquid equities to calibrate total portfolio risk budget.</p>
+        </div>
+        <div class="flow-step">
+          <span class="flow-step-num">STEP 2 · SECTOR THEMES</span>
+          <h3>Thematic Clusters &amp; Capital Flows</h3>
+          <p>Unsupervised dynamic clustering identifies rising/falling theme clusters, measuring sub-industry win rates and capital velocity to locate institutional momentum.</p>
+        </div>
+        <div class="flow-step">
+          <span class="flow-step-num">STEP 3 · EQUITIES DEEP-DIVE</span>
+          <h3>5-D Attribution &amp; 20 Focus Tickers</h3>
+          <p>Orthogonal factor attribution isolates Top 10 Bullish and Top 10 Bearish equities, augmented by AI causal reasoning on breaking news catalysts and forensic health.</p>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="font-size:18px; margin:28px 0 16px;">The 8 Standard Report Sections Explained</h3>
+    <div class="chapter-grid">
+      <div class="chapter-card">
+        <span class="chapter-num">00</span>
+        <div class="chapter-title">Key Takeaways (GEO)</div>
+        <p class="chapter-desc">High-density AI executive summary detailing macro regime, primary long themes, divergent risks, and portfolio posture.</p>
+        <div class="chapter-goal">⏱️ 30s Executive Summary</div>
+      </div>
+      <div class="chapter-card">
+        <span class="chapter-num">01</span>
+        <div class="chapter-title">Macro Regime &amp; Environment</div>
+        <p class="chapter-desc">Macro state classification banner, 4 benchmark ETF quotes (SPY/QQQ/DIA/IWM), full-market advance-decline ratios, and systemic commentary.</p>
+        <div class="chapter-goal">🎯 Set the Stage: Wind at Back vs Headwind</div>
+      </div>
+      <div class="chapter-card">
+        <span class="chapter-num">02</span>
+        <div class="chapter-title">Thematic Clusters &amp; Rotation</div>
+        <p class="chapter-desc">Unsupervised clustering table showing cluster size, 1D/1M mean returns, alignment win rates, binomial Z-scores, and constituent movers.</p>
+        <div class="chapter-goal">🧭 Track Smart Money Migration</div>
+      </div>
+      <div class="chapter-card">
+        <span class="chapter-num">03</span>
+        <div class="chapter-title">Executive Stock Summary</div>
+        <p class="chapter-desc">Actionable summary lists for Long Leaders and Short Pressures, with direct anchor links to deep-dive cards and sector divergence flags.</p>
+        <div class="chapter-goal">⚡ Scan All 20 Focus Tickers in 1 View</div>
+      </div>
+      <div class="chapter-card">
+        <span class="chapter-num">04</span>
+        <div class="chapter-title">5-D Long Leader Studies</div>
+        <p class="chapter-desc">Deep-dive cards for Top 10 Longs: Causal News Intelligence, 5-D Microstructure Breakdown, 6-Pillar Moat, Analyst Targets, and Earnings Warnings.</p>
+        <div class="chapter-goal">🔍 Explain Why Longs Surged</div>
+      </div>
+      <div class="chapter-card">
+        <span class="chapter-num">05</span>
+        <div class="chapter-title">5-D Short Pressure Studies</div>
+        <p class="chapter-desc">Deep-dive cards for Top 10 Shorts: Breakdown drivers, forensic accounting red flags, and dedicated AI Sector Divergence detective breakdowns.</p>
+        <div class="chapter-goal">🛡️ Forensics on Drops &amp; Traps</div>
+      </div>
+      <div class="chapter-card">
+        <span class="chapter-num">06</span>
+        <div class="chapter-title">Master Overview Table</div>
+        <p class="chapter-desc">Comprehensive 10-column comparison matrix across all 20 focus equities (Direction, Ticker, Industry, Score, Resonance, Price, 1D %, RelVol, Health, Earnings Date).</p>
+        <div class="chapter-goal">📊 Side-by-Side Factor Benchmarking</div>
+      </div>
+      <div class="chapter-card">
+        <span class="chapter-num">07</span>
+        <div class="chapter-title">Quantitative Methodology</div>
+        <p class="chapter-desc">Mathematical formulas, 5-D weighting parameters, robust Z-score metrics, and forensic accounting threshold proofs ensuring zero black-box obscurity.</p>
+        <div class="chapter-goal">📐 Verify Algorithm &amp; Math Integrity</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Module 3: 8 Data Categories -->
+<section id="data-system">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-eyebrow">03 · Institutional Data Foundation</span>
+      <h2>8 Core Data Pillars Across 100+ Granular Metrics</h2>
+      <p class="section-lede">
+        A reliable quantitative report cannot rely solely on basic price percentages. To ensure tradability and statistical rigor, K2J applies institutional liquidity thresholds, ingesting and computing over 100 metrics across 8 institutional pillars for all 1,500+ liquid equities in our universe:
+      </p>
+    </div>
+
+    <div class="data-cat-grid">
+      <!-- Category 1 -->
+      <div class="data-cat-card">
+        <div>
+          <div class="data-cat-header">
+            <span class="data-cat-badge">01 · Asset Metadata &amp; Consensus</span>
+            <span class="data-cat-count">≈ 22 Metrics</span>
+          </div>
+          <h3>Identification, Share Structure &amp; Wall Street Outlook</h3>
+          <div class="data-cat-question">💡 Solves: Which industry? What is the float size? What is Wall Street's expectation gap?</div>
+          <div class="data-cat-fields">
+            type, subtype, exchange, market, sector, industry, cusip, isin, figi, number_of_shareholders, total_shares_outstanding, float_shares_outstanding, float_shares_percent_calc, earnings_release_date, earnings_release_next_date, price_target_average, target_price_performance, Recommend.All
+          </div>
+        </div>
+        <p class="data-cat-role"><strong>Quant Role</strong>: Gauges free-float concentration; enforces strict 3-day proximity alerts for upcoming binary earnings gaps; measures Wall Street target price upside dispersion.</p>
+      </div>
+
+      <!-- Category 2 -->
+      <div class="data-cat-card">
+        <div>
+          <div class="data-cat-header">
+            <span class="data-cat-badge">02 · Multi-Period Price &amp; Microstructure</span>
+            <span class="data-cat-count">≈ 52 Metrics</span>
+          </div>
+          <h3>Intraday Candlestick Intent, Breakouts &amp; Extended Hours</h3>
+          <div class="data-cat-question">💡 Solves: Is capital genuinely driving the bid, or is it a fading gap-and-dump trap?</div>
+          <div class="data-cat-fields">
+            open, high, low, close, gap, change, change_from_open, volume, volume_change, average_volume_10d/30d/60d/90d, relative_volume, Value.Traded (Turnover), Volatility.D/W/M, beta_1/3/5Y, Perf.W/1M/3M/6M/Y/YTD, High/Low.1M/3M/6M/52W/ATH/ATL, premarket/postmarket_open/high/low/close/volume/gap
+          </div>
+        </div>
+        <p class="data-cat-role"><strong>Quant Role</strong>: Powers <strong>D3 Capital Flow &amp; Microstructure</strong> (labels `BULLISH_DRIVE` vs `FADING_GAP_DUMP` penalty); powers <strong>D4 Breakout Recognition</strong> (ATH, 52-Week High, 6-Month platform vs Breakdown).</p>
+      </div>
+
+      <!-- Category 3 -->
+      <div class="data-cat-card">
+        <div>
+          <div class="data-cat-header">
+            <span class="data-cat-badge">03 · Technical Indicators &amp; Pivot Matrix</span>
+            <span class="data-cat-count">≈ 56 Metrics</span>
+          </div>
+          <h3>Moving Averages, Oscillators &amp; 5 Pivot Systems</h3>
+          <div class="data-cat-question">💡 Solves: How strong is trend persistence? Where is institutional average cost?</div>
+          <div class="data-cat-fields">
+            SMA 5/20/50/100/200, EMA 5/10/20/50/100/200, HullMA9, Ichimoku (Tenkan/Kijun/Span A/B), RSI (14), Stochastic, Stoch.RSI, ADX (+DI/-DI), ATR, ADR, CCI20, Williams %R, Momentum, ROC, UO, AO, BBPower, VWAP, VWMA, BB.upper/lower/basis, ChaikinMoneyFlow (CMF), MoneyFlow (MFI), P.SAR, Pivot Points (Camarilla, Classic, DeMark, Fibonacci, Woodie)
+          </div>
+        </div>
+        <p class="data-cat-role"><strong>Quant Role</strong>: Orthogonal indicator de-noising; CMF > 0 verifies active institutional buying; closing above VWAP confirms institutional inventory is in positive territory.</p>
+      </div>
+
+      <!-- Category 4 -->
+      <div class="data-cat-card">
+        <div>
+          <div class="data-cat-header">
+            <span class="data-cat-badge">04 · Financial Statements Deep-Dive</span>
+            <span class="data-cat-count">≈ 31 Metrics</span>
+          </div>
+          <h3>Income Statement, Cash Flow &amp; Balance Sheet (TTM &amp; FQ)</h3>
+          <div class="data-cat-question">💡 Solves: Does the company generate real organic free cash flow, or is it paper revenue?</div>
+          <div class="data-cat-fields">
+            total_revenue_ttm/fq, gross_profit_ttm/fq, ebit_ttm, ebitda_ttm/fq, net_income_ttm/fq, basic/diluted_eps_ttm, research_and_dev_ttm/fq, cash_f_operating_activities_ttm/fq, free_cash_flow_ttm/fq, capital_expenditures_ttm/fq, cash_n_equivalents_fq, total_assets_fq, total_liabilities_fq, net_debt_fq, total_equity_fq, goodwill_fq
+          </div>
+        </div>
+        <p class="data-cat-role"><strong>Quant Role</strong>: Penetrates accrual accounting by validating earnings quality via Free Cash Flow (FCF) and Operating Cash Flow, filtering out revenue illusions.</p>
+      </div>
+
+      <!-- Category 5 -->
+      <div class="data-cat-card">
+        <div>
+          <div class="data-cat-header">
+            <span class="data-cat-badge">05 · Advanced Enterprise Valuation</span>
+            <span class="data-cat-count">≈ 15 Metrics</span>
+          </div>
+          <h3>Cash Flow Multiples &amp; Enterprise Value (EV) Ratios</h3>
+          <div class="data-cat-question">💡 Solves: What is the true margin of safety based on cash generation?</div>
+          <div class="data-cat-fields">
+            market_cap_basic, price_earnings_ttm (P/E), price_earnings_growth_ttm (PEG), price_sales (P/S), price_book_fq (P/B), price_free_cash_flow_ttm (P/FCF), ev_to_ebitda_ttm, enterprise_value_to_ebit_ttm, enterprise_value_to_revenue_ttm, enterprise_value_to_free_cash_flow_ttm, earnings_yield_recent, buyback_yield_recent
+          </div>
+        </div>
+        <p class="data-cat-role"><strong>Quant Role</strong>: Powers <strong>D5 Fundamental Context</strong>; uses EV/EBITDA and P/FCF cash multiples instead of GAAP P/E distorted by non-operating one-offs.</p>
+      </div>
+
+      <!-- Category 6 -->
+      <div class="data-cat-card">
+        <div>
+          <div class="data-cat-header">
+            <span class="data-cat-badge">06 · Multi-Period Growth Rates</span>
+            <span class="data-cat-count">≈ 8 Metrics</span>
+          </div>
+          <h3>Revenue, Profitability &amp; Balance Sheet Acceleration</h3>
+          <div class="data-cat-question">💡 Solves: Is fundamental expansion accelerating, plateauing, or stalling?</div>
+          <div class="data-cat-fields">
+            total_revenue_yoy_growth_ttm, gross_profit_yoy_growth_ttm, ebitda_yoy_growth_ttm, net_income_yoy_growth_ttm, free_cash_flow_yoy_growth_ttm, capital_expenditures_yoy_growth_ttm, total_assets_yoy_growth_fq, total_debt_yoy_growth_fq
+          </div>
+        </div>
+        <p class="data-cat-role"><strong>Quant Role</strong>: Detects marginal inflections in revenue and operating leverage, validating whether a stock's momentum has multi-quarter earnings backing.</p>
+      </div>
+
+      <!-- Category 7 -->
+      <div class="data-cat-card">
+        <div>
+          <div class="data-cat-header">
+            <span class="data-cat-badge">07 · Financial Ratios &amp; Quant Forensics</span>
+            <span class="data-cat-count">≈ 20 Metrics</span>
+          </div>
+          <h3>Capital Efficiency &amp; 4 Classic Forensic Risk Models</h3>
+          <div class="data-cat-question">💡 Solves: Are there hidden bankruptcy risks, aggressive accruals, or manipulation?</div>
+          <div class="data-cat-fields">
+            return_on_equity (ROE), return_on_assets (ROA), return_on_invested_capital (ROIC), gross_margin, operating_margin, net_margin, current_ratio, quick_ratio, debt_to_equity, altman_z_score_ttm, piotroski_f_score_ttm, sloan_ratio_ttm, zmijewski_score_ttm
+          </div>
+        </div>
+        <p class="data-cat-role"><strong>Quant Role</strong>: Forms an uncompromised defensive moat. Longs must pass <strong>Piotroski F ≥ 3, Sloan ≤ 10%, Altman Z ≥ 1.81</strong> hard red lines; Shorts systematically isolate financially distressed targets.</p>
+      </div>
+
+      <!-- Category 8 -->
+      <div class="data-cat-card">
+        <div>
+          <div class="data-cat-header">
+            <span class="data-cat-badge">08 · Dividends &amp; Capital Allocation</span>
+            <span class="data-cat-count">≈ 8 Metrics</span>
+          </div>
+          <h3>Shareholder Yield, Buybacks &amp; Payout Consistency</h3>
+          <div class="data-cat-question">💡 Solves: Does management allocate capital efficiently to shareholders?</div>
+          <div class="data-cat-fields">
+            dividends_yield, dividend_yield_indicated, dps_ttm, dps_common_stock_prim_issue_yoy_growth_fy, continuous_dividend_growth, continuous_dividend_payout, dividend_payout_ratio_ttm, total_cash_dividends_paid_ttm
+          </div>
+        </div>
+        <p class="data-cat-role"><strong>Quant Role</strong>: Combines buyback yield with dividend yield to calculate Total Shareholder Yield, identifying quality defensive anchors during turbulent macro phases.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Module 4: 3-Layer Screening Funnel -->
+<section id="funnel" class="bg-raise">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-eyebrow">04 · Stock Selection Funnel</span>
+      <h2>How the Daily 20 Focus Equities Are Selected</h2>
+      <p class="section-lede">
+        Out of 1,500+ eligible high-liquidity equities, how does the engine isolate the 20 most representative stories (Top 10 Longs + Top 10 Shorts) each day?
+      </p>
+    </div>
+
+    <div class="funnel-wrap">
+      <div class="funnel-steps">
+        <div class="funnel-box l1">
+          <span style="font-family:var(--mono); font-size:11px; color:var(--amber-dim); font-weight:600;">LAYER 1 · EXTREME MOVERS (2 SEATS)</span>
+          <h3>Locking Market Extremes</h3>
+          <p>The single largest gainer and single largest decliner in the market automatically take positions #1. If divergent from their sector, they are flagged as <code>EXTREMA_DIVERGENCE</code> to ensure no black swan is ignored.</p>
+        </div>
+        <div class="funnel-box l2">
+          <span style="font-family:var(--mono); font-size:11px; color:var(--amber); font-weight:600;">LAYER 2 · 5-D RESONANCE ENGINE (18 SEATS)</span>
+          <h3>Multi-Factor Ranking</h3>
+          <p>The remaining 18 seats are strictly sorted by resonance tiers (<code>5/5★</code> → <code>4/5</code> → <code>3/5</code>), composite attribution score, and an Industry Alignment filter (≥50%) to eliminate isolated noise.</p>
+        </div>
+        <div class="funnel-box l3">
+          <span style="font-family:var(--mono); font-size:11px; color:var(--green); font-weight:600;">LAYER 3 · DIVERSITY CONSTRAINTS</span>
+          <h3>Preventing Sector Clustering</h3>
+          <p>A maximum of 3 tickers per thematic cluster and 3 tickers per sub-industry are permitted. This guarantees broad market representation rather than a single industry dominating the report.</p>
+        </div>
+      </div>
+
+      <div style="background:var(--paper); border:1px solid var(--hairline); padding:24px; border-radius:2px;">
+        <h3 style="font-size:16px; margin-bottom:12px;">What Characterizes the Selected Stocks?</h3>
+        <div style="margin-bottom:14px;">
+          <span style="font-family:var(--mono); font-size:12px; color:var(--green); font-weight:600; display:block; margin-bottom:4px;">🟢 Bullish Leader Characteristics</span>
+          <p style="font-size:13px; color:var(--steel); margin:0;">
+            High factor resonance (`5/5★` or `4/5`), genuine intraday buying drive (`BULLISH_DRIVE`), closing price above VWAP, multi-period breakout (ATH/52W), robust balance sheet (Piotroski ≥ 3, Altman Z ≥ 1.81, Sloan ≤ 10%), and industry momentum tailwinds.
+          </p>
+        </div>
+        <div>
+          <span style="font-family:var(--mono); font-size:12px; color:var(--red); font-weight:600; display:block; margin-bottom:4px;">🔴 Bearish Pressure Characteristics</span>
+          <p style="font-size:13px; color:var(--steel); margin:0;">
+            Broad sector breakdown (`BEARISH_DUMP`), persistent capital outflow (CMF < 0), balance sheet vulnerability (low F-score, distressed Altman Z, Sloan accrual red flag), or sudden company-specific **sector divergence shocks**.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Module 5: 5-D Attribution Model -->
+<section id="attribution">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-eyebrow">05 · 5-Dimensional Factor Model</span>
+      <h2>Orthogonal Factor Risk Model &amp; Attribution Formula</h2>
+      <p class="section-lede">
+        In K2J's architecture, <strong>5-D resonance measures attribution completeness</strong> — how many independent market dimensions simultaneously support an equity's move:
+      </p>
+    </div>
+
+    <div style="background:var(--paper-raise); border:1px solid var(--hairline); padding:20px 24px; border-radius:2px; font-family:var(--mono); font-size:14px; text-align:center; margin-bottom:24px;">
+      Narrative Attribution Score = Φ( 0.20 D₁ + 0.25 D₂ + 0.25 D₃ + 0.15 D₄ + 0.15 D₅ ) × 100
+    </div>
+
+    <div class="matrix-grid">
+      <div class="matrix-card">
+        <span class="matrix-code">D1 · INDEX ALIGNMENT</span>
+        <span class="matrix-weight">Weight 20% · Macro Climate</span>
+        <h3>Systematic Beta Co-Movement</h3>
+        <p>Excess return vs market median + Beta sensitivity + Macro regime hard gating. In broad market rallies, short D1 is mathematically disqualified.</p>
+      </div>
+      <div class="matrix-card">
+        <span class="matrix-code">D2 · SECTOR CLUSTERING</span>
+        <span class="matrix-weight">Weight 25% · Sector Tailwind</span>
+        <h3>Industry Momentum &amp; Cohesion</h3>
+        <p>Pure industry residual Alpha + sub-industry alignment ratio (≥50%) + cluster Z-score. Severe sector divergence receives a -2.0 penalty.</p>
+      </div>
+      <div class="matrix-card">
+        <span class="matrix-code">D3 · CAPITAL FLOW</span>
+        <span class="matrix-weight">Weight 25% · Microstructure</span>
+        <h3>Real Buying vs Distribution</h3>
+        <p>Change from open + Intraday Intent tagging + VWAP deviation + Turnover volume + Chaikin Money Flow (CMF).</p>
+      </div>
+      <div class="matrix-card">
+        <span class="matrix-code">D4 · PRICE ACTION</span>
+        <span class="matrix-weight">Weight 15% · Technical Momentum</span>
+        <h3>Multi-Period Breakout</h3>
+        <p>Breakout badge tiers (ATH +1.0, 52W/6M +0.7, 3M +0.4, BREAKDOWN -0.7) + Moving average distance + Bollinger position + MACD acceleration.</p>
+      </div>
+      <div class="matrix-card">
+        <span class="matrix-code">D5 · FUNDAMENTALS</span>
+        <span class="matrix-weight">Weight 15% · Cash Flow Moat</span>
+        <h3>Valuation &amp; Forensic Health</h3>
+        <p>EV/EBITDA &amp; P/FCF cash multiples + Piotroski F-score + Altman Z distress barrier + Sloan Ratio earnings penalty + sector adaptation.</p>
+      </div>
+    </div>
+
+    <div style="margin-top:24px; display:flex; gap:12px; flex-wrap:wrap; align-items:center;">
+      <span style="font-size:13px; font-weight:600; color:var(--steel);">Resonance Tier Legend:</span>
+      <span style="font-family:var(--mono); font-size:12px; background:var(--amber); color:#181207; font-weight:600; padding:2px 8px; border-radius:2px;">5/5★ Five-Star Resonance (Highest Conviction Highlight)</span>
+      <span style="font-family:var(--mono); font-size:12px; background:rgba(28,45,66,0.12); color:var(--navy); font-weight:600; padding:2px 8px; border-radius:2px; border:1px solid rgba(28,45,66,0.3);">4/5 Strong Attribution (Primary Focus)</span>
+      <span style="font-family:var(--mono); font-size:12px; background:var(--paper-raise); color:var(--steel); padding:2px 8px; border-radius:2px; border:1px solid var(--hairline);">3/5 Mainstream Attribution (Standard Entry)</span>
+    </div>
+  </div>
+</section>
+
+<!-- Module 6: Sector Divergence Deep-Dive -->
+<section id="divergence" class="bg-raise">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-eyebrow">06 · Forensic Alert Mechanism</span>
+      <h2>Understanding Sector Divergence &amp; AI Forensics</h2>
+      <p class="section-lede">
+        In equities trading, a stock collapsing while its entire industry surges represents one of the deadliest "falling knives." K2J built a dedicated quantitative divergence monitor and AI forensic engine to explain these anomalies.
+      </p>
+    </div>
+
+    <div class="divergence-box">
+      <span class="divergence-tag">⚠️ FORENSIC WARNING · SECTOR DIVERGENCE</span>
+      <h3 style="font-size:20px; margin-bottom:12px;">Diverging from Sector Reality: Not a Standard Short Candidate</h3>
+      <p style="font-size:14.5px; color:var(--ink); line-height:1.7; margin:0;">
+        When a ticker moves in sharp opposition to its underlying sub-industry (e.g., gold miners rally +2.81% with 80% participation, but one specific miner plunges -9.35%), this is not normal cyclical pressure — it signals an <strong>isolated company-specific black swan</strong>.
+      </p>
+
+      <div class="divergence-grid">
+        <div>
+          <h4 style="font-size:15px; margin-bottom:10px; color:var(--amber-dim);">⚙️ K2J Model Penalty Logic</h4>
+          <ul style="margin:0; padding-left:18px; font-size:13.5px; color:var(--steel); line-height:1.75;">
+            <li><strong>D2 Sector Penalty</strong>: Assigns a mandatory punitive score of <code>-2.0</code> (Sector Divergence), reflecting total lack of group support.</li>
+            <li><strong>Composite Z-Score Deduction</strong>: Automatically deducts <code>-0.50</code> from overall Z-score (compressing a 62.7 score down to 38.2), ensuring it is <strong>never misclassified as a "Resonant Short Leader"</strong>.</li>
+            <li><strong>Role Clarification</strong>: Front-end tags the ticker as <code>EXTREMA_DIVERGENCE</code> (Isolated Divergence Drop) rather than a group short.</li>
+            <li><strong>Targeted AI Forensics</strong>: Triggers deep-dive news retrieval to uncover the exact corporate catalyst and embeds a prominent <code>⚠️ Divergent</code> orange alert banner atop the card.</li>
+          </ul>
+        </div>
+
+        <div class="divergence-card">
+          <h4>📌 Real Case Study · SA (August 24, 2026)</h4>
+          <p style="font-size:13px; color:var(--ink); margin-bottom:8px; line-height:1.6;">
+            <strong>The Anomaly</strong>: The Gold &amp; Silver Mining sector gained <strong>+2.81%</strong> (peers IAG, BTG surged), but SA plummeted <strong>-9.35%</strong>.
+          </p>
+          <p style="font-size:13px; color:var(--steel); margin:0; line-height:1.6;">
+            <strong>AI Forensic Finding</strong>: Targeted news retrieval uncovered a surprise dilutive secondary equity offering. The alert warned investors: Do not blind-buy SA just because gold is rallying!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Module 7: Case Studies -->
+<section id="cases">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-eyebrow">07 · Real Report Case Studies</span>
+      <h2>Real Stock Profiles &amp; Factor Deconstruction</h2>
+      <p class="section-lede">
+        Real-world examples from the August 24, 2026 report demonstrate how 5-D attribution translates raw numbers into actionable intelligence:
+      </p>
+    </div>
+
+    <div class="case-grid">
+      <!-- Case 1 -->
+      <div class="case-card">
+        <div>
+          <div class="case-badge-row">
+            <span class="case-ticker">CART</span>
+            <span class="case-ret up">+3.91%</span>
+          </div>
+          <span class="case-type">🟢 Long Breakout Leader · 4/5 Resonance</span>
+          <h3>52-Week Breakout + Bullish Intraday Drive</h3>
+          <p>
+            Logistics &amp; Delivery. Broke out to 52-week highs with an intraday gain of +3.9% from open, closing +1.6% above VWAP. D3 Capital Flow and D4 Breakout confirm strong institutional backing.
+          </p>
+        </div>
+        <div class="case-metrics">
+          <strong>Factor Profile</strong>:<br>
+          • Breakout Badge: 52W_6M<br>
+          • Intraday Intent: BULLISH_DRIVE<br>
+          • Composite Score: 88.4 / 4/5 Tier<br>
+          • Confirmed: D1, D3, D4, D5 ✓
+        </div>
+      </div>
+
+      <!-- Case 2 -->
+      <div class="case-card">
+        <div>
+          <div class="case-badge-row">
+            <span class="case-ticker">ALVO</span>
+            <span class="case-ret up">+18.51%</span>
+          </div>
+          <span class="case-type">⚡ Catalyst Surge · 3/5 Attribution</span>
+          <h3>Extreme Gain + Genuine Buying Volume</h3>
+          <p>
+            Biotechnology. Despite broad sector weakness, surged +18.5% on 3.4x average volume following an FDA regulatory resolution. While sector-divergent, strong intraday buying confirmed institutional demand.
+          </p>
+        </div>
+        <div class="case-metrics">
+          <strong>Factor Profile</strong>:<br>
+          • Relative Volume: 3.40x Surge<br>
+          • Intraday Intent: BULLISH_DRIVE<br>
+          • Catalyst: FDA Compliance Resolved<br>
+          • Role: EXTREMA_DIVERGENCE
+        </div>
+      </div>
+
+      <!-- Case 3 -->
+      <div class="case-card">
+        <div>
+          <div class="case-badge-row">
+            <span class="case-ticker">AAOI</span>
+            <span class="case-ret down">-13.82%</span>
+          </div>
+          <span class="case-type">🔴 Bearish Breakdown · Forensic Warning</span>
+          <h3>Platform Breakdown + Capital Outflow</h3>
+          <p>
+            Optical Technology. Unilateral selling saw price drop -7.8% from open. CMF accelerated into negative territory with multi-timeframe moving averages broken. Model warned of sharp downside liquidity traps.
+          </p>
+        </div>
+        <div class="case-metrics">
+          <strong>Factor Profile</strong>:<br>
+          • Technical Pattern: BREAKDOWN<br>
+          • Intraday Intent: BEARISH_DUMP<br>
+          • CMF: -0.12 Outflow Acceleration<br>
+          • Role: EXTREMA_ALIGNED (Lead Drop)
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Module 8: 4-Step Reading Workflow -->
+<section id="workflow" class="bg-raise">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-eyebrow">08 · Step-by-Step Guide</span>
+      <h2>The 4-Step 5-Minute Daily Report Reading Workflow</h2>
+      <p class="section-lede">
+        A comprehensive K2J quantitative report packs immense analytical depth. How can you extract maximum signal in minimum time?
+      </p>
+    </div>
+
+    <div class="workflow-grid">
+      <div class="workflow-card">
+        <span class="workflow-step">STEP 01 · MACRO REGIME</span>
+        <span class="workflow-time">⏱️ 1 Minute</span>
+        <h3>Gauge Systemic Wind Direction</h3>
+        <p>Open <code>01 Macro Environment</code>: Is the market Risk-On or Compression? Are benchmark ETFs diverging? Is 1,500+ liquid stock breadth > 50%? Calibrate overall portfolio exposure accordingly.</p>
+      </div>
+      <div class="workflow-card">
+        <span class="workflow-step">STEP 02 · SECTOR THEMES</span>
+        <span class="workflow-time">⏱️ 2 Minutes</span>
+        <h3>Spot Capital Accumulation</h3>
+        <p>Scan <code>02 Thematic Clusters</code>: Which sub-industries are surging with high internal win rates (>70%)? Locate the dominant institutional sector rotations.</p>
+      </div>
+      <div class="workflow-card">
+        <span class="workflow-step">STEP 03 · 20 FOCUS TICKERS</span>
+        <span class="workflow-time">⏱️ 2 Minutes</span>
+        <h3>Scan the Multi-Factor Roster</h3>
+        <p>Review <code>03 Executive Summary</code> and <code>06 Master Table</code>: Scan the Top 10 Long and Top 10 Short rosters, noting golden <code>5/5★</code> badges and <code>⚠️ Divergent</code> alerts.</p>
+      </div>
+      <div class="workflow-card">
+        <span class="workflow-step">STEP 04 · DEEP-DIVES</span>
+        <span class="workflow-time">⏱️ On-Demand</span>
+        <h3>Verify Moats &amp; Earnings Risk</h3>
+        <p>Click ticker links to explore <code>04/05 Deep-Dive Cards</code>: Read the AI causal synthesis (Why It Moved), 6-pillar business moat, Wall Street price targets, and binary earnings gap warnings.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Module 9: Indicator Dictionary -->
+<section id="dictionary">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-eyebrow">09 · Quantitative Glossary</span>
+      <h2>Core Quantitative &amp; Forensic Indicator Glossary</h2>
+      <p class="section-lede">
+        Quick reference dictionary defining the key quantitative metrics and forensic thresholds used across the report:
+      </p>
+    </div>
+
+    <div class="dict-list">
+      <details class="dict-item" open>
+        <summary class="dict-summary">
+          <span class="dict-term">CMF (Chaikin Money Flow)</span>
+          <span class="dict-tag">Capital Flow</span>
+        </summary>
+        <div class="dict-body">
+          Measures the volume-weighted accumulation and distribution over a 20-day period. Ranges between -1.0 and +1.0. <strong>CMF > 0</strong> confirms active institutional buying pressure; <strong>CMF < 0</strong> reflects continuous distribution.
+        </div>
+      </details>
+
+      <details class="dict-item">
+        <summary class="dict-summary">
+          <span class="dict-term">VWAP Deviation % (Volume-Weighted Average Price Deviation)</span>
+          <span class="dict-tag">Microstructure</span>
+        </summary>
+        <div class="dict-body">
+          Measures the percentage difference between the closing price and the day's institutional volume-weighted average price (VWAP). Positive values indicate that intraday buyers are in profit (tailwind advantage); negative values signify trapped overhead supply.
+        </div>
+      </details>
+
+      <details class="dict-item">
+        <summary class="dict-summary">
+          <span class="dict-term">Piotroski F-Score (9-Point Fundamental Health)</span>
+          <span class="dict-tag">Forensics</span>
+        </summary>
+        <div class="dict-body">
+          Stanford Professor Joseph Piotroski's 9-factor model assessing profitability, operational efficiency, and balance sheet leverage. <strong>F-Score ≥ 7</strong> indicates top-tier fundamental health; <strong>F-Score < 3</strong> signals structural deterioration.
+        </div>
+      </details>
+
+      <details class="dict-item">
+        <summary class="dict-summary">
+          <span class="dict-term">Altman Z-Score (Bankruptcy Risk Model)</span>
+          <span class="dict-tag">Credit Risk</span>
+        </summary>
+        <div class="dict-body">
+          NYU Professor Edward Altman's classic formula forecasting corporate bankruptcy risk. <strong>Z > 2.99</strong> indicates a safe financial zone; <strong>1.81 ≤ Z ≤ 2.99</strong> is a grey zone; <strong>Z < 1.81</strong> alerts to severe distress and default probability.
+        </div>
+      </details>
+
+      <details class="dict-item">
+        <summary class="dict-summary">
+          <span class="dict-term">Sloan Ratio % (Accrual Earnings Quality)</span>
+          <span class="dict-tag">Earnings Forensics</span>
+        </summary>
+        <div class="dict-body">
+          Developed by Professor Richard Sloan, this metric evaluates the proportion of earnings derived from non-cash accruals versus organic cash flow. <strong>Sloan Ratio > 10%</strong> raises an aggressive accounting red flag, warning of potentially inflated paper profits.
+        </div>
+      </details>
+
+      <details class="dict-item">
+        <summary class="dict-summary">
+          <span class="dict-term">Relative Volume (10D Average Multiple)</span>
+          <span class="dict-tag">Volume Surge</span>
+        </summary>
+        <div class="dict-body">
+          Daily volume relative to the 10-day moving average volume. <strong>RelVol > 2.0x</strong> flags a significant volume anomaly; combined with candlestick intent, it distinguishes institutional accumulation from panic selling.
+        </div>
+      </details>
+
+      <details class="dict-item">
+        <summary class="dict-summary">
+          <span class="dict-term">Total Shareholder Yield (Buybacks + Dividends)</span>
+          <span class="dict-tag">Capital Allocation</span>
+        </summary>
+        <div class="dict-body">
+          Sum of buyback yield and dividend yield. Compared to dividend yield alone, total shareholder yield gives a complete picture of management's organic cash return to shareholders.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- Module 10: Bottom CTA -->
+<section class="bg-raise" style="text-align:center;">
+  <div class="wrap" style="max-width:720px;">
+    <span class="section-eyebrow" style="margin-bottom:12px;">Get Started</span>
+    <h2 style="font-size:28px; margin-bottom:16px;">Explore the Latest Daily US Equities Quantitative Report</h2>
+    <p class="section-lede" style="margin:0 auto 28px;">
+      Now that you understand our 8-pillar dataset, factor models, and the 4-step workflow, open today's report to experience institutional quantitative research in practice.
+    </p>
+    <div class="cta-row" style="justify-content:center;">
+      <a class="cta-primary" href="/#archive">Open Latest Quantitative Report →</a>
+      <a class="cta-secondary" href="/">Return to Home</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="disclaimer">
+      K2J AI Quantitative Lab publishes independent research for informational and educational purposes only. Nothing here constitutes investment advice, and Justin is not a registered investment adviser. Signal strength, statistical weighting, and stance descriptions reflect a systematic research process, not trade recommendations. Do your own research and consult a licensed professional before making investment decisions.
+    </p>
+    <div class="footer-bottom">
+      <span>© 2026 K2J AI Quantitative Lab</span>
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="./guide.en.html">Methodology Guide</a>
+        <a href="/privacy.en.html">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

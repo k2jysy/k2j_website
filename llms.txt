@@ -28,5 +28,12 @@
 ## Key Links & Resources
 
 - [Official Website](https://k2j.net/): Homepage with methodology, interactive FAQ, and report archive.
+- [Methodology & Reading Guide](https://k2j.net/guide.html): Comprehensive guide on the 8 data pillars (100+ metrics), top-down macro-to-stock analytical logic, 5-D attribution formula, 20 focus equities screening funnel, and sector divergence forensics.
+  - [Chinese Reading Guide](https://k2j.net/guide.zh.html)
+  - [English Reading Guide](https://k2j.net/guide.en.html)
+- [Privacy Policy](https://k2j.net/privacy.html): Official data privacy and compliance policy.
+  - [Chinese Privacy Policy](https://k2j.net/privacy.zh.html)
+  - [English Privacy Policy](https://k2j.net/privacy.en.html)
 - [Full LLM Knowledge Base](https://k2j.net/llms-full.txt): Complete detailed text representation for LLM context windows and deep retrieval.
 - [Daily Reports Archive](https://k2j.net/#archive): Full repository of daily market quantitative analysis reports (Bilingual: English & Simplified Chinese) under `/reports/`.
+

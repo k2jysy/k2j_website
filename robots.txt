@@ -3,11 +3,33 @@
 User-agent: *
 Allow: /
 
-# AI Crawlers & LLM Search Agents (Full Access for GEO / Generative Engine Optimization)
+# Search Engine Crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Generative Engine Optimization (GEO) & AI Search Crawlers
 User-agent: GPTBot
 Allow: /
 
 User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
 Allow: /
 
 User-agent: ClaudeBot
@@ -31,6 +53,22 @@ Allow: /
 User-agent: Meta-ExternalAgent
 Allow: /
 
+User-agent: Bytespider
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
 # Sitemap & LLMs Knowledge Discovery
 Sitemap: https://k2j.net/sitemap.xml
 LLMs-Txt: https://k2j.net/llms.txt
+

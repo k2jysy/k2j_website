@@ -56,7 +56,60 @@ The entire platform is designed, engineered, and operated independently by Justi
 
 ---
 
-## 4. Frequently Asked Questions (FAQ)
+---
+
+## 4. Institutional 8-Pillar Data Architecture (100+ Granular Metrics)
+
+Every post-close trading session, K2J filters the broader US market for optimal liquidity and tradability, ingesting and computing across 8 comprehensive data pillars for over 1,500 liquid US equities:
+1. **Asset Metadata, Share Structure & Wall Street Consensus** (20+ metrics): CUSIP/ISIN identifiers, Free Float %, institutional ownership, upcoming earnings proximity alerts, analyst ratings, and 1-year target price upside dispersion.
+2. **Multi-Period Price, Volume & Microstructure** (50+ metrics): Candlestick intent (`BULLISH_DRIVE` vs `FADING_GAP_DUMP`), VWAP deviation %, relative volume (10D/30D/60D/90D averages), turnover, multi-period highs/lows (ATH, 52W, 6M, 3M), and extended-hours pre/post-market quotes.
+3. **Full-Period Technical Indicators & Pivot Systems** (50+ metrics): Multi-timeframe moving averages (SMA/EMA/Hull), Ichimoku cloud, momentum oscillators (RSI, Stochastic, ADX, ATR, CCI), institutional money channels (VWAP, Bollinger Bands, CMF, MFI), and 5 classic pivot point systems (Camarilla, Classic, DeMark, Fibonacci, Woodie).
+4. **Financial Statements Deep-Dive (TTM & FQ)** (30+ metrics): Income statement (revenue, EBITDA, R&D expense), Cash Flow statement (Free Cash Flow, Operating Cash Flow, CapEx), and Balance Sheet (cash, net debt, total equity, goodwill).
+5. **Advanced Enterprise Valuation Multiples** (15+ metrics): EV/EBITDA, EV/EBIT, EV/Revenue, EV/FCF, P/FCF, PEG, Earnings Yield %, Buyback Yield %.
+6. **Multi-Period Growth Rates** (8+ metrics): YoY quarterly and TTM growth across revenue, gross profit, EBITDA, net income, free cash flow, assets, and liabilities.
+7. **Capital Ratios & 4 Classic Forensic Quant Models** (20+ metrics): Return on capital (ROE, ROA, ROIC), liquidity ratios, and four classic forensic accounting risk models:
+   - **Piotroski F-Score (0-9)**: Fundamental operational health verification (Longs must have F ≥ 3).
+   - **Altman Z-Score**: Corporate bankruptcy and default risk barrier (Z < 1.81 distressed warning).
+   - **Sloan Ratio %**: Accrual earnings quality audit (Sloan > 10% flags aggressive earnings manipulation).
+   - **Zmijewski Score**: Financial distress probability cross-validation.
+8. **Shareholder Yield & Dividend Policy** (8+ metrics): Dividend yield, dividend growth persistence, payout ratios, and Total Shareholder Yield (Buybacks + Dividends).
+
+---
+
+## 5. Daily 20 Focus Equities Selection & Sector Divergence Forensics
+
+### 5.1 Three-Layer Screening Funnel
+- **Layer 1 (2 Extreme Movers)**: Single largest daily gainer and single largest decliner automatically qualify, ensuring market extremes and black-swan anomalies are tracked.
+- **Layer 2 (18 5-D Resonance Leaders)**: Sorted by 5-D factor resonance tier (`5/5★` → `4/5` → `3/5`), composite attribution score, and an Industry Alignment filter (≥50%) to discard isolated noise.
+- **Layer 3 (Diversity Cap)**: Maximum 3 tickers per thematic cluster and 3 tickers per sub-industry to prevent sector clustering and preserve macro market breadth.
+
+### 5.2 5-D Factor Attribution Formula
+$$\text{Narrative Score} = \Phi\left(0.20 D_1 + 0.25 D_2 + 0.25 D_3 + 0.15 D_4 + 0.15 D_5\right) \times 100$$
+- **D1 (20%)**: Index Alignment & Systematic Beta co-movement.
+- **D2 (25%)**: Sector Clustering, residual Alpha, and sub-industry win rate.
+- **D3 (25%)**: Capital Flow, Candlestick Intent, VWAP deviation, and Chaikin Money Flow.
+- **D4 (15%)**: Price Action, ATH/52W breakout badges, and moving average momentum.
+- **D5 (15%)**: Fundamentals, cash flow multiples, and forensic accounting red lines.
+
+### 5.3 Sector Divergence (⚠️) Forensic Alerts
+When a stock collapses while its sub-industry surges (e.g. gold mining up +2.81% across 80% of peers, but SA drops -9.35%), the system tags it as **Sector Divergence**:
+- D2 Sector dimension receives a punitive `-2.0` score.
+- Composite Z-score is reduced by `-0.50`, classifying the move as an *Isolated Divergence Drop* rather than a resonant short.
+- Targeted AI news reasoning extracts the company-specific black swan (e.g., dilutive offerings) and displays an orange `⚠️ Divergent` warning banner.
+
+---
+
+## 6. Top-Down Reading Blueprint (Macro → Sector → Equities)
+
+Readers are guided through a disciplined 4-step 5-minute workflow:
+1. **Step 1 (1 Min) · Macro Regime**: Check Section 01 for macro climate (Risk-On vs Risk-Off) and full-market advance/decline breadth to calibrate overall portfolio risk budget.
+2. **Step 2 (2 Mins) · Thematic Clusters**: Scan Section 02 to identify sub-industries where institutional smart money is accumulating with high internal win rates (>70%).
+3. **Step 3 (2 Mins) · 20 Focus Tickers**: Review Section 03 summary and Section 06 master table for `5/5★` golden resonance badges and `⚠️ Divergent` warnings.
+4. **Step 4 (On-Demand) · Equities Deep-Dive**: Explore Section 04/05 cards for AI causal news intelligence ("Why It Moved"), 6-pillar business moat, analyst targets, and 3-day earnings proximity warnings.
+
+---
+
+## 7. Frequently Asked Questions (FAQ)
 
 ### Q1: What makes K2J AI Quantitative Lab unique?
 A1: Unlike purely discretionary commentary or black-box academic models, K2J combines rigorous multi-factor statistical mechanics with production-grade autonomous agentic AI. It is built to institutional rigor by a veteran practitioner who actively trades the signals daily.
@@ -64,18 +117,27 @@ A1: Unlike purely discretionary commentary or black-box academic models, K2J com
 ### Q2: What technology stack does K2J use?
 A2: The AI architecture leverages LangGraph for multi-agent workflows, Pinecone for vector retrieval, and Python (uv, NumPy, SciPy, LightGBM, scikit-learn) for quantitative modeling, backed by deterministic guardrail engines.
 
-### Q3: How can I access the daily reports?
-A3: Daily reports are published every trading morning in both English and Simplified Chinese under `https://k2j.net/reports/`. A full chronological archive with year filtering is accessible on the homepage at `https://k2j.net/#archive`.
+### Q3: How can I access the daily reports and reading guide?
+A3: Daily reports are published every trading morning in both English and Simplified Chinese under `https://k2j.net/reports/`. The comprehensive methodology guide is available at `https://k2j.net/guide.html` (`https://k2j.net/guide.zh.html` and `https://k2j.net/guide.en.html`).
 
 ### Q4: What collaboration opportunities are available with Justin?
 A4: Justin is open to strategic advisory, technical consulting, and collaborative partnerships with hedge funds, proprietary trading firms, asset managers, and AI startups seeking proven expertise in building production agentic AI systems and quantitative finance models. Contact via email at `k2jysy@gmail.com` or LinkedIn at `https://www.linkedin.com/in/justin-k2j`.
 
 ---
 
-## 5. Contact & Social Channels
+## 8. Contact & Key Resources
 
 - **Website**: https://k2j.net/
+- **Methodology Guide**: https://k2j.net/guide.html
+  - Chinese Guide: https://k2j.net/guide.zh.html
+  - English Guide: https://k2j.net/guide.en.html
+- **Privacy Policy**: https://k2j.net/privacy.html
+  - Chinese Privacy Policy: https://k2j.net/privacy.zh.html
+  - English Privacy Policy: https://k2j.net/privacy.en.html
 - **Author**: Justin
 - **Email**: k2jysy@gmail.com
 - **LinkedIn**: https://www.linkedin.com/in/justin-k2j
 - **Reports Directory**: https://k2j.net/reports/
+- **LLM Summary**: https://k2j.net/llms.txt
+- **LLM Full Whitepaper**: https://k2j.net/llms-full.txt
+
