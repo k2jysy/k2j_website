@@ -3,7 +3,7 @@
 URL: https://k2j.net/
 Author: Justin (k2jysy@gmail.com | https://www.linkedin.com/in/justin-k2j)
 Published by: K2J AI Quantitative Lab
-License: Informational & Educational Research
+License: Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0) | https://creativecommons.org/licenses/by-nc-nd/4.0/
 
 ---
 
@@ -77,14 +77,23 @@ Every post-close trading session, K2J filters the broader US market for optimal 
 
 ---
 
-## 5. NLP-Powered Causal News Intelligence Engine (70+ Wire Feeds)
+## 5. Intelligence & Regulatory Surveillance Engine
 
-In addition to the multi-factor quantitative data pillars, K2J runs an NLP-powered news intelligence engine providing continuous market surveillance:
-- **Real-Time Surveillance Across 70+ Sources**: Ingests and parses wire services, financial media, and regulatory filings 24/7.
+### 5.1 NLP-Powered Causal News Intelligence (70+ Wire Feeds)
+- **Real-Time Surveillance Across 70+ Sources**: Ingests and parses wire services, financial media, and regulatory feeds 24/7.
 - **Causal Event–Ticker Relevance Scoring**: Employs deep NLP models to score the true causal impact between breaking news and targeted liquid equities.
 - **Bullish/Bearish Sentiment Polarity Decomposition**: Dissects sentiment magnitude, directional conviction, and institutional narrative weight.
 - **Event-Driven Tail-Risk Signal Extraction**: Filters out background noise and isolates asymmetric tail-risk catalysts (earnings surprises, regulatory actions, dilutive financing, management turnover).
 - **Alpha Overlay**: Synthesizes unstructured news signals into a forward-looking catalytic layer that resonates with price/volume and factor data.
+
+### 5.2 SEC EDGAR & 13F Smart Money Regulatory Intelligence Pipeline
+- **Real-Time SEC EDGAR Ingestion**: Automated ingestion and structured parsing of mandatory regulatory submissions:
+  - **Form 13F**: Quarterly institutional investment manager holdings and interim portfolio amendments.
+  - **Form 13D / 13G**: Beneficial ownership disclosures triggered when institutional entities cross the 5% equity ownership threshold.
+  - **Form 4**: Statements of changes in beneficial ownership by corporate insiders, officers, and directors.
+  - **Form 8-K**: Unscheduled material corporate events, executive departures, financing terms, and strategic transactions.
+- **Smart Money Flow & Divergence Forensics**: Cross-references disclosed institutional positioning against intraday and multi-day price-volume microstructure. Isolates subtle divergences between declared institutional allocations and actual market order flow to detect stealth accumulation or liquidation before broad consensus discovery.
+- **Triple-Engine Resonance**: Unifies "Price/Volume Multi-Factor Models + Causal News Sentiment + Smart Money Regulatory Filings" into an institutional-grade multi-layer decision framework.
 
 ---
 
@@ -136,6 +145,9 @@ A3: Daily reports are published every trading morning in both English and Simpli
 A4: Justin is open to strategic advisory, technical consulting, and collaborative partnerships with hedge funds, proprietary trading firms, asset managers, and AI startups seeking proven expertise in building production agentic AI systems and quantitative finance models. Contact via email at `k2jysy@gmail.com` or LinkedIn at `https://www.linkedin.com/in/justin-k2j`.
 
 ---
+
+### Q5: How does K2J track smart money through 13F and SEC filings?
+A5: K2J continuously parses SEC EDGAR filings (Form 13F institutional holdings, 13D/13G beneficial ownership, Form 4 insider trades, 8-K material notices) and cross-references them against price-volume microstructure. This reveals divergences between disclosed institutional stakes and real-time market liquidity, pinpointing smart money accumulation and distribution before broad price discovery.
 
 ## 9. Contact & Key Resources
 

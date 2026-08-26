@@ -1,6 +1,6 @@
 # K2J AI Quantitative Lab
 
-> K2J AI Quantitative Lab is an independent, institutional-standard daily quantitative research system for US equities. Designed, built, and operated end-to-end by Justin — an enterprise AI systems architect with 20+ years of experience and an active options/equities trader — using LangGraph multi-agent orchestration, Agentic RAG, and deterministic guardrails.
+> K2J AI Quantitative Lab is an independent, institutional-standard daily quantitative research system for US equities. Designed, built, and operated end-to-end by Justin — an enterprise AI systems architect with 20+ years of experience and an active options/equities trader — using LangGraph multi-agent orchestration, Agentic RAG, deterministic guardrails, and real-time 13F/SEC regulatory filing surveillance.
 
 ## Core Quantitative Research Methodology
 
@@ -8,6 +8,7 @@
 - [Market Breadth Analysis](https://k2j.net/#research): Full-market cross-sectional participation metric measuring internal equity breadth beyond headline indices.
 - [5-D Orthogonal Factor Attribution](https://k2j.net/#research): Five-dimensional cross-sectional statistical attribution using robust WLS and PCA to isolate true alpha drivers from noise.
 - [Latent Theme Clustering](https://k2j.net/#research): High-dimensional mover clustering using HDBSCAN and dense semantic embeddings to identify emergent market narrative clusters.
+- [13F & SEC Filing Surveillance / Smart Money Tracking](https://k2j.net/#research): Real-time ingestion and parsing of SEC EDGAR submissions (Form 13F quarterly holdings, 13D/13G beneficial ownership, Form 4 insider transactions, 8-K material events) to track institutional positioning and identify price-volume divergences.
 - [Real-Time Financial News Intelligence](https://k2j.net/#research): 24/7 NLP surveillance across 70+ financial wire sources performing causal event-ticker relevance scoring, polarity decomposition, and tail-risk extraction.
 - [Portfolio & Tail-Risk Optimization](https://k2j.net/#research): Dynamic portfolio stance modeling constrained by CVaR (Conditional Value-at-Risk) and Bayesian Risk Parity.
 
@@ -16,6 +17,7 @@
 - **Agentic Orchestration**: Autonomous multi-agent pipelines orchestrated via LangGraph.
 - **Retrieval-Augmented Generation**: Agentic RAG with Pinecone vector database and hybrid dense/sparse indexing.
 - **Reliability & Guardrails**: Deterministic guardrails preventing hallucination and enforcing financial data consistency.
+- **Triple-Engine Resonance**: Synchronized alpha synthesis uniting price/volume factors, news intelligence, and smart money regulatory filings.
 - **Production Cadence**: Rebuilt and published autonomously every trading morning before market open.
 
 ## Author & Background
@@ -37,4 +39,3 @@
   - [English Privacy Policy](https://k2j.net/privacy.en.html)
 - [Full LLM Knowledge Base](https://k2j.net/llms-full.txt): Complete detailed text representation for LLM context windows and deep retrieval.
 - [Daily Reports Archive](https://k2j.net/#archive): Full repository of daily market quantitative analysis reports (Bilingual: English & Simplified Chinese) under `/reports/`.
-
