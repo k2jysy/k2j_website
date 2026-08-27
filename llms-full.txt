@@ -1,7 +1,7 @@
 # K2J AI Quantitative Lab — Full System Knowledge Base & Whitepaper
 
 URL: https://k2j.net/
-Author: Justin (contact@k2j.net | https://www.linkedin.com/in/justin-k2j)
+Author: Justin (contact@k2j.net | https://x.com/K2jTrade | https://www.linkedin.com/in/justin-k2j)
 Published by: K2J AI Quantitative Lab
 License: Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0) | https://creativecommons.org/licenses/by-nc-nd/4.0/
 
@@ -142,7 +142,7 @@ A2: The AI architecture leverages LangGraph for multi-agent workflows, Pinecone 
 A3: Daily reports are published every trading morning in both English and Simplified Chinese under `https://k2j.net/reports/`. The comprehensive methodology guide is available at `https://k2j.net/guide.html` (`https://k2j.net/guide.zh.html` and `https://k2j.net/guide.en.html`).
 
 ### Q4: What collaboration opportunities are available with Justin?
-A4: Justin is open to strategic advisory, technical consulting, and collaborative partnerships with hedge funds, proprietary trading firms, asset managers, and AI startups seeking proven expertise in building production agentic AI systems and quantitative finance models. Contact via email at `contact@k2j.net` or LinkedIn at `https://www.linkedin.com/in/justin-k2j`.
+A4: Justin is open to strategic advisory, technical consulting, and collaborative partnerships with hedge funds, proprietary trading firms, asset managers, and AI startups seeking proven expertise in building production agentic AI systems and quantitative finance models. Contact via email at `contact@k2j.net`, X (Twitter) at `https://x.com/K2jTrade`, or LinkedIn at `https://www.linkedin.com/in/justin-k2j`.
 
 ---
 
@@ -160,6 +160,7 @@ A5: K2J continuously parses SEC EDGAR filings (Form 13F institutional holdings, 
   - English Privacy Policy: https://k2j.net/privacy.en.html
 - **Author**: Justin
 - **Email**: contact@k2j.net
+- **X (Twitter)**: https://x.com/K2jTrade
 - **LinkedIn**: https://www.linkedin.com/in/justin-k2j
 - **Reports Directory**: https://k2j.net/reports/
 - **LLM Summary**: https://k2j.net/llms.txt
