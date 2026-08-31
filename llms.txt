@@ -39,4 +39,4 @@
   - [Chinese Privacy Policy](https://k2j.net/privacy.zh.html)
   - [English Privacy Policy](https://k2j.net/privacy.en.html)
 - [Full LLM Knowledge Base](https://k2j.net/llms-full.txt): Complete detailed text representation for LLM context windows and deep retrieval.
-- [Daily Reports Archive](https://k2j.net/#archive): Full repository of daily market quantitative analysis reports (Bilingual: English & Simplified Chinese) under `/reports/`.
+- [Daily Reports Archive](https://k2j.net/#archive): Full repository of daily market quantitative analysis reports (Bilingual: English & Traditional Chinese) under `/reports/`.

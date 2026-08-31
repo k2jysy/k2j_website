@@ -139,7 +139,7 @@ A1: Unlike purely discretionary commentary or black-box academic models, K2J com
 A2: The AI architecture leverages LangGraph for multi-agent workflows, Pinecone for vector retrieval, and Python (uv, NumPy, SciPy, LightGBM, scikit-learn) for quantitative modeling, backed by deterministic guardrail engines.
 
 ### Q3: How can I access the daily reports and reading guide?
-A3: Daily reports are published every trading morning in both English and Simplified Chinese under `https://k2j.net/reports/`. The comprehensive methodology guide is available at `https://k2j.net/guide.html` (`https://k2j.net/guide.zh.html` and `https://k2j.net/guide.en.html`).
+A3: Daily reports are published every trading morning in both English and Traditional Chinese under `https://k2j.net/reports/`. The comprehensive methodology guide is available at `https://k2j.net/guide.html` (`https://k2j.net/guide.zh.html` and `https://k2j.net/guide.en.html`).
 
 ### Q4: What collaboration opportunities are available with Justin?
 A4: Justin is open to strategic advisory, technical consulting, and collaborative partnerships with hedge funds, proprietary trading firms, asset managers, and AI startups seeking proven expertise in building production agentic AI systems and quantitative finance models. Contact via email at `contact@k2j.net`, X (Twitter) at `https://x.com/K2jTrade`, or LinkedIn at `https://www.linkedin.com/in/justin-k2j`.
