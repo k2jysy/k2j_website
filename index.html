@@ -797,10 +797,10 @@
   .archive-title{font-size:16px; font-weight:500;}
   .archive-actions{display:flex; gap:10px; align-items:center; flex-wrap:wrap;}
 
-  .report-list{border-top:1px solid rgba(233,234,228,0.14); margin-top:8px;}
+  .report-list{margin-top:16px;}
   .report-row{
     display:flex; justify-content:space-between; align-items:center;
-    padding:14px 12px; border-bottom:1px solid rgba(233,234,228,0.1);
+    padding:14px 16px; border-bottom:1px solid rgba(233,234,228,0.08);
     transition:background .15s;
   }
   .report-row:hover{background:rgba(233,234,228,0.035);}
@@ -819,6 +819,96 @@
   .report-pill-link:hover{border-color:var(--amber); color:var(--amber); background:rgba(184,130,58,0.08);}
   .report-pill-link.primary{background:var(--amber); color:#181207; border-color:var(--amber); font-weight:600;}
   .report-pill-link.primary:hover{background:#CB934A;}
+
+  /* Month Group Accordion */
+  .month-group{
+    margin-bottom:12px;
+    border:1px solid rgba(233,234,228,0.12);
+    border-radius:3px;
+    background:rgba(233,234,228,0.02);
+    overflow:hidden;
+    transition:border-color .2s ease, background-color .2s ease;
+  }
+  .month-group:hover{
+    border-color:rgba(184,130,58,0.35);
+  }
+  .month-group.expanded{
+    border-color:rgba(184,130,58,0.4);
+    background:rgba(184,130,58,0.02);
+  }
+  .month-header{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:13px 18px;
+    background:rgba(233,234,228,0.035);
+    border:none;
+    color:var(--hero-text);
+    cursor:pointer;
+    font-family:inherit;
+    text-align:left;
+    transition:background .15s ease, color .15s ease;
+    user-select:none;
+    touch-action:manipulation;
+  }
+  .month-header:hover{
+    background:rgba(233,234,228,0.07);
+  }
+  .month-header-left{
+    display:flex;
+    align-items:center;
+    gap:12px;
+  }
+  .month-arrow{
+    width:14px;
+    height:14px;
+    color:var(--amber);
+    transition:transform .2s ease;
+    transform:rotate(-90deg);
+    flex-shrink:0;
+  }
+  .month-arrow.expanded{
+    transform:rotate(0deg);
+  }
+  .month-title{
+    font-size:15px;
+    font-weight:600;
+    color:#E0E2DC;
+    letter-spacing:0.02em;
+  }
+  .month-count-badge{
+    font-family:var(--mono);
+    font-size:11.5px;
+    letter-spacing:0.04em;
+    padding:2px 8px;
+    border-radius:12px;
+    background:rgba(184,130,58,0.14);
+    color:var(--amber);
+    border:1px solid rgba(184,130,58,0.28);
+    font-weight:500;
+  }
+  .month-hint{
+    font-family:var(--mono);
+    font-size:12px;
+    color:#8A9088;
+    letter-spacing:0.04em;
+    transition:color .15s ease;
+  }
+  .month-header:hover .month-hint{
+    color:var(--amber);
+  }
+  .month-content{
+    display:none;
+    border-top:1px solid rgba(233,234,228,0.08);
+    background:rgba(0,0,0,0.15);
+  }
+  .month-content.expanded{
+    display:block;
+  }
+  .month-content .report-row:last-child{
+    border-bottom:none;
+  }
 
   .archive-more-wrap{text-align:center; margin-top:24px;}
   .archive-more-btn{
@@ -994,7 +1084,11 @@
 
   @media (max-width:720px){
     .nav-links{display:none;}
-    .report-row{flex-direction:column; align-items:flex-start; gap:10px; padding:14px 4px;}
+    .month-header{padding:12px 14px;}
+    .month-header-left{gap:8px;}
+    .month-title{font-size:14px;}
+    .month-hint{font-size:11px;}
+    .report-row{flex-direction:column; align-items:flex-start; gap:10px; padding:12px 14px;}
     .report-meta{flex-direction:column; gap:4px; width:100%;}
     .report-row-title{white-space:normal; line-height:1.4;}
     .report-links{margin-left:0; width:100%; justify-content:flex-start; flex-wrap:wrap;}
@@ -1574,6 +1668,7 @@
    * =========================================================================
    */
   var REPORTS = [
+    '20260901',
     '20260831',
     '20260828',
     '20260827',
@@ -1585,10 +1680,9 @@
   ];
 
   var BASE_URL = '/reports';
-  var PAGE_LIMIT = 10;
   var currentLang = 'en';
   var selectedYear = 'all';
-  var showAll = false;
+  var monthExpandState = {};
 
   var toggle = document.getElementById('lang-toggle');
   var reportLink = document.getElementById('report-link');
@@ -1625,6 +1719,40 @@
     } else {
       return monthNamesEn[mInt - 1] + ' ' + day + ', ' + year;
     }
+  }
+
+  function groupReportsByMonth(reports) {
+    var groups = {};
+    var monthKeys = [];
+    for (var i = 0; i < reports.length; i++) {
+      var d = reports[i];
+      if (!d || d.length < 6) continue;
+      var ym = d.substring(0, 6);
+      if (!groups[ym]) {
+        groups[ym] = [];
+        monthKeys.push(ym);
+      }
+      groups[ym].push(d);
+    }
+    return { keys: monthKeys, groups: groups };
+  }
+
+  function formatMonthHeader(ymStr, count, lang) {
+    if (!ymStr || ymStr.length < 6) return { title: ymStr, countText: '' };
+    var year = ymStr.substring(0, 4);
+    var month = ymStr.substring(4, 6);
+    var mInt = parseInt(month, 10);
+    var monthNamesEn = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    var monthTitle = '';
+    var countText = '';
+    if (lang === 'zh') {
+      monthTitle = year + ' 年 ' + mInt + ' 月';
+      countText = count + ' 篇';
+    } else {
+      monthTitle = monthNamesEn[mInt - 1] + ' ' + year;
+      countText = count + (count > 1 ? ' reports' : ' report');
+    }
+    return { title: monthTitle, countText: countText };
   }
 
   function updateHeroCTA() {
@@ -1673,7 +1801,6 @@
     for (var j = 0; j < btns.length; j++) {
       btns[j].addEventListener('click', function() {
         selectedYear = this.getAttribute('data-year');
-        showAll = false;
         renderArchive();
       });
     }
@@ -1727,47 +1854,73 @@
       }
     }
 
-    var displayCount = showAll ? filtered.length : Math.min(filtered.length, PAGE_LIMIT);
-    var html = '';
-    for (var k = 0; k < displayCount; k++) {
-      var dateStr = filtered[k];
-      var zhUrl = getReportUrl(dateStr, 'zh');
-      var enUrl = getReportUrl(dateStr, 'en');
+    if (filtered.length === 0) {
+      listContainer.innerHTML = '<div style="padding:20px 0; color:#8A9088;">' + (currentLang === 'zh' ? '該年份無報告' : 'No reports found for this year.') + '</div>';
+      moreWrap.innerHTML = '';
+      return;
+    }
 
-      html += '<div class="report-row">' +
-        '<div class="report-meta">' +
-          '<span class="report-row-date">' + formatDate(dateStr, currentLang, 'short') + '</span>' +
-          '<span class="report-row-title">' + (currentLang === 'zh' ? '每日美股市場量化分析報告' : 'Daily US Equities Quantitative Analysis Report') + '</span>' +
-        '</div>' +
-        '<div class="report-links">' +
-          '<a class="report-pill-link" href="' + zhUrl + '" target="_blank" rel="noopener">中文</a>' +
-          '<a class="report-pill-link" href="' + enUrl + '" target="_blank" rel="noopener">EN</a>' +
+    var grouped = groupReportsByMonth(filtered);
+    var monthKeys = grouped.keys;
+    var html = '';
+
+    for (var m = 0; m < monthKeys.length; m++) {
+      var ym = monthKeys[m];
+      var monthReports = grouped.groups[ym];
+      // 預設最新月份展開，歷史月份預設收起
+      if (monthExpandState[ym] === undefined) {
+        monthExpandState[ym] = (m === 0);
+      }
+      var isExpanded = !!monthExpandState[ym];
+      var headerInfo = formatMonthHeader(ym, monthReports.length, currentLang);
+      var statusHint = isExpanded ? (currentLang === 'zh' ? '收起' : 'Collapse') : (currentLang === 'zh' ? '展開' : 'Expand');
+
+      var rowsHtml = '';
+      for (var k = 0; k < monthReports.length; k++) {
+        var dateStr = monthReports[k];
+        var zhUrl = getReportUrl(dateStr, 'zh');
+        var enUrl = getReportUrl(dateStr, 'en');
+
+        rowsHtml += '<div class="report-row">' +
+          '<div class="report-meta">' +
+            '<span class="report-row-date">' + formatDate(dateStr, currentLang, 'short') + '</span>' +
+            '<span class="report-row-title">' + (currentLang === 'zh' ? '每日美股市場量化分析報告' : 'Daily US Equities Quantitative Analysis Report') + '</span>' +
+          '</div>' +
+          '<div class="report-links">' +
+            '<a class="report-pill-link" href="' + zhUrl + '" target="_blank" rel="noopener">中文</a>' +
+            '<a class="report-pill-link" href="' + enUrl + '" target="_blank" rel="noopener">EN</a>' +
+          '</div>' +
+        '</div>';
+      }
+
+      html += '<div class="month-group ' + (isExpanded ? 'expanded' : '') + '" id="month-group-' + ym + '">' +
+        '<button class="month-header" type="button" aria-expanded="' + isExpanded + '" data-ym="' + ym + '">' +
+          '<div class="month-header-left">' +
+            '<svg class="month-arrow ' + (isExpanded ? 'expanded' : '') + '" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">' +
+              '<polyline points="6 9 12 15 18 9"></polyline>' +
+            '</svg>' +
+            '<span class="month-title">' + headerInfo.title + '</span>' +
+            '<span class="month-count-badge">' + headerInfo.countText + '</span>' +
+          '</div>' +
+          '<span class="month-hint">' + statusHint + '</span>' +
+        '</button>' +
+        '<div class="month-content ' + (isExpanded ? 'expanded' : '') + '">' +
+          rowsHtml +
         '</div>' +
       '</div>';
     }
-    listContainer.innerHTML = html;
 
-    // 展開更多按鈕
-    if (filtered.length > PAGE_LIMIT) {
-      if (!showAll) {
-        moreWrap.innerHTML = '<button class="archive-more-btn" id="archive-more-btn">' +
-          (currentLang === 'zh' ? '展開更多歷史報告 ↓ (共 ' + filtered.length + ' 篇)' : 'Show more reports ↓ (' + filtered.length + ' total)') +
-          '</button>';
-        document.getElementById('archive-more-btn').addEventListener('click', function() {
-          showAll = true;
-          renderArchive();
-        });
-      } else {
-        moreWrap.innerHTML = '<button class="archive-more-btn" id="archive-more-btn">' +
-          (currentLang === 'zh' ? '收起歷史報告 ↑' : 'Collapse history ↑') +
-          '</button>';
-        document.getElementById('archive-more-btn').addEventListener('click', function() {
-          showAll = false;
-          renderArchive();
-        });
-      }
-    } else {
-      moreWrap.innerHTML = '';
+    listContainer.innerHTML = html;
+    moreWrap.innerHTML = '';
+
+    // 綁定月份標題點擊展開/收起事件
+    var monthHeaders = listContainer.querySelectorAll('.month-header');
+    for (var h = 0; h < monthHeaders.length; h++) {
+      monthHeaders[h].addEventListener('click', function() {
+        var ymKey = this.getAttribute('data-ym');
+        monthExpandState[ymKey] = !monthExpandState[ymKey];
+        renderArchive();
+      });
     }
   }
 
